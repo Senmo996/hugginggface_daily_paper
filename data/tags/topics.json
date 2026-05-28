@@ -391,6 +391,15 @@
       ]
     },
     {
+      "name": "deepfake detection",
+      "description": "Methods for detecting synthetic or manipulated face, audio, image, or video content, especially approaches aimed at generalizing to unseen forgery techniques or generation models.",
+      "created_at": "2026-05-28T15:24:54Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.02359"
+      ]
+    },
+    {
       "name": "dialogue data generation",
       "description": "Methods for constructing, mining, or synthesizing dialogue datasets, especially task-oriented or domain-specific conversations used to train and evaluate language models.",
       "created_at": "2026-05-28T05:58:16Z",
@@ -1483,7 +1492,7 @@
       "name": "LLM interpretability",
       "description": "Research on methods for understanding, explaining, and validating the internal representations or behaviors of large language models, including activation-based interpretation and reliability assessment of interpretability tools.",
       "created_at": "2026-05-28T05:56:47Z",
-      "usage_count": 15,
+      "usage_count": 16,
       "examples": [
         "2605.26045",
         "2605.26242",
@@ -1499,7 +1508,8 @@
         "2605.25052",
         "2512.23988",
         "2601.00830",
-        "2601.02314"
+        "2601.02314",
+        "2601.02989"
       ]
     },
     {
@@ -2918,10 +2928,11 @@
       "name": "recommendation model scaling",
       "description": "Research on scalable recommender-system architectures, scaling laws, and efficiency-oriented model designs for improving recommendation performance under parameter and compute constraints.",
       "created_at": "2026-05-28T06:33:26Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2604.00590",
-        "2604.19550"
+        "2604.19550",
+        "2601.03153"
       ]
     },
     {
@@ -3513,12 +3524,13 @@
       "name": "video editing",
       "description": "Methods for editing generated or real videos with text or other controls while preserving structure, temporal coherence, and computational efficiency.",
       "created_at": "2026-05-28T07:32:47Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2604.22586",
         "2605.06535",
         "2601.01425",
-        "2601.02785"
+        "2601.02785",
+        "2601.01720"
       ]
     },
     {
