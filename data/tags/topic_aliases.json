@@ -1,0 +1,10 @@
+{
+  "aliases": {
+    "LLM agent test-time scaling": "LLM test-time scaling",
+    "world model benchmark evaluation": "world models",
+    "image editing benchmark evaluation": "image editing",
+    "video editing benchmark evaluation": "video editing",
+    "continual learning": "LLM continual learning",
+    "Transformer interpretability": "LLM interpretability"
+  }
+}

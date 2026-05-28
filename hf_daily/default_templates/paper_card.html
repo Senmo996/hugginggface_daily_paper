@@ -1,0 +1,71 @@
+<article
+  class="paper-card{% if latest_date and paper.daily_date != latest_date %} is-hidden{% endif %}"
+  data-title="{{ paper.title|lower }}"
+  data-summary="{{ paper.one_sentence_summary|default('', true)|lower }}"
+  data-topic="{{ paper.topic_tag|default('', true) }}"
+  data-institution="{{ paper.institution_tag|default('', true) }}"
+  data-date="{{ paper.daily_date }}"
+  data-paper-id="{{ paper.id }}"
+  data-original-institution="{{ paper.institution_tag|default('', true) }}"
+  data-original-topic="{{ paper.topic_tag|default('', true) }}"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">{{ paper.daily_date }}</p>
+      <h3><a href="{{ paper.hf_url }}" target="_blank" rel="noreferrer">{{ paper.title }}</a></h3>
+    </div>
+    <div class="metrics">
+      <span>{{ paper.upvotes|default(0, true) }} upvotes</span>
+      <span>{{ paper.num_comments|default(0, true) }} comments</span>
+    </div>
+  </div>
+
+  <p class="authors">{{ paper.authors|author_list }}</p>
+  <p class="one-line">{{ paper.one_sentence_summary }}</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">{{ paper.institution_tag }}</span>
+    <span class="tag topic" data-tag-role="topic">{{ paper.topic_tag }}</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="{{ paper.institution_tag|default('', true) }}">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="{{ paper.topic_tag|default('', true) }}">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>{{ paper.summary }}</p>
+  </details>
+
+  <div class="links">
+    <a href="{{ paper.hf_url }}" target="_blank" rel="noreferrer">HF</a>
+    <a href="{{ paper.arxiv_url }}" target="_blank" rel="noreferrer">arXiv</a>
+    {% if paper.project_page %}
+      <a href="{{ paper.project_page }}" target="_blank" rel="noreferrer">Project</a>
+    {% endif %}
+    {% if paper.github_repo %}
+      <a href="{{ paper.github_repo }}" target="_blank" rel="noreferrer">GitHub</a>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Institution x Topic Matrix - Hugging Face Daily Papers</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Institution x Topic</p>
+        <h1>Top institution-topic matrix</h1>
+      </div>
+      <div class="stats">
+        <a href="index.html">Index</a>
+        <span>{{ papers|length }} papers</span>
+        <span>{{ dates|length }} days</span>
+      </div>
+    </header>
+
+    <main class="matrix-page">
+      <p class="muted">Top 40 institutions by paper count against global top topics plus each institution's strongest local topics.</p>
+      <div id="institutionTopicMatrix" class="matrix-table"></div>
+    </main>
+    <script id="matrixPapersData" type="application/json">{{ papers|tojson }}</script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

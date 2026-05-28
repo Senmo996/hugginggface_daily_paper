@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ date }} - Hugging Face Daily Papers</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Daily archive</p>
+        <h1>{{ date }}</h1>
+      </div>
+      <div class="stats">
+        <a href="../index.html">Index</a>
+        <span>{{ papers|length }} papers</span>
+      </div>
+    </header>
+
+    <main class="daily-page">
+      <div class="paper-grid">
+        {% for paper in papers %}
+          {% include "paper_card.html" %}
+        {% else %}
+          <p class="empty">No generated papers for this date.</p>
+        {% endfor %}
+      </div>
+    </main>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

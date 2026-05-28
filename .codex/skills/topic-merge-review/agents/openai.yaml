@@ -1,0 +1,4 @@
+interface:
+  display_name: "Topic Merge Review"
+  short_description: "Review and gate topic tag merges"
+  default_prompt: "Review candidate topic tag merges and require human approval before writing aliases."

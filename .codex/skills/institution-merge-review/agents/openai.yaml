@@ -1,0 +1,4 @@
+interface:
+  display_name: "Institution Merge Review"
+  short_description: "Review and gate institution tag merges"
+  default_prompt: "Review candidate institution tag merges and require human approval before writing aliases."

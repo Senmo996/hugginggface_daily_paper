@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hugging Face Daily Papers</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Local research archive</p>
+        <h1>Hugging Face Daily Papers</h1>
+      </div>
+      <div class="header-actions">
+        <div class="trend-shell">
+          <button id="topicTrendToggle" class="trend-toggle" type="button" aria-expanded="false" aria-controls="topicTrendPanel">
+            Topic trends
+          </button>
+          <section class="trend-menu" id="topicTrendPanel" hidden>
+            <div class="trend-menu-head">
+              <div>
+                <p class="eyebrow">Topic trends</p>
+                <h2>Daily topic curves</h2>
+              </div>
+              <button id="topicTrendReset" class="secondary" type="button">Top 5</button>
+            </div>
+            <div class="trend-controls">
+              <label>
+                <span>Start</span>
+                <select id="trendStartDate" aria-label="Trend start date"></select>
+              </label>
+              <label>
+                <span>End</span>
+                <select id="trendEndDate" aria-label="Trend end date"></select>
+              </label>
+              <label>
+                <span>Topics</span>
+                <select id="trendTopicSelect" aria-label="Topic trend selector" multiple></select>
+              </label>
+            </div>
+            <svg id="topicTrendChart" class="trend-chart" role="img" aria-label="Topic trend chart"></svg>
+            <div id="topicTrendLegend" class="trend-legend"></div>
+            <div id="topicTrendSummary" class="trend-summary"></div>
+            <section class="rising-topics">
+              <h3>Rising topics</h3>
+              <p class="muted">Compared with the previous equal-length date range.</p>
+              <div id="risingTopicList" class="rising-topic-list"></div>
+            </section>
+          </section>
+        </div>
+        <a class="trend-toggle" href="matrix.html">Matrix</a>
+        <div class="stats">
+          <span>{{ papers|length }} papers</span>
+          <span>{{ dates|length }} days</span>
+        </div>
+      </div>
+    </header>
+
+    <main
+      class="layout"
+      data-latest-date="{{ latest_date }}"
+      data-available-dates="{{ dates|tojson|forceescape }}"
+    >
+      <aside class="sidebar">
+        <section>
+          <h2>Date Archive</h2>
+          {% if dates %}
+            <div class="date-selectors">
+              <label>
+                <span>Year</span>
+                <select id="dateYear" aria-label="Year"></select>
+              </label>
+              <label>
+                <span>Month</span>
+                <select id="dateMonth" aria-label="Month"></select>
+              </label>
+              <label>
+                <span>Day</span>
+                <select id="dateDay" aria-label="Day"></select>
+              </label>
+            </div>
+            <p id="dateStatus" class="date-status">Showing {{ latest_date }}</p>
+          {% else %}
+            <p class="muted">No daily pages yet.</p>
+          {% endif %}
+        </section>
+
+        <section>
+          <h2>Institution Tags</h2>
+          <div class="tag-list">
+            {% for tag in institution_tags %}
+              <button class="tag-filter" data-filter-type="institution" data-filter-value="{{ tag }}">{{ tag }} <span>{{ counts.institutions[tag] }}</span></button>
+            {% else %}
+              <p class="muted">No institution tags yet.</p>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section>
+          <h2>Topic Tags</h2>
+          <div class="tag-list">
+            {% for tag in topic_tags %}
+              <button class="tag-filter" data-filter-type="topic" data-filter-value="{{ tag }}">{{ tag }} <span>{{ counts.topics[tag] }}</span></button>
+            {% else %}
+              <p class="muted">No topic tags yet.</p>
+            {% endfor %}
+          </div>
+        </section>
+      </aside>
+
+      <section class="content">
+        <div class="toolbar">
+          <label class="search">
+            <span>Search</span>
+            <span class="search-controls">
+              <input id="searchInput" type="search" placeholder="Title, summary, tag, institution">
+              <select id="searchScope" aria-label="Search field">
+                <option value="all" selected>All fields</option>
+                <option value="title">Title</option>
+                <option value="summary">Summary</option>
+                <option value="tag">Tags</option>
+                <option value="topic">Topic</option>
+                <option value="institution">Institution</option>
+              </select>
+            </span>
+          </label>
+          <button id="clearFilters" class="secondary">Clear filters</button>
+        </div>
+        <div id="activeFilter" class="active-filter"></div>
+        <div id="paperList" class="paper-grid">
+          {% for paper in papers %}
+            {% include "paper_card.html" %}
+          {% else %}
+            <p class="empty">Run <code>python -m hf_daily run --date YYYY-MM-DD</code> to build the first archive page.</p>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

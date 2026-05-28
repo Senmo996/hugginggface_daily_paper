@@ -1,0 +1,4972 @@
+{
+  "institutions": [
+    {
+      "name": "AAAAA Academia Attractions",
+      "created_at": "2026-05-28T05:55:22Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.27068"
+      ]
+    },
+    {
+      "name": "Accio",
+      "created_at": "2026-05-28T06:51:56Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.08545"
+      ]
+    },
+    {
+      "name": "actAVA AI",
+      "created_at": "2026-05-28T08:58:39Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.16679"
+      ]
+    },
+    {
+      "name": "Adalat AI",
+      "created_at": "2026-05-28T08:37:03Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.13087"
+      ]
+    },
+    {
+      "name": "Adobe",
+      "created_at": "2026-05-28T05:57:05Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.26111"
+      ]
+    },
+    {
+      "name": "Adobe Research",
+      "created_at": "2026-05-28T06:31:12Z",
+      "usage_count": 3,
+      "examples": [
+        "2603.29092",
+        "2605.19330",
+        "2605.22818"
+      ]
+    },
+    {
+      "name": "Advanced Translation Technology Lab at ASTREC, NICT",
+      "created_at": "2026-05-28T06:29:43Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.28858"
+      ]
+    },
+    {
+      "name": "AI at Meta",
+      "created_at": "2026-05-28T05:56:52Z",
+      "usage_count": 7,
+      "examples": [
+        "2605.27358",
+        "2604.04872",
+        "2604.04746",
+        "2604.16529",
+        "2604.21681",
+        "2605.13852",
+        "2512.24551"
+      ]
+    },
+    {
+      "name": "AI Safety & Interpretability Lab",
+      "created_at": "2026-05-28T05:56:47Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.26045"
+      ]
+    },
+    {
+      "name": "Ai2",
+      "created_at": "2026-05-28T06:55:11Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.08626",
+        "2605.02881",
+        "2605.06663"
+      ]
+    },
+    {
+      "name": "AI45Research",
+      "created_at": "2026-05-28T06:50:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.06628"
+      ]
+    },
+    {
+      "name": "AI4Bharat",
+      "created_at": "2026-05-28T07:39:57Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.21481",
+        "2604.21523"
+      ]
+    },
+    {
+      "name": "AI4Data",
+      "created_at": "2026-05-28T08:00:36Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.04962"
+      ]
+    },
+    {
+      "name": "AI4Museum",
+      "created_at": "2026-05-28T06:54:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.07338"
+      ]
+    },
+    {
+      "name": "AIDAS Lab",
+      "created_at": "2026-05-28T06:29:02Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.00007"
+      ]
+    },
+    {
+      "name": "Aikyam Lab",
+      "created_at": "2026-05-28T07:35:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.18756"
+      ]
+    },
+    {
+      "name": "AIM Intelligence",
+      "created_at": "2026-05-28T07:54:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.05662"
+      ]
+    },
+    {
+      "name": "AIPOCH",
+      "created_at": "2026-05-28T07:55:58Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.20441"
+      ]
+    },
+    {
+      "name": "AISE research lab at TU Delft",
+      "created_at": "2026-05-28T06:35:45Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.00917"
+      ]
+    },
+    {
+      "name": "akatsuki-neo",
+      "created_at": "2026-05-28T05:55:05Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.27102"
+      ]
+    },
+    {
+      "name": "Alarmif",
+      "created_at": "2026-05-28T15:08:42Z",
+      "usage_count": 1,
+      "examples": [
+        "2512.23380"
+      ]
+    },
+    {
+      "name": "Alexandria University",
+      "created_at": "2026-05-28T08:39:26Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.12556"
+      ]
+    },
+    {
+      "name": "Alibaba",
+      "created_at": "2026-05-28T08:42:58Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.15055"
+      ]
+    },
+    {
+      "name": "Alibaba Cloud Apsara Lab",
+      "created_at": "2026-05-28T06:50:06Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.06834"
+      ]
+    },
+    {
+      "name": "Alibaba DAMO Academy",
+      "created_at": "2026-05-28T07:41:27Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.23758"
+      ]
+    },
+    {
+      "name": "alibaba-inc",
+      "created_at": "2026-05-28T05:24:15Z",
+      "usage_count": 18,
+      "examples": [
+        "2605.28732",
+        "2605.28773",
+        "2605.28109",
+        "2604.16044",
+        "2604.19748",
+        "2604.19636",
+        "2605.06376",
+        "2605.07915",
+        "2605.14438",
+        "2605.15824",
+        "2605.18233",
+        "2512.24873"
+      ]
+    },
+    {
+      "name": "Alibaba-NLP",
+      "created_at": "2026-05-28T06:56:00Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.27490"
+      ]
+    },
+    {
+      "name": "Allen Institute for AI",
+      "created_at": "2026-05-28T06:51:41Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.08516"
+      ]
+    },
+    {
+      "name": "ALMAnaCH (Inria)",
+      "created_at": "2026-05-28T08:26:00Z",
+      "usage_count": 3,
+      "examples": [
+        "2605.12438",
+        "2605.19908",
+        "2605.18646"
+      ]
+    },
+    {
+      "name": "AMAAI Lab",
+      "created_at": "2026-05-28T07:55:16Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.03395"
+      ]
+    },
+    {
+      "name": "AMAP-ML",
+      "created_at": "2026-05-28T07:16:00Z",
+      "usage_count": 5,
+      "examples": [
+        "2604.18168",
+        "2604.17295",
+        "2512.18181",
+        "2605.22355",
+        "2512.24271"
+      ]
+    },
+    {
+      "name": "Amazon",
+      "created_at": "2026-05-28T06:49:03Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.04913",
+        "2604.19835",
+        "2604.22119",
+        "2605.11378"
+      ]
+    },
+    {
+      "name": "Amazon AGI",
+      "created_at": "2026-05-28T07:28:12Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.19945"
+      ]
+    },
+    {
+      "name": "AMD",
+      "created_at": "2026-05-28T07:36:16Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.24003",
+        "2605.16819"
+      ]
+    },
+    {
+      "name": "American University of Beirut",
+      "created_at": "2026-05-28T06:58:25Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.08570"
+      ]
+    },
+    {
+      "name": "Amsterdam Machine Learning Lab",
+      "created_at": "2026-05-28T08:56:14Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10302"
+      ]
+    },
+    {
+      "name": "Amsterdam UMC",
+      "created_at": "2026-05-28T09:31:58Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.20405"
+      ]
+    },
+    {
+      "name": "Ant Group",
+      "created_at": "2026-05-28T06:43:18Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.04787",
+        "2604.24198",
+        "2605.12496"
+      ]
+    },
+    {
+      "name": "Apple",
+      "created_at": "2026-05-28T06:31:57Z",
+      "usage_count": 10,
+      "examples": [
+        "2604.01193",
+        "2604.12887",
+        "2604.22782",
+        "2605.06216",
+        "2605.08078",
+        "2605.08029",
+        "2605.07394",
+        "2605.08513",
+        "2605.10889",
+        "2605.15035"
+      ]
+    },
+    {
+      "name": "Applied AI group of the Tallinn University of Technology",
+      "created_at": "2026-05-28T08:01:25Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.04330"
+      ]
+    },
+    {
+      "name": "ARC Lab, Tencent PCG",
+      "created_at": "2026-05-28T07:18:12Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.11102",
+        "2605.10922"
+      ]
+    },
+    {
+      "name": "Arena",
+      "created_at": "2026-05-28T09:27:17Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.17602"
+      ]
+    },
+    {
+      "name": "Arizona State University",
+      "created_at": "2026-05-28T09:12:55Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.08472"
+      ]
+    },
+    {
+      "name": "Artefact",
+      "created_at": "2026-05-28T07:03:46Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.09497"
+      ]
+    },
+    {
+      "name": "AweAI Team",
+      "created_at": "2026-05-28T07:03:28Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.13018"
+      ]
+    },
+    {
+      "name": "BAIDU",
+      "created_at": "2026-05-28T06:48:52Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.05643",
+        "2605.00425",
+        "2605.15572",
+        "2605.14589"
+      ]
+    },
+    {
+      "name": "BE2R Lab",
+      "created_at": "2026-05-28T07:40:39Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.26067"
+      ]
+    },
+    {
+      "name": "Beihang University",
+      "created_at": "2026-05-28T07:14:14Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.16299",
+        "2605.05704"
+      ]
+    },
+    {
+      "name": "Beijing Academy of Artificial Intelligence",
+      "created_at": "2026-05-28T07:23:24Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.18518",
+        "2604.25256",
+        "2604.27711"
+      ]
+    },
+    {
+      "name": "Beijing Institute of Technology",
+      "created_at": "2026-05-28T05:54:50Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.27030"
+      ]
+    },
+    {
+      "name": "Ben-Gurion University of the Negev",
+      "created_at": "2026-05-28T07:26:58Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.16680"
+      ]
+    },
+    {
+      "name": "BenchFlow",
+      "created_at": "2026-05-28T06:45:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.05172"
+      ]
+    },
+    {
+      "name": "Bethgelab",
+      "created_at": "2026-05-28T06:53:37Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.07427"
+      ]
+    },
+    {
+      "name": "BidirLM (Decoder To Encoder)",
+      "created_at": "2026-05-28T06:41:51Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.02045"
+      ]
+    },
+    {
+      "name": "BIGDATA ANALYTICS ENGINEERING LAB, Pusan National University, Busan, Korea",
+      "created_at": "2026-05-28T08:25:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.11011"
+      ]
+    },
+    {
+      "name": "Boldt",
+      "created_at": "2026-05-28T07:48:35Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.28075"
+      ]
+    },
+    {
+      "name": "Bosch US",
+      "created_at": "2026-05-28T09:40:16Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.25449"
+      ]
+    },
+    {
+      "name": "Boston University",
+      "created_at": "2026-05-28T06:57:29Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.01848",
+        "2605.22678"
+      ]
+    },
+    {
+      "name": "BrainsBuild",
+      "created_at": "2026-05-28T06:38:24Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.01152",
+        "2604.14430"
+      ]
+    },
+    {
+      "name": "Byering",
+      "created_at": "2026-05-28T05:58:16Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.25162"
+      ]
+    },
+    {
+      "name": "ByteDance",
+      "created_at": "2026-05-28T05:55:37Z",
+      "usage_count": 6,
+      "examples": [
+        "2605.27366",
+        "2604.06169",
+        "2604.11804",
+        "2605.00809",
+        "2605.11458",
+        "2605.22344"
+      ]
+    },
+    {
+      "name": "ByteDance Seed",
+      "created_at": "2026-05-28T05:55:26Z",
+      "usage_count": 12,
+      "examples": [
+        "2605.26895",
+        "2604.11521",
+        "2604.14148",
+        "2604.15311",
+        "2604.18292",
+        "2604.27505",
+        "2605.00503",
+        "2605.02134",
+        "2605.06548",
+        "2605.13831",
+        "2512.24210",
+        "2512.24617"
+      ]
+    },
+    {
+      "name": "bytedance-research",
+      "created_at": "2026-05-28T08:58:12Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.18678"
+      ]
+    },
+    {
+      "name": "Carnegie Mellon University",
+      "created_at": "2026-05-28T05:25:48Z",
+      "usage_count": 20,
+      "examples": [
+        "2605.26457",
+        "2603.29025",
+        "2603.21460",
+        "2604.01029",
+        "2604.01487",
+        "2604.11805",
+        "2604.10784",
+        "2604.15579",
+        "2604.20087",
+        "2604.17568",
+        "2604.21718",
+        "2605.05724",
+        "2605.12733",
+        "2605.15565",
+        "2605.16865",
+        "2605.19516",
+        "2605.20668",
+        "2605.17766"
+      ]
+    },
+    {
+      "name": "Center for Language and Speech Processing @ JHU",
+      "created_at": "2026-05-28T06:49:37Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.04443",
+        "2604.09443"
+      ]
+    },
+    {
+      "name": "Centre de Recherche en Informatique de Lens",
+      "created_at": "2026-05-28T07:37:51Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.24170"
+      ]
+    },
+    {
+      "name": "Centro di Sonologia Computazionale",
+      "created_at": "2026-05-28T07:02:27Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.10628"
+      ]
+    },
+    {
+      "name": "Chair for Machine Learning & Computer Vision",
+      "created_at": "2026-05-28T07:55:27Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.01234"
+      ]
+    },
+    {
+      "name": "ChangeLing Lab",
+      "created_at": "2026-05-28T06:38:32Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.29042"
+      ]
+    },
+    {
+      "name": "ChenLab @ The Hong Kong Polytechnic University",
+      "created_at": "2026-05-28T06:57:44Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.08641"
+      ]
+    },
+    {
+      "name": "Chenyan Xiong Research Group at CMU",
+      "created_at": "2026-05-28T07:33:37Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.20012"
+      ]
+    },
+    {
+      "name": "Chinese Academic of Science Institute of Automation",
+      "created_at": "2026-05-28T06:42:35Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.02073",
+        "2604.14142",
+        "2605.00380",
+        "2605.23264"
+      ]
+    },
+    {
+      "name": "Chinese Academy of Sciences",
+      "created_at": "2026-05-28T06:53:03Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.08362",
+        "2604.16902"
+      ]
+    },
+    {
+      "name": "Chinese University of Hong Kong",
+      "created_at": "2026-05-28T06:46:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.06156"
+      ]
+    },
+    {
+      "name": "Chinese University of Hong Kong, Shenzhen",
+      "created_at": "2026-05-28T07:13:42Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.16029"
+      ]
+    },
+    {
+      "name": "CIS, LMU Munich",
+      "created_at": "2026-05-28T07:05:27Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.12978",
+        "2605.09548"
+      ]
+    },
+    {
+      "name": "Claw-Eval",
+      "created_at": "2026-05-28T06:44:39Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.06132"
+      ]
+    },
+    {
+      "name": "Clio AI",
+      "created_at": "2026-05-28T07:20:40Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.15760"
+      ]
+    },
+    {
+      "name": "CMU Safe AI Lab",
+      "created_at": "2026-05-28T07:05:47Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.13015"
+      ]
+    },
+    {
+      "name": "CodeFuse AI",
+      "created_at": "2026-05-28T07:30:09Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.21889"
+      ]
+    },
+    {
+      "name": "Cohere",
+      "created_at": "2026-05-28T07:17:59Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.17609"
+      ]
+    },
+    {
+      "name": "Columbia University",
+      "created_at": "2026-05-28T09:32:33Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.19990"
+      ]
+    },
+    {
+      "name": "Computer Incident Response Center Luxembourg",
+      "created_at": "2026-05-28T07:19:24Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.16038"
+      ]
+    },
+    {
+      "name": "CompVis",
+      "created_at": "2026-05-28T06:56:06Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.09527",
+        "2604.11737"
+      ]
+    },
+    {
+      "name": "Cornell University",
+      "created_at": "2026-05-28T08:56:39Z",
+      "usage_count": 2,
+      "examples": [
+        "2602.09016",
+        "2605.22581"
+      ]
+    },
+    {
+      "name": "COWARobot",
+      "created_at": "2026-05-28T08:33:21Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.11550"
+      ]
+    },
+    {
+      "name": "CRUISE Research Group (UNSW)",
+      "created_at": "2026-05-28T09:30:46Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.22715"
+      ]
+    },
+    {
+      "name": "CUHK",
+      "created_at": "2026-05-28T07:59:40Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.06665"
+      ]
+    },
+    {
+      "name": "CUHK SphereLab",
+      "created_at": "2026-05-28T05:25:52Z",
+      "usage_count": 3,
+      "examples": [
+        "2605.28819"
+      ]
+    },
+    {
+      "name": "CVL-UESTC",
+      "created_at": "2026-05-28T15:10:28Z",
+      "usage_count": 1,
+      "examples": [
+        "2512.24176"
+      ]
+    },
+    {
+      "name": "DAMO Academy",
+      "created_at": "2026-05-28T06:27:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.25240"
+      ]
+    },
+    {
+      "name": "Data Intelligence System Lab",
+      "created_at": "2026-05-28T08:49:54Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.02290"
+      ]
+    },
+    {
+      "name": "Datadog",
+      "created_at": "2026-05-28T09:16:24Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.20119"
+      ]
+    },
+    {
+      "name": "DEEMOS Technology",
+      "created_at": "2026-05-28T06:58:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.09132"
+      ]
+    },
+    {
+      "name": "DeepCybo",
+      "created_at": "2026-05-28T08:43:42Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.14712",
+        "2605.15298"
+      ]
+    },
+    {
+      "name": "DeepGlint",
+      "created_at": "2026-05-28T07:10:48Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14967"
+      ]
+    },
+    {
+      "name": "Deepmind",
+      "created_at": "2026-05-28T06:55:54Z",
+      "usage_count": 5,
+      "examples": [
+        "2604.09168",
+        "2604.23099",
+        "2605.13050",
+        "2605.17260",
+        "2512.23988"
+      ]
+    },
+    {
+      "name": "DeepRecall",
+      "created_at": "2026-05-28T07:11:47Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14531"
+      ]
+    },
+    {
+      "name": "DeepReinforce",
+      "created_at": "2026-05-28T06:38:50Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.02721"
+      ]
+    },
+    {
+      "name": "DeepSeek",
+      "created_at": "2026-05-28T15:08:09Z",
+      "usage_count": 1,
+      "examples": [
+        "2512.24880"
+      ]
+    },
+    {
+      "name": "DigitalOcean",
+      "created_at": "2026-05-28T06:37:12Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.00356"
+      ]
+    },
+    {
+      "name": "DISCO",
+      "created_at": "2026-05-28T06:45:41Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.05181"
+      ]
+    },
+    {
+      "name": "DXRG AI Inc",
+      "created_at": "2026-05-28T07:41:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.26091"
+      ]
+    },
+    {
+      "name": "East China Normal University",
+      "created_at": "2026-05-28T06:36:03Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.01618",
+        "2604.04503",
+        "2604.13902"
+      ]
+    },
+    {
+      "name": "Eberhard Karls Universität Tübingen",
+      "created_at": "2026-05-28T08:10:45Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.06380"
+      ]
+    },
+    {
+      "name": "Eindhoven University of Technology",
+      "created_at": "2026-05-28T06:49:56Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.05060"
+      ]
+    },
+    {
+      "name": "elemental tasks",
+      "created_at": "2026-05-28T07:09:32Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.08510"
+      ]
+    },
+    {
+      "name": "EleutherAI",
+      "created_at": "2026-05-28T08:12:02Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.09063"
+      ]
+    },
+    {
+      "name": "ELLIS Institute Tübingen",
+      "created_at": "2026-05-28T08:22:48Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.12460"
+      ]
+    },
+    {
+      "name": "Emory University",
+      "created_at": "2026-05-28T06:43:44Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.03295"
+      ]
+    },
+    {
+      "name": "EPFL VILAB",
+      "created_at": "2026-05-28T07:14:03Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.15453"
+      ]
+    },
+    {
+      "name": "Erasmus University Rotterdam",
+      "created_at": "2026-05-28T07:02:48Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.11152"
+      ]
+    },
+    {
+      "name": "ETH Zurich",
+      "created_at": "2026-05-28T06:56:54Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.09482",
+        "2604.15231",
+        "2605.06643",
+        "2605.19804"
+      ]
+    },
+    {
+      "name": "EuniAI",
+      "created_at": "2026-05-28T09:28:59Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.22535"
+      ]
+    },
+    {
+      "name": "EvolvingLMMs-Lab",
+      "created_at": "2026-05-28T05:45:16Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.28820"
+      ]
+    },
+    {
+      "name": "Eyeline Labs",
+      "created_at": "2026-05-28T07:30:15Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.21915"
+      ]
+    },
+    {
+      "name": "FaceMind",
+      "created_at": "2026-05-28T06:40:42Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.02176"
+      ]
+    },
+    {
+      "name": "Fewshot Corp",
+      "created_at": "2026-05-28T07:20:21Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.17596"
+      ]
+    },
+    {
+      "name": "FINAL_Bench",
+      "created_at": "2026-05-28T08:41:00Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.14386"
+      ]
+    },
+    {
+      "name": "FPV Labs",
+      "created_at": "2026-05-28T08:53:55Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.05945"
+      ]
+    },
+    {
+      "name": "FrameX-AI",
+      "created_at": "2026-05-28T07:53:32Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.03849",
+        "2605.04461"
+      ]
+    },
+    {
+      "name": "Fraunhofer IGD",
+      "created_at": "2026-05-28T07:36:50Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.22841",
+        "2604.22842"
+      ]
+    },
+    {
+      "name": "Fudan University",
+      "created_at": "2026-05-28T05:24:28Z",
+      "usage_count": 8,
+      "examples": [
+        "2605.28293",
+        "2604.04215",
+        "2604.15923",
+        "2604.17091",
+        "2604.13602",
+        "2605.07465"
+      ]
+    },
+    {
+      "name": "FudanCVL",
+      "created_at": "2026-05-28T09:19:22Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.21343"
+      ]
+    },
+    {
+      "name": "Fundamental AI Lab at UTN",
+      "created_at": "2026-05-28T06:34:45Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.02327"
+      ]
+    },
+    {
+      "name": "GAIR-NLP",
+      "created_at": "2026-05-28T07:48:39Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.02661"
+      ]
+    },
+    {
+      "name": "Gamma Lab",
+      "created_at": "2026-05-28T06:44:00Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.02605"
+      ]
+    },
+    {
+      "name": "GAP-LAB",
+      "created_at": "2026-05-28T07:28:17Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.19720"
+      ]
+    },
+    {
+      "name": "General Medical AI",
+      "created_at": "2026-05-28T06:28:00Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.27460"
+      ]
+    },
+    {
+      "name": "Gensyn",
+      "created_at": "2026-05-28T06:56:19Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.02372"
+      ]
+    },
+    {
+      "name": "Georgia Institute of Technology",
+      "created_at": "2026-05-28T08:06:15Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.06597",
+        "2605.12913"
+      ]
+    },
+    {
+      "name": "GigaAI-Research",
+      "created_at": "2026-05-28T06:40:32Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.01765",
+        "2604.08168",
+        "2604.07882"
+      ]
+    },
+    {
+      "name": "Global",
+      "created_at": "2026-05-28T07:05:53Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.12152",
+        "2604.24597"
+      ]
+    },
+    {
+      "name": "Good Start Labs",
+      "created_at": "2026-05-28T07:29:34Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.20987"
+      ]
+    },
+    {
+      "name": "Google",
+      "created_at": "2026-05-28T05:24:50Z",
+      "usage_count": 20,
+      "examples": [
+        "2605.26340",
+        "2605.27295",
+        "2603.26599",
+        "2604.05081",
+        "2604.08526",
+        "2604.12012",
+        "2604.19741",
+        "2604.24842",
+        "2605.01428",
+        "2604.25907",
+        "2605.08083",
+        "2605.06924",
+        "2605.07039",
+        "2605.00933",
+        "2605.10899",
+        "2605.12587",
+        "2605.14454",
+        "2605.22809"
+      ]
+    },
+    {
+      "name": "Google / Fitbit",
+      "created_at": "2026-05-28T07:51:54Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.04012"
+      ]
+    },
+    {
+      "name": "Google DeepMind",
+      "created_at": "2026-05-28T07:26:40Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.20329",
+        "2605.06651"
+      ]
+    },
+    {
+      "name": "Graph Computation and Machine Learning (GCOM) Group",
+      "created_at": "2026-05-28T08:24:28Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.05630"
+      ]
+    },
+    {
+      "name": "GVC Lab at Great Bay University",
+      "created_at": "2026-05-28T06:28:14Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.29664"
+      ]
+    },
+    {
+      "name": "H-EmbodVis",
+      "created_at": "2026-05-28T06:51:02Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.08546",
+        "2604.28196"
+      ]
+    },
+    {
+      "name": "Harbin Institute of Technology",
+      "created_at": "2026-05-28T06:30:02Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.25791"
+      ]
+    },
+    {
+      "name": "Harbin Institute of Technology, Shenzhen",
+      "created_at": "2026-05-28T07:48:47Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.27776"
+      ]
+    },
+    {
+      "name": "Harvard University",
+      "created_at": "2026-05-28T05:24:02Z",
+      "usage_count": 8,
+      "examples": [
+        "2605.28814",
+        "2605.28655",
+        "2604.09544",
+        "2604.06505"
+      ]
+    },
+    {
+      "name": "Helixar AI",
+      "created_at": "2026-05-28T06:43:39Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04522"
+      ]
+    },
+    {
+      "name": "Henan University",
+      "created_at": "2026-05-28T07:20:59Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.03337"
+      ]
+    },
+    {
+      "name": "high-quality llm benchmarks",
+      "created_at": "2026-05-28T08:05:18Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.04615"
+      ]
+    },
+    {
+      "name": "HKU MMLab",
+      "created_at": "2026-05-28T07:54:19Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.05163"
+      ]
+    },
+    {
+      "name": "HKUST",
+      "created_at": "2026-05-28T06:29:49Z",
+      "usage_count": 4,
+      "examples": [
+        "2603.26546",
+        "2604.10465",
+        "2605.10488",
+        "2605.15167"
+      ]
+    },
+    {
+      "name": "HKUST NLP Group",
+      "created_at": "2026-05-28T08:41:24Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.06527"
+      ]
+    },
+    {
+      "name": "HKUSTGZ",
+      "created_at": "2026-05-28T07:51:19Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.28123",
+        "2605.10977",
+        "2605.21131"
+      ]
+    },
+    {
+      "name": "HOLI-LAB",
+      "created_at": "2026-05-28T09:00:57Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.14368"
+      ]
+    },
+    {
+      "name": "Hong Kong Polytechnic University",
+      "created_at": "2026-05-28T07:07:54Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14048"
+      ]
+    },
+    {
+      "name": "Hong Kong University",
+      "created_at": "2026-05-28T08:07:13Z",
+      "usage_count": 1,
+      "examples": [
+        "2602.03473"
+      ]
+    },
+    {
+      "name": "Hong Kong University of Science and Technology(GuangZhou)",
+      "created_at": "2026-05-28T07:08:24Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.12988",
+        "2605.23889"
+      ]
+    },
+    {
+      "name": "Huang's INTelligence lab",
+      "created_at": "2026-05-28T09:07:07Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.15529"
+      ]
+    },
+    {
+      "name": "Huazhong University of Science and Technology",
+      "created_at": "2026-05-28T06:35:34Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.02190",
+        "2604.15308"
+      ]
+    },
+    {
+      "name": "Hugging Face",
+      "created_at": "2026-05-28T06:48:35Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.06392",
+        "2605.10988"
+      ]
+    },
+    {
+      "name": "Human-centered AI Laboratory",
+      "created_at": "2026-05-28T06:41:06Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.28301"
+      ]
+    },
+    {
+      "name": "Humanoid Sensing and Perception",
+      "created_at": "2026-05-28T06:38:13Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.24257"
+      ]
+    },
+    {
+      "name": "HYU NLP Lab.",
+      "created_at": "2026-05-28T07:19:37Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.17886"
+      ]
+    },
+    {
+      "name": "IBM",
+      "created_at": "2026-05-28T08:54:51Z",
+      "usage_count": 3,
+      "examples": [
+        "2605.08614",
+        "2605.18827",
+        "2605.20630"
+      ]
+    },
+    {
+      "name": "IBM Research",
+      "created_at": "2026-05-28T05:57:00Z",
+      "usage_count": 6,
+      "examples": [
+        "2605.24219",
+        "2605.22608",
+        "2604.21480",
+        "2604.23446",
+        "2605.09131",
+        "2605.08518"
+      ]
+    },
+    {
+      "name": "Idiap Research Institute",
+      "created_at": "2026-05-28T06:31:17Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.26246"
+      ]
+    },
+    {
+      "name": "Illuin Technology",
+      "created_at": "2026-05-28T06:37:32Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.26259"
+      ]
+    },
+    {
+      "name": "inclusionAI",
+      "created_at": "2026-05-28T07:25:47Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.20796",
+        "2604.19859"
+      ]
+    },
+    {
+      "name": "Indian Institute of Technology, Guwahati",
+      "created_at": "2026-05-28T07:09:49Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.10149"
+      ]
+    },
+    {
+      "name": "Inria Lille",
+      "created_at": "2026-05-28T06:30:13Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.29497"
+      ]
+    },
+    {
+      "name": "InSpatio Team",
+      "created_at": "2026-05-28T06:47:59Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.07209"
+      ]
+    },
+    {
+      "name": "Institute for Computer Science, Artificial intelligence and Technology",
+      "created_at": "2026-05-28T09:05:19Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.10126"
+      ]
+    },
+    {
+      "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+      "created_at": "2026-05-28T09:15:47Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.20682",
+        "2605.13734"
+      ]
+    },
+    {
+      "name": "Intern Large Models",
+      "created_at": "2026-05-28T07:08:17Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.14116",
+        "2605.10912",
+        "2605.23897"
+      ]
+    },
+    {
+      "name": "Intern Robotics",
+      "created_at": "2026-05-28T06:52:50Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.08544"
+      ]
+    },
+    {
+      "name": "Intuit",
+      "created_at": "2026-05-28T06:47:06Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.05467"
+      ]
+    },
+    {
+      "name": "IP Intelligence",
+      "created_at": "2026-05-28T06:29:11Z",
+      "usage_count": 3,
+      "examples": [
+        "2603.29557",
+        "2604.27419",
+        "2605.03571"
+      ]
+    },
+    {
+      "name": "IQuest",
+      "created_at": "2026-05-28T08:12:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10344"
+      ]
+    },
+    {
+      "name": "IRLab, University Of Amsterdam",
+      "created_at": "2026-05-28T07:20:33Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.16576"
+      ]
+    },
+    {
+      "name": "IST Austria Distributed Algorithms and Systems Lab",
+      "created_at": "2026-05-28T08:05:43Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.07850"
+      ]
+    },
+    {
+      "name": "Istanbul Technical University",
+      "created_at": "2026-05-28T07:15:35Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14663"
+      ]
+    },
+    {
+      "name": "JavisVerse",
+      "created_at": "2026-05-28T15:09:46Z",
+      "usage_count": 1,
+      "examples": [
+        "2512.22905"
+      ]
+    },
+    {
+      "name": "JD Open Source",
+      "created_at": "2026-05-28T06:42:03Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04911"
+      ]
+    },
+    {
+      "name": "Jerzak Labs",
+      "created_at": "2026-05-28T07:18:17Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.18203",
+        "2605.08423"
+      ]
+    },
+    {
+      "name": "Jina AI",
+      "created_at": "2026-05-28T08:15:57Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.08384"
+      ]
+    },
+    {
+      "name": "jingdong",
+      "created_at": "2026-05-28T08:23:10Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.12070"
+      ]
+    },
+    {
+      "name": "Johns Hopkins University",
+      "created_at": "2026-05-28T08:27:21Z",
+      "usage_count": 4,
+      "examples": [
+        "2605.12449",
+        "2604.09839",
+        "2605.20087",
+        "2605.19354"
+      ]
+    },
+    {
+      "name": "Joy Future Academy",
+      "created_at": "2026-05-28T06:52:00Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.07296",
+        "2605.07748"
+      ]
+    },
+    {
+      "name": "KAIST",
+      "created_at": "2026-05-28T06:39:22Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.02870",
+        "2604.11579",
+        "2605.25535"
+      ]
+    },
+    {
+      "name": "KAIST AI",
+      "created_at": "2026-05-28T05:24:22Z",
+      "usage_count": 14,
+      "examples": [
+        "2605.28775",
+        "2605.26230",
+        "2604.14004",
+        "2604.11661",
+        "2605.08735",
+        "2605.12477",
+        "2605.13880",
+        "2605.15726",
+        "2605.20258",
+        "2605.22718",
+        "2605.20910",
+        "2605.17873"
+      ]
+    },
+    {
+      "name": "KAUST Center of Excellence in Generative AI",
+      "created_at": "2026-05-28T06:35:17Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.01973"
+      ]
+    },
+    {
+      "name": "Keio University",
+      "created_at": "2026-05-28T06:30:32Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.28224"
+      ]
+    },
+    {
+      "name": "Kenotic Labs",
+      "created_at": "2026-05-28T07:02:54Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.06710",
+        "2604.17273"
+      ]
+    },
+    {
+      "name": "King Abdullah University of Science and Technology",
+      "created_at": "2026-05-28T06:30:51Z",
+      "usage_count": 2,
+      "examples": [
+        "2603.25645",
+        "2605.10762"
+      ]
+    },
+    {
+      "name": "Kling Team",
+      "created_at": "2026-05-28T05:54:35Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.26244",
+        "2605.22012"
+      ]
+    },
+    {
+      "name": "Knowledge and Data Engineering Group at Xiamen University",
+      "created_at": "2026-05-28T07:01:18Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.11716"
+      ]
+    },
+    {
+      "name": "Knowledge Engineer Group @ Tsinghua University",
+      "created_at": "2026-05-28T07:39:14Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.25806"
+      ]
+    },
+    {
+      "name": "Korea University",
+      "created_at": "2026-05-28T07:10:42Z",
+      "usage_count": 2,
+      "examples": [
+        "2509.25843",
+        "2605.07237"
+      ]
+    },
+    {
+      "name": "KR Labs",
+      "created_at": "2026-05-28T06:46:42Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04979"
+      ]
+    },
+    {
+      "name": "kuaishou technology",
+      "created_at": "2026-05-28T06:33:26Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.00590"
+      ]
+    },
+    {
+      "name": "Kyutai",
+      "created_at": "2026-05-28T05:57:48Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.22769"
+      ]
+    },
+    {
+      "name": "Lab of Kevin Jablonka at Uni Jena",
+      "created_at": "2026-05-28T07:27:37Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.18805"
+      ]
+    },
+    {
+      "name": "Language Technology Lab @University of Cambridge",
+      "created_at": "2026-05-28T07:01:55Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.11290"
+      ]
+    },
+    {
+      "name": "Language Understanding and Knowledge Acquisition Lab",
+      "created_at": "2026-05-28T07:14:29Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14568"
+      ]
+    },
+    {
+      "name": "Language, Intelligence, and Model Evaluation Lab",
+      "created_at": "2026-05-28T07:03:50Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.10577"
+      ]
+    },
+    {
+      "name": "LARK Lab@HKUST (GZ)",
+      "created_at": "2026-05-28T09:07:17Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.18703"
+      ]
+    },
+    {
+      "name": "Layer 6 AI",
+      "created_at": "2026-05-28T08:18:00Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.06788",
+        "2605.21748"
+      ]
+    },
+    {
+      "name": "Leibniz Universität Hannover",
+      "created_at": "2026-05-28T06:54:49Z",
+      "usage_count": 1,
+      "examples": [
+        "2511.16428"
+      ]
+    },
+    {
+      "name": "Lexsi Labs",
+      "created_at": "2026-05-28T08:55:09Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.15138"
+      ]
+    },
+    {
+      "name": "LG AI Research",
+      "created_at": "2026-05-28T06:55:21Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.08644"
+      ]
+    },
+    {
+      "name": "LiAuto",
+      "created_at": "2026-05-28T07:13:46Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14518"
+      ]
+    },
+    {
+      "name": "LiAuto Foundation Model",
+      "created_at": "2026-05-28T07:11:12Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14629"
+      ]
+    },
+    {
+      "name": "Lightning Rod Labs",
+      "created_at": "2026-05-28T06:36:59Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.01298",
+        "2605.12817"
+      ]
+    },
+    {
+      "name": "Lightricks",
+      "created_at": "2026-05-28T07:08:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.11788"
+      ]
+    },
+    {
+      "name": "Limex AI Lab",
+      "created_at": "2026-05-28T09:02:04Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.15482"
+      ]
+    },
+    {
+      "name": "LLM-Drop",
+      "created_at": "2026-05-28T06:46:00Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.24652"
+      ]
+    },
+    {
+      "name": "LLMEval Official  Team",
+      "created_at": "2026-05-28T09:17:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.19597"
+      ]
+    },
+    {
+      "name": "LMMs-Lab",
+      "created_at": "2026-05-28T06:39:10Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.02317",
+        "2604.28185",
+        "2605.20342"
+      ]
+    },
+    {
+      "name": "Locus Lab",
+      "created_at": "2026-05-28T09:37:07Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.21488"
+      ]
+    },
+    {
+      "name": "Long-Context Model Laboratory",
+      "created_at": "2026-05-28T06:52:56Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.07394"
+      ]
+    },
+    {
+      "name": "LongCat",
+      "created_at": "2026-05-28T05:56:31Z",
+      "usage_count": 9,
+      "examples": [
+        "2605.27141",
+        "2605.27209",
+        "2603.27538",
+        "2604.10098",
+        "2604.11778",
+        "2604.11689",
+        "2604.18240",
+        "2605.02396",
+        "2605.25874"
+      ]
+    },
+    {
+      "name": "MAC-AutoML",
+      "created_at": "2026-05-28T09:03:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.17278"
+      ]
+    },
+    {
+      "name": "MAIR Lab",
+      "created_at": "2026-05-28T06:39:33Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.27183"
+      ]
+    },
+    {
+      "name": "Massachusetts Institute of Technology",
+      "created_at": "2026-05-28T06:34:52Z",
+      "usage_count": 6,
+      "examples": [
+        "2604.01658",
+        "2604.09130",
+        "2604.18584",
+        "2605.09196",
+        "2605.18101",
+        "2605.19932"
+      ]
+    },
+    {
+      "name": "Max Planck Institute for Informatics",
+      "created_at": "2026-05-28T06:57:34Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.09181"
+      ]
+    },
+    {
+      "name": "Max Planck Institute for Intelligent Systems",
+      "created_at": "2026-05-28T08:45:42Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.15188",
+        "2512.25070"
+      ]
+    },
+    {
+      "name": "MBZUAI",
+      "created_at": "2026-05-28T06:40:14Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.03231"
+      ]
+    },
+    {
+      "name": "McAuley-Lab",
+      "created_at": "2026-05-28T07:52:08Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.02913",
+        "2605.12995"
+      ]
+    },
+    {
+      "name": "McGill NLP Group",
+      "created_at": "2026-05-28T06:52:15Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.07776",
+        "2605.18607"
+      ]
+    },
+    {
+      "name": "MeiGen-AI",
+      "created_at": "2026-05-28T09:27:43Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.21605"
+      ]
+    },
+    {
+      "name": "meituan",
+      "created_at": "2026-05-28T06:32:10Z",
+      "usage_count": 2,
+      "examples": [
+        "2603.25823",
+        "2604.10425"
+      ]
+    },
+    {
+      "name": "MemTensor",
+      "created_at": "2026-05-28T08:20:10Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.09530"
+      ]
+    },
+    {
+      "name": "Memtensor Research Group",
+      "created_at": "2026-05-28T08:57:53Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.18401"
+      ]
+    },
+    {
+      "name": "Mercedes-Benz AG",
+      "created_at": "2026-05-28T07:19:58Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.17388"
+      ]
+    },
+    {
+      "name": "Merck & Co., Inc.",
+      "created_at": "2026-05-28T07:46:48Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.27124"
+      ]
+    },
+    {
+      "name": "Meta",
+      "created_at": "2026-05-28T07:50:17Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.00932"
+      ]
+    },
+    {
+      "name": "Meta AI",
+      "created_at": "2026-05-28T07:34:11Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.24763",
+        "2605.08044"
+      ]
+    },
+    {
+      "name": "Meta Llama",
+      "created_at": "2026-05-28T06:59:42Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.08706"
+      ]
+    },
+    {
+      "name": "Meta Research",
+      "created_at": "2026-05-28T09:01:22Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.18749"
+      ]
+    },
+    {
+      "name": "MIC at DKFZ",
+      "created_at": "2026-05-28T07:15:48Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.15950",
+        "2605.18329"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "created_at": "2026-05-28T06:53:19Z",
+      "usage_count": 8,
+      "examples": [
+        "2604.08476",
+        "2604.08540",
+        "2506.14665",
+        "2604.17761",
+        "2604.28181",
+        "2605.12501",
+        "2605.12925",
+        "2605.21573"
+      ]
+    },
+    {
+      "name": "Microsoft Research",
+      "created_at": "2026-05-28T06:29:33Z",
+      "usage_count": 11,
+      "examples": [
+        "2603.25732",
+        "2604.01220",
+        "2604.15309",
+        "2604.16054",
+        "2604.24764",
+        "2605.10781",
+        "2605.15040",
+        "2605.15458",
+        "2605.23904",
+        "2605.23899",
+        "2605.24517"
+      ]
+    },
+    {
+      "name": "Midea AI Research Center",
+      "created_at": "2026-05-28T06:55:46Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.09450",
+        "2604.11045",
+        "2604.11548"
+      ]
+    },
+    {
+      "name": "MILA",
+      "created_at": "2026-05-28T09:18:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.21981"
+      ]
+    },
+    {
+      "name": "Mind Lab",
+      "created_at": "2026-05-28T08:20:17Z",
+      "usage_count": 3,
+      "examples": [
+        "2605.12357",
+        "2605.13779",
+        "2605.24830"
+      ]
+    },
+    {
+      "name": "MiniMax",
+      "created_at": "2026-05-28T05:54:44Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.26494"
+      ]
+    },
+    {
+      "name": "Minnesota NLP",
+      "created_at": "2026-05-28T07:14:42Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.10261",
+        "2604.17073"
+      ]
+    },
+    {
+      "name": "MiroMind AI",
+      "created_at": "2026-05-28T06:31:52Z",
+      "usage_count": 2,
+      "examples": [
+        "2603.28407",
+        "2512.22630"
+      ]
+    },
+    {
+      "name": "MIT",
+      "created_at": "2026-05-28T08:14:56Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10938"
+      ]
+    },
+    {
+      "name": "MLL Lab",
+      "created_at": "2026-05-28T06:47:51Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.06268"
+      ]
+    },
+    {
+      "name": "MME-Benchmarks",
+      "created_at": "2026-05-28T06:44:34Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.05015"
+      ]
+    },
+    {
+      "name": "MMLab@HKUST",
+      "created_at": "2026-05-28T06:59:07Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.10949"
+      ]
+    },
+    {
+      "name": "Mohamed Bin Zayed University of Artificial Intelligence",
+      "created_at": "2026-05-28T06:37:19Z",
+      "usage_count": 10,
+      "examples": [
+        "2604.00829",
+        "2604.06170",
+        "2604.10039",
+        "2604.17318",
+        "2604.27766",
+        "2605.10468",
+        "2605.15592",
+        "2605.18719",
+        "2605.19436",
+        "2605.12623"
+      ]
+    },
+    {
+      "name": "Monash University",
+      "created_at": "2026-05-28T07:32:18Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.21518"
+      ]
+    },
+    {
+      "name": "Moorcheh.ai",
+      "created_at": "2026-05-28T07:33:10Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.22085"
+      ]
+    },
+    {
+      "name": "Motif Technologies",
+      "created_at": "2026-05-28T07:13:56Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.16503"
+      ]
+    },
+    {
+      "name": "MSU Video Group",
+      "created_at": "2026-05-28T07:15:28Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14816"
+      ]
+    },
+    {
+      "name": "MTRI",
+      "created_at": "2026-05-28T08:10:09Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.07447"
+      ]
+    },
+    {
+      "name": "Multimedia Intelligent Processing Group in Communication University of China",
+      "created_at": "2026-05-28T07:32:47Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.22586",
+        "2605.19484"
+      ]
+    },
+    {
+      "name": "Multimodal Art Projection",
+      "created_at": "2026-05-28T07:26:22Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.19572",
+        "2605.17283"
+      ]
+    },
+    {
+      "name": "Musubi",
+      "created_at": "2026-05-28T08:16:50Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10537"
+      ]
+    },
+    {
+      "name": "MVP Lab",
+      "created_at": "2026-05-28T08:44:01Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.15190"
+      ]
+    },
+    {
+      "name": "Nanjing University",
+      "created_at": "2026-05-28T07:13:29Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.13074",
+        "2604.15093",
+        "2605.16893"
+      ]
+    },
+    {
+      "name": "Nanjing University; Tencent Youtu Lab",
+      "created_at": "2026-05-28T08:21:19Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.12013"
+      ]
+    },
+    {
+      "name": "Nankai University",
+      "created_at": "2026-05-28T07:38:44Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.25819"
+      ]
+    },
+    {
+      "name": "Nanyang Technological University",
+      "created_at": "2026-05-28T06:32:30Z",
+      "usage_count": 7,
+      "examples": [
+        "2604.01221",
+        "2604.07023",
+        "2604.10030",
+        "2604.14062",
+        "2605.08737",
+        "2605.20266",
+        "2605.22144"
+      ]
+    },
+    {
+      "name": "National Taiwan University",
+      "created_at": "2026-05-28T06:30:55Z",
+      "usage_count": 2,
+      "examples": [
+        "2603.19195",
+        "2604.17435"
+      ]
+    },
+    {
+      "name": "National University of Singapore",
+      "created_at": "2026-05-28T06:35:49Z",
+      "usage_count": 12,
+      "examples": [
+        "2603.27666",
+        "2604.00830",
+        "2604.04562",
+        "2604.01043",
+        "2604.08302",
+        "2604.07429",
+        "2604.19548",
+        "2605.04045",
+        "2605.19833",
+        "2605.20315",
+        "2605.21072",
+        "2512.24097"
+      ]
+    },
+    {
+      "name": "Natural and Artificial Intelligence Lab",
+      "created_at": "2026-05-28T06:45:29Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.05117",
+        "2604.08523",
+        "2605.08703"
+      ]
+    },
+    {
+      "name": "NAVER AI Lab",
+      "created_at": "2026-05-28T07:24:05Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.18164"
+      ]
+    },
+    {
+      "name": "Nebius",
+      "created_at": "2026-05-28T08:16:15Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10453"
+      ]
+    },
+    {
+      "name": "Netflix",
+      "created_at": "2026-05-28T06:34:56Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.02296"
+      ]
+    },
+    {
+      "name": "New York University",
+      "created_at": "2026-05-28T06:49:10Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.05846",
+        "2605.17734",
+        "2605.21803"
+      ]
+    },
+    {
+      "name": "NJU-LINK Lab",
+      "created_at": "2026-05-28T06:59:14Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.11641",
+        "2604.14683",
+        "2605.15301"
+      ]
+    },
+    {
+      "name": "NLP & AI - Korea University",
+      "created_at": "2026-05-28T06:48:58Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.04734",
+        "2604.05684",
+        "2605.26002"
+      ]
+    },
+    {
+      "name": "NLP Group in SUSTech",
+      "created_at": "2026-05-28T07:03:39Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.08865"
+      ]
+    },
+    {
+      "name": "NLP Research Group UniBW",
+      "created_at": "2026-05-28T08:46:49Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.14354",
+        "2605.14352"
+      ]
+    },
+    {
+      "name": "Northeastern University",
+      "created_at": "2026-05-28T06:54:26Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.27070"
+      ]
+    },
+    {
+      "name": "NousResearch",
+      "created_at": "2026-05-28T08:21:05Z",
+      "usage_count": 4,
+      "examples": [
+        "2605.06546",
+        "2605.06554",
+        "2605.12290",
+        "2604.27263"
+      ]
+    },
+    {
+      "name": "Novosibirsk State University",
+      "created_at": "2026-05-28T07:57:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.04523"
+      ]
+    },
+    {
+      "name": "NVIDIA",
+      "created_at": "2026-05-28T05:23:54Z",
+      "usage_count": 30,
+      "examples": [
+        "2605.28774",
+        "2605.28816",
+        "2605.23163",
+        "2605.27365",
+        "2604.04921",
+        "2604.06916",
+        "2604.07348",
+        "2604.10905",
+        "2604.09557",
+        "2604.13036",
+        "2604.12374",
+        "2604.13010",
+        "2502.07408",
+        "2604.09860",
+        "2604.26779",
+        "2604.24954",
+        "2605.13724",
+        "2605.05806",
+        "2605.15178",
+        "2605.14906",
+        "2605.18739",
+        "2605.19786",
+        "2605.22791",
+        "2605.23902"
+      ]
+    },
+    {
+      "name": "NYU Machine Learning for Language",
+      "created_at": "2026-05-28T05:57:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.26242"
+      ]
+    },
+    {
+      "name": "OmniGUI",
+      "created_at": "2026-05-28T09:08:22Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.18758"
+      ]
+    },
+    {
+      "name": "On-Point-Rnd",
+      "created_at": "2026-05-28T09:14:26Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.17659"
+      ]
+    },
+    {
+      "name": "OpenBMB",
+      "created_at": "2026-05-28T07:53:59Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.27393"
+      ]
+    },
+    {
+      "name": "OpenDataArena",
+      "created_at": "2026-05-28T06:59:49Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.10480"
+      ]
+    },
+    {
+      "name": "OpenDataLab",
+      "created_at": "2026-05-28T06:40:51Z",
+      "usage_count": 5,
+      "examples": [
+        "2604.04771",
+        "2604.24819",
+        "2605.10341",
+        "2605.12882",
+        "2605.15963"
+      ]
+    },
+    {
+      "name": "OpenEnvision",
+      "created_at": "2026-05-28T08:13:51Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.08354"
+      ]
+    },
+    {
+      "name": "OpenMOSS",
+      "created_at": "2026-05-28T08:00:58Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.04077",
+        "2605.12090"
+      ]
+    },
+    {
+      "name": "OPPO",
+      "created_at": "2026-05-28T06:33:34Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.00886",
+        "2605.05765"
+      ]
+    },
+    {
+      "name": "OPPO Research Institute",
+      "created_at": "2026-05-28T06:31:22Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.22794"
+      ]
+    },
+    {
+      "name": "OPTML Group @ MSU",
+      "created_at": "2026-05-28T09:36:29Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.19282"
+      ]
+    },
+    {
+      "name": "Orailix",
+      "created_at": "2026-05-28T09:45:31Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.21085"
+      ]
+    },
+    {
+      "name": "Oregon State University",
+      "created_at": "2026-05-28T08:52:40Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.14212"
+      ]
+    },
+    {
+      "name": "OSU NLP Group",
+      "created_at": "2026-05-28T06:37:39Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.01619",
+        "2605.24218"
+      ]
+    },
+    {
+      "name": "PediaMed AI",
+      "created_at": "2026-05-28T09:03:10Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.17894"
+      ]
+    },
+    {
+      "name": "Peking University",
+      "created_at": "2026-05-28T05:24:34Z",
+      "usage_count": 20,
+      "examples": [
+        "2605.28691",
+        "2603.26164",
+        "2604.01569",
+        "2604.04707",
+        "2604.05939",
+        "2604.17454",
+        "2604.17472",
+        "2604.26951",
+        "2604.24026",
+        "2605.06747",
+        "2605.07363",
+        "2605.10365",
+        "2605.11363",
+        "2605.15186",
+        "2605.15250",
+        "2605.18287",
+        "2605.18263",
+        "2605.14747"
+      ]
+    },
+    {
+      "name": "Pennsylvania State University",
+      "created_at": "2026-05-28T06:34:05Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.01194",
+        "2604.03480",
+        "2604.28157"
+      ]
+    },
+    {
+      "name": "Perception and LANguage Lab @UIUC",
+      "created_at": "2026-05-28T06:53:45Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.08503",
+        "2604.08536",
+        "2604.08645"
+      ]
+    },
+    {
+      "name": "Pi3AI",
+      "created_at": "2026-05-28T09:01:42Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.16909"
+      ]
+    },
+    {
+      "name": "Plurai",
+      "created_at": "2026-05-28T07:39:20Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.25203"
+      ]
+    },
+    {
+      "name": "Pohang University of Science and Technology",
+      "created_at": "2026-05-28T06:36:54Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.01666"
+      ]
+    },
+    {
+      "name": "Politecnico di Torino",
+      "created_at": "2026-05-28T07:18:54Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.18267"
+      ]
+    },
+    {
+      "name": "Praxel",
+      "created_at": "2026-05-28T07:41:48Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.25476",
+        "2604.25441",
+        "2605.00777",
+        "2605.03073"
+      ]
+    },
+    {
+      "name": "Princeton University",
+      "created_at": "2026-05-28T06:29:38Z",
+      "usage_count": 12,
+      "examples": [
+        "2603.29089",
+        "2603.30043",
+        "2604.14084",
+        "2604.12002",
+        "2604.20156",
+        "2605.00347",
+        "2604.25788",
+        "2605.09998",
+        "2605.12483",
+        "2605.13834",
+        "2605.13997",
+        "2605.17698"
+      ]
+    },
+    {
+      "name": "Purdue University",
+      "created_at": "2026-05-28T08:15:09Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.26326"
+      ]
+    },
+    {
+      "name": "Qluon",
+      "created_at": "2026-05-28T09:22:01Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.19008"
+      ]
+    },
+    {
+      "name": "Qualcomm",
+      "created_at": "2026-05-28T08:13:33Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.07721"
+      ]
+    },
+    {
+      "name": "Qualixar",
+      "created_at": "2026-05-28T07:12:01Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04514"
+      ]
+    },
+    {
+      "name": "Queen's University",
+      "created_at": "2026-05-28T07:09:13Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.09409",
+        "2605.24213"
+      ]
+    },
+    {
+      "name": "Qwen",
+      "created_at": "2026-05-28T06:27:32Z",
+      "usage_count": 6,
+      "examples": [
+        "2603.19835",
+        "2604.10866",
+        "2604.15804",
+        "2605.10730",
+        "2605.13565",
+        "2605.25624"
+      ]
+    },
+    {
+      "name": "Qwen DianJin",
+      "created_at": "2026-05-28T07:19:43Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.17972"
+      ]
+    },
+    {
+      "name": "QwikBuild",
+      "created_at": "2026-05-28T07:55:41Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.04637"
+      ]
+    },
+    {
+      "name": "Red Hat AI",
+      "created_at": "2026-05-28T09:03:44Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.17842"
+      ]
+    },
+    {
+      "name": "rednote-hilab",
+      "created_at": "2026-05-28T05:25:20Z",
+      "usage_count": 4,
+      "examples": [
+        "2605.27882",
+        "2605.11609"
+      ]
+    },
+    {
+      "name": "Rensselaer Polytechnic Institute",
+      "created_at": "2026-05-28T06:47:22Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.04074",
+        "2604.20857",
+        "2605.06607",
+        "2605.18630"
+      ]
+    },
+    {
+      "name": "Rice RobotPI Lab",
+      "created_at": "2026-05-28T09:11:59Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.09789"
+      ]
+    },
+    {
+      "name": "RL-MIND Group",
+      "created_at": "2026-05-28T07:22:31Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.17078"
+      ]
+    },
+    {
+      "name": "RLWRLD",
+      "created_at": "2026-05-28T07:53:36Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.03269"
+      ]
+    },
+    {
+      "name": "Robbyant",
+      "created_at": "2026-05-28T07:07:49Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14141"
+      ]
+    },
+    {
+      "name": "Ropedia",
+      "created_at": "2026-05-28T05:54:20Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.27367"
+      ]
+    },
+    {
+      "name": "RTP-LLM",
+      "created_at": "2026-05-28T05:57:15Z",
+      "usage_count": 3,
+      "examples": [
+        "2605.26632",
+        "2605.16928",
+        "2605.20708"
+      ]
+    },
+    {
+      "name": "RUC-AIBOX",
+      "created_at": "2026-05-28T07:01:44Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.11446",
+        "2604.12890",
+        "2604.24583"
+      ]
+    },
+    {
+      "name": "RUC-GSAI-IIRLab",
+      "created_at": "2026-05-28T06:44:47Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04949"
+      ]
+    },
+    {
+      "name": "Rutgers University",
+      "created_at": "2026-05-28T08:16:42Z",
+      "usage_count": 3,
+      "examples": [
+        "2605.08715",
+        "2605.08504",
+        "2605.09296"
+      ]
+    },
+    {
+      "name": "SAILING Lab (CMU & MBZUAI)",
+      "created_at": "2026-05-28T09:28:41Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.22138"
+      ]
+    },
+    {
+      "name": "Salesforce AI Research",
+      "created_at": "2026-05-28T06:35:56Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.01676",
+        "2604.02315",
+        "2604.16830",
+        "2605.15113"
+      ]
+    },
+    {
+      "name": "Samsung  AI Lab (SAIL) Montreal",
+      "created_at": "2026-05-28T06:46:46Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04356"
+      ]
+    },
+    {
+      "name": "Samsung Research",
+      "created_at": "2026-05-28T06:28:57Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.00093",
+        "2605.13163"
+      ]
+    },
+    {
+      "name": "Sanae AI Lab",
+      "created_at": "2026-05-28T09:42:27Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.23491"
+      ]
+    },
+    {
+      "name": "Sandy Research",
+      "created_at": "2026-05-28T07:05:12Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.12946"
+      ]
+    },
+    {
+      "name": "Sapient AI",
+      "created_at": "2026-05-28T09:15:33Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.20613"
+      ]
+    },
+    {
+      "name": "Scale AI",
+      "created_at": "2026-05-28T07:01:49Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.10718",
+        "2604.09408",
+        "2605.20164"
+      ]
+    },
+    {
+      "name": "SEACrowd",
+      "created_at": "2026-05-28T07:08:01Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.11490"
+      ]
+    },
+    {
+      "name": "SenseNova",
+      "created_at": "2026-05-28T08:20:02Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.12500"
+      ]
+    },
+    {
+      "name": "Seoul National University",
+      "created_at": "2026-05-28T05:24:06Z",
+      "usage_count": 12,
+      "examples": [
+        "2605.28003",
+        "2603.29387",
+        "2604.04934",
+        "2604.03619",
+        "2605.09996",
+        "2605.05886",
+        "2605.07579",
+        "2605.07865",
+        "2605.15669",
+        "2605.17448"
+      ]
+    },
+    {
+      "name": "Seoul National University VLSI Lab",
+      "created_at": "2026-05-28T09:01:15Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.16839"
+      ]
+    },
+    {
+      "name": "ServiceNow",
+      "created_at": "2026-05-28T06:36:16Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.02007"
+      ]
+    },
+    {
+      "name": "ServiceNow Research",
+      "created_at": "2026-05-28T06:30:26Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.29852"
+      ]
+    },
+    {
+      "name": "ServiceNow-AI",
+      "created_at": "2026-05-28T06:31:44Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.00073",
+        "2604.01202",
+        "2605.12178",
+        "2605.13841"
+      ]
+    },
+    {
+      "name": "Shanda AI Research Tokyo",
+      "created_at": "2026-05-28T06:34:35Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.02329"
+      ]
+    },
+    {
+      "name": "shanghai ailab",
+      "created_at": "2026-05-28T06:28:04Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.00479",
+        "2605.18451"
+      ]
+    },
+    {
+      "name": "Shanghai Jiao Tong University",
+      "created_at": "2026-05-28T05:57:43Z",
+      "usage_count": 12,
+      "examples": [
+        "2605.24931",
+        "2604.02097",
+        "2604.08224",
+        "2604.06231",
+        "2604.09574",
+        "2604.18396",
+        "2604.17406",
+        "2605.03042",
+        "2605.14306",
+        "2605.15843",
+        "2605.18714",
+        "2605.25971"
+      ]
+    },
+    {
+      "name": "Shanghai Jiaotong University 1(NOT OFFICIAL)",
+      "created_at": "2026-05-28T07:08:43Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.03088",
+        "2605.13527"
+      ]
+    },
+    {
+      "name": "shanghai university",
+      "created_at": "2026-05-28T06:31:07Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.29437"
+      ]
+    },
+    {
+      "name": "ShanghaiTech University",
+      "created_at": "2026-05-28T07:40:45Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.24927"
+      ]
+    },
+    {
+      "name": "Shiyu's Lab",
+      "created_at": "2026-05-28T06:45:22Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04323"
+      ]
+    },
+    {
+      "name": "Show Lab",
+      "created_at": "2026-05-28T05:54:59Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.17423",
+        "2605.06535"
+      ]
+    },
+    {
+      "name": "SII - GAIR",
+      "created_at": "2026-05-28T06:35:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.29640"
+      ]
+    },
+    {
+      "name": "SII-GAIR",
+      "created_at": "2026-05-28T06:28:25Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.27164"
+      ]
+    },
+    {
+      "name": "Simon Fraser University",
+      "created_at": "2026-05-28T07:34:18Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.24300"
+      ]
+    },
+    {
+      "name": "Simplified Reasoning",
+      "created_at": "2026-05-28T09:24:13Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.14678"
+      ]
+    },
+    {
+      "name": "Simula Metropolitan Center for Digital Engineering (SimulaMet)",
+      "created_at": "2026-05-28T08:01:15Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.06652"
+      ]
+    },
+    {
+      "name": "Simular",
+      "created_at": "2026-05-28T07:17:37Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.17849"
+      ]
+    },
+    {
+      "name": "Singapore Management University",
+      "created_at": "2026-05-28T06:37:59Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.00491"
+      ]
+    },
+    {
+      "name": "Skoltech",
+      "created_at": "2026-05-28T07:31:19Z",
+      "usage_count": 2,
+      "examples": [
+        "2506.17001",
+        "2605.13481"
+      ]
+    },
+    {
+      "name": "Snap Research",
+      "created_at": "2026-05-28T06:37:49Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.02330",
+        "2605.26109"
+      ]
+    },
+    {
+      "name": "Snowflake",
+      "created_at": "2026-05-28T05:57:25Z",
+      "usage_count": 4,
+      "examples": [
+        "2605.23215",
+        "2603.25764",
+        "2604.00698",
+        "2604.18845"
+      ]
+    },
+    {
+      "name": "Social And Language Technology Lab",
+      "created_at": "2026-05-28T07:26:54Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.20779"
+      ]
+    },
+    {
+      "name": "Sony",
+      "created_at": "2026-05-28T06:36:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.01929"
+      ]
+    },
+    {
+      "name": "Soochow University",
+      "created_at": "2026-05-28T08:36:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10268"
+      ]
+    },
+    {
+      "name": "Southwest Jiaotong University",
+      "created_at": "2026-05-28T07:52:50Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.01466"
+      ]
+    },
+    {
+      "name": "SpeakLeash | Spichlerz",
+      "created_at": "2026-05-28T07:01:12Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.10799"
+      ]
+    },
+    {
+      "name": "Sponge Computing Lab at HKUST",
+      "created_at": "2026-05-28T09:10:29Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.20150"
+      ]
+    },
+    {
+      "name": "Stability AI",
+      "created_at": "2026-05-28T09:18:01Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.17991",
+        "2605.21226"
+      ]
+    },
+    {
+      "name": "Stanford NLP",
+      "created_at": "2026-05-28T07:32:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.22294"
+      ]
+    },
+    {
+      "name": "Stanford University",
+      "created_at": "2026-05-28T06:55:36Z",
+      "usage_count": 12,
+      "examples": [
+        "2604.08567",
+        "2604.05336",
+        "2604.10333",
+        "2511.15915",
+        "2604.25917",
+        "2604.23380",
+        "2604.24658",
+        "2605.02240",
+        "2605.02028",
+        "2605.12964",
+        "2605.18746",
+        "2512.24766"
+      ]
+    },
+    {
+      "name": "StepFun",
+      "created_at": "2026-05-28T07:38:59Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.25719",
+        "2605.12034",
+        "2605.23463"
+      ]
+    },
+    {
+      "name": "Sun Yat-sen University",
+      "created_at": "2026-05-28T07:51:27Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.00891",
+        "2605.03353"
+      ]
+    },
+    {
+      "name": "SyMuPe",
+      "created_at": "2026-05-28T08:01:07Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.06627"
+      ]
+    },
+    {
+      "name": "Talan",
+      "created_at": "2026-05-28T08:37:48Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.08557"
+      ]
+    },
+    {
+      "name": "Technical University of Denmark",
+      "created_at": "2026-05-28T08:30:51Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.11696"
+      ]
+    },
+    {
+      "name": "Technical University of Munich",
+      "created_at": "2026-05-28T06:32:36Z",
+      "usage_count": 6,
+      "examples": [
+        "2603.26661",
+        "2604.13226",
+        "2604.21106",
+        "2605.00414",
+        "2605.13542",
+        "2605.23888"
+      ]
+    },
+    {
+      "name": "Technion Israel institute of technology",
+      "created_at": "2026-05-28T07:04:55Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.12373",
+        "2605.10616",
+        "2605.12411"
+      ]
+    },
+    {
+      "name": "Technology Innovation Institute",
+      "created_at": "2026-05-28T06:29:17Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.27365"
+      ]
+    },
+    {
+      "name": "Tel Aviv University",
+      "created_at": "2026-05-28T07:32:11Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.22554",
+        "2605.25052"
+      ]
+    },
+    {
+      "name": "Tele-AI",
+      "created_at": "2026-05-28T06:39:47Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.01609"
+      ]
+    },
+    {
+      "name": "Temple University",
+      "created_at": "2026-05-28T07:56:06Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.05166"
+      ]
+    },
+    {
+      "name": "Tencent",
+      "created_at": "2026-05-28T05:24:54Z",
+      "usage_count": 16,
+      "examples": [
+        "2605.28398",
+        "2605.23271",
+        "2605.26952",
+        "2604.08364",
+        "2604.14268",
+        "2604.19742",
+        "2604.19667",
+        "2605.06416",
+        "2605.06200",
+        "2605.06221",
+        "2605.25343",
+        "2512.24618",
+        "2512.23959",
+        "2512.24615"
+      ]
+    },
+    {
+      "name": "Tencent Hunyuan",
+      "created_at": "2026-05-28T05:24:11Z",
+      "usage_count": 16,
+      "examples": [
+        "2605.28548",
+        "2603.29620",
+        "2604.07430",
+        "2604.05072",
+        "2604.25727",
+        "2605.05185",
+        "2605.06139",
+        "2605.09262",
+        "2605.09269",
+        "2605.11711",
+        "2605.11739",
+        "2605.15876",
+        "2605.20873",
+        "2605.26108"
+      ]
+    },
+    {
+      "name": "Texas A&M University",
+      "created_at": "2026-05-28T06:53:14Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.03841"
+      ]
+    },
+    {
+      "name": "texasaandm",
+      "created_at": "2026-05-28T07:06:07Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.10812"
+      ]
+    },
+    {
+      "name": "Text Intelligence Lab of Westlake University",
+      "created_at": "2026-05-28T08:37:55Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.04651"
+      ]
+    },
+    {
+      "name": "The BEACON Project",
+      "created_at": "2026-05-28T08:36:39Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10867"
+      ]
+    },
+    {
+      "name": "The Chinese University of Hong Kong",
+      "created_at": "2026-05-28T05:55:45Z",
+      "usage_count": 4,
+      "examples": [
+        "2605.25802",
+        "2605.12492",
+        "2605.15198",
+        "2605.17242"
+      ]
+    },
+    {
+      "name": "The Chinese University of Hong Kong - Database Group",
+      "created_at": "2026-05-28T08:15:32Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10923"
+      ]
+    },
+    {
+      "name": "The College of William & Mary",
+      "created_at": "2026-05-28T08:26:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.11400"
+      ]
+    },
+    {
+      "name": "The Hebrew University of Jerusalem",
+      "created_at": "2026-05-28T06:56:25Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.09237",
+        "2604.15284"
+      ]
+    },
+    {
+      "name": "The Hong Kong Polytechnic University",
+      "created_at": "2026-05-28T07:21:48Z",
+      "usage_count": 5,
+      "examples": [
+        "2604.19254",
+        "2605.09608",
+        "2509.24244",
+        "2605.13030",
+        "2605.16882"
+      ]
+    },
+    {
+      "name": "The Hong Kong University of Science and Technology",
+      "created_at": "2026-05-28T08:22:23Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10832"
+      ]
+    },
+    {
+      "name": "The Information Engineering Lab",
+      "created_at": "2026-05-28T08:09:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.07210"
+      ]
+    },
+    {
+      "name": "The Ohio State University",
+      "created_at": "2026-05-28T09:40:41Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.24117"
+      ]
+    },
+    {
+      "name": "The University of Hong Kong",
+      "created_at": "2026-05-28T06:53:25Z",
+      "usage_count": 9,
+      "examples": [
+        "2604.08064",
+        "2604.18564",
+        "2604.08537",
+        "2604.17696",
+        "2604.18982",
+        "2605.06222",
+        "2605.09591",
+        "2605.18727",
+        "2605.19660"
+      ]
+    },
+    {
+      "name": "The University of Queensland",
+      "created_at": "2026-05-28T08:44:45Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.01018"
+      ]
+    },
+    {
+      "name": "The University of Tokyo",
+      "created_at": "2026-05-28T09:24:06Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.22109"
+      ]
+    },
+    {
+      "name": "Themis",
+      "created_at": "2026-05-28T07:47:40Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.00754"
+      ]
+    },
+    {
+      "name": "Thoughtworks",
+      "created_at": "2026-05-28T08:47:40Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.14323"
+      ]
+    },
+    {
+      "name": "Tianjin University",
+      "created_at": "2026-05-28T07:03:13Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.12627"
+      ]
+    },
+    {
+      "name": "Tianyi Lab",
+      "created_at": "2026-05-28T07:16:39Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.18543"
+      ]
+    },
+    {
+      "name": "TIGER-Lab",
+      "created_at": "2026-05-28T07:07:03Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.11626",
+        "2605.05242"
+      ]
+    },
+    {
+      "name": "Together",
+      "created_at": "2026-05-28T08:58:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.17757"
+      ]
+    },
+    {
+      "name": "Tongyi-MAI",
+      "created_at": "2026-05-28T07:54:25Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.05204"
+      ]
+    },
+    {
+      "name": "TongyiLab",
+      "created_at": "2026-05-28T07:39:24Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.24005",
+        "2605.12481",
+        "2605.20183",
+        "2605.18018"
+      ]
+    },
+    {
+      "name": "Trustworthy Autonomous Cyber Physical Systems (ACPS) Lab",
+      "created_at": "2026-05-28T08:11:16Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.06455"
+      ]
+    },
+    {
+      "name": "Tsinghua Machine Learning Group",
+      "created_at": "2026-05-28T08:40:14Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.15141"
+      ]
+    },
+    {
+      "name": "Tsinghua NLP Group",
+      "created_at": "2026-05-28T07:03:09Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.13016",
+        "2605.10933"
+      ]
+    },
+    {
+      "name": "Tsinghua University",
+      "created_at": "2026-05-28T05:56:36Z",
+      "usage_count": 13,
+      "examples": [
+        "2605.25437",
+        "2604.08921",
+        "2507.04227",
+        "2604.24625",
+        "2605.04956",
+        "2605.05997",
+        "2605.08985",
+        "2605.08978",
+        "2605.14278",
+        "2605.18643",
+        "2602.07892",
+        "2605.22538",
+        "2605.25160"
+      ]
+    },
+    {
+      "name": "Tsinghua-IVG",
+      "created_at": "2026-05-28T07:30:39Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.21904"
+      ]
+    },
+    {
+      "name": "Tsinghua-LeapLab",
+      "created_at": "2026-05-28T07:38:37Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.25636",
+        "2605.01711",
+        "2605.14333"
+      ]
+    },
+    {
+      "name": "UC Berkeley",
+      "created_at": "2026-05-28T06:48:25Z",
+      "usage_count": 4,
+      "examples": [
+        "2604.04247",
+        "2604.09687",
+        "2604.08551",
+        "2605.19633"
+      ]
+    },
+    {
+      "name": "UC Davis",
+      "created_at": "2026-05-28T06:48:47Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.07343",
+        "2605.07075",
+        "2605.16403"
+      ]
+    },
+    {
+      "name": "UC Santa Barbara NLP Group",
+      "created_at": "2026-05-28T06:33:01Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.00842",
+        "2604.27039",
+        "2605.14271"
+      ]
+    },
+    {
+      "name": "UC Santa Cruz",
+      "created_at": "2026-05-28T09:35:49Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.20177"
+      ]
+    },
+    {
+      "name": "UCLA",
+      "created_at": "2026-05-28T06:33:38Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.29002"
+      ]
+    },
+    {
+      "name": "UCLA NLP",
+      "created_at": "2026-05-28T06:51:30Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.08539",
+        "2605.12493"
+      ]
+    },
+    {
+      "name": "UCSC-VLAA",
+      "created_at": "2026-05-28T06:42:31Z",
+      "usage_count": 5,
+      "examples": [
+        "2604.04759",
+        "2604.15706",
+        "2604.20200",
+        "2604.21375",
+        "2605.20176"
+      ]
+    },
+    {
+      "name": "UIUC ScaleML Lab",
+      "created_at": "2026-05-28T07:21:14Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.13346"
+      ]
+    },
+    {
+      "name": "Ulsan National Institute of Science and Technology",
+      "created_at": "2026-05-28T06:57:01Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.07786"
+      ]
+    },
+    {
+      "name": "UNC Chapel Hill",
+      "created_at": "2026-05-28T07:01:40Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.11666",
+        "2604.13418"
+      ]
+    },
+    {
+      "name": "Univerity of Bonn",
+      "created_at": "2026-05-28T07:06:35Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.11211"
+      ]
+    },
+    {
+      "name": "Universidad de San Andrés",
+      "created_at": "2026-05-28T09:06:37Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.14236"
+      ]
+    },
+    {
+      "name": "Universitat de Barcelona",
+      "created_at": "2026-05-28T09:31:26Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.20496"
+      ]
+    },
+    {
+      "name": "University College London",
+      "created_at": "2026-05-28T07:32:55Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.22436"
+      ]
+    },
+    {
+      "name": "University College London CS",
+      "created_at": "2026-05-28T09:33:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.22878"
+      ]
+    },
+    {
+      "name": "University of Alberta",
+      "created_at": "2026-05-28T06:57:54Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04987"
+      ]
+    },
+    {
+      "name": "University of Amsterdam",
+      "created_at": "2026-05-28T07:35:33Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.24762",
+        "2605.25191"
+      ]
+    },
+    {
+      "name": "University of Bologna",
+      "created_at": "2026-05-28T07:50:57Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.00632"
+      ]
+    },
+    {
+      "name": "University of British Columbia",
+      "created_at": "2026-05-28T08:08:07Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.06832"
+      ]
+    },
+    {
+      "name": "University of California at San Diego",
+      "created_at": "2026-05-28T06:59:20Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.11201",
+        "2605.08520",
+        "2605.14169"
+      ]
+    },
+    {
+      "name": "University of California San Diego",
+      "created_at": "2026-05-28T08:01:36Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.05758"
+      ]
+    },
+    {
+      "name": "University of California, Berkeley",
+      "created_at": "2026-05-28T07:22:52Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.17397",
+        "2604.20720",
+        "2605.12484"
+      ]
+    },
+    {
+      "name": "University of California, Los Angeles",
+      "created_at": "2026-05-28T05:25:13Z",
+      "usage_count": 3,
+      "examples": [
+        "2605.27028"
+      ]
+    },
+    {
+      "name": "University of Edinburgh",
+      "created_at": "2026-05-28T07:01:28Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.11544"
+      ]
+    },
+    {
+      "name": "University of Florida",
+      "created_at": "2026-05-28T09:04:35Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.16386"
+      ]
+    },
+    {
+      "name": "University of Hong Kong",
+      "created_at": "2026-05-28T07:49:02Z",
+      "usage_count": 3,
+      "examples": [
+        "2405.13729",
+        "2411.18966",
+        "2605.06196"
+      ]
+    },
+    {
+      "name": "University of Houston",
+      "created_at": "2026-05-28T08:02:06Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.06477"
+      ]
+    },
+    {
+      "name": "University of Illinois at Urbana-Champaign",
+      "created_at": "2026-05-28T05:26:02Z",
+      "usage_count": 17,
+      "examples": [
+        "2605.26396",
+        "2603.28590",
+        "2604.11748",
+        "2604.11969",
+        "2604.27351",
+        "2605.01214",
+        "2605.02910",
+        "2605.05558",
+        "2605.12978",
+        "2605.11182",
+        "2605.12975",
+        "2605.00180",
+        "2605.15012",
+        "2605.15764",
+        "2605.22642"
+      ]
+    },
+    {
+      "name": "University of Illinois Chicago",
+      "created_at": "2026-05-28T06:33:42Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.00892",
+        "2604.00375",
+        "2605.17672"
+      ]
+    },
+    {
+      "name": "University of Illinois Urbana-Champaign",
+      "created_at": "2026-05-28T06:48:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.25111"
+      ]
+    },
+    {
+      "name": "University of Leeds",
+      "created_at": "2026-05-28T07:02:16Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.09212"
+      ]
+    },
+    {
+      "name": "University of Macau",
+      "created_at": "2026-05-28T09:07:27Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.19995"
+      ]
+    },
+    {
+      "name": "University of Maryland",
+      "created_at": "2026-05-28T09:00:42Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.14038"
+      ]
+    },
+    {
+      "name": "University of Massachusetts Amherst",
+      "created_at": "2026-05-28T08:39:08Z",
+      "usage_count": 3,
+      "examples": [
+        "2605.08583",
+        "2605.13647",
+        "2605.21712"
+      ]
+    },
+    {
+      "name": "University of Montreal",
+      "created_at": "2026-05-28T09:38:31Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.23218"
+      ]
+    },
+    {
+      "name": "University of North Carolina at Chapel Hill",
+      "created_at": "2026-05-28T06:35:28Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.01007",
+        "2604.04202",
+        "2605.14269"
+      ]
+    },
+    {
+      "name": "University of Notre Dame",
+      "created_at": "2026-05-28T08:16:05Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.10664",
+        "2605.11518"
+      ]
+    },
+    {
+      "name": "University of Oxford",
+      "created_at": "2026-05-28T05:54:39Z",
+      "usage_count": 4,
+      "examples": [
+        "2605.25893",
+        "2603.28763",
+        "2506.01015",
+        "2605.22681"
+      ]
+    },
+    {
+      "name": "University of Pennsylvania",
+      "created_at": "2026-05-28T06:31:01Z",
+      "usage_count": 3,
+      "examples": [
+        "2603.17191",
+        "2604.05333",
+        "2605.18106"
+      ]
+    },
+    {
+      "name": "University of Science and Technology Beijing",
+      "created_at": "2026-05-28T07:18:49Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.16593"
+      ]
+    },
+    {
+      "name": "University of Science and Technology of China",
+      "created_at": "2026-05-28T06:45:10Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.05404",
+        "2605.14876",
+        "2605.21850"
+      ]
+    },
+    {
+      "name": "University of Southern California",
+      "created_at": "2026-05-28T06:38:19Z",
+      "usage_count": 6,
+      "examples": [
+        "2603.27449",
+        "2604.17338",
+        "2604.20817",
+        "2604.11610",
+        "2605.06241",
+        "2605.12466"
+      ]
+    },
+    {
+      "name": "University of Texas at Austin",
+      "created_at": "2026-05-28T08:08:48Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.06628"
+      ]
+    },
+    {
+      "name": "University of Tokyo",
+      "created_at": "2026-05-28T06:32:56Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.01128"
+      ]
+    },
+    {
+      "name": "University of Toronto",
+      "created_at": "2026-05-28T07:23:39Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.15664",
+        "2605.23892"
+      ]
+    },
+    {
+      "name": "University of Toronto Computer Science",
+      "created_at": "2026-05-28T06:57:49Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.08571",
+        "2605.22668"
+      ]
+    },
+    {
+      "name": "University of Toronto CSSLab",
+      "created_at": "2026-05-28T06:45:15Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.01591",
+        "2604.18519"
+      ]
+    },
+    {
+      "name": "University of Vienna",
+      "created_at": "2026-05-28T06:37:25Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.26233"
+      ]
+    },
+    {
+      "name": "University of Washington",
+      "created_at": "2026-05-28T07:04:50Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.10966",
+        "2604.19642"
+      ]
+    },
+    {
+      "name": "University of Waterloo",
+      "created_at": "2026-05-28T06:55:15Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.07413",
+        "2605.22766"
+      ]
+    },
+    {
+      "name": "University of Western Australia",
+      "created_at": "2026-05-28T06:56:14Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04415"
+      ]
+    },
+    {
+      "name": "University of Wisconsin - Madison",
+      "created_at": "2026-05-28T06:47:32Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.01622",
+        "2604.13151",
+        "2605.15181"
+      ]
+    },
+    {
+      "name": "University of Wisconsin-Madison",
+      "created_at": "2026-05-28T06:39:28Z",
+      "usage_count": 3,
+      "examples": [
+        "2604.01411",
+        "2605.17110",
+        "2605.17109"
+      ]
+    },
+    {
+      "name": "Università degli Studi di Padova",
+      "created_at": "2026-05-28T07:36:36Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.23604"
+      ]
+    },
+    {
+      "name": "UniX Lab",
+      "created_at": "2026-05-28T08:13:13Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10434"
+      ]
+    },
+    {
+      "name": "Unknown",
+      "created_at": "2026-05-28T05:23:48Z",
+      "usage_count": 489,
+      "examples": [
+        "2605.28820",
+        "2605.28805",
+        "2605.28184",
+        "2605.28763",
+        "2605.27311",
+        "2605.27905",
+        "2605.27466",
+        "2605.27762",
+        "2605.26114",
+        "2605.25979",
+        "2605.27476",
+        "2605.25188",
+        "2605.24468",
+        "2605.27235",
+        "2503.08600",
+        "2605.26293",
+        "2605.15042",
+        "2603.28032",
+        "2603.28088",
+        "2603.29957",
+        "2603.28052",
+        "2603.29585",
+        "2603.29029",
+        "2603.30045",
+        "2603.26174",
+        "2603.27520",
+        "2603.26357",
+        "2603.24414",
+        "2604.01161",
+        "2603.26017",
+        "2604.00025",
+        "2603.26653",
+        "2604.00626",
+        "2604.00528",
+        "2604.00986",
+        "2604.01168",
+        "2603.29247",
+        "2604.00913",
+        "2603.23582",
+        "2604.02029",
+        "2604.01001",
+        "2604.02289",
+        "2604.01760",
+        "2604.01014",
+        "2603.28130",
+        "2604.01328",
+        "2604.01479",
+        "2604.02088",
+        "2603.06679",
+        "2604.01404",
+        "2604.03144",
+        "2604.03128",
+        "2604.03016",
+        "2604.02947",
+        "2604.02368",
+        "2604.02486",
+        "2603.22078",
+        "2604.03118",
+        "2604.04184",
+        "2604.03993",
+        "2604.04901",
+        "2604.03253",
+        "2604.04917",
+        "2604.02288",
+        "2602.08602",
+        "2604.04155",
+        "2604.04780",
+        "2604.03687",
+        "2604.04767",
+        "2604.01483",
+        "2604.03266",
+        "2604.03695",
+        "2604.03922",
+        "2604.05091",
+        "2604.02648",
+        "2604.05533",
+        "2604.06168",
+        "2604.05963",
+        "2604.06079",
+        "2604.06425",
+        "2604.07340",
+        "2604.06427",
+        "2604.06757",
+        "2604.07350",
+        "2604.06912",
+        "2603.26657",
+        "2604.07273",
+        "2604.03995",
+        "2604.06182",
+        "2604.08377",
+        "2604.07823",
+        "2604.08120",
+        "2604.07966",
+        "2604.08340",
+        "2604.06377",
+        "2604.08172",
+        "2604.06938",
+        "2604.08124",
+        "2602.06057",
+        "2604.08995",
+        "2604.08801",
+        "2604.09201",
+        "2604.08118",
+        "2604.11297",
+        "2604.08121",
+        "2604.10708",
+        "2604.10688",
+        "2604.11035",
+        "2604.11753",
+        "2604.09459",
+        "2604.11259",
+        "2604.02340",
+        "2604.11547",
+        "2604.11491",
+        "2604.10539",
+        "2604.11004",
+        "2604.04385",
+        "2604.13030",
+        "2604.12989",
+        "2604.12710",
+        "2604.05278",
+        "2604.12119",
+        "2604.11840",
+        "2604.09594",
+        "2604.13023",
+        "2604.09746",
+        "2604.06159",
+        "2604.14147",
+        "2604.13201",
+        "2604.14164",
+        "2604.14228",
+        "2604.14125",
+        "2604.11707",
+        "2604.14572",
+        "2604.14922",
+        "2604.14265",
+        "2604.07466",
+        "2604.14914",
+        "2604.13618",
+        "2603.27844",
+        "2211.16780",
+        "2604.04936",
+        "2604.16027",
+        "2604.15151",
+        "2604.05716",
+        "2604.15715",
+        "2604.15411",
+        "2604.10571",
+        "2604.16254",
+        "2604.16272",
+        "2604.18394",
+        "2604.16893",
+        "2604.18574",
+        "2604.18224",
+        "2604.17308",
+        "2604.16826",
+        "2604.13313",
+        "2604.18131",
+        "2604.15710",
+        "2604.16642",
+        "2604.16498",
+        "2604.17698",
+        "2602.15143",
+        "2604.16943",
+        "2511.10262",
+        "2604.19747",
+        "2604.19295",
+        "2604.19211",
+        "2604.19321",
+        "2604.19406",
+        "2604.19440",
+        "2604.19550",
+        "2604.19341",
+        "2604.17982",
+        "2604.16060",
+        "2604.16913",
+        "2604.18591",
+        "2604.20733",
+        "2604.20570",
+        "2604.14932",
+        "2604.20246",
+        "2604.18932",
+        "2604.19902",
+        "2604.19926",
+        "2604.18780",
+        "2604.16659",
+        "2604.21686",
+        "2604.21689",
+        "2604.21931",
+        "2604.21921",
+        "2604.20244",
+        "2604.10268",
+        "2604.17492",
+        "2604.21668",
+        "2604.21300",
+        "2604.20398",
+        "2604.21193",
+        "2604.16926",
+        "2604.22748",
+        "2604.18580",
+        "2604.22565",
+        "2604.22152",
+        "2604.16353",
+        "2604.22446",
+        "2604.23775",
+        "2604.22875",
+        "2604.23781",
+        "2604.15574",
+        "2508.10180",
+        "2604.17565",
+        "2604.24479",
+        "2604.22880",
+        "2604.23772",
+        "2604.23644",
+        "2604.23210",
+        "2604.16391",
+        "2604.24040",
+        "2604.23600",
+        "2604.25914",
+        "2604.21003",
+        "2604.24441",
+        "2604.25164",
+        "2604.25427",
+        "2604.25032",
+        "2604.26904",
+        "2604.25135",
+        "2604.24351",
+        "2604.24977",
+        "2604.26694",
+        "2604.26186",
+        "2604.26116",
+        "2604.23426",
+        "2604.22868",
+        "2604.27083",
+        "2604.28158",
+        "2604.28139",
+        "2604.27085",
+        "2604.28190",
+        "2604.28130",
+        "2604.28169",
+        "2604.27251",
+        "2604.24952",
+        "2604.27578",
+        "2604.24953",
+        "2604.24902",
+        "2605.00658",
+        "2604.27221",
+        "2605.00781",
+        "2605.00553",
+        "2604.23774",
+        "2605.00416",
+        "2605.00273",
+        "2604.27818",
+        "2604.21984",
+        "2604.23586",
+        "2605.00323",
+        "2605.00691",
+        "2604.23195",
+        "2604.27660",
+        "2605.00814",
+        "2605.02178",
+        "2605.02222",
+        "2605.01725",
+        "2605.02730",
+        "2605.00529",
+        "2604.27582",
+        "2604.25154",
+        "2605.02291",
+        "2605.04036",
+        "2605.04453",
+        "2605.03596",
+        "2605.02801",
+        "2605.02904",
+        "2604.27488",
+        "2605.01717",
+        "2605.01371",
+        "2605.03941",
+        "2605.02943",
+        "2605.01284",
+        "2605.04569",
+        "2605.04128",
+        "2605.03848",
+        "2605.04916",
+        "2604.24575",
+        "2605.03314",
+        "2510.04142",
+        "2605.06130",
+        "2605.06614",
+        "2605.05566",
+        "2605.06642",
+        "2605.06638",
+        "2605.04647",
+        "2605.04451",
+        "2605.01640",
+        "2605.05922",
+        "2605.04604",
+        "2605.00623",
+        "2602.00095",
+        "2605.06169",
+        "2605.08063",
+        "2605.07396",
+        "2605.07825",
+        "2511.07328",
+        "2605.08043",
+        "2605.08678",
+        "2605.07896",
+        "2605.07510",
+        "2605.05781",
+        "2605.06716",
+        "2605.05838",
+        "2605.07079",
+        "2605.07243",
+        "2605.06105",
+        "2604.25325",
+        "2605.09877",
+        "2605.09959",
+        "2605.10813",
+        "2605.08738",
+        "2605.09271",
+        "2604.23789",
+        "2605.10848",
+        "2605.09708",
+        "2605.10921",
+        "2605.09163",
+        "2605.12495",
+        "2605.10780",
+        "2605.11882",
+        "2605.00080",
+        "2605.12497",
+        "2605.09266",
+        "2605.11136",
+        "2605.08299",
+        "2605.07153",
+        "2605.12474",
+        "2605.08734",
+        "2605.11424",
+        "2605.13062",
+        "2605.13511",
+        "2605.09942",
+        "2605.12825",
+        "2605.12004",
+        "2605.12684",
+        "2605.13037",
+        "2605.13775",
+        "2605.09433",
+        "2605.13292",
+        "2605.11733",
+        "2605.13301",
+        "2605.15128",
+        "2605.15182",
+        "2605.13941",
+        "2605.14445",
+        "2605.07637",
+        "2605.14607",
+        "2605.13027",
+        "2605.14392",
+        "2605.14068",
+        "2605.14389",
+        "2605.15185",
+        "2605.16257",
+        "2605.15980",
+        "2605.15256",
+        "2605.12058",
+        "2605.15871",
+        "2605.15597",
+        "2605.16143",
+        "2605.15961",
+        "2605.15320",
+        "2605.13740",
+        "2605.15375",
+        "2605.14539",
+        "2605.14040",
+        "2605.12038",
+        "2605.12524",
+        "2605.12678",
+        "2605.07249",
+        "2605.14786",
+        "2605.18747",
+        "2605.18661",
+        "2605.16079",
+        "2605.18652",
+        "2605.17933",
+        "2605.18601",
+        "2605.18743",
+        "2605.17199",
+        "2605.18549",
+        "2605.20025",
+        "2605.19577",
+        "2605.18748",
+        "2605.18984",
+        "2605.17829",
+        "2605.20147",
+        "2605.18855",
+        "2605.09640",
+        "2605.20104",
+        "2605.19305",
+        "2605.18226",
+        "2605.20035",
+        "2605.16003",
+        "2605.20075",
+        "2605.17909",
+        "2605.17360",
+        "2605.17026",
+        "2605.14842",
+        "2605.19147",
+        "2605.17076",
+        "2605.21468",
+        "2605.19376",
+        "2605.21487",
+        "2605.17526",
+        "2605.21463",
+        "2605.16787",
+        "2605.20834",
+        "2605.21384",
+        "2605.18565",
+        "2605.20179",
+        "2605.17916",
+        "2605.20955",
+        "2605.21431",
+        "2605.20158",
+        "2605.21467",
+        "2605.21572",
+        "2605.10158",
+        "2605.22177",
+        "2605.21363",
+        "2605.22777",
+        "2605.18577",
+        "2605.22641",
+        "2605.22074",
+        "2605.20244",
+        "2605.07604",
+        "2605.22717",
+        "2605.22552",
+        "2605.22570",
+        "2605.23345",
+        "2605.23901",
+        "2605.23903",
+        "2605.21856",
+        "2604.20665",
+        "2605.24681",
+        "2605.24675",
+        "2605.25604",
+        "2605.23081",
+        "2605.23204",
+        "2605.24938",
+        "2605.26086",
+        "2605.25569",
+        "2605.26105",
+        "2605.26535",
+        "2605.26102",
+        "2605.23986",
+        "2605.26089",
+        "2605.25294",
+        "2605.26099",
+        "2605.08129",
+        "2605.25461",
+        "2605.23699",
+        "2605.26502",
+        "2604.13517",
+        "2605.25189",
+        "2605.26449",
+        "2512.25073",
+        "2512.23343",
+        "2512.23851",
+        "2512.25075",
+        "2512.22564",
+        "2512.24297",
+        "2512.24885",
+        "2512.22280",
+        "2512.24165",
+        "2512.24724",
+        "2512.24007",
+        "2601.00393",
+        "2601.00664"
+      ]
+    },
+    {
+      "name": "USC Information Sciences Institute",
+      "created_at": "2026-05-28T09:44:31Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.22880"
+      ]
+    },
+    {
+      "name": "UTokyo Yokoya Lab",
+      "created_at": "2026-05-28T07:22:56Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.17632"
+      ]
+    },
+    {
+      "name": "Valeo",
+      "created_at": "2026-05-28T07:11:01Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.12966"
+      ]
+    },
+    {
+      "name": "VideoDB",
+      "created_at": "2026-05-28T07:05:18Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.11177"
+      ]
+    },
+    {
+      "name": "Virginia Polytechnic Institute and State University",
+      "created_at": "2026-05-28T08:19:49Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.10032"
+      ]
+    },
+    {
+      "name": "Virginia Tech",
+      "created_at": "2026-05-28T08:45:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.15193"
+      ]
+    },
+    {
+      "name": "VirtueAI",
+      "created_at": "2026-05-28T08:05:35Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.04808"
+      ]
+    },
+    {
+      "name": "Visionary-Laboratoary",
+      "created_at": "2026-05-28T09:26:27Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.22536",
+        "2605.23771"
+      ]
+    },
+    {
+      "name": "Visual Cognitive Systems Laboratory",
+      "created_at": "2026-05-28T06:54:04Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.20524"
+      ]
+    },
+    {
+      "name": "Visual Computing Lab",
+      "created_at": "2026-05-28T07:26:16Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.20841"
+      ]
+    },
+    {
+      "name": "vivo",
+      "created_at": "2026-05-28T07:21:29Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.19587"
+      ]
+    },
+    {
+      "name": "Vrije Universiteit Amsterdam",
+      "created_at": "2026-05-28T07:25:14Z",
+      "usage_count": 1,
+      "examples": [
+        "2602.10751"
+      ]
+    },
+    {
+      "name": "Wan-AI",
+      "created_at": "2026-05-28T06:36:25Z",
+      "usage_count": 1,
+      "examples": [
+        "2603.28068"
+      ]
+    },
+    {
+      "name": "Westlake University",
+      "created_at": "2026-05-28T06:33:53Z",
+      "usage_count": 4,
+      "examples": [
+        "2603.25406",
+        "2604.12322",
+        "2605.21195",
+        "2605.24426"
+      ]
+    },
+    {
+      "name": "Wuhan Univeristy",
+      "created_at": "2026-05-28T08:46:25Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.14984"
+      ]
+    },
+    {
+      "name": "Xi'an Jiaotong University",
+      "created_at": "2026-05-28T08:41:08Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.14892"
+      ]
+    },
+    {
+      "name": "Xiamen University",
+      "created_at": "2026-05-28T05:57:36Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.18879"
+      ]
+    },
+    {
+      "name": "Xiaohongshu",
+      "created_at": "2026-05-28T05:25:04Z",
+      "usage_count": 4,
+      "examples": [
+        "2605.28721",
+        "2605.07177"
+      ]
+    },
+    {
+      "name": "Xiaomi Research",
+      "created_at": "2026-05-28T07:16:07Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.18486"
+      ]
+    },
+    {
+      "name": "xpeng-robotics",
+      "created_at": "2026-05-28T07:29:21Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.19734"
+      ]
+    },
+    {
+      "name": "Yale NLP Lab",
+      "created_at": "2026-05-28T07:44:04Z",
+      "usage_count": 2,
+      "examples": [
+        "2604.27151",
+        "2605.19769"
+      ]
+    },
+    {
+      "name": "Yale University",
+      "created_at": "2026-05-28T07:54:12Z",
+      "usage_count": 2,
+      "examples": [
+        "2605.04018",
+        "2605.09649"
+      ]
+    },
+    {
+      "name": "Yonsei University",
+      "created_at": "2026-05-28T08:04:59Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.07755"
+      ]
+    },
+    {
+      "name": "Z.ai",
+      "created_at": "2026-05-28T06:32:04Z",
+      "usage_count": 2,
+      "examples": [
+        "2603.26648",
+        "2604.26752"
+      ]
+    },
+    {
+      "name": "Zhejiang University",
+      "created_at": "2026-05-28T06:34:40Z",
+      "usage_count": 20,
+      "examples": [
+        "2604.02268",
+        "2604.03679",
+        "2604.04804",
+        "2604.08455",
+        "2604.08209",
+        "2604.06870",
+        "2604.11784",
+        "2604.14025",
+        "2604.12626",
+        "2604.14144",
+        "2604.14113",
+        "2604.13822",
+        "2604.23941",
+        "2605.00877",
+        "2605.06507",
+        "2605.15155",
+        "2605.13169",
+        "2605.09681",
+        "2605.26115",
+        "2512.24385"
+      ]
+    },
+    {
+      "name": "Zhi Huang Lab",
+      "created_at": "2026-05-28T07:50:22Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.00925"
+      ]
+    },
+    {
+      "name": "Zhongguancun Academy",
+      "created_at": "2026-05-28T08:33:36Z",
+      "usage_count": 1,
+      "examples": [
+        "2605.13757"
+      ]
+    },
+    {
+      "name": "ZIP Lab",
+      "created_at": "2026-05-28T06:43:06Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.04838"
+      ]
+    },
+    {
+      "name": "ZJU-OmniAI",
+      "created_at": "2026-05-28T07:16:53Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.14258"
+      ]
+    },
+    {
+      "name": "zlab-princeton",
+      "created_at": "2026-05-28T06:56:43Z",
+      "usage_count": 1,
+      "examples": [
+        "2604.09531"
+      ]
+    }
+  ]
+}

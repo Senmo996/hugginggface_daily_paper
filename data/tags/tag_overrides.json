@@ -1,0 +1,34 @@
+{
+  "paper_overrides": {
+    "2603.28088": {
+      "institution_tag": "shanghai ailab"
+    },
+    "2604.02268": {
+      "institution_tag": "LongCat"
+    },
+    "2604.04804": {
+      "institution_tag": "Ant Group"
+    },
+    "2604.08377": {
+      "institution_tag": "Dream X"
+    },
+    "2604.17308": {
+      "institution_tag": "University of Science and Technology of China"
+    },
+    "2604.27660": {
+      "institution_tag": "Tsinghua University"
+    },
+    "2605.06130": {
+      "institution_tag": "LongCat"
+    },
+    "2605.08129": {
+      "institution_tag": "alibaba-inc"
+    },
+    "2605.27905": {
+      "institution_tag": "Hong Kong University of Science and Technology(GuangZhou)"
+    },
+    "2605.28805": {
+      "institution_tag": "Tsinghua University"
+    }
+  }
+}

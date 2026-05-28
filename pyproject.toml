@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hf-daily"
+version = "0.1.0"
+description = "Fetch Hugging Face Daily Papers, generate summaries and tags, and build a static archive."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "httpx>=0.27",
+  "jinja2>=3.1",
+  "openai>=1.40",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.package-data]
+hf_daily = [
+  "default_templates/*.html",
+  "default_static/*.css",
+  "default_static/*.js",
+]
