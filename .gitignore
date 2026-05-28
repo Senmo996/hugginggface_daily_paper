@@ -7,6 +7,5 @@ __pycache__/
 .ruff_cache/
 .superpowers/
 data/raw/
-data/daily/
 data/backup-*/
 site/
