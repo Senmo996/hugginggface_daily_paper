@@ -1,8 +1,18 @@
 # Hugging Face Daily Papers Archive
 
-This project fetches Hugging Face Daily Papers, stores the raw and generated data locally, asks an OpenAI-compatible model for a Chinese one-sentence summary plus two tags, and builds a static website.
+中文 | [English](README.en.md)
 
-## Setup
+这是一个用于追踪 Hugging Face Daily Papers 的本地归档和静态网站项目。它会抓取每日论文列表，使用 OpenAI 兼容模型生成中文一句话摘要、机构标签和 topic 标签，并构建一个可在浏览器中查看的静态网站。
+
+项目重点包括：
+
+- 每日论文抓取、摘要生成和标签生成。
+- 中文静态站点，支持日期归档、全局搜索、字段搜索和标签筛选。
+- topic 趋势统计、异动榜，以及 Institution x Topic 矩阵。
+- 本地管理模式，可在网页里手动修正错误的 institution/topic tag。
+- topic 和 institution 合并审查 skill，所有合并都必须经过人工确认后才写入 alias。
+
+## 安装
 
 ```powershell
 python -m venv .venv
@@ -11,7 +21,7 @@ python -m pip install -e ".[dev]"
 Copy-Item .env.example .env
 ```
 
-Edit `.env`:
+编辑 `.env`：
 
 ```text
 OPENAI_BASE_URL=https://api.openai.com/v1
@@ -19,71 +29,156 @@ OPENAI_API_KEY=your-key
 OPENAI_MODEL=your-model
 ```
 
-Any OpenAI-compatible endpoint can be used as long as it supports chat completions and JSON output.
+只要接口兼容 chat completions 和 JSON 输出，就可以使用 OpenAI 兼容服务。
 
-## Daily Workflow
+## 日常使用
 
-Fetch one date:
+抓取指定日期：
 
 ```powershell
 python -m hf_daily fetch --date 2026-05-28
 ```
 
-Generate summaries and tags:
+生成摘要和标签：
 
 ```powershell
 python -m hf_daily generate --date 2026-05-28
 ```
 
-Build the static site:
+构建静态网站：
 
 ```powershell
 python -m hf_daily build
 ```
 
-Or run everything:
+执行完整流程：
 
 ```powershell
 python -m hf_daily run --date 2026-05-28
 ```
 
-Open `site/index.html` in your browser after building.
+构建完成后打开 `site/index.html`。
 
-To edit incorrect institution or topic tags from the browser, start the local admin site:
+## 本地管理模式
+
+如果网页中某篇论文的 institution tag 或 topic tag 有误，可以启动本地管理模式：
 
 ```powershell
 python -m hf_daily admin
 ```
 
-Open the printed local URL, click `Edit tags` on a paper card, update the tags, and click `Save draft`. In admin mode the save is written to `data/tags/tag_overrides.json` and the site is rebuilt automatically. The original `data/daily/*.json` files are not rewritten.
+打开命令行输出的本地地址，在论文卡片中点击 `Edit tags`，修改标签后点击 `Save draft`。修改会写入 `data/tags/tag_overrides.json`，并自动重建站点。原始的 `data/daily/*.json` 不会被改写。
 
-## Local Data
+输入新标签时，页面会基于当前已有标签提供自动补全。例如输入 `ali` 时，可以提示已有的 `alibaba-inc` 等标签。
 
-- `data/raw/YYYY-MM-DD.json`: raw Hugging Face API response.
-- `data/daily/YYYY-MM-DD.json`: normalized papers with generated summaries and tags.
-- `data/tags/topics.json`: local medium-granularity topic tag library.
-- `data/tags/institutions.json`: local institution tag library.
-- `data/tags/topic_aliases.json`: reviewed topic tag merge aliases.
-- `data/tags/institution_aliases.json`: reviewed institution tag merge aliases.
-- `data/tags/tag_overrides.json`: manual per-paper institution/topic tag corrections.
-- `site/`: generated static website.
+## 网站功能
 
-Each paper gets exactly two final tags:
+首页默认展示最新一个有论文的日期。`Date Archive` 只显示至少有一篇论文的日期；周末或无论文日期会在构建站点时自动过滤，不出现在日期归档中。
 
-- `institution_tag`: from Hugging Face `organization` when present, otherwise conservatively inferred by the model.
-- `topic_tag`: English, medium-granularity method/research-direction tag. Existing local topic tags are reused when close enough.
+搜索和筛选包括：
 
-## Static Site
+- 默认全字段搜索。
+- 可选择只搜索 title、topic tag、institution tag 等字段。
+- 搜索结果覆盖所有日期，而不是只搜索当前日期。
+- institution/topic tag 筛选同样跨全部已生成日期。
 
-The homepage defaults to the latest generated date with papers. Use the `Year`, `Month`, and `Day` selectors in `Date Archive` to switch the paper cards in place without opening another page. The selectors only expose dates that have at least one paper; empty weekend dates are ignored during site build.
+统计功能包括：
 
-Institution and topic tag filters search across all generated dates, not just the currently selected date. Clearing filters returns the homepage to the selected date view.
+- topic trend 曲线：默认展示指定时间范围内数量最多的前 5 个 topic。
+- 用户可指定想查看的 topic 曲线。
+- topic 异动榜：对比当前区间和前一区间，查看增长最快的 topic。
+- Institution x Topic 矩阵：独立页面展示 top institutions 与 topics 的交叉分布。
 
-Daily pages are still generated under `site/daily/YYYY-MM-DD.html` as standalone archive pages.
+## 本地数据
 
-## Windows Task Scheduler Example
+- `data/raw/YYYY-MM-DD.json`：Hugging Face API 原始响应。
+- `data/daily/YYYY-MM-DD.json`：标准化后的论文、摘要和标签。
+- `data/tags/topics.json`：本地 topic tag 库。
+- `data/tags/institutions.json`：本地 institution tag 库。
+- `data/tags/topic_aliases.json`：经过人工确认的 topic 合并 alias。
+- `data/tags/institution_aliases.json`：经过人工确认的 institution 合并 alias。
+- `data/tags/tag_overrides.json`：网页管理模式写入的手动标签修正。
+- `site/`：生成的静态网站。
 
-Create a daily task that runs from this project directory:
+每篇论文最终有两个核心标签：
+
+- `institution_tag`：优先来自 Hugging Face 的 organization 字段，缺失时由模型保守推断。
+- `topic_tag`：英文、中等粒度的方法或研究方向标签，会优先复用已有 topic。
+
+公开仓库默认不提交 `.env`、`data/raw/`、`data/daily/` 和 `site/`。请不要把 API key 或私有生成数据提交到公开仓库。
+
+## Codex Skills
+
+本项目包含两个项目级 Codex skill，位于 `.codex/skills/`。它们只在本项目内生效，用于减少标签合并时的误合并风险。
+
+### topic-merge-review
+
+路径：`.codex/skills/topic-merge-review`
+
+用途：
+
+- 查找相似 topic。
+- 生成候选合并审查包。
+- 区分高置信、需要人工判断、应保持分开的 topic。
+- 在用户明确批准后，写入 `data/tags/topic_aliases.json`。
+
+辅助脚本：
+
+```powershell
+python .codex\skills\topic-merge-review\scripts\suggest_topic_merges.py --root .
+```
+
+核心规则：
+
+1. 第一阶段只生成审查建议，不写文件。
+2. 用户必须用明确的 `Approve:` 列出 alias 到 canonical 的映射。
+3. 第二阶段只写 `data/tags/topic_aliases.json`。
+4. 不重写 `data/daily/*.json`。
+
+批准示例：
+
+```text
+Approve:
+- LLM agent test-time scaling -> LLM test-time scaling
+- video editing benchmark evaluation -> video editing
+```
+
+### institution-merge-review
+
+路径：`.codex/skills/institution-merge-review`
+
+用途：
+
+- 查找 institution tag 中明显的大小写、标点、冠词、简称或官方名称变体。
+- 生成候选合并审查包。
+- 避免把母公司、实验室、校区、学院等不同实体错误合并。
+- 在用户明确批准后，写入 `data/tags/institution_aliases.json`。
+
+辅助脚本：
+
+```powershell
+python .codex\skills\institution-merge-review\scripts\suggest_institution_merges.py --root .
+```
+
+核心规则：
+
+1. 第一阶段只生成审查建议，不写文件。
+2. 用户必须用明确的 `Approve:` 列出 alias 到 canonical 的映射。
+3. 第二阶段只写 `data/tags/institution_aliases.json`。
+4. 不重写 `data/daily/*.json`。
+5. 不把 `Unknown` 合并到真实机构。
+
+批准示例：
+
+```text
+Approve:
+- Alibaba -> alibaba-inc
+- The University of Hong Kong -> University of Hong Kong
+```
+
+## 定时任务示例
+
+Windows Task Scheduler：
 
 ```powershell
 $Action = New-ScheduledTaskAction `
@@ -99,11 +194,11 @@ Register-ScheduledTask `
   -Description "Fetch Hugging Face daily papers and rebuild the static archive."
 ```
 
-The default date uses the local Asia/Shanghai date. Pass `--date YYYY-MM-DD` if you want a fixed date.
+默认日期使用本地 Asia/Shanghai 日期。如需固定日期，可传入 `--date YYYY-MM-DD`。
 
-## GitHub Actions Example
+## GitHub Actions 示例
 
-Save this as `.github/workflows/daily.yml` if you want automated generation in GitHub:
+如果需要在 GitHub 自动生成，可保存为 `.github/workflows/daily.yml`：
 
 ```yaml
 name: Daily Hugging Face Papers
@@ -132,7 +227,7 @@ jobs:
           path: site
 ```
 
-## Testing
+## 测试
 
 ```powershell
 python -m pytest -q
