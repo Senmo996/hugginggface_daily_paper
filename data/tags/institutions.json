@@ -59,6 +59,14 @@
       ]
     },
     {
+      "name": "AGIBOT Finch",
+      "created_at": "2026-05-28T15:22:45Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.03044"
+      ]
+    },
+    {
       "name": "AI at Meta",
       "created_at": "2026-05-28T05:56:52Z",
       "usage_count": 7,
@@ -142,9 +150,10 @@
     {
       "name": "AIM Intelligence",
       "created_at": "2026-05-28T07:54:52Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2605.05662"
+        "2605.05662",
+        "2601.01836"
       ]
     },
     {
@@ -398,6 +407,14 @@
       ]
     },
     {
+      "name": "AutoLab",
+      "created_at": "2026-05-28T15:17:13Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.02281"
+      ]
+    },
+    {
       "name": "AweAI Team",
       "created_at": "2026-05-28T07:03:28Z",
       "usage_count": 1,
@@ -536,7 +553,7 @@
     {
       "name": "ByteDance",
       "created_at": "2026-05-28T05:55:37Z",
-      "usage_count": 8,
+      "usage_count": 10,
       "examples": [
         "2605.27366",
         "2604.06169",
@@ -545,7 +562,9 @@
         "2605.11458",
         "2605.22344",
         "2601.02204",
-        "2601.01425"
+        "2601.01425",
+        "2601.02256",
+        "2601.02785"
       ]
     },
     {
@@ -696,10 +715,11 @@
     {
       "name": "CIS, LMU Munich",
       "created_at": "2026-05-28T07:05:27Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2604.12978",
-        "2605.09548"
+        "2605.09548",
+        "2601.02996"
       ]
     },
     {
@@ -1386,6 +1406,14 @@
       ]
     },
     {
+      "name": "Huawei's Vancouver VBDAI Lab",
+      "created_at": "2026-05-28T15:19:26Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.00501"
+      ]
+    },
+    {
       "name": "Huazhong University of Science and Technology",
       "created_at": "2026-05-28T06:35:34Z",
       "usage_count": 2,
@@ -1532,6 +1560,14 @@
       "usage_count": 1,
       "examples": [
         "2604.08544"
+      ]
+    },
+    {
+      "name": "Intern Science",
+      "created_at": "2026-05-28T15:22:31Z",
+      "usage_count": 1,
+      "examples": [
+        "2512.22334"
       ]
     },
     {
@@ -1775,6 +1811,14 @@
       ]
     },
     {
+      "name": "LAMM: MIT Laboratory for Atomistic and Molecular Mechanics",
+      "created_at": "2026-05-28T15:20:41Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.00863"
+      ]
+    },
+    {
       "name": "Language Technology Lab @University of Cambridge",
       "created_at": "2026-05-28T07:01:55Z",
       "usage_count": 1,
@@ -1851,9 +1895,10 @@
     {
       "name": "LiAuto Foundation Model",
       "created_at": "2026-05-28T07:11:12Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2604.14629"
+        "2604.14629",
+        "2512.23412"
       ]
     },
     {
@@ -1868,9 +1913,10 @@
     {
       "name": "Lightricks",
       "created_at": "2026-05-28T07:08:38Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2604.11788"
+        "2604.11788",
+        "2601.03233"
       ]
     },
     {
@@ -2021,6 +2067,14 @@
       ]
     },
     {
+      "name": "Medical Image Analysis Lab, SFU",
+      "created_at": "2026-05-28T15:20:04Z",
+      "usage_count": 1,
+      "examples": [
+        "2512.21472"
+      ]
+    },
+    {
       "name": "MeiGen-AI",
       "created_at": "2026-05-28T09:27:43Z",
       "usage_count": 1,
@@ -2114,7 +2168,7 @@
     {
       "name": "Microsoft",
       "created_at": "2026-05-28T06:53:19Z",
-      "usage_count": 8,
+      "usage_count": 9,
       "examples": [
         "2604.08476",
         "2604.08540",
@@ -2123,7 +2177,8 @@
         "2604.28181",
         "2605.12501",
         "2605.12925",
-        "2605.21573"
+        "2605.21573",
+        "2601.02439"
       ]
     },
     {
@@ -2324,11 +2379,12 @@
     {
       "name": "Nanjing University",
       "created_at": "2026-05-28T07:13:29Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2604.13074",
         "2604.15093",
-        "2605.16893"
+        "2605.16893",
+        "2601.03256"
       ]
     },
     {
@@ -2500,7 +2556,7 @@
     {
       "name": "NVIDIA",
       "created_at": "2026-05-28T05:23:54Z",
-      "usage_count": 30,
+      "usage_count": 31,
       "examples": [
         "2605.28774",
         "2605.28816",
@@ -2525,7 +2581,8 @@
         "2605.18739",
         "2605.19786",
         "2605.22791",
-        "2605.23902"
+        "2605.23902",
+        "2601.02427"
       ]
     },
     {
@@ -2591,10 +2648,11 @@
     {
       "name": "OpenMOSS",
       "created_at": "2026-05-28T08:00:58Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2605.04077",
-        "2605.12090"
+        "2605.12090",
+        "2601.01554"
       ]
     },
     {
@@ -3352,6 +3410,14 @@
       ]
     },
     {
+      "name": "SWE-Lego",
+      "created_at": "2026-05-28T15:18:17Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.01426"
+      ]
+    },
+    {
       "name": "SyMuPe",
       "created_at": "2026-05-28T08:01:07Z",
       "usage_count": 1,
@@ -3401,9 +3467,10 @@
     {
       "name": "Technology Innovation Institute",
       "created_at": "2026-05-28T06:29:17Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2603.27365"
+        "2603.27365",
+        "2601.02346"
       ]
     },
     {
@@ -3679,6 +3746,14 @@
       ]
     },
     {
+      "name": "Toronto Metropolitan University",
+      "created_at": "2026-05-28T15:20:23Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.02314"
+      ]
+    },
+    {
       "name": "Trustworthy Autonomous Cyber Physical Systems (ACPS) Lab",
       "created_at": "2026-05-28T08:11:16Z",
       "usage_count": 1,
@@ -3948,9 +4023,10 @@
     {
       "name": "University of Cambridge",
       "created_at": "2026-05-28T15:14:45Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2601.00747"
+        "2601.00747",
+        "2601.02179"
       ]
     },
     {
@@ -4120,11 +4196,12 @@
     {
       "name": "University of Science and Technology of China",
       "created_at": "2026-05-28T06:45:10Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2604.05404",
         "2605.14876",
-        "2605.21850"
+        "2605.21850",
+        "2601.03193"
       ]
     },
     {
@@ -4256,7 +4333,7 @@
     {
       "name": "Unknown",
       "created_at": "2026-05-28T05:23:48Z",
-      "usage_count": 494,
+      "usage_count": 507,
       "examples": [
         "2605.28820",
         "2605.28805",
@@ -4736,7 +4813,20 @@
         "2601.00796",
         "2601.00204",
         "2601.00830",
-        "2601.02553"
+        "2601.02553",
+        "2601.02358",
+        "2512.24138",
+        "2601.01576",
+        "2601.02356",
+        "2601.01046",
+        "2601.02267",
+        "2512.23035",
+        "2601.02315",
+        "2512.22877",
+        "2601.01321",
+        "2601.01874",
+        "2601.01592",
+        "2601.03127"
       ]
     },
     {
@@ -4889,6 +4979,14 @@
       ]
     },
     {
+      "name": "Xiaomi MiMo",
+      "created_at": "2026-05-28T15:22:21Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.02780"
+      ]
+    },
+    {
       "name": "Xiaomi Research",
       "created_at": "2026-05-28T07:16:07Z",
       "usage_count": 1,
@@ -4942,7 +5040,7 @@
     {
       "name": "Zhejiang University",
       "created_at": "2026-05-28T06:34:40Z",
-      "usage_count": 20,
+      "usage_count": 21,
       "examples": [
         "2604.02268",
         "2604.03679",
@@ -4963,7 +5061,8 @@
         "2605.13169",
         "2605.09681",
         "2605.26115",
-        "2512.24385"
+        "2512.24385",
+        "2601.03252"
       ]
     },
     {
