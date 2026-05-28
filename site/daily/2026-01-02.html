@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2026-01-02 - Hugging Face Daily Papers</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Daily archive</p>
+        <h1>2026-01-02</h1>
+      </div>
+      <div class="stats">
+        <a href="../index.html">Index</a>
+        <span>7 papers</span>
+      </div>
+    </header>
+
+    <main class="daily-page">
+      <div class="paper-grid">
+<article
+  class="paper-card"
+  data-title="improving multi-step rag with hypergraph-based memory for long-context complex relational modeling"
+  data-summary="本文提出一种用于多步检索增强生成的超图记忆机制，将检索到的事实和推理过程组织为动态高阶关系结构，以提升长上下文复杂关系建模和全局推理能力。"
+  data-topic="RAG retrieval"
+  data-institution="Tencent"
+  data-date="2026-01-02"
+  data-paper-id="2512.23959"
+  data-original-institution="Tencent"
+  data-original-topic="RAG retrieval"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-01-02</p>
+      <h3><a href="https://huggingface.co/papers/2512.23959" target="_blank" rel="noreferrer">Improving Multi-step RAG with Hypergraph-based Memory for Long-Context Complex Relational Modeling</a></h3>
+    </div>
+    <div class="metrics">
+      <span>111 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Chulun Zhou, Chunkang Zhang, Guoxin Yu, +4 more</p>
+  <p class="one-line">本文提出一种用于多步检索增强生成的超图记忆机制，将检索到的事实和推理过程组织为动态高阶关系结构，以提升长上下文复杂关系建模和全局推理能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Tencent</span>
+    <span class="tag topic" data-tag-role="topic">RAG retrieval</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Tencent">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="RAG retrieval">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Multi-step retrieval-augmented generation (RAG) has become a widely adopted strategy for enhancing large language models (LLMs) on tasks that demand global comprehension and intensive reasoning. Many RAG systems incorporate a working memory module to consolidate retrieved information. However, existing memory designs function primarily as passive storage that accumulates isolated facts for the purpose of condensing the lengthy inputs and generating new sub-queries through deduction. This static nature overlooks the crucial high-order correlations among primitive facts, the compositions of which can often provide stronger guidance for subsequent steps. Therefore, their representational strength and impact on multi-step reasoning and knowledge evolution are limited, resulting in fragmented reasoning and weak global sense-making capacity in extended contexts. We introduce HGMem, a hypergraph-based memory mechanism that extends the concept of memory beyond simple storage into a dynamic, expressive structure for complex reasoning and global understanding. In our approach, memory is represented as a hypergraph whose hyperedges correspond to distinct memory units, enabling the progressive formation of higher-order interactions within memory. This mechanism connects facts and thoughts around the focal problem, evolving into an integrated and situated knowledge structure that provides strong propositions for deeper reasoning in subsequent steps. We evaluate HGMem on several challenging datasets designed for global sense-making. Extensive experiments and in-depth analyses show that our method consistently improves multi-step RAG and substantially outperforms strong baseline systems across diverse tasks.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2512.23959" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2512.23959" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/Encyclomen/HGMem" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="dynamic large concept models: latent reasoning in an adaptive semantic space"
+  data-summary="本文提出动态大概念模型，通过端到端学习可变长度语义概念并在压缩后的潜在概念空间中分配推理计算，同时引入压缩感知缩放律和解耦μp参数化以提升固定flops下的语言模型效率。"
+  data-topic="LLM latent computation"
+  data-institution="ByteDance Seed"
+  data-date="2026-01-02"
+  data-paper-id="2512.24617"
+  data-original-institution="ByteDance Seed"
+  data-original-topic="LLM latent computation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-01-02</p>
+      <h3><a href="https://huggingface.co/papers/2512.24617" target="_blank" rel="noreferrer">Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space</a></h3>
+    </div>
+    <div class="metrics">
+      <span>66 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Xingwei Qu, Shaowen Wang, Zihao Huang, +16 more</p>
+  <p class="one-line">本文提出动态大概念模型，通过端到端学习可变长度语义概念并在压缩后的潜在概念空间中分配推理计算，同时引入压缩感知缩放律和解耦μP参数化以提升固定FLOPs下的语言模型效率。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">ByteDance Seed</span>
+    <span class="tag topic" data-tag-role="topic">LLM latent computation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="ByteDance Seed">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM latent computation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large Language Models (LLMs) apply uniform computation to all tokens, despite language exhibiting highly non-uniform information density. This token-uniform regime wastes capacity on locally predictable spans while under-allocating computation to semantically critical transitions. We propose Dynamic Large Concept Models (DLCM), a hierarchical language modeling framework that learns semantic boundaries from latent representations and shifts computation from tokens to a compressed concept space where reasoning is more efficient. DLCM discovers variable-length concepts end-to-end without relying on predefined linguistic units. Hierarchical compression fundamentally changes scaling behavior. We introduce the first compression-aware scaling law, which disentangles token-level capacity, concept-level reasoning capacity, and compression ratio, enabling principled compute allocation under fixed FLOPs. To stably train this heterogeneous architecture, we further develop a decoupled μP parametrization that supports zero-shot hyperparameter transfer across widths and compression regimes. At a practical setting (R=4, corresponding to an average of four tokens per concept), DLCM reallocates roughly one-third of inference compute into a higher-capacity reasoning backbone, achieving a +2.69\% average improvement across 12 zero-shot benchmarks under matched inference FLOPs.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2512.24617" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2512.24617" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="diffthinker: towards generative multimodal reasoning with diffusion models"
+  data-summary="本文提出将多模态推理重构为扩散模型驱动的生成式图像到图像任务，以提升长程视觉中心任务中的逻辑一致性、空间精度和可控性。"
+  data-topic="diffusion-based multimodal reasoning"
+  data-institution="Unknown"
+  data-date="2026-01-02"
+  data-paper-id="2512.24165"
+  data-original-institution="Unknown"
+  data-original-topic="diffusion-based multimodal reasoning"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-01-02</p>
+      <h3><a href="https://huggingface.co/papers/2512.24165" target="_blank" rel="noreferrer">DiffThinker: Towards Generative Multimodal Reasoning with Diffusion Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>52 upvotes</span>
+      <span>5 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zefeng He, Xiaoye Qu, Yafu Li, +3 more</p>
+  <p class="one-line">本文提出将多模态推理重构为扩散模型驱动的生成式图像到图像任务，以提升长程视觉中心任务中的逻辑一致性、空间精度和可控性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">diffusion-based multimodal reasoning</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="diffusion-based multimodal reasoning">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>While recent Multimodal Large Language Models (MLLMs) have attained significant strides in multimodal reasoning, their reasoning processes remain predominantly text-centric, leading to suboptimal performance in complex long-horizon, vision-centric tasks. In this paper, we establish a novel Generative Multimodal Reasoning paradigm and introduce DiffThinker, a diffusion-based reasoning framework. Conceptually, DiffThinker reformulates multimodal reasoning as a native generative image-to-image task, achieving superior logical consistency and spatial precision in vision-centric tasks. We perform a systematic comparison between DiffThinker and MLLMs, providing the first in-depth investigation into the intrinsic characteristics of this paradigm, revealing four core properties: efficiency, controllability, native parallelism, and collaboration. Extensive experiments across four domains (sequential planning, combinatorial optimization, constraint satisfaction, and spatial configuration) demonstrate that DiffThinker significantly outperforms leading closed source models including GPT-5 (+314.2\%) and Gemini-3-Flash (+111.6\%), as well as the fine-tuned Qwen3-VL-32B baseline (+39.0\%), highlighting generative multimodal reasoning as a promising approach for vision-centric reasoning.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2512.24165" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2512.24165" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://diffthinker-project.github.io/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/lcqysl/DiffThinker" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="on the role of discreteness in diffusion llms"
+  data-summary="本文从扩散过程与语言建模需求出发分析连续嵌入扩散和离散词元扩散的结构性权衡，并指出面向文本结构的扩散语言模型需要改进位置相关破坏机制和多词依赖建模。"
+  data-topic="diffusion language models"
+  data-institution="MiroMind AI"
+  data-date="2026-01-02"
+  data-paper-id="2512.22630"
+  data-original-institution="MiroMind AI"
+  data-original-topic="diffusion language models"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-01-02</p>
+      <h3><a href="https://huggingface.co/papers/2512.22630" target="_blank" rel="noreferrer">On the Role of Discreteness in Diffusion LLMs</a></h3>
+    </div>
+    <div class="metrics">
+      <span>18 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Ziqi Jin, Bin Wang, Xiang Lin, +2 more</p>
+  <p class="one-line">本文从扩散过程与语言建模需求出发分析连续嵌入扩散和离散词元扩散的结构性权衡，并指出面向文本结构的扩散语言模型需要改进位置相关破坏机制和多词依赖建模。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">MiroMind AI</span>
+    <span class="tag topic" data-tag-role="topic">diffusion language models</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="MiroMind AI">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="diffusion language models">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Diffusion models offer appealing properties for language generation, such as parallel decoding and iterative refinement, but the discrete and highly structured nature of text challenges the direct application of diffusion principles. In this paper, we revisit diffusion language modeling from the view of diffusion process and language modeling, and outline five properties that separate diffusion mechanics from language-specific requirements. We first categorize existing approaches into continuous diffusion in embedding space and discrete diffusion over tokens. We then show that each satisfies only part of the five essential properties and therefore reflects a structural trade-off. Through analyses of recent large diffusion language models, we identify two central issues: (i) uniform corruption does not respect how information is distributed across positions, and (ii) token-wise marginal training cannot capture multi-token dependencies during parallel decoding. These observations motivate diffusion processes that align more closely with the structure of text, and encourage future work toward more coherent diffusion language models.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2512.22630" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2512.22630" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="dream2flow: bridging video generation and open-world manipulation with 3d object flow"
+  data-summary="本文提出用预训练视频生成模型合成物体运动，并将其重建为3d物体流作为中间表示，再通过轨迹优化或强化学习转化为机器人低层控制，以实现开放世界零样本操作。"
+  data-topic="video-guided robot manipulation"
+  data-institution="Stanford University"
+  data-date="2026-01-02"
+  data-paper-id="2512.24766"
+  data-original-institution="Stanford University"
+  data-original-topic="video-guided robot manipulation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-01-02</p>
+      <h3><a href="https://huggingface.co/papers/2512.24766" target="_blank" rel="noreferrer">Dream2Flow: Bridging Video Generation and Open-World Manipulation with 3D Object Flow</a></h3>
+    </div>
+    <div class="metrics">
+      <span>9 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Karthik Dharmarajan, Wenlong Huang, Jiajun Wu, +2 more</p>
+  <p class="one-line">本文提出用预训练视频生成模型合成物体运动，并将其重建为3D物体流作为中间表示，再通过轨迹优化或强化学习转化为机器人低层控制，以实现开放世界零样本操作。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Stanford University</span>
+    <span class="tag topic" data-tag-role="topic">video-guided robot manipulation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Stanford University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="video-guided robot manipulation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Generative video modeling has emerged as a compelling tool to zero-shot reason about plausible physical interactions for open-world manipulation. Yet, it remains a challenge to translate such human-led motions into the low-level actions demanded by robotic systems. We observe that given an initial image and task instruction, these models excel at synthesizing sensible object motions. Thus, we introduce Dream2Flow, a framework that bridges video generation and robotic control through 3D object flow as an intermediate representation. Our method reconstructs 3D object motions from generated videos and formulates manipulation as object trajectory tracking. By separating the state changes from the actuators that realize those changes, Dream2Flow overcomes the embodiment gap and enables zero-shot guidance from pre-trained video models to manipulate objects of diverse categories-including rigid, articulated, deformable, and granular. Through trajectory optimization or reinforcement learning, Dream2Flow converts reconstructed 3D object flow into executable low-level commands without task-specific demonstrations. Simulation and real-world experiments highlight 3D object flow as a general and scalable interface for adapting video generation models to open-world robotic manipulation. Videos and visualizations are available at https://dream2flow.github.io/.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2512.24766" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2512.24766" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://dream2flow.github.io/" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="flowblending: stage-aware multi-model sampling for fast and high-fidelity video generation"
+  data-summary="本文研究视频生成模型的快速采样，提出按扩散/流匹配时间阶段在大模型与小模型之间切换的多模型采样策略，以在保持画质、时序一致性和语义对齐的同时降低推理开销。"
+  data-topic="diffusion model acceleration"
+  data-institution="Unknown"
+  data-date="2026-01-02"
+  data-paper-id="2512.24724"
+  data-original-institution="Unknown"
+  data-original-topic="diffusion model acceleration"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-01-02</p>
+      <h3><a href="https://huggingface.co/papers/2512.24724" target="_blank" rel="noreferrer">FlowBlending: Stage-Aware Multi-Model Sampling for Fast and High-Fidelity Video Generation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>9 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Jibin Song, Mingi Kwon, Jaeseok Jeong, +1 more</p>
+  <p class="one-line">本文研究视频生成模型的快速采样，提出按扩散/流匹配时间阶段在大模型与小模型之间切换的多模型采样策略，以在保持画质、时序一致性和语义对齐的同时降低推理开销。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">diffusion model acceleration</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="diffusion model acceleration">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>In this work, we show that the impact of model capacity varies across timesteps: it is crucial for the early and late stages but largely negligible during the intermediate stage. Accordingly, we propose FlowBlending, a stage-aware multi-model sampling strategy that employs a large model and a small model at capacity-sensitive stages and intermediate stages, respectively. We further introduce simple criteria to choose stage boundaries and provide a velocity-divergence analysis as an effective proxy for identifying capacity-sensitive regions. Across LTX-Video (2B/13B) and WAN 2.1 (1.3B/14B), FlowBlending achieves up to 1.65x faster inference with 57.35% fewer FLOPs, while maintaining the visual fidelity, temporal coherence, and semantic alignment of the large models. FlowBlending is also compatible with existing sampling-acceleration techniques, enabling up to 2x additional speedup. Project page is available at: https://jibin86.github.io/flowblending_project_page.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2512.24724" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2512.24724" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://jibin86.github.io/flowblending_project_page/" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="teso tabu enhanced simulation optimization for noisy black box problems"
+  data-summary="本文提出一种面向噪声黑盒仿真优化问题的禁忌增强元启发式框架，通过短期禁忌列表、长期精英记忆和破格准则在随机环境中平衡探索与利用。"
+  data-topic="metaheuristic optimization"
+  data-institution="Unknown"
+  data-date="2026-01-02"
+  data-paper-id="2512.24007"
+  data-original-institution="Unknown"
+  data-original-topic="metaheuristic optimization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-01-02</p>
+      <h3><a href="https://huggingface.co/papers/2512.24007" target="_blank" rel="noreferrer">TESO Tabu Enhanced Simulation Optimization for Noisy Black Box Problems</a></h3>
+    </div>
+    <div class="metrics">
+      <span>4 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Bulent Soykan, Sean Mondesire, Ghaith Rabadi</p>
+  <p class="one-line">本文提出一种面向噪声黑盒仿真优化问题的禁忌增强元启发式框架，通过短期禁忌列表、长期精英记忆和破格准则在随机环境中平衡探索与利用。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">metaheuristic optimization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="metaheuristic optimization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Simulation optimization (SO) is frequently challenged by noisy evaluations, high computational costs, and complex, multimodal search landscapes. This paper introduces Tabu-Enhanced Simulation Optimization (TESO), a novel metaheuristic framework integrating adaptive search with memory-based strategies. TESO leverages a short-term Tabu List to prevent cycling and encourage diversification, and a long-term Elite Memory to guide intensification by perturbing high-performing solutions. An aspiration criterion allows overriding tabu restrictions for exceptional candidates. This combination facilitates a dynamic balance between exploration and exploitation in stochastic environments. We demonstrate TESO&#39;s effectiveness and reliability using an queue optimization problem, showing improved performance compared to benchmarks and validating the contribution of its memory components. Source code and data are available at: https://github.com/bulentsoykan/TESO.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2512.24007" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2512.24007" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/bulentsoykan/TESO" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article>      </div>
+    </main>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

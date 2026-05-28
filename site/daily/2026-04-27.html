@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2026-04-27 - Hugging Face Daily Papers</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Daily archive</p>
+        <h1>2026-04-27</h1>
+      </div>
+      <div class="stats">
+        <a href="../index.html">Index</a>
+        <span>16 papers</span>
+      </div>
+    </header>
+
+    <main class="daily-page">
+      <div class="paper-grid">
+<article
+  class="paper-card"
+  data-title="agentic world modeling: foundations, capabilities, laws, and beyond"
+  data-summary="本文系统综述智能体世界建模，提出“能力层级×规律类型”分类框架来梳理预测、仿真与自我演化模型在物理、数字、社会和科学环境中的方法、评估与挑战。"
+  data-topic="world models"
+  data-institution="unknown"
+  data-date="2026-04-27"
+  data-paper-id="2604.22748"
+  data-original-institution="unknown"
+  data-original-topic="world models"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.22748" target="_blank" rel="noreferrer">Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond</a></h3>
+    </div>
+    <div class="metrics">
+      <span>227 upvotes</span>
+      <span>5 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Meng Chu, Xuan Billy Zhang, Kevin Qinghong Lin, +39 more</p>
+  <p class="one-line">本文系统综述智能体世界建模，提出“能力层级×规律类型”分类框架来梳理预测、仿真与自我演化模型在物理、数字、社会和科学环境中的方法、评估与挑战。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">world models</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="world models">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, coordinate with others, or design experiments require predictive environment models, yet the term world model carries different meanings across research communities. We introduce a &#34;levels x laws&#34; taxonomy organized along two axes. The first defines three capability levels: L1 Predictor, which learns one-step local transition operators; L2 Simulator, which composes them into multi-step, action-conditioned rollouts that respect domain laws; and L3 Evolver, which autonomously revises its own model when predictions fail against new evidence. The second identifies four governing-law regimes: physical, digital, social, and scientific. These regimes determine what constraints a world model must satisfy and where it is most likely to fail. Using this framework, we synthesize over 400 works and summarize more than 100 representative systems spanning model-based reinforcement learning, video generation, web and GUI agents, multi-agent social simulation, and AI-driven scientific discovery. We analyze methods, failure modes, and evaluation practices across level-regime pairs, propose decision-centric evaluation principles and a minimal reproducible evaluation package, and outline architectural guidance, open problems, and governance challenges. The resulting roadmap connects previously isolated communities and charts a path from passive next-step prediction toward world models that can simulate, and ultimately reshape, the environments in which agents operate.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.22748" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.22748" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://agentic-world-modeling.xyz/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/matrix-agent/awesome-agentic-world-modeling" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="video analysis and generation via a semantic progress function"
+  data-summary="本文提出语义进度函数，用语义嵌入距离拟合视频序列的语义变化曲线，并通过重参数化实现恒定语义节奏的分析、校正与生成视频控制。"
+  data-topic="video generation control"
+  data-institution="Tel Aviv University"
+  data-date="2026-04-27"
+  data-paper-id="2604.22554"
+  data-original-institution="Tel Aviv University"
+  data-original-topic="video generation control"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.22554" target="_blank" rel="noreferrer">Video Analysis and Generation via a Semantic Progress Function</a></h3>
+    </div>
+    <div class="metrics">
+      <span>63 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Gal Metzer, Sagi Polaczek, Ali Mahdavi-Amiri, +2 more</p>
+  <p class="one-line">本文提出语义进度函数，用语义嵌入距离拟合视频序列的语义变化曲线，并通过重参数化实现恒定语义节奏的分析、校正与生成视频控制。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Tel Aviv University</span>
+    <span class="tag topic" data-tag-role="topic">video generation control</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Tel Aviv University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="video generation control">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Transformations produced by image and video generation models often evolve in a highly non-linear manner: long stretches where the content barely changes are followed by sudden, abrupt semantic jumps. To analyze and correct this behavior, we introduce a Semantic Progress Function, a one-dimensional representation that captures how the meaning of a given sequence evolves over time. For each frame, we compute distances between semantic embeddings and fit a smooth curve that reflects the cumulative semantic shift across the sequence. Departures of this curve from a straight line reveal uneven semantic pacing. Building on this insight, we propose a semantic linearization procedure that reparameterizes (or retimes) the sequence so that semantic change unfolds at a constant rate, yielding smoother and more coherent transitions. Beyond linearization, our framework provides a model-agnostic foundation for identifying temporal irregularities, comparing semantic pacing across different generators, and steering both generated and real-world video sequences toward arbitrary target pacing.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.22554" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.22554" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://sagipolaczek.github.io/semantic-progress-function/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/SagiPolaczek/semantic-progress-function" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="diffnr: diffusion-enhanced neural representation optimization for sparse-view 3d tomographic reconstruction"
+  data-summary="该论文提出一种将单步扩散先验融入神经场和3d高斯等神经表示优化的稀疏视角ct三维重建方法，通过周期性生成伪参考体积来减少伪影并提升重建效率与质量。"
+  data-topic="medical image reconstruction"
+  data-institution="Monash University"
+  data-date="2026-04-27"
+  data-paper-id="2604.21518"
+  data-original-institution="Monash University"
+  data-original-topic="medical image reconstruction"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.21518" target="_blank" rel="noreferrer">DiffNR: Diffusion-Enhanced Neural Representation Optimization for Sparse-View 3D Tomographic Reconstruction</a></h3>
+    </div>
+    <div class="metrics">
+      <span>28 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Shiyan Su, Ruyi Zha, Danli Shi, +2 more</p>
+  <p class="one-line">该论文提出一种将单步扩散先验融入神经场和3D高斯等神经表示优化的稀疏视角CT三维重建方法，通过周期性生成伪参考体积来减少伪影并提升重建效率与质量。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Monash University</span>
+    <span class="tag topic" data-tag-role="topic">medical image reconstruction</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Monash University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="medical image reconstruction">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Neural representations (NRs), such as neural fields and 3D Gaussians, effectively model volumetric data in computed tomography (CT) but suffer from severe artifacts under sparse-view settings. To address this, we propose DiffNR, a novel framework that enhances NR optimization with diffusion priors. At its core is SliceFixer, a single-step diffusion model designed to correct artifacts in degraded slices. We integrate specialized conditioning layers into the network and develop tailored data curation strategies to support model finetuning. During reconstruction, SliceFixer periodically generates pseudo-reference volumes, providing auxiliary 3D perceptual supervision to fix underconstrained regions. Compared to prior methods that embed CT solvers into time-consuming iterative denoising, our repair-and-augment strategy avoids frequent diffusion model queries, leading to better runtime performance. Extensive experiments show that DiffNR improves PSNR by 3.99 dB on average, generalizes well across domains, and maintains efficient optimization.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.21518" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.21518" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://ooonesevennn.github.io/DiffNR/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/ooonesevennn/DiffNR" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="llm safety from within: detecting harmful content with internal representations"
+  data-summary="本文提出一种利用大语言模型内部层表示，通过线性探测识别安全相关神经元并自适应加权融合多层特征的轻量级有害内容检测方法。"
+  data-topic="LLM safety monitoring"
+  data-institution="University of Toronto CSSLab"
+  data-date="2026-04-27"
+  data-paper-id="2604.18519"
+  data-original-institution="University of Toronto CSSLab"
+  data-original-topic="LLM safety monitoring"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.18519" target="_blank" rel="noreferrer">LLM Safety From Within: Detecting Harmful Content with Internal Representations</a></h3>
+    </div>
+    <div class="metrics">
+      <span>26 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Difan Jiao, Yilun Liu, Ye Yuan, +4 more</p>
+  <p class="one-line">本文提出一种利用大语言模型内部层表示，通过线性探测识别安全相关神经元并自适应加权融合多层特征的轻量级有害内容检测方法。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">University of Toronto CSSLab</span>
+    <span class="tag topic" data-tag-role="topic">LLM safety monitoring</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="University of Toronto CSSLab">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM safety monitoring">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Guard models are widely used to detect harmful content in user prompts and LLM responses. However, state-of-the-art guard models rely solely on terminal-layer representations and overlook the rich safety-relevant features distributed across internal layers. We present SIREN, a lightweight guard model that harnesses these internal features. By identifying safety neurons via linear probing and combining them through an adaptive layer-weighted strategy, SIREN builds a harmfulness detector from LLM internals without modifying the underlying model. Our comprehensive evaluation shows that SIREN substantially outperforms state-of-the-art open-source guard models across multiple benchmarks while using 250 times fewer trainable parameters. Moreover, SIREN exhibits superior generalization to unseen benchmarks, naturally enables real-time streaming detection, and significantly improves inference efficiency compared to generative guard models. Overall, our results highlight LLM internal states as a promising foundation for practical, high-performance harmfulness detection.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.18519" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.18519" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/CSSLab/SIREN" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="contexts are never long enough: structured reasoning for scalable question answering over long document sets"
+  data-summary="本文提出一种面向超长文档集合问答的结构化推理框架，通过将关键信息抽取到关系数据库并结合数据协调与sql查询来实现可扩展的跨文档证据综合。"
+  data-topic="structured document QA"
+  data-institution="Stanford NLP"
+  data-date="2026-04-27"
+  data-paper-id="2604.22294"
+  data-original-institution="Stanford NLP"
+  data-original-topic="structured document QA"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.22294" target="_blank" rel="noreferrer">Contexts are Never Long Enough: Structured Reasoning for Scalable Question Answering over Long Document Sets</a></h3>
+    </div>
+    <div class="metrics">
+      <span>18 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Harshit Joshi, Priyank Shethia, Jadelynn Dao, +1 more</p>
+  <p class="one-line">本文提出一种面向超长文档集合问答的结构化推理框架，通过将关键信息抽取到关系数据库并结合数据协调与SQL查询来实现可扩展的跨文档证据综合。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Stanford NLP</span>
+    <span class="tag topic" data-tag-role="topic">structured document QA</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Stanford NLP">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="structured document QA">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Real-world document question answering is challenging. Analysts must synthesize evidence across multiple documents and different parts of each document. However, any fixed LLM context window can be exceeded as document collections grow. A common workaround is to decompose documents into chunks and assemble answers from chunk-level outputs, but this introduces an aggregation bottleneck: as the number of chunks grows, systems must still combine and reason over an increasingly large body of extracted evidence. We present SLIDERS, a framework for question answering over long document collections through structured reasoning. SLIDERS extracts salient information into a relational database, enabling scalable reasoning over persistent structured state via SQL rather than concatenated text. To make this locally extracted representation globally coherent, SLIDERS introduces a data reconciliation stage that leverages provenance, extraction rationales, and metadata to detect and repair duplicated, inconsistent, and incomplete records. SLIDERS outperforms all baselines on three existing long-context benchmarks, despite all of them fitting within the context window of strong base LLMs, exceeding GPT-4.1 by 6.6 points on average. It also improves over the next best baseline by ~19 and ~32 points on two new benchmarks at 3.9M and 36M tokens, respectively.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.22294" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.22294" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://sliders.genie.stanford.edu" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/stanford-oval/sliders" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="building a precise video language with human-ai oversight"
+  data-summary="该论文提出基于结构化视觉原语和专家批判修订的人机协同监督流程，用于构建高精度视频字幕数据并通过sft、dpo、奖励建模和推理时扩展提升视频语言模型及视频生成控制能力。"
+  data-topic="multimodal data curation"
+  data-institution="Carnegie Mellon University"
+  data-date="2026-04-27"
+  data-paper-id="2604.21718"
+  data-original-institution="Carnegie Mellon University"
+  data-original-topic="multimodal data curation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.21718" target="_blank" rel="noreferrer">Building a Precise Video Language with Human-AI Oversight</a></h3>
+    </div>
+    <div class="metrics">
+      <span>17 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zhiqiu Lin, Chancharik Mitra, Siyuan Cen, +13 more</p>
+  <p class="one-line">该论文提出基于结构化视觉原语和专家批判修订的人机协同监督流程，用于构建高精度视频字幕数据并通过SFT、DPO、奖励建模和推理时扩展提升视频语言模型及视频生成控制能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Carnegie Mellon University</span>
+    <span class="tag topic" data-tag-role="topic">multimodal data curation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Carnegie Mellon University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal data curation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Video-language models (VLMs) learn to reason about the dynamic visual world through natural language. We introduce a suite of open datasets, benchmarks, and recipes for scalable oversight that enable precise video captioning. First, we define a structured specification for describing subjects, scenes, motion, spatial, and camera dynamics, grounded by hundreds of carefully defined visual primitives developed with professional video creators such as filmmakers. Next, to curate high-quality captions, we introduce CHAI (Critique-based Human-AI Oversight), a framework where trained experts critique and revise model-generated pre-captions into improved post-captions. This division of labor improves annotation accuracy and efficiency by offloading text generation to models, allowing humans to better focus on verification. Additionally, these critiques and preferences between pre- and post-captions provide rich supervision for improving open-source models (Qwen3-VL) on caption generation, reward modeling, and critique generation through SFT, DPO, and inference-time scaling. Our ablations show that critique quality in precision, recall, and constructiveness, ensured by our oversight framework, directly governs downstream performance. With modest expert supervision, the resulting model outperforms closed-source models such as Gemini-3.1-Pro. Finally, we apply our approach to re-caption large-scale professional videos (e.g., films, commercials, games) and fine-tune video generation models such as Wan to better follow detailed prompts of up to 400 words, achieving finer control over cinematography including camera motion, angle, lens, focus, point of view, and framing. Our results show that precise specification and human-AI oversight are key to professional-level video understanding and generation. Data and code are available on our project page: https://linzhiqiu.github.io/papers/chai/</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.21718" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.21718" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://linzhiqiu.github.io/papers/chai/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/chancharikmitra/CHAI" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="flowanchor: stabilizing the editing signal for inversion-free video editing"
+  data-summary="本文提出一种免反演的训练免费流式视频编辑框架，通过空间感知注意力细化和自适应幅度调制来稳定高维视频潜空间中的编辑信号，从而提升多目标和快速运动场景下的编辑一致性与效率。"
+  data-topic="video editing"
+  data-institution="Multimedia Intelligent Processing Group in Communication University of China"
+  data-date="2026-04-27"
+  data-paper-id="2604.22586"
+  data-original-institution="Multimedia Intelligent Processing Group in Communication University of China"
+  data-original-topic="video editing"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.22586" target="_blank" rel="noreferrer">FlowAnchor: Stabilizing the Editing Signal for Inversion-Free Video Editing</a></h3>
+    </div>
+    <div class="metrics">
+      <span>16 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Ze Chen, Lan Chen, Yuanhang Li, +1 more</p>
+  <p class="one-line">本文提出一种免反演的训练免费流式视频编辑框架，通过空间感知注意力细化和自适应幅度调制来稳定高维视频潜空间中的编辑信号，从而提升多目标和快速运动场景下的编辑一致性与效率。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Multimedia Intelligent Processing Group in Communication University of China</span>
+    <span class="tag topic" data-tag-role="topic">video editing</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Multimedia Intelligent Processing Group in Communication University of China">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="video editing">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>We propose FlowAnchor, a training-free framework for stable and efficient inversion-free, flow-based video editing. Inversion-free editing methods have recently shown impressive efficiency and structure preservation in images by directly steering the sampling trajectory with an editing signal. However, extending this paradigm to videos remains challenging, often failing in multi-object scenes or with increased frame counts. We identify the root cause as the instability of the editing signal in high-dimensional video latent spaces, which arises from imprecise spatial localization and length-induced magnitude attenuation. To overcome this challenge, FlowAnchor explicitly anchors both where to edit and how strongly to edit. It introduces Spatial-aware Attention Refinement, which enforces consistent alignment between textual guidance and spatial regions, and Adaptive Magnitude Modulation, which adaptively preserves sufficient editing strength. Together, these mechanisms stabilize the editing signal and guide the flow-based evolution toward the desired target distribution. Extensive experiments demonstrate that FlowAnchor achieves more faithful, temporally coherent, and computationally efficient video editing across challenging multi-object and fast-motion scenarios. The project page is available at https://cuc-mipg.github.io/FlowAnchor.github.io/.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.22586" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.22586" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://cuc-mipg.github.io/FlowAnchor.github.io/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/CUC-MIPG/FlowAnchor" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="agentsearchbench: a benchmark for ai agent search in the wild"
+  data-summary="本文提出一个面向真实场景的ai智能体搜索基准，将智能体发现形式化为检索与重排序任务，并通过执行表现信号评估和改进基于描述的匹配方法。"
+  data-topic="LLM agent retrieval"
+  data-institution="University College London"
+  data-date="2026-04-27"
+  data-paper-id="2604.22436"
+  data-original-institution="University College London"
+  data-original-topic="LLM agent retrieval"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.22436" target="_blank" rel="noreferrer">AgentSearchBench: A Benchmark for AI Agent Search in the Wild</a></h3>
+    </div>
+    <div class="metrics">
+      <span>14 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Bin Wu, Arastun Mammadli, Xiaoyu Zhang, +1 more</p>
+  <p class="one-line">本文提出一个面向真实场景的AI智能体搜索基准，将智能体发现形式化为检索与重排序任务，并通过执行表现信号评估和改进基于描述的匹配方法。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">University College London</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent retrieval</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="University College London">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent retrieval">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>The rapid growth of AI agent ecosystems is transforming how complex tasks are delegated and executed, creating a new challenge of identifying suitable agents for a given task. Unlike traditional tools, agent capabilities are often compositional and execution-dependent, making them difficult to assess from textual descriptions alone. However, existing research and benchmarks typically assume well-specified functionalities, controlled candidate pools, or only executable task queries, leaving realistic agent search scenarios insufficiently studied. We introduce AgentSearchBench, a large-scale benchmark for agent search in the wild, built from nearly 10,000 real-world agents across multiple providers. The benchmark formalizes agent search as retrieval and reranking problems under both executable task queries and high-level task descriptions, and evaluates relevance using execution-grounded performance signals. Experiments reveal a consistent gap between semantic similarity and actual agent performance, exposing the limitations of description-based retrieval and reranking methods. We further show that lightweight behavioral signals, including execution-aware probing, can substantially improve ranking quality, highlighting the importance of incorporating execution signals into agent discovery. Our code is available at https://github.com/Bingo-W/AgentSearchBench.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.22436" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.22436" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://bingo-w.github.io/AgentSearchBench/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/Bingo-W/AgentSearchBench" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="sessa: selective state space attention"
+  data-summary="本文提出一种将注意力置于循环反馈路径中的长上下文解码器架构，用理论证明其具备更慢衰减的幂律记忆尾和更灵活的选择性检索能力，并在长上下文基准上优于匹配的 transformer 与 mamba 类模型。"
+  data-topic="LLM architecture optimization"
+  data-institution="Unknown"
+  data-date="2026-04-27"
+  data-paper-id="2604.18580"
+  data-original-institution="Unknown"
+  data-original-topic="LLM architecture optimization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.18580" target="_blank" rel="noreferrer">Sessa: Selective State Space Attention</a></h3>
+    </div>
+    <div class="metrics">
+      <span>14 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Liubomyr Horbatko</p>
+  <p class="one-line">本文提出一种将注意力置于循环反馈路径中的长上下文解码器架构，用理论证明其具备更慢衰减的幂律记忆尾和更灵活的选择性检索能力，并在长上下文基准上优于匹配的 Transformer 与 Mamba 类模型。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM architecture optimization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM architecture optimization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Modern sequence modeling is dominated by two families: Transformers, whose self-attention can access arbitrary elements of the visible sequence, and structured state-space models, which propagate information through an explicit recurrent state. These mechanisms face different limitations on long contexts: when attention is diffuse, the influence of individual tokens is diluted across the effective support, while recurrent state propagation can lose long-range sensitivity unless information is actively preserved. As a result, both mechanisms face challenges in preserving and selectively retrieving information over long contexts. We propose Sessa, a decoder that places attention inside a recurrent feedback path. This creates many attention-based paths through which past tokens can influence future states, rather than relying on a single attention read or a single recurrent chain. We prove that, under explicit assumptions and matched regimes, Sessa admits power-law memory tails O(ell^{-β}) for 0 &lt; β&lt; 1, with slower decay than in the corresponding Transformer and Mamba-style baselines. We further give an explicit construction that achieves this power-law rate. Under the same assumptions, Sessa is the only model class among those considered that realizes flexible selective retrieval, including profiles whose influence does not decay with distance. Consistent with this theoretical advantage, across matched experiments, Sessa achieves the strongest performance on long-context benchmarks while remaining competitive with Transformer and Mamba-style baselines on short-context language modeling.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.18580" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.18580" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/LibratioAI/sessa" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="memanto: typed semantic memory with information-theoretic retrieval for long-horizon agents"
+  data-summary="本文提出一种面向长程智能体的类型化语义记忆层，通过预定义记忆类别、冲突解决、时间版本管理和信息论语义检索来降低复杂度并提升多会话记忆检索效果。"
+  data-topic="LLM memory"
+  data-institution="Moorcheh.ai"
+  data-date="2026-04-27"
+  data-paper-id="2604.22085"
+  data-original-institution="Moorcheh.ai"
+  data-original-topic="LLM memory"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.22085" target="_blank" rel="noreferrer">Memanto: Typed Semantic Memory with Information-Theoretic Retrieval for Long-Horizon Agents</a></h3>
+    </div>
+    <div class="metrics">
+      <span>12 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Seyed Moein Abtahi, Rasa Rahnema, Hetkumar Patel, +3 more</p>
+  <p class="one-line">本文提出一种面向长程智能体的类型化语义记忆层，通过预定义记忆类别、冲突解决、时间版本管理和信息论语义检索来降低复杂度并提升多会话记忆检索效果。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Moorcheh.ai</span>
+    <span class="tag topic" data-tag-role="topic">LLM memory</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Moorcheh.ai">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM memory">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>The transition from stateless language model inference to persistent, multi session autonomous agents has revealed memory to be a primary architectural bottleneck in the deployment of production grade agentic systems. Existing methodologies largely depend on hybrid semantic graph architectures, which impose substantial computational overhead during both ingestion and retrieval. These systems typically require large language model mediated entity extraction, explicit graph schema maintenance, and multi query retrieval pipelines. This paper introduces Memanto, a universal memory layer for agentic artificial intelligence that challenges the prevailing assumption that knowledge graph complexity is necessary to achieve high fidelity agent memory. Memanto integrates a typed semantic memory schema comprising thirteen predefined memory categories, an automated conflict resolution mechanism, and temporal versioning. These components are enabled by Moorcheh&#39;s Information Theoretic Search engine, a no indexing semantic database that provides deterministic retrieval within sub ninety millisecond latency while eliminating ingestion delay. Through systematic benchmarking on the LongMemEval and LoCoMo evaluation suites, Memanto achieves state of the art accuracy scores of 89.8 percent and 87.1 percent respectively. These results surpass all evaluated hybrid graph and vector based systems while requiring only a single retrieval query, incurring no ingestion cost, and maintaining substantially lower operational complexity. A five stage progressive ablation study is presented to quantify the contribution of each architectural component, followed by a discussion of the implications for scalable deployment of agentic memory systems.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.22085" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.22085" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://memanto.ai/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/moorcheh-ai/memanto" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="learning evidence highlighting for frozen llms"
+  data-summary="本文提出一种面向冻结大语言模型的证据高亮框架，通过强化学习训练轻量级标注器在原始长上下文中突出关键片段，从而提升下游推理与问答表现。"
+  data-topic="LLM evidence selection"
+  data-institution="unknown"
+  data-date="2026-04-27"
+  data-paper-id="2604.22565"
+  data-original-institution="unknown"
+  data-original-topic="LLM evidence selection"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.22565" target="_blank" rel="noreferrer">Learning Evidence Highlighting for Frozen LLMs</a></h3>
+    </div>
+    <div class="metrics">
+      <span>6 upvotes</span>
+      <span>1 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Shaoang Li, Yanhang Shi, Yufei Li, +10 more</p>
+  <p class="one-line">本文提出一种面向冻结大语言模型的证据高亮框架，通过强化学习训练轻量级标注器在原始长上下文中突出关键片段，从而提升下游推理与问答表现。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM evidence selection</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM evidence selection">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large Language Models (LLMs) can reason well, yet often miss decisive evidence when it is buried in long, noisy contexts. We introduce HiLight, an Evidence Emphasis framework that decouples evidence selection from reasoning for frozen LLM solvers. HiLight avoids compressing or rewriting the input, which can discard or distort evidence, by training a lightweight Emphasis Actor to insert minimal highlight tags around pivotal spans in the unaltered context. A frozen Solver then performs downstream reasoning on the emphasized input. We cast highlighting as a weakly supervised decision-making problem and optimize the Actor with reinforcement learning using only the Solver&#39;s task reward, requiring no evidence labels and no access to or modification of the Solver. Across sequential recommendation and long-context question answering, HiLight consistently improves performance over strong prompt-based and automated prompt-optimization baselines. The learned emphasis policy transfers zero-shot to both smaller and larger unseen Solver families, including an API-based Solver, suggesting that the Actor captures genuine, reusable evidence structure rather than overfitting to a single backbone.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.22565" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.22565" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="emergent strategic reasoning risks in ai: a taxonomy-driven evaluation framework"
+  data-summary="本文提出一个基于风险分类法的自动化代理评估框架，用生成场景和双重评分标准系统检测大语言模型中的欺骗、评测博弈和奖励黑客等战略推理安全风险。"
+  data-topic="LLM behavior evaluation"
+  data-institution="Amazon"
+  data-date="2026-04-27"
+  data-paper-id="2604.22119"
+  data-original-institution="Amazon"
+  data-original-topic="LLM behavior evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.22119" target="_blank" rel="noreferrer">Emergent Strategic Reasoning Risks in AI: A Taxonomy-Driven Evaluation Framework</a></h3>
+    </div>
+    <div class="metrics">
+      <span>6 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Tharindu Kumarage, Lisa Bauer, Yao Ma, +7 more</p>
+  <p class="one-line">本文提出一个基于风险分类法的自动化代理评估框架，用生成场景和双重评分标准系统检测大语言模型中的欺骗、评测博弈和奖励黑客等战略推理安全风险。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Amazon</span>
+    <span class="tag topic" data-tag-role="topic">LLM behavior evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Amazon">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM behavior evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>As reasoning capacity and deployment scope grow in tandem, large language models (LLMs) gain the capacity to engage in behaviors that serve their own objectives, a class of risks we term Emergent Strategic Reasoning Risks (ESRRs). These include, but are not limited to, deception (intentionally misleading users or evaluators), evaluation gaming (strategically manipulating performance during safety testing), and reward hacking (exploiting misspecified objectives). Systematically understanding and benchmarking these risks remains an open challenge. To address this gap, we introduce ESRRSim, a taxonomy-driven agentic framework for automated behavioral risk evaluation. We construct an extensible risk taxonomy of 7 categories, which is decomposed into 20 subcategories. ESRRSim generates evaluation scenarios designed to elicit faithful reasoning, paired with dual rubrics assessing both model responses and reasoning traces, in a judge-agnostic and scalable architecture. Evaluation across 11 reasoning LLMs reveals substantial variation in risk profiles (detection rates ranging 14.45%-72.72%), with dramatic generational improvements suggesting models may increasingly recognize and adapt to evaluation contexts.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.22119" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.22119" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="dworldeval: scalable robotic policy evaluation via discrete diffusion world model"
+  data-summary="本文提出一种将视觉、语言和机器人动作统一离散标记化并用扩散世界模型预测未来观测与任务进度的可扩展机器人策略评估方法。"
+  data-topic="world models"
+  data-institution="unknown"
+  data-date="2026-04-27"
+  data-paper-id="2604.22152"
+  data-original-institution="unknown"
+  data-original-topic="world models"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.22152" target="_blank" rel="noreferrer">dWorldEval: Scalable Robotic Policy Evaluation via Discrete Diffusion World Model</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>1 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yaxuan Li, Zhongyi Zhou, Yefei Chen, +2 more</p>
+  <p class="one-line">本文提出一种将视觉、语言和机器人动作统一离散标记化并用扩散世界模型预测未来观测与任务进度的可扩展机器人策略评估方法。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">world models</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="world models">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Evaluating robotics policies across thousands of environments and thousands of tasks is infeasible with existing approaches. This motivates the need for a new methodology for scalable robotics policy evaluation. In this paper, we propose dWorldEval, which uses a discrete diffusion world model as a scalable evaluation proxy for robotics policies. Specifically, dWorldEval maps all modalities - including vision, language, and robotic actions - into a unified token space, modeling them via a single transformer-based denoising network. In this paper, we propose dWorldEval, using a discrete diffusion world model as a scalable evaluation proxy for robotics policy. Specifically, it maps all modalities, including vision, language, and robotics action into a unified token space, then denoises them with a single transformer network. Building on this architecture, we employ a sparse keyframe memory to maintain spatiotemporal consistency. We also introduce a progress token that indicates the degree of task completion. At inference, the model jointly predicts future observations and progress token, allowing automatically determine success when the progress reaches 1. Extensive experiments demonstrate that dWorldEval significantly outperforms previous approaches, i.e., WorldEval, Ctrl-World, and WorldGym, on LIBERO, RoboTwin, and multiple real-robot tasks. It paves the way for a new architectural paradigm in building world simulators for robotics evaluation at scale.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.22152" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.22152" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="embodiedmidtrain: bridging the gap between vision-language models and vision-language-action models via mid-training"
+  data-summary="该论文提出通过可学习的邻近度估计器从大规模视觉语言数据中筛选与具身控制更对齐的样本进行中期训练，从而缩小vlm到vla的分布差距并提升机器人操作性能。"
+  data-topic="vision-language-action models"
+  data-institution="Chenyan Xiong Research Group at CMU"
+  data-date="2026-04-27"
+  data-paper-id="2604.20012"
+  data-original-institution="Chenyan Xiong Research Group at CMU"
+  data-original-topic="vision-language-action models"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.20012" target="_blank" rel="noreferrer">EmbodiedMidtrain: Bridging the Gap between Vision-Language Models and Vision-Language-Action Models via Mid-training</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yiyang Du, Zhanqiu Guo, Xin Ye, +2 more</p>
+  <p class="one-line">该论文提出通过可学习的邻近度估计器从大规模视觉语言数据中筛选与具身控制更对齐的样本进行中期训练，从而缩小VLM到VLA的分布差距并提升机器人操作性能。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Chenyan Xiong Research Group at CMU</span>
+    <span class="tag topic" data-tag-role="topic">vision-language-action models</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Chenyan Xiong Research Group at CMU">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="vision-language-action models">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Vision-Language-Action Models (VLAs) inherit their visual and linguistic capabilities from Vision-Language Models (VLMs), yet most VLAs are built from off-the-shelf VLMs that are not adapted to the embodied domain, limiting their downstream performance. In this work, we propose EmbodiedMidtrain to bridge the gap between VLMs and VLAs. We first characterize the data distribution gap between them, showing that VLA data occupy compact regions that are largely separated from the broader VLM distribution, while the degree of alignment varies substantially both across and within VLM data sources. Then, we build a mid-training data engine that leverages a lightweight learnable proximity estimator to select the most VLA-aligned candidates from a large VLM pool, and mid-trains the VLM on this curated mixture before downstream VLA fine-tuning. Experiments on three robot manipulation benchmarks show that mid-training consistently improves performance across different VLM backbones, achieving results competitive with expert VLAs and off-the-shelf VLMs trained with larger model scale and training budgets. Further analysis reveals that mid-training provides a stronger initialization for VLA fine-tuning, with gains emerging from the earliest steps and widening throughout training. Moreover, the data engine captures both dataset-level and sample-level alignment signals, favoring spatial reasoning over text-centric tasks while preserving the diversity of the VLM data. We will release all code, data and models for future research.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.20012" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.20012" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://adu2021.github.io/blog/EmbodiedMidtrain/" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="agriir: a scalable framework for domain-specific knowledge retrieval"
+  data-summary="本文提出一个面向农业等垂直领域的模块化rag检索框架，通过查询改写、子查询规划、自适应检索、答案合成与评估等可配置阶段，在低计算成本下提供带确定性引用的可信领域知识问答。"
+  data-topic="RAG retrieval"
+  data-institution="unknown"
+  data-date="2026-04-27"
+  data-paper-id="2604.16353"
+  data-original-institution="unknown"
+  data-original-topic="RAG retrieval"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.16353" target="_blank" rel="noreferrer">AgriIR: A Scalable Framework for Domain-Specific Knowledge Retrieval</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Shuvam Banerji Seal, Aheli Poddar, Alok Mishra, +1 more</p>
+  <p class="one-line">本文提出一个面向农业等垂直领域的模块化RAG检索框架，通过查询改写、子查询规划、自适应检索、答案合成与评估等可配置阶段，在低计算成本下提供带确定性引用的可信领域知识问答。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">RAG retrieval</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="RAG retrieval">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>This paper introduces AgriIR, a configurable retrieval augmented generation (RAG) framework designed to deliver grounded, domain-specific answers while maintaining flexibility and low computational cost. Instead of relying on large, monolithic models, AgriIR decomposes the information access process into declarative modular stages -- query refinement, sub-query planning, retrieval, synthesis, and evaluation. This design allows practitioners to adapt the framework to new knowledge verticals without modifying the architecture. Our reference implementation targets Indian agricultural information access, integrating 1B-parameter language models with adaptive retrievers and domain-aware agent catalogues. The system enforces deterministic citation, integrates telemetry for transparency, and includes automated deployment assets to ensure auditable, reproducible operation. By emphasizing architectural design and modular control, AgriIR demonstrates that well-engineered pipelines can achieve domain-accurate, trustworthy retrieval even under constrained resources. We argue that this approach exemplifies ``AI for Agriculture&#39;&#39; by promoting accessibility, sustainability, and accountability in retrieval-augmented generation systems.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.16353" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.16353" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/Shuvam-Banerji-Seal/AgriIR" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="diagrambank: a large-scale dataset of diagram design exemplars with paper metadata for retrieval-augmented generation"
+  data-summary="该论文构建了一个从顶级论文中自动筛选和配对元数据的大规模科学示意图数据集，用于支持多模态检索和基于示例的检索增强科学图表生成。"
+  data-topic="multimodal data curation"
+  data-institution="Rensselaer Polytechnic Institute"
+  data-date="2026-04-27"
+  data-paper-id="2604.20857"
+  data-original-institution="Rensselaer Polytechnic Institute"
+  data-original-topic="multimodal data curation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-27</p>
+      <h3><a href="https://huggingface.co/papers/2604.20857" target="_blank" rel="noreferrer">DiagramBank: A Large-scale Dataset of Diagram Design Exemplars with Paper Metadata for Retrieval-Augmented Generation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Tingwen Zhang, Ling Yue, Zhen Xu, +1 more</p>
+  <p class="one-line">该论文构建了一个从顶级论文中自动筛选和配对元数据的大规模科学示意图数据集，用于支持多模态检索和基于示例的检索增强科学图表生成。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Rensselaer Polytechnic Institute</span>
+    <span class="tag topic" data-tag-role="topic">multimodal data curation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Rensselaer Polytechnic Institute">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal data curation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Recent advances in autonomous ``AI scientist&#39;&#39; systems have demonstrated the ability to automatically write scientific manuscripts and codes with execution. However, producing a publication-grade scientific diagram (e.g., teaser figure) is still a major bottleneck in the ``end-to-end&#39;&#39; paper generation process. For example, a teaser figure acts as a strategic visual interface and serves a different purpose than derivative data plots. It demands conceptual synthesis and planning to translate complex logic workflow into a compelling graphic that guides intuition and sparks curiosity. Existing AI scientist systems usually omit this component or fall back to an inferior alternative. To bridge this gap, we present DiagramBank, a large-scale dataset consisting of 89,422 schematic diagrams curated from existing top-tier scientific publications, designed for multimodal retrieval and exemplar-driven scientific figure generation. DiagramBank is developed through our automated curation pipeline that extracts figures and corresponding in-text references, and uses a CLIP-based filter to differentiate schematic diagrams from standard plots or natural images. Each instance is paired with rich context from abstract, caption, to figure-reference pairs, enabling information retrieval under different query granularities. We release DiagramBank in a ready-to-index format and provide a retrieval-augmented generation codebase to demonstrate exemplar-conditioned synthesis of teaser figures. DiagramBank is publicly available at https://huggingface.co/datasets/zhangt20/DiagramBank with code at https://github.com/csml-rpi/DiagramBank.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.20857" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.20857" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/csml-rpi/DiagramBank" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article>      </div>
+    </main>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

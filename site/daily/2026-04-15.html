@@ -1,0 +1,2640 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2026-04-15 - Hugging Face Daily Papers</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Daily archive</p>
+        <h1>2026-04-15</h1>
+      </div>
+      <div class="stats">
+        <a href="../index.html">Index</a>
+        <span>40 papers</span>
+      </div>
+    </header>
+
+    <main class="daily-page">
+      <div class="paper-grid">
+<article
+  class="paper-card"
+  data-title="clawgui: a unified framework for training, evaluating, and deploying gui agents"
+  data-summary="本文提出clawgui统一框架，用于通过强化学习训练、标准化评测和跨设备部署来构建可在真实移动图形界面中执行操作的gui智能体。"
+  data-topic="GUI automation"
+  data-institution="Zhejiang University"
+  data-date="2026-04-15"
+  data-paper-id="2604.11784"
+  data-original-institution="Zhejiang University"
+  data-original-topic="GUI automation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.11784" target="_blank" rel="noreferrer">ClawGUI: A Unified Framework for Training, Evaluating, and Deploying GUI Agents</a></h3>
+    </div>
+    <div class="metrics">
+      <span>143 upvotes</span>
+      <span>8 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Fei Tang, Zhiqiong Lu, Boxuan Zhang, +4 more</p>
+  <p class="one-line">本文提出ClawGUI统一框架，用于通过强化学习训练、标准化评测和跨设备部署来构建可在真实移动图形界面中执行操作的GUI智能体。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Zhejiang University</span>
+    <span class="tag topic" data-tag-role="topic">GUI automation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Zhejiang University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="GUI automation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>GUI agents drive applications through their visual interfaces instead of programmatic APIs, interacting with arbitrary software via taps, swipes, and keystrokes, reaching a long tail of applications that CLI-based agents cannot. Yet progress in this area is bottlenecked less by modeling capacity than by the absence of a coherent full-stack infrastructure: online RL training suffers from environment instability and closed pipelines, evaluation protocols drift silently across works, and trained agents rarely reach real users on real devices. We present ClawGUI, an open-source framework addressing these three gaps within a single harness. ClawGUI-RL provides the first open-source GUI agent RL infrastructure with validated support for both parallel virtual environments and real physical devices, integrating GiGPO with a Process Reward Model for dense step-level supervision. ClawGUI-Eval enforces a fully standardized evaluation pipeline across 6 benchmarks and 11+ models, achieving 95.8\% reproduction against official baselines. ClawGUI-Agent brings trained agents to Android, HarmonyOS, and iOS through 12+ chat platforms with hybrid CLI-GUI control and persistent personalized memory. Trained end to end within this pipeline, ClawGUI-2B achieves 17.1\% Success Rate on MobileWorld GUI-Only, outperforming the same-scale MAI-UI-2B baseline by 6.0\%.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.11784" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.11784" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://zju-real.github.io/ClawGUI-Page/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/ZJU-REAL/ClawGUI" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="rethinking on-policy distillation of large language models: phenomenology, mechanism, and recipe"
+  data-summary="本文系统研究大语言模型在线策略蒸馏的成败条件、训练动力学与词元级机制，并提出离线冷启动和教师对齐提示选择等策略来修复失败的蒸馏过程。"
+  data-topic="on-policy distillation"
+  data-institution="Tsinghua NLP Group"
+  data-date="2026-04-15"
+  data-paper-id="2604.13016"
+  data-original-institution="Tsinghua NLP Group"
+  data-original-topic="on-policy distillation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.13016" target="_blank" rel="noreferrer">Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe</a></h3>
+    </div>
+    <div class="metrics">
+      <span>108 upvotes</span>
+      <span>6 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yaxuan Li, Yuxin Zuo, Bingxiang He, +8 more</p>
+  <p class="one-line">本文系统研究大语言模型在线策略蒸馏的成败条件、训练动力学与词元级机制，并提出离线冷启动和教师对齐提示选择等策略来修复失败的蒸馏过程。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Tsinghua NLP Group</span>
+    <span class="tag topic" data-tag-role="topic">on-policy distillation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Tsinghua NLP Group">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="on-policy distillation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>On-policy distillation (OPD) has become a core technique in the post-training of large language models, yet its training dynamics remain poorly understood. This paper provides a systematic investigation of OPD dynamics and mechanisms. We first identify that two conditions govern whether OPD succeeds or fails: (i) the student and teacher should share compatible thinking patterns; and (ii) even with consistent thinking patterns and higher scores, the teacher must offer genuinely new capabilities beyond what the student has seen during training. We validate these findings through weak-to-strong reverse distillation, showing that same-family 1.5B and 7B teachers are distributionally indistinguishable from the student&#39;s perspective. Probing into the token-level mechanism, we show that successful OPD is characterized by progressive alignment on high-probability tokens at student-visited states, a small shared token set that concentrates most of the probability mass (97%-99%). We further propose two practical strategies to recover failing OPD: off-policy cold start and teacher-aligned prompt selection. Finally, we show that OPD&#39;s apparent free lunch of dense token-level reward comes at a cost, raising the question of whether OPD can scale to long-horizon distillation.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.13016" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.13016" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/thunlp/OPD" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="knowrl: boosting llm reasoning via reinforcement learning with minimal-sufficient knowledge guidance"
+  data-summary="本文提出knowrl，通过将提示分解为原子知识点并用约束子集搜索选择最小充分知识指导，缓解大语言模型强化学习推理训练中的奖励稀疏问题。"
+  data-topic="LLM reinforcement learning"
+  data-institution="Tianjin University"
+  data-date="2026-04-15"
+  data-paper-id="2604.12627"
+  data-original-institution="Tianjin University"
+  data-original-topic="LLM reinforcement learning"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12627" target="_blank" rel="noreferrer">KnowRL: Boosting LLM Reasoning via Reinforcement Learning with Minimal-Sufficient Knowledge Guidance</a></h3>
+    </div>
+    <div class="metrics">
+      <span>101 upvotes</span>
+      <span>6 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Linhao Yu, Tianmeng Yang, Siyu Ding, +8 more</p>
+  <p class="one-line">本文提出KnowRL，通过将提示分解为原子知识点并用约束子集搜索选择最小充分知识指导，缓解大语言模型强化学习推理训练中的奖励稀疏问题。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Tianjin University</span>
+    <span class="tag topic" data-tag-role="topic">LLM reinforcement learning</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Tianjin University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM reinforcement learning">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>RLVR improves reasoning in large language models, but its effectiveness is often limited by severe reward sparsity on hard problems. Recent hint-based RL methods mitigate sparsity by injecting partial solutions or abstract templates, yet they typically scale guidance by adding more tokens, which introduce redundancy, inconsistency, and extra training overhead. We propose KnowRL (Knowledge-Guided Reinforcement Learning), an RL training framework that treats hint design as a minimal-sufficient guidance problem. During RL training, KnowRL decomposes guidance into atomic knowledge points (KPs) and uses Constrained Subset Search (CSS) to construct compact, interaction-aware subsets for training. We further identify a pruning interaction paradox -- removing one KP may help while removing multiple such KPs can hurt -- and explicitly optimize for robust subset curation under this dependency structure. We train KnowRL-Nemotron-1.5B from OpenMath-Nemotron-1.5B. Across eight reasoning benchmarks at the 1.5B scale, KnowRL-Nemotron-1.5B consistently outperforms strong RL and hinting baselines. Without KP hints at inference, KnowRL-Nemotron-1.5B reaches 70.08 average accuracy, already surpassing Nemotron-1.5B by +9.63 points; with selected KPs, performance improves to 74.16, establishing a new state of the art at this scale. The model, curated training data, and code are publicly available at https://github.com/Hasuer/KnowRL.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12627" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12627" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/Hasuer/KnowRL" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="lyra 2.0: explorable generative 3d worlds"
+  data-summary="本文提出一种生成可探索大规模3d世界的框架，通过3d几何辅助的历史帧检索与稠密对应缓解空间遗忘，并用自增强历史训练抑制长程视频生成中的时间漂移，最终结合前馈重建获得一致的3d场景。"
+  data-topic="3D scene generation"
+  data-institution="NVIDIA"
+  data-date="2026-04-15"
+  data-paper-id="2604.13036"
+  data-original-institution="NVIDIA"
+  data-original-topic="3D scene generation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.13036" target="_blank" rel="noreferrer">Lyra 2.0: Explorable Generative 3D Worlds</a></h3>
+    </div>
+    <div class="metrics">
+      <span>41 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Tianchang Shen, Sherwin Bahmani, Kai He, +12 more</p>
+  <p class="one-line">本文提出一种生成可探索大规模3D世界的框架，通过3D几何辅助的历史帧检索与稠密对应缓解空间遗忘，并用自增强历史训练抑制长程视频生成中的时间漂移，最终结合前馈重建获得一致的3D场景。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">NVIDIA</span>
+    <span class="tag topic" data-tag-role="topic">3D scene generation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="NVIDIA">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="3D scene generation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Recent advances in video generation enable a new paradigm for 3D scene creation: generating camera-controlled videos that simulate scene walkthroughs, then lifting them to 3D via feed-forward reconstruction techniques. This generative reconstruction approach combines the visual fidelity and creative capacity of video models with 3D outputs ready for real-time rendering and simulation. Scaling to large, complex environments requires 3D-consistent video generation over long camera trajectories with large viewpoint changes and location revisits, a setting where current video models degrade quickly. Existing methods for long-horizon generation are fundamentally limited by two forms of degradation: spatial forgetting and temporal drifting. As exploration proceeds, previously observed regions fall outside the model&#39;s temporal context, forcing the model to hallucinate structures when revisited. Meanwhile, autoregressive generation accumulates small synthesis errors over time, gradually distorting scene appearance and geometry. We present Lyra 2.0, a framework for generating persistent, explorable 3D worlds at scale. To address spatial forgetting, we maintain per-frame 3D geometry and use it solely for information routing -- retrieving relevant past frames and establishing dense correspondences with the target viewpoints -- while relying on the generative prior for appearance synthesis. To address temporal drifting, we train with self-augmented histories that expose the model to its own degraded outputs, teaching it to correct drift rather than propagate it. Together, these enable substantially longer and 3D-consistent video trajectories, which we leverage to fine-tune feed-forward reconstruction models that reliably recover high-quality 3D scenes.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.13036" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.13036" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="nemotron 3 super: open, efficient mixture-of-experts hybrid mamba-transformer model for agentic reasoning"
+  data-summary="该论文介绍了一个面向代理式推理的开放高效大语言模型，通过混合mamba-attention与moe架构、低精度预训练、监督微调、强化学习和量化来提升长上下文能力与推理吞吐。"
+  data-topic="LLM architecture optimization"
+  data-institution="NVIDIA"
+  data-date="2026-04-15"
+  data-paper-id="2604.12374"
+  data-original-institution="NVIDIA"
+  data-original-topic="LLM architecture optimization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12374" target="_blank" rel="noreferrer">Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning</a></h3>
+    </div>
+    <div class="metrics">
+      <span>37 upvotes</span>
+      <span>1 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">NVIDIA, Aakshita Chandiramani, Aaron Blakeman, +543 more</p>
+  <p class="one-line">该论文介绍了一个面向代理式推理的开放高效大语言模型，通过混合Mamba-Attention与MoE架构、低精度预训练、监督微调、强化学习和量化来提升长上下文能力与推理吞吐。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">NVIDIA</span>
+    <span class="tag topic" data-tag-role="topic">LLM architecture optimization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="NVIDIA">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM architecture optimization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>We describe the pre-training, post-training, and quantization of Nemotron 3 Super, a 120 billion (active 12 billion) parameter hybrid Mamba-Attention Mixture-of-Experts model. Nemotron 3 Super is the first model in the Nemotron 3 family to 1) be pre-trained in NVFP4, 2) leverage LatentMoE, a new Mixture-of-Experts architecture that optimizes for both accuracy per FLOP and accuracy per parameter, and 3) include MTP layers for inference acceleration through native speculative decoding. We pre-trained Nemotron 3 Super on 25 trillion tokens followed by post-training using supervised fine tuning (SFT) and reinforcement learning (RL). The final model supports up to 1M context length and achieves comparable accuracy on common benchmarks, while also achieving up to 2.2x and 7.5x higher inference throughput compared to GPT-OSS-120B and Qwen3.5-122B, respectively. Nemotron 3 Super datasets, along with the base, post-trained, and quantized checkpoints, are open-sourced on HuggingFace.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12374" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12374" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="toward autonomous long-horizon engineering for ml research"
+  data-summary="本文面向长周期机器学习研究工程，提出结合层级编排与持久化文件工作区的自治科研代理系统，以维持跨理解、实现、实验和调试阶段的连续状态并提升任务完成能力。"
+  data-topic="autonomous research agents"
+  data-institution="AweAI Team"
+  data-date="2026-04-15"
+  data-paper-id="2604.13018"
+  data-original-institution="AweAI Team"
+  data-original-topic="autonomous research agents"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.13018" target="_blank" rel="noreferrer">Toward Autonomous Long-Horizon Engineering for ML Research</a></h3>
+    </div>
+    <div class="metrics">
+      <span>34 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Guoxin Chen, Jie Chen, Lei Chen, +7 more</p>
+  <p class="one-line">本文面向长周期机器学习研究工程，提出结合层级编排与持久化文件工作区的自治科研代理系统，以维持跨理解、实现、实验和调试阶段的连续状态并提升任务完成能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">AweAI Team</span>
+    <span class="tag topic" data-tag-role="topic">autonomous research agents</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="AweAI Team">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="autonomous research agents">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Autonomous AI research has advanced rapidly, but long-horizon ML research engineering remains difficult: agents must sustain coherent progress across task comprehension, environment setup, implementation, experimentation, and debugging over hours or days. We introduce AiScientist, a system for autonomous long-horizon engineering for ML research built on a simple principle: strong long-horizon performance requires both structured orchestration and durable state continuity. To this end, AiScientist combines hierarchical orchestration with a permission-scoped File-as-Bus workspace: a top-level Orchestrator maintains stage-level control through concise summaries and a workspace map, while specialized agents repeatedly re-ground on durable artifacts such as analyses, plans, code, and experimental evidence rather than relying primarily on conversational handoffs, yielding thin control over thick state. Across two complementary benchmarks, AiScientist improves PaperBench score by 10.54 points on average over the best matched baseline and achieves 81.82 Any Medal% on MLE-Bench Lite. Ablation studies further show that File-as-Bus protocol is a key driver of performance, reducing PaperBench by 6.41 points and MLE-Bench Lite by 31.82 points when removed. These results suggest that long-horizon ML research engineering is a systems problem of coordinating specialized work over durable project state, rather than a purely local reasoning problem.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.13018" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.13018" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/AweAI-Team/AiScientist" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="turing test on screen: a benchmark for mobile gui agent humanization"
+  data-summary="本文提出面向移动端gui智能体人类化行为的屏幕图灵测试基准，通过触控动态数据、检测指标与行为匹配方法评估并提升智能体在保持任务性能时的拟人可模仿性。"
+  data-topic="LLM agent benchmark evaluation"
+  data-institution="Shanghai Jiao Tong University"
+  data-date="2026-04-15"
+  data-paper-id="2604.09574"
+  data-original-institution="Shanghai Jiao Tong University"
+  data-original-topic="LLM agent benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.09574" target="_blank" rel="noreferrer">Turing Test on Screen: A Benchmark for Mobile GUI Agent Humanization</a></h3>
+    </div>
+    <div class="metrics">
+      <span>30 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Jiachen Zhu, Lingyu Yang, Rong Shan, +6 more</p>
+  <p class="one-line">本文提出面向移动端GUI智能体人类化行为的屏幕图灵测试基准，通过触控动态数据、检测指标与行为匹配方法评估并提升智能体在保持任务性能时的拟人可模仿性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Shanghai Jiao Tong University</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Shanghai Jiao Tong University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>The rise of autonomous GUI agents has triggered adversarial countermeasures from digital platforms, yet existing research prioritizes utility and robustness over the critical dimension of anti-detection. We argue that for agents to survive in human-centric ecosystems, they must evolve Humanization capabilities. We introduce the ``Turing Test on Screen,&#39;&#39; formally modeling the interaction as a MinMax optimization problem between a detector and an agent aiming to minimize behavioral divergence. We then collect a new high-fidelity dataset of mobile touch dynamics, and conduct our analysis that vanilla LMM-based agents are easily detectable due to unnatural kinematics. Consequently, we establish the Agent Humanization Benchmark (AHB) and detection metrics to quantify the trade-off between imitability and utility. Finally, we propose methods ranging from heuristic noise to data-driven behavioral matching, demonstrating that agents can achieve high imitability theoretically and empirically without sacrificing performance. This work shifts the paradigm from whether an agent can perform a task to how it performs it within a human-centric ecosystem, laying the groundwork for seamless coexistence in adversarial digital environments.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.09574" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.09574" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="sppo: sequence-level ppo for long-horizon reasoning tasks"
+  data-summary="本文提出序列级ppo框架，将长链式推理建模为序列级上下文赌博机，并用解耦标量价值函数在无需多采样的情况下稳定高效地对齐推理型大语言模型。"
+  data-topic="LLM reinforcement learning"
+  data-institution="NLP Group in SUSTech"
+  data-date="2026-04-15"
+  data-paper-id="2604.08865"
+  data-original-institution="NLP Group in SUSTech"
+  data-original-topic="LLM reinforcement learning"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.08865" target="_blank" rel="noreferrer">SPPO: Sequence-Level PPO for Long-Horizon Reasoning Tasks</a></h3>
+    </div>
+    <div class="metrics">
+      <span>29 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Tianyi Wang, Yixia Li, Long Li, +6 more</p>
+  <p class="one-line">本文提出序列级PPO框架，将长链式推理建模为序列级上下文赌博机，并用解耦标量价值函数在无需多采样的情况下稳定高效地对齐推理型大语言模型。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">NLP Group in SUSTech</span>
+    <span class="tag topic" data-tag-role="topic">LLM reinforcement learning</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="NLP Group in SUSTech">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM reinforcement learning">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Proximal Policy Optimization (PPO) is central to aligning Large Language Models (LLMs) in reasoning tasks with verifiable rewards. However, standard token-level PPO struggles in this setting due to the instability of temporal credit assignment over long Chain-of-Thought (CoT) horizons and the prohibitive memory cost of the value model. While critic-free alternatives like GRPO mitigate these issues, they incur significant computational overhead by requiring multiple samples for baseline estimation, severely limiting training throughput. In this paper, we introduce Sequence-Level PPO (SPPO), a scalable algorithm that harmonizes the sample efficiency of PPO with the stability of outcome-based updates. SPPO reformulates the reasoning process as a Sequence-Level Contextual Bandit problem, employing a decoupled scalar value function to derive low-variance advantage signals without multi-sampling. Extensive experiments on mathematical benchmarks demonstrate that SPPO significantly surpasses standard PPO and matches the performance of computation-heavy group-based methods, offering a resource-efficient framework for aligning reasoning LLMs.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.08865" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.08865" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/sustech-nlp/SPPO" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="bert-as-a-judge: a robust alternative to lexical methods for efficient reference-based llm evaluation"
+  data-summary="本文研究llm生成结果的参考答案式自动评估，提出用轻量级bert编码器判别候选答案与参考答案的语义正确性，以比词法匹配更鲁棒且比大型llm评审更高效的方式进行规模化评测。"
+  data-topic="LLM behavior evaluation"
+  data-institution="Artefact"
+  data-date="2026-04-15"
+  data-paper-id="2604.09497"
+  data-original-institution="Artefact"
+  data-original-topic="LLM behavior evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.09497" target="_blank" rel="noreferrer">BERT-as-a-Judge: A Robust Alternative to Lexical Methods for Efficient Reference-Based LLM Evaluation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>29 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Hippolyte Gisserot-Boukhlef, Nicolas Boizard, Emmanuel Malherbe, +2 more</p>
+  <p class="one-line">本文研究LLM生成结果的参考答案式自动评估，提出用轻量级BERT编码器判别候选答案与参考答案的语义正确性，以比词法匹配更鲁棒且比大型LLM评审更高效的方式进行规模化评测。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Artefact</span>
+    <span class="tag topic" data-tag-role="topic">LLM behavior evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Artefact">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM behavior evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Accurate evaluation is central to the large language model (LLM) ecosystem, guiding model selection and downstream adoption across diverse use cases. In practice, however, evaluating generative outputs typically relies on rigid lexical methods to extract and assess answers, which can conflate a model&#39;s true problem-solving ability with its compliance with predefined formatting guidelines. While recent LLM-as-a-Judge approaches mitigate this issue by assessing semantic correctness rather than strict structural conformity, they also introduce substantial computational overhead, making evaluation costly. In this work, we first systematically investigate the limitations of lexical evaluation through a large-scale empirical study spanning 36 models and 15 downstream tasks, demonstrating that such methods correlate poorly with human judgments. To address this limitation, we introduce BERT-as-a-Judge, an encoder-driven approach for assessing answer correctness in reference-based generative settings, robust to variations in output phrasing, and requiring only lightweight training on synthetically annotated question-candidate-reference triplets. We show that it consistently outperforms the lexical baseline while matching the performance of much larger LLM judges, providing a compelling tradeoff between the two and enabling reliable, scalable evaluation. Finally, through extensive experimentation, we provide detailed insights into BERT-as-a-Judge&#39;s performance to offer practical guidance for practitioners, and release all project artifacts to foster downstream adoption.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.09497" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.09497" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/artefactory/BERT-as-a-Judge" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="the blind spot of agent safety: how benign user instructions expose critical vulnerabilities in computer-use agents"
+  data-summary="本文提出os-blind基准，用于评估计算机使用智能体在用户指令表面良性但执行环境或结果会导致伤害时的安全漏洞，并分析前沿模型、多智能体系统和现有防御在该设置下的失效模式。"
+  data-topic="LLM agent security evaluation"
+  data-institution="Language, Intelligence, and Model Evaluation Lab"
+  data-date="2026-04-15"
+  data-paper-id="2604.10577"
+  data-original-institution="Language, Intelligence, and Model Evaluation Lab"
+  data-original-topic="LLM agent security evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.10577" target="_blank" rel="noreferrer">The Blind Spot of Agent Safety: How Benign User Instructions Expose Critical Vulnerabilities in Computer-Use Agents</a></h3>
+    </div>
+    <div class="metrics">
+      <span>25 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Xuwei Ding, Skylar Zhai, Linxin Song, +6 more</p>
+  <p class="one-line">本文提出OS-BLIND基准，用于评估计算机使用智能体在用户指令表面良性但执行环境或结果会导致伤害时的安全漏洞，并分析前沿模型、多智能体系统和现有防御在该设置下的失效模式。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Language, Intelligence, and Model Evaluation Lab</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent security evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Language, Intelligence, and Model Evaluation Lab">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent security evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Computer-use agents (CUAs) can now autonomously complete complex tasks in real digital environments, but when misled, they can also be used to automate harmful actions programmatically. Existing safety evaluations largely target explicit threats such as misuse and prompt injection, but overlook a subtle yet critical setting where user instructions are entirely benign and harm arises from the task context or execution outcome. We introduce OS-BLIND, a benchmark that evaluates CUAs under unintended attack conditions, comprising 300 human-crafted tasks across 12 categories, 8 applications, and 2 threat clusters: environment-embedded threats and agent-initiated harms. Our evaluation on frontier models and agentic frameworks reveals that most CUAs exceed 90% attack success rate (ASR), and even the safety-aligned Claude 4.5 Sonnet reaches 73.0% ASR. More interestingly, this vulnerability becomes even more severe, with ASR rising from 73.0% to 92.7% when Claude 4.5 Sonnet is deployed in multi-agent systems. Our analysis further shows that existing safety defenses provide limited protection when user instructions are benign. Safety alignment primarily activates within the first few steps and rarely re-engages during subsequent execution. In multi-agent systems, decomposed subtasks obscure the harmful intent from the model, causing safety-aligned models to fail. We will release our OS-BLIND to encourage the broader research community to further investigate and address these safety challenges.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.10577" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.10577" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://limenlp.github.io/OS_Blind/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/limenlp/OS_Blind" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="lary: a latent action representation yielding benchmark for generalizable vision-to-action alignment"
+  data-summary="本文提出一个面向视觉到动作对齐的潜在动作表示评测框架，通过大规模人类视频、图像对和运动轨迹系统比较通用视觉基础模型与具身潜在动作模型在语义动作理解和机器人控制中的泛化能力。"
+  data-topic="vision-language-action models"
+  data-institution="LongCat"
+  data-date="2026-04-15"
+  data-paper-id="2604.11689"
+  data-original-institution="LongCat"
+  data-original-topic="vision-language-action models"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.11689" target="_blank" rel="noreferrer">LARY: A Latent Action Representation Yielding Benchmark for Generalizable Vision-to-Action Alignment</a></h3>
+    </div>
+    <div class="metrics">
+      <span>21 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Dujun Nie, Fengjiao Chen, Qi Lv, +4 more</p>
+  <p class="one-line">本文提出一个面向视觉到动作对齐的潜在动作表示评测框架，通过大规模人类视频、图像对和运动轨迹系统比较通用视觉基础模型与具身潜在动作模型在语义动作理解和机器人控制中的泛化能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">LongCat</span>
+    <span class="tag topic" data-tag-role="topic">vision-language-action models</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="LongCat">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="vision-language-action models">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>While the shortage of explicit action data limits Vision-Language-Action (VLA) models, human action videos offer a scalable yet unlabeled data source. A critical challenge in utilizing large-scale human video datasets lies in transforming visual signals into ontology-independent representations, known as latent actions. However, the capacity of latent action representation to derive robust control from visual observations has yet to be rigorously evaluated. We introduce the Latent Action Representation Yielding (LARY) Benchmark, a unified framework for evaluating latent action representations on both high-level semantic actions (what to do) and low-level robotic control (how to do). The comprehensively curated dataset encompasses over one million videos (1,000 hours) spanning 151 action categories, alongside 620K image pairs and 595K motion trajectories across diverse embodiments and environments. Our experiments reveal two crucial insights: (i) General visual foundation models, trained without any action supervision, consistently outperform specialized embodied latent action models. (ii) Latent-based visual space is fundamentally better aligned to physical action space than pixel-based space. These results suggest that general visual representations inherently encode action-relevant knowledge for physical control, and that semantic-level abstraction serves as a fundamentally more effective pathway from vision to action than pixel-level reconstruction.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.11689" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.11689" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://meituan-longcat.github.io/LARYBench/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/meituan-longcat/LARYBench" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="towards long-horizon agentic multimodal search"
+  data-summary="本文面向长程智能体式多模态搜索，提出通过文件化视觉表示、按需取图工具和合成轨迹微调来降低上下文开销并提升跨模态多跳推理能力。"
+  data-topic="multimodal agents"
+  data-institution="RUC-AIBOX"
+  data-date="2026-04-15"
+  data-paper-id="2604.12890"
+  data-original-institution="RUC-AIBOX"
+  data-original-topic="multimodal agents"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12890" target="_blank" rel="noreferrer">Towards Long-horizon Agentic Multimodal Search</a></h3>
+    </div>
+    <div class="metrics">
+      <span>20 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yifan Du, Zikang Liu, Jinbiao Peng, +5 more</p>
+  <p class="one-line">本文面向长程智能体式多模态搜索，提出通过文件化视觉表示、按需取图工具和合成轨迹微调来降低上下文开销并提升跨模态多跳推理能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">RUC-AIBOX</span>
+    <span class="tag topic" data-tag-role="topic">multimodal agents</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="RUC-AIBOX">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal agents">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Multimodal deep search agents have shown great potential in solving complex tasks by iteratively collecting textual and visual evidence. However, managing the heterogeneous information and high token costs associated with multimodal inputs over long horizons remains a critical challenge, as existing methods often suffer from context explosion or the loss of crucial visual signals. To address this, we propose a novel Long-horizon MultiModal deep search framework, named LMM-Searcher, centered on a file-based visual representation mechanism. By offloading visual assets to an external file system and mapping them to lightweight textual identifiers (UIDs), our approach mitigates context overhead while preserving multimodal information for future access. We equip the agent with a tailored fetch-image tool, enabling a progressive, on-demand visual loading strategy for active perception. Furthermore, we introduce a data synthesis pipeline designed to generate queries requiring complex cross-modal multi-hop reasoning. Using this pipeline, we distill 12K high-quality trajectories to fine-tune Qwen3-VL-Thinking-30A3B into a specialized multimodal deep search agent. Extensive experiments across four benchmarks demonstrate that our method successfully scales to 100-turn search horizons, achieving state-of-the-art performance among open-source models on challenging long-horizon benchmarks like MM-BrowseComp and MMSearch-Plus, while also exhibiting strong generalizability across different base models. Our code will be released in https://github.com/RUCAIBox/LMM-Searcher.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12890" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12890" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/RUCAIBox/LMM-Searcher" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="hierarchical svg tokenization: learning compact visual programs for scalable vector graphics modeling"
+  data-summary="本文面向可扩展矢量图形的自回归生成，提出层次化svg分词、几何约束段 token、数值感知初始化与课程训练来提升生成保真度、空间一致性和序列效率。"
+  data-topic="visual tokenization"
+  data-institution="Tencent Hunyuan"
+  data-date="2026-04-15"
+  data-paper-id="2604.05072"
+  data-original-institution="Tencent Hunyuan"
+  data-original-topic="visual tokenization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.05072" target="_blank" rel="noreferrer">Hierarchical SVG Tokenization: Learning Compact Visual Programs for Scalable Vector Graphics Modeling</a></h3>
+    </div>
+    <div class="metrics">
+      <span>18 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Ximing Xing, Ziteng Xue, Zhenxi Li, +8 more</p>
+  <p class="one-line">本文面向可扩展矢量图形的自回归生成，提出层次化SVG分词、几何约束段 token、数值感知初始化与课程训练来提升生成保真度、空间一致性和序列效率。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Tencent Hunyuan</span>
+    <span class="tag topic" data-tag-role="topic">visual tokenization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Tencent Hunyuan">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="visual tokenization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Recent large language models have shifted SVG generation from differentiable rendering optimization to autoregressive program synthesis. However, existing approaches still rely on generic byte-level tokenization inherited from natural language processing, which poorly reflects the geometric structure of vector graphics. Numerical coordinates are fragmented into discrete symbols, destroying spatial relationships and introducing severe token redundancy, often leading to coordinate hallucination and inefficient long-sequence generation. To address these challenges, we propose HiVG, a hierarchical SVG tokenization framework tailored for autoregressive vector graphics generation. HiVG decomposes raw SVG strings into structured atomic tokens and further compresses executable command--parameter groups into geometry-constrained segment tokens, substantially improving sequence efficiency while preserving syntactic validity. To further mitigate spatial mismatch, we introduce a Hierarchical Mean--Noise (HMN) initialization strategy that injects numerical ordering signals and semantic priors into new token embeddings. Combined with a curriculum training paradigm that progressively increases program complexity, HiVG enables more stable learning of executable SVG programs. Extensive experiments on both text-to-SVG and image-to-SVG tasks demonstrate improved generation fidelity, spatial consistency, and sequence efficiency compared with conventional tokenization schemes. Our code is publicly available at https://github.com/ximinng/HiVG</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.05072" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.05072" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://hy-hivg.github.io/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/ximinng/HiVG" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="lightning opd: efficient post-training for large reasoning models with offline on-policy distillation"
+  data-summary="本文研究大语言推理模型的高效后训练，提出通过教师一致性约束预计算教师概率的离线在线策略蒸馏方法，以在降低训练基础设施成本的同时保持数学推理和代码生成性能。"
+  data-topic="on-policy distillation"
+  data-institution="NVIDIA"
+  data-date="2026-04-15"
+  data-paper-id="2604.13010"
+  data-original-institution="NVIDIA"
+  data-original-topic="on-policy distillation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.13010" target="_blank" rel="noreferrer">Lightning OPD: Efficient Post-Training for Large Reasoning Models with Offline On-Policy Distillation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>17 upvotes</span>
+      <span>7 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yecheng Wu, Song Han, Hai Cai</p>
+  <p class="one-line">本文研究大语言推理模型的高效后训练，提出通过教师一致性约束预计算教师概率的离线在线策略蒸馏方法，以在降低训练基础设施成本的同时保持数学推理和代码生成性能。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">NVIDIA</span>
+    <span class="tag topic" data-tag-role="topic">on-policy distillation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="NVIDIA">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="on-policy distillation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>On-policy distillation (OPD) has emerged as an efficient post-training paradigm for large language models. However, standard OPD requires a live teacher inference server throughout training, resulting in substantial infrastructure overhead. In this work, we investigate whether on-policy distillation can be performed offline. A natural approach is to precompute teacher log-probabilities once over SFT rollouts and reuse them during training. In practice, however, this offline variant fails to reliably match the performance of standard OPD. To understand this discrepancy, we identify a previously overlooked condition that is critical for any OPD pipeline, which we term teacher consistency. This condition requires that the same teacher model be used for both supervised fine-tuning and OPD. We show that violating teacher consistency introduces an irreducible gradient bias, causing both offline and online OPD to converge to a suboptimal fixed point regardless of training duration. Building on this insight, we propose Lightning OPD, an offline on-policy distillation framework that enforces teacher consistency by precomputing teacher log-probabilities over SFT rollouts. This design eliminates the need for a live teacher server entirely. We further show that, under teacher consistency, Lightning OPD shares the same optimum as standard OPD, with bounded gradient discrepancy and an implicit regularization effect that helps prevent policy drift. Extensive experiments on mathematical reasoning and code generation demonstrate that Lightning OPD achieves state-of-the-art performance with significantly improved efficiency. Starting from an SFT-initialized Qwen3-8B-Base model, Lightning OPD reaches 69.9% on AIME 2024 in just 30 GPU hours, achieving a 4.0x speedup over standard OPD and substantially lowering the barrier to entry for academic research on LLM post-training.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.13010" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.13010" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="generative refinement networks for visual synthesis"
+  data-summary="本文提出一种基于近无损分层二值量化、全局自回归细化和熵引导自适应采样的视觉生成框架，以提升图像、文生图和文生视频合成的质量与计算效率。"
+  data-topic="efficient visual generation"
+  data-institution="Unknown"
+  data-date="2026-04-15"
+  data-paper-id="2604.13030"
+  data-original-institution="Unknown"
+  data-original-topic="efficient visual generation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.13030" target="_blank" rel="noreferrer">Generative Refinement Networks for Visual Synthesis</a></h3>
+    </div>
+    <div class="metrics">
+      <span>16 upvotes</span>
+      <span>1 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Jian Han, Jinlai Liu, Jiahuan Wang, +2 more</p>
+  <p class="one-line">本文提出一种基于近无损分层二值量化、全局自回归细化和熵引导自适应采样的视觉生成框架，以提升图像、文生图和文生视频合成的质量与计算效率。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">efficient visual generation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="efficient visual generation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>While diffusion models dominate the field of visual generation, they are computationally inefficient, applying a uniform computational effort regardless of different complexity. In contrast, autoregressive (AR) models are inherently complexity-aware, as evidenced by their variable likelihoods, but are often hindered by lossy discrete tokenization and error accumulation. In this work, we introduce Generative Refinement Networks (GRN), a next-generation visual synthesis paradigm to address these issues. At its core, GRN addresses the discrete tokenization bottleneck through a theoretically near-lossless Hierarchical Binary Quantization (HBQ), achieving a reconstruction quality comparable to continuous counterparts. Built upon HBQ&#39;s latent space, GRN fundamentally upgrades AR generation with a global refinement mechanism that progressively perfects and corrects artworks -- like a human artist painting. Besides, GRN integrates an entropy-guided sampling strategy, enabling complexity-aware, adaptive-step generation without compromising visual quality. On the ImageNet benchmark, GRN establishes new records in image reconstruction (0.56 rFID) and class-conditional image generation (1.81 gFID). We also scale GRN to more challenging text-to-image and text-to-video generation, delivering superior performance on an equivalent scale. We release all models and code to foster further research on GRN.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.13030" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.13030" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/MGenAI/GRN" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="rethinking the diffusion model from a langevin perspective"
+  data-summary="本文从朗之万动力学视角重新梳理扩散模型，统一解释其正反向过程、ode/sde形式以及与vae、得分匹配和流匹配之间的理论关系。"
+  data-topic="diffusion model theory"
+  data-institution="HKUST"
+  data-date="2026-04-15"
+  data-paper-id="2604.10465"
+  data-original-institution="HKUST"
+  data-original-topic="diffusion model theory"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.10465" target="_blank" rel="noreferrer">Rethinking the Diffusion Model from a Langevin Perspective</a></h3>
+    </div>
+    <div class="metrics">
+      <span>16 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Candi Zheng, Yuan Lan</p>
+  <p class="one-line">本文从朗之万动力学视角重新梳理扩散模型，统一解释其正反向过程、ODE/SDE形式以及与VAE、得分匹配和流匹配之间的理论关系。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">HKUST</span>
+    <span class="tag topic" data-tag-role="topic">diffusion model theory</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="HKUST">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="diffusion model theory">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Diffusion models are often introduced from multiple perspectives, such as VAEs, score matching, or flow matching, accompanied by dense and technically demanding mathematics that can be difficult for beginners to grasp. One classic question is: how does the reverse process invert the forward process to generate data from pure noise? This article systematically organizes the diffusion model from a fresh Langevin perspective, offering a simpler, clearer, and more intuitive answer. We also address the following questions: how can ODE-based and SDE-based diffusion models be unified under a single framework? Why are diffusion models theoretically superior to ordinary VAEs? Why is flow matching not fundamentally simpler than denoising or score matching, but equivalent under maximum-likelihood? We demonstrate that the Langevin perspective offers clear and straightforward answers to these questions, bridging existing interpretations of diffusion models, showing how different formulations can be converted into one another within a common framework, and offering pedagogical value for both learners and experienced researchers seeking deeper intuition.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.10465" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.10465" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://iclr-blogposts.github.io/2026/blog/2026/rethinking-diffusion-langevin/" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="many-tier instruction hierarchy in llm agents"
+  data-summary="本文提出多层级指令层次结构范式和基准，用于评估大语言模型智能体在多达12级权限冲突中遵循高优先级指令的能力。"
+  data-topic="LLM agent security evaluation"
+  data-institution="Center for Language and Speech Processing @ JHU"
+  data-date="2026-04-15"
+  data-paper-id="2604.09443"
+  data-original-institution="Center for Language and Speech Processing @ JHU"
+  data-original-topic="LLM agent security evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.09443" target="_blank" rel="noreferrer">Many-Tier Instruction Hierarchy in LLM Agents</a></h3>
+    </div>
+    <div class="metrics">
+      <span>16 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Jingyu Zhang, Tianjian Li, William Jurayj, +3 more</p>
+  <p class="one-line">本文提出多层级指令层次结构范式和基准，用于评估大语言模型智能体在多达12级权限冲突中遵循高优先级指令的能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Center for Language and Speech Processing @ JHU</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent security evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Center for Language and Speech Processing @ JHU">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent security evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large language model agents receive instructions from many sources-system messages, user prompts, tool outputs, and more-each carrying different levels of trust and authority. When these instructions conflict, models must reliably follow the highest-privilege instruction to remain safe and effective. The dominant paradigm, instruction hierarchy (IH), assumes a fixed, small set of privilege levels (typically fewer than five) defined by rigid role labels (e.g., system &gt; user). This is inadequate for real-world agentic settings, where conflicts can arise across far more sources and contexts. In this work, we propose Many-Tier Instruction Hierarchy (ManyIH), a paradigm for resolving instruction conflicts among instructions with arbitrarily many privilege levels. We introduce ManyIH-Bench, the first benchmark for ManyIH. ManyIH-Bench requires models to navigate up to 12 levels of conflicting instructions with varying privileges, comprising 853 agentic tasks (427 coding and 426 instruction-following). ManyIH-Bench composes constraints developed by LLMs and verified by humans to create realistic and difficult test cases spanning 46 real-world agents. Our experiments show that even the current frontier models perform poorly (~40% accuracy) when instruction conflict scales. This work underscores the urgent need for methods that explicitly target fine-grained, scalable instruction conflict resolution in agentic settings.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.09443" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.09443" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://jhu-clsp.github.io/ManyIH" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/JHU-CLSP/ManyIH" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="feed-forward 3d scene modeling: a problem-driven perspective"
+  data-summary="本文综述了从二维图像单次前向生成三维场景表示的通用3d重建方法，并以特征增强、几何感知、多视角融合、效率优化和时序建模等模型设计策略建立问题驱动分类。"
+  data-topic="multi-view 3D reconstruction"
+  data-institution="Zhejiang University"
+  data-date="2026-04-15"
+  data-paper-id="2604.14025"
+  data-original-institution="Zhejiang University"
+  data-original-topic="multi-view 3D reconstruction"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.14025" target="_blank" rel="noreferrer">Feed-Forward 3D Scene Modeling: A Problem-Driven Perspective</a></h3>
+    </div>
+    <div class="metrics">
+      <span>15 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Weijie Wang, Qihang Cao, Sensen Gao, +10 more</p>
+  <p class="one-line">本文综述了从二维图像单次前向生成三维场景表示的通用3D重建方法，并以特征增强、几何感知、多视角融合、效率优化和时序建模等模型设计策略建立问题驱动分类。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Zhejiang University</span>
+    <span class="tag topic" data-tag-role="topic">multi-view 3D reconstruction</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Zhejiang University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multi-view 3D reconstruction">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Reconstructing 3D representations from 2D inputs is a fundamental task in computer vision and graphics, serving as a cornerstone for understanding and interacting with the physical world. While traditional methods achieve high fidelity, they are limited by slow per-scene optimization or category-specific training, which hinders their practical deployment and scalability. Hence, generalizable feed-forward 3D reconstruction has witnessed rapid development in recent years. By learning a model that maps images directly to 3D representations in a single forward pass, these methods enable efficient reconstruction and robust cross-scene generalization. Our survey is motivated by a critical observation: despite the diverse geometric output representations, ranging from implicit fields to explicit primitives, existing feed-forward approaches share similar high-level architectural patterns, such as image feature extraction backbones, multi-view information fusion mechanisms, and geometry-aware design principles. Consequently, we abstract away from these representation differences and instead focus on model design, proposing a novel taxonomy centered on model design strategies that are agnostic to the output format. Our proposed taxonomy organizes the research directions into five key problems that drive recent research development: feature enhancement, geometry awareness, model efficiency, augmentation strategies and temporal-aware models. To support this taxonomy with empirical grounding and standardized evaluation, we further comprehensively review related benchmarks and datasets, and extensively discuss and categorize real-world applications based on feed-forward 3D models. Finally, we outline future directions to address open challenges such as scalability, evaluation standards, and world modeling.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.14025" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.14025" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://ff3d-survey.github.io" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/ziplab/Awesome-Feed-Forward-3D" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="habitat-gs: a high-fidelity navigation simulator with dynamic gaussian splatting"
+  data-summary="本文提出一个面向具身导航的高保真仿真器，将实时3d gaussian splatting场景渲染与可行走的高斯人类化身结合，以提升智能体在动态人类环境中的视觉真实感、泛化能力和人感知导航能力。"
+  data-topic="robotics simulation"
+  data-institution="Zhejiang University"
+  data-date="2026-04-15"
+  data-paper-id="2604.12626"
+  data-original-institution="Zhejiang University"
+  data-original-topic="robotics simulation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12626" target="_blank" rel="noreferrer">Habitat-GS: A High-Fidelity Navigation Simulator with Dynamic Gaussian Splatting</a></h3>
+    </div>
+    <div class="metrics">
+      <span>15 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Ziyuan Xia, Jingyi Xu, Chong Cui, +9 more</p>
+  <p class="one-line">本文提出一个面向具身导航的高保真仿真器，将实时3D Gaussian Splatting场景渲染与可行走的高斯人类化身结合，以提升智能体在动态人类环境中的视觉真实感、泛化能力和人感知导航能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Zhejiang University</span>
+    <span class="tag topic" data-tag-role="topic">robotics simulation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Zhejiang University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="robotics simulation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Training embodied AI agents depends critically on the visual fidelity of simulation environments and the ability to model dynamic humans. Current simulators rely on mesh-based rasterization with limited visual realism, and their support for dynamic human avatars, where available, is constrained to mesh representations, hindering agent generalization to human-populated real-world scenarios. We present Habitat-GS, a navigation-centric embodied AI simulator extended from Habitat-Sim that integrates 3D Gaussian Splatting scene rendering and drivable gaussian avatars while maintaining full compatibility with the Habitat ecosystem. Our system implements a 3DGS renderer for real-time photorealistic rendering and supports scalable 3DGS asset import from diverse sources. For dynamic human modeling, we introduce a gaussian avatar module that enables each avatar to simultaneously serve as a photorealistic visual entity and an effective navigation obstacle, allowing agents to learn human-aware behaviors in realistic settings. Experiments on point-goal navigation demonstrate that agents trained on 3DGS scenes achieve stronger cross-domain generalization, with mixed-domain training being the most effective strategy. Evaluations on avatar-aware navigation further confirm that gaussian avatars enable effective human-aware navigation. Finally, performance benchmarks validate the system&#39;s scalability across varying scene complexity and avatar counts.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12626" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12626" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://zju3dv.github.io/habitat-gs/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/zju3dv/habitat-gs" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="self-adversarial one step generation via condition shifting"
+  data-summary="本文提出一种通过条件偏移从流模型内部提取对抗校正信号的无判别器框架，用于高效训练高质量一步文本到图像生成模型并兼容全参数与lora微调。"
+  data-topic="diffusion model acceleration"
+  data-institution="Westlake University"
+  data-date="2026-04-15"
+  data-paper-id="2604.12322"
+  data-original-institution="Westlake University"
+  data-original-topic="diffusion model acceleration"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12322" target="_blank" rel="noreferrer">Self-Adversarial One Step Generation via Condition Shifting</a></h3>
+    </div>
+    <div class="metrics">
+      <span>13 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Deyuan Liu, Peng Sun, Yansen Han, +3 more</p>
+  <p class="one-line">本文提出一种通过条件偏移从流模型内部提取对抗校正信号的无判别器框架，用于高效训练高质量一步文本到图像生成模型并兼容全参数与LoRA微调。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Westlake University</span>
+    <span class="tag topic" data-tag-role="topic">diffusion model acceleration</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Westlake University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="diffusion model acceleration">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>The push for efficient text to image synthesis has moved the field toward one step sampling, yet existing methods still face a three way tradeoff among fidelity, inference speed, and training efficiency. Approaches that rely on external discriminators can sharpen one step performance, but they often introduce training instability, high GPU memory overhead, and slow convergence, which complicates scaling and parameter efficient tuning. In contrast, regression based distillation and consistency objectives are easier to optimize, but they typically lose fine details when constrained to a single step. We present APEX, built on a key theoretical insight: adversarial correction signals can be extracted endogenously from a flow model through condition shifting. Using a transformation creates a shifted condition branch whose velocity field serves as an independent estimator of the model&#39;s current generation distribution, yielding a gradient that is provably GAN aligned, replacing the sample dependent discriminator terms that cause gradient vanishing. This discriminator free design is architecture preserving, making APEX a plug and play framework compatible with both full parameter and LoRA based tuning. Empirically, our 0.6B model surpasses FLUX-Schnell 12B (20times more parameters) in one step quality. With LoRA tuning on Qwen-Image 20B, APEX reaches a GenEval score of 0.89 at NFE=1 in 6 hours, surpassing the original 50-step teacher (0.87) and providing a 15.33times inference speedup. Code is available https://github.com/LINs-lab/APEX.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12322" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12322" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/LINs-lab/APEX" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="you only judge once: multi-response reward modeling in a single forward pass"
+  data-summary="本文提出一种多模态多响应奖励模型，通过将候选回答拼接后单次前向传播进行n路偏好比较与打分，从而提升奖励评估效率并支持强化学习优化开放式生成质量。"
+  data-topic="multimodal reward modeling"
+  data-institution="University of Washington"
+  data-date="2026-04-15"
+  data-paper-id="2604.10966"
+  data-original-institution="University of Washington"
+  data-original-topic="multimodal reward modeling"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.10966" target="_blank" rel="noreferrer">You Only Judge Once: Multi-response Reward Modeling in a Single Forward Pass</a></h3>
+    </div>
+    <div class="metrics">
+      <span>12 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yinuo Yang, Zixian Ma, Manasi Ganti, +2 more</p>
+  <p class="one-line">本文提出一种多模态多响应奖励模型，通过将候选回答拼接后单次前向传播进行N路偏好比较与打分，从而提升奖励评估效率并支持强化学习优化开放式生成质量。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">University of Washington</span>
+    <span class="tag topic" data-tag-role="topic">multimodal reward modeling</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="University of Washington">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal reward modeling">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>We present a discriminative multimodal reward model that scores all candidate responses in a single forward pass. Conventional discriminative reward models evaluate each response independently, requiring multiple forward passes, one for each potential response. Our approach concatenates multiple responses with separator tokens and applies cross-entropy over their scalar scores, enabling direct comparative reasoning and efficient N-way preference learning. The multi-response design also yields up to Ntimes wall-clock speedup and FLOPs reduction over conventional single-response scoring. To enable N-way reward evaluation beyond existing pairwise benchmarks, we construct two new benchmarks: (1) MR^2Bench-Image contains human-annotated rankings over responses from 8 diverse models; (2) MR^2Bench-Video is a large-scale video-based reward benchmark derived from 94K crowdsourced pairwise human judgments over video question-answering spanning 19 models, denoised via preference graph ensemble. Both benchmarks provide 4-response evaluation variants sampled from the full rankings. Built on a 4B vision-language backbone with LoRA fine-tuning and a lightweight MLP value head, our model achieves state-of-the-art results on six multimodal reward benchmarks, including MR^2Bench-Image, MR^2Bench-Video, and four other existing benchmarks. Our model outperforms existing larger generative and discriminative reward models. We further demonstrate that our reward model, when used in reinforcement learning with GRPO, produces improved policy models that maintain performance across standard multimodal benchmarks while substantially improving open-ended generation quality, outperforming a single-response discriminative reward model (RM) baseline by a large margin in both training stability and open-ended generation quality.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.10966" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.10966" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="masked by consensus: disentangling privileged knowledge in llm correctness"
+  data-summary="本文通过训练基于自身与外部模型隐藏状态的问题正确性分类器，并在模型分歧子集和层级表示上进行对比分析，研究大语言模型是否拥有关于答案正确性的特权内部知识。"
+  data-topic="LLM interpretability"
+  data-institution="Technion Israel institute of technology"
+  data-date="2026-04-15"
+  data-paper-id="2604.12373"
+  data-original-institution="Technion Israel institute of technology"
+  data-original-topic="LLM interpretability"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12373" target="_blank" rel="noreferrer">Masked by Consensus: Disentangling Privileged Knowledge in LLM Correctness</a></h3>
+    </div>
+    <div class="metrics">
+      <span>9 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Tomer Ashuach, Liat Ein-Dor, Shai Gretz, +2 more</p>
+  <p class="one-line">本文通过训练基于自身与外部模型隐藏状态的问题正确性分类器，并在模型分歧子集和层级表示上进行对比分析，研究大语言模型是否拥有关于答案正确性的特权内部知识。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Technion Israel institute of technology</span>
+    <span class="tag topic" data-tag-role="topic">LLM interpretability</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Technion Israel institute of technology">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM interpretability">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Humans use introspection to evaluate their understanding through private internal states inaccessible to external observers. We investigate whether large language models possess similar privileged knowledge about answer correctness, information unavailable through external observation. We train correctness classifiers on question representations from both a model&#39;s own hidden states and external models, testing whether self-representations provide a performance advantage. On standard evaluation, we find no advantage: self-probes perform comparably to peer-model probes. We hypothesize this is due to high inter-model agreement of answer correctness. To isolate genuine privileged knowledge, we evaluate on disagreement subsets, where models produce conflicting predictions. Here, we discover domain-specific privileged knowledge: self-representations consistently outperform peer representations in factual knowledge tasks, but show no advantage in math reasoning. We further localize this domain asymmetry across model layers, finding that the factual advantage emerges progressively from early-to-mid layers onward, consistent with model-specific memory retrieval, while math reasoning shows no consistent advantage at any depth.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12373" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12373" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://technion-cs-nlp.github.io/Privileged-Knowledge/" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="grid2matrix: revealing digital agnosia in vision-language models"
+  data-summary="本文提出一个可控的颜色网格到矩阵读出基准，用于评估和分析视觉语言模型在细粒度视觉细节表达上的系统性失败及其与视觉编码、语言输出和图像 patch 边界的关系。"
+  data-topic="multimodal benchmark evaluation"
+  data-institution="UC Berkeley"
+  data-date="2026-04-15"
+  data-paper-id="2604.09687"
+  data-original-institution="UC Berkeley"
+  data-original-topic="multimodal benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.09687" target="_blank" rel="noreferrer">Grid2Matrix: Revealing Digital Agnosia in Vision-Language Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>8 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yunkai Zhang, Linda Li, Yingxin Cui, +5 more</p>
+  <p class="one-line">本文提出一个可控的颜色网格到矩阵读出基准，用于评估和分析视觉语言模型在细粒度视觉细节表达上的系统性失败及其与视觉编码、语言输出和图像 patch 边界的关系。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">UC Berkeley</span>
+    <span class="tag topic" data-tag-role="topic">multimodal benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="UC Berkeley">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Vision-Language Models (VLMs) excel on many multimodal reasoning benchmarks, but these evaluations often do not require an exhaustive readout of the image and can therefore obscure failures in faithfully capturing all visual details. We introduce Grid2Matrix (G2M), a controlled benchmark in which a model is shown a color grid and a color-to-number mapping, and must output the corresponding matrix. By varying grid size and the number of colors, G2M provides a simple way to increase visual complexity while minimizing semantic confounds. We find that VLMs exhibit a sharp early collapse in zero-shot end-to-end evaluation, failing on surprisingly small grids rather than degrading gradually as the task becomes denser. We probe the visual encoders of VLMs from two representative families and find that they preserve substantially more of the grid information than the corresponding end-to-end outputs. This suggests that the failure is not explained by visual encoding alone, but also reflects a gap between what remains recoverable from visual features and what is ultimately expressed in language. We term this gap Digital Agnosia. Further analyses show that these errors are highly structured and depend strongly on how grid cells overlap with visual patch boundaries. We also find that common strategies such as model scaling and multimodal alignment do not fully eliminate this failure mode. We expect G2M to serve as a useful testbed for understanding where and how VLMs lose fine visual details, and for evaluating tasks where missing even small visual details can matter, such as tables, charts, forms, and GUIs.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.09687" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.09687" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://analogyai.ai/blog/vlm-visual-readout" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/zhykoties/Grid2Matrix_DigitalAgnosia" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="accelerating speculative decoding with block diffusion draft trees"
+  data-summary="本文提出一种基于块扩散草稿模型分布构建草稿树的推测解码方法，通过最佳优先节点选择和祖先注意力掩码在单次目标模型前向验证中提升语言模型生成加速效果。"
+  data-topic="LLM system optimization"
+  data-institution="Unknown"
+  data-date="2026-04-15"
+  data-paper-id="2604.12989"
+  data-original-institution="Unknown"
+  data-original-topic="LLM system optimization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12989" target="_blank" rel="noreferrer">Accelerating Speculative Decoding with Block Diffusion Draft Trees</a></h3>
+    </div>
+    <div class="metrics">
+      <span>8 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Liran Ringel, Yaniv Romano</p>
+  <p class="one-line">本文提出一种基于块扩散草稿模型分布构建草稿树的推测解码方法，通过最佳优先节点选择和祖先注意力掩码在单次目标模型前向验证中提升语言模型生成加速效果。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM system optimization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM system optimization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Speculative decoding accelerates autoregressive language models by using a lightweight drafter to propose multiple future tokens, which the target model then verifies in parallel. DFlash shows that a block diffusion drafter can generate an entire draft block in a single forward pass and achieve state-of-the-art speculative decoding performance, outperforming strong autoregressive drafters such as EAGLE-3. Vanilla DFlash, however, still verifies only a single drafted trajectory per round, potentially limiting its acceptance length. We introduce DDTree (Diffusion Draft Tree), a method that constructs a draft tree directly from the per-position distributions of a block diffusion drafter. Under a fixed node budget, DDTree uses a simple best-first heap algorithm to select the continuations that are most likely to match the target model according to a surrogate defined by the draft model&#39;s output. The resulting tree is verified efficiently in a single target model forward pass using an ancestor-only attention mask. Because DDTree builds on DFlash, a leading draft model for speculative decoding, these gains place DDTree among the leading approaches to speculative decoding.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12989" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12989" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://liranringel.github.io/ddtree" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/liranringel/ddtree" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="parcae: scaling laws for stable looped language models"
+  data-summary="本文将循环语言模型建模为残差流上的非线性时变动力系统，通过约束注入参数谱范数来稳定训练并研究固定参数下训练与测试时计算扩展的缩放规律。"
+  data-topic="LLM scaling laws"
+  data-institution="Sandy Research"
+  data-date="2026-04-15"
+  data-paper-id="2604.12946"
+  data-original-institution="Sandy Research"
+  data-original-topic="LLM scaling laws"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12946" target="_blank" rel="noreferrer">Parcae: Scaling Laws For Stable Looped Language Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>7 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Hayden Prairie, Zachary Novack, Taylor Berg-Kirkpatrick, +1 more</p>
+  <p class="one-line">本文将循环语言模型建模为残差流上的非线性时变动力系统，通过约束注入参数谱范数来稳定训练并研究固定参数下训练与测试时计算扩展的缩放规律。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Sandy Research</span>
+    <span class="tag topic" data-tag-role="topic">LLM scaling laws</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Sandy Research">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM scaling laws">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Traditional fixed-depth architectures scale quality by increasing training FLOPs, typically through increased parameterization, at the expense of a higher memory footprint, or data. A potential alternative is looped architectures, which instead increase FLOPs by sending activations through a block of layers in a loop. While promising, existing recipes for training looped architectures can be unstable, suffering from residual explosion and loss spikes. We address these challenges by recasting looping as a nonlinear time-variant dynamical system over the residual stream. Via a linear approximation to this system, we find that instability occurs in existing looped architectures as a result of large spectral norms in their injection parameters. To address these instability issues, we propose Parcae, a novel stable, looped architecture that constrains the spectral norm of the injection parameters via discretization of a negative diagonal parameterization. As a result, Parcae achieves up to 6.3% lower validation perplexity over prior large-scale looped models. Using our stable looped architecture, we investigate the scaling properties of looping as a medium to improve quality by increasing FLOPs in training and test-time. For training, we derive predictable power laws to scale FLOPs while keeping parameter count fixed. Our initial scaling laws suggest that looping and data should be increased in tandem, given a fixed FLOP budget. At test-time, we find that Parcae can use looping to scale compute, following a predictable, saturating exponential decay. When scaled up to 1.3B parameters, we find that Parcae improves CORE and Core-Extended quality by 2.99 and 1.18 points when compared to strong Transformer baselines under a fixed parameter and data budget, achieving a relative quality of up to 87.5% a Transformer twice the size.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12946" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12946" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://sandyresearch.github.io/parcae/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/sandyresearch/parcae" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="do thought streams matter? evaluating reasoning in gemini vision-language models for video scene understanding"
+  data-summary="该论文通过为gemini视觉语言模型的视频场景理解任务设计思维流质量、覆盖度和关注实体等评测指标，系统分析推理轨迹长度与内容对最终输出质量和幻觉现象的影响。"
+  data-topic="multimodal benchmark evaluation"
+  data-institution="VideoDB"
+  data-date="2026-04-15"
+  data-paper-id="2604.11177"
+  data-original-institution="VideoDB"
+  data-original-topic="multimodal benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.11177" target="_blank" rel="noreferrer">Do Thought Streams Matter? Evaluating Reasoning in Gemini Vision-Language Models for Video Scene Understanding</a></h3>
+    </div>
+    <div class="metrics">
+      <span>7 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Shivam Sharma, Sankalp Nagaonkar, Ashish Choithani, +1 more</p>
+  <p class="one-line">该论文通过为Gemini视觉语言模型的视频场景理解任务设计思维流质量、覆盖度和关注实体等评测指标，系统分析推理轨迹长度与内容对最终输出质量和幻觉现象的影响。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">VideoDB</span>
+    <span class="tag topic" data-tag-role="topic">multimodal benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="VideoDB">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>We benchmark how internal reasoning traces, which we call thought streams, affect video scene understanding in vision-language models. Using four configurations of Google&#39;s Gemini 2.5 Flash and Flash Lite across scenes extracted from 100 hours of video, we ask three questions: does more thinking lead to better outputs, where do the gains stop, and what do these models actually think about? We introduce three evaluation metrics. Contentfulness measures how much of the thought stream is useful scene content versus meta-commentary. Thought-Final Coverage measures how faithfully the thought stream translates into the final output. Dominant Entity Analysis identifies which subjects, actions, and settings the model focuses on. GPT-5 serves as an independent judge. We find that quality gains from additional thinking plateau quickly, with most improvement occurring in the first few hundred tokens. Flash Lite offers the best balance between quality and token usage. Tight reasoning budgets cause the model to add content in the final output that it never reasoned about, a form of compression-step hallucination. Despite being different model tiers, Flash and Flash Lite produce similar thought streams, though they differ in style: Flash discusses its reasoning process, while Lite focuses on describing the scene.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.11177" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.11177" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/video-db/gemini-reasoning-eval" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/video-db/gemini-reasoning-eval" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="videoflextok: flexible-length coarse-to-fine video tokenization"
+  data-summary="本文提出一种可变长度、由粗到细的视频视觉分词方法，通过生成式流解码器在不同 token 数量下重建视频，从而提升文本到视频等生成任务的训练效率并支持更长视频生成。"
+  data-topic="visual tokenization"
+  data-institution="Apple"
+  data-date="2026-04-15"
+  data-paper-id="2604.12887"
+  data-original-institution="Apple"
+  data-original-topic="visual tokenization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12887" target="_blank" rel="noreferrer">VideoFlexTok: Flexible-Length Coarse-to-Fine Video Tokenization</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>1 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Andrei Atanov, Jesse Allardice, Roman Bachmann, +6 more</p>
+  <p class="one-line">本文提出一种可变长度、由粗到细的视频视觉分词方法，通过生成式流解码器在不同 token 数量下重建视频，从而提升文本到视频等生成任务的训练效率并支持更长视频生成。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Apple</span>
+    <span class="tag topic" data-tag-role="topic">visual tokenization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Apple">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="visual tokenization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Visual tokenizers map high-dimensional raw pixels into a compressed representation for downstream modeling. Beyond compression, tokenizers dictate what information is preserved and how it is organized. A de facto standard approach to video tokenization is to represent a video as a spatiotemporal 3D grid of tokens, each capturing the corresponding local information in the original signal. This requires the downstream model that consumes the tokens, e.g., a text-to-video model, to learn to predict all low-level details &#34;pixel-by-pixel&#34; irrespective of the video&#39;s inherent complexity, leading to high learning complexity.
+  We present VideoFlexTok, which represents videos with a variable-length sequence of tokens structured in a coarse-to-fine manner -- where the first tokens (emergently) capture abstract information, such as semantics and motion, and later tokens add fine-grained details. The generative flow decoder enables realistic video reconstructions from any token count. This representation structure allows adapting the token count according to downstream needs and encoding videos longer than the baselines with the same budget.
+  We evaluate VideoFlexTok on class- and text-to-video generative tasks and show that it leads to more efficient training compared to 3D grid tokens, e.g., achieving comparable generation quality (gFVD and ViCLIP Score) with a 5x smaller model (1.1B vs 5.2B). Finally, we demonstrate how VideoFlexTok can enable long video generation without prohibitive computational cost by training a text-to-video model on 10-second 81-frame videos with only 672 tokens, 8x fewer than a comparable 3D grid tokenizer.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12887" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12887" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/apple/ml-videoflextok" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="glotocr bench: ocr models still struggle beyond a handful of unicode scripts"
+  data-summary="本文提出覆盖100多种unicode文字体系的ocr基准，通过真实多语文本渲染与退化图像评测开放和闭源视觉语言模型，揭示当前模型在低资源文字上的泛化能力仍严重受限。"
+  data-topic="multimodal benchmark evaluation"
+  data-institution="CIS, LMU Munich"
+  data-date="2026-04-15"
+  data-paper-id="2604.12978"
+  data-original-institution="CIS, LMU Munich"
+  data-original-topic="multimodal benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12978" target="_blank" rel="noreferrer">GlotOCR Bench: OCR Models Still Struggle Beyond a Handful of Unicode Scripts</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>6 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Amir Hossein Kargaran, Nafiseh Nikeghbal, Jana Diesner, +2 more</p>
+  <p class="one-line">本文提出覆盖100多种Unicode文字体系的OCR基准，通过真实多语文本渲染与退化图像评测开放和闭源视觉语言模型，揭示当前模型在低资源文字上的泛化能力仍严重受限。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">CIS, LMU Munich</span>
+    <span class="tag topic" data-tag-role="topic">multimodal benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="CIS, LMU Munich">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Optical character recognition (OCR) has advanced rapidly with the rise of vision-language models, yet evaluation has remained concentrated on a small cluster of high- and mid-resource scripts. We introduce GlotOCR Bench, a comprehensive benchmark evaluating OCR generalization across 100+ Unicode scripts. Our benchmark comprises clean and degraded image variants rendered from real multilingual texts. Images are rendered using fonts from the Google Fonts repository, shaped with HarfBuzz and rasterized with FreeType, supporting both LTR and RTL scripts. Samples of rendered images were manually reviewed to verify correct rendering across all scripts. We evaluate a broad suite of open-weight and proprietary vision-language models and find that most perform well on fewer than ten scripts, and even the strongest frontier models fail to generalize beyond thirty scripts. Performance broadly tracks script-level pretraining coverage, suggesting that current OCR systems rely on language model pretraining as much as on visual recognition. Models confronted with unfamiliar scripts either produce random noise or hallucinate characters from similar scripts they already know. We release the benchmark and pipeline for reproducibility. Pipeline Code: https://github.com/cisnlp/glotocr-bench, Benchmark: https://hf.co/datasets/cis-lmu/glotocr-bench.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12978" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12978" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://huggingface.co/datasets/cis-lmu/GlotOCR-bench" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/cisnlp/glotocr-bench" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="lasa: language-agnostic semantic alignment at the semantic bottleneck for llm safety"
+  data-summary="本文研究低资源语言下的大模型安全脆弱性，并通过在语言无关的语义瓶颈层进行表示级安全对齐来提升跨语言安全性。"
+  data-topic="LLM safety alignment"
+  data-institution="unknown"
+  data-date="2026-04-15"
+  data-paper-id="2604.12710"
+  data-original-institution="unknown"
+  data-original-topic="LLM safety alignment"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12710" target="_blank" rel="noreferrer">LASA: Language-Agnostic Semantic Alignment at the Semantic Bottleneck for LLM Safety</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Junxiao Yang, Haoran Liu, Jinzhe Tu, +9 more</p>
+  <p class="one-line">本文研究低资源语言下的大模型安全脆弱性，并通过在语言无关的语义瓶颈层进行表示级安全对齐来提升跨语言安全性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM safety alignment</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM safety alignment">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large language models (LLMs) often demonstrate strong safety performance in high-resource languages, yet exhibit severe vulnerabilities when queried in low-resource languages. We attribute this gap to a mismatch between language-agnostic semantic understanding ability and language-dominant safety alignment biased toward high-resource languages. Consistent with this hypothesis, we empirically identify the semantic bottleneck in LLMs, an intermediate layer in which the geometry of model representations is governed primarily by shared semantic content rather than language identity. Building on this observation, we propose Language-Agnostic Semantic Alignment (LASA), which anchors safety alignment directly in semantic bottlenecks. Experiments show that LASA substantially improves safety across all languages: average attack success rate (ASR) drops from 24.7% to 2.8% on LLaMA-3.1-8B-Instruct and remains around 3-4% across Qwen2.5 and Qwen3 Instruct models (7B-32B). Together, our analysis and method offer a representation-level perspective on LLM safety, suggesting that safety alignment requires anchoring safety understanding not in surface text, but in the model&#39;s language-agnostic semantic space.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12710" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12710" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="spec kit agents: context-grounded agentic workflows"
+  data-summary="本文研究面向大型代码仓库的规范驱动ai编程代理，通过多代理流程和阶段级上下文检索与验证钩子，将需求、计划、任务和实现过程 grounded 到仓库证据中以减少幻觉和架构违规。"
+  data-topic="LLM coding agents"
+  data-institution="Unknown"
+  data-date="2026-04-15"
+  data-paper-id="2604.05278"
+  data-original-institution="Unknown"
+  data-original-topic="LLM coding agents"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.05278" target="_blank" rel="noreferrer">Spec Kit Agents: Context-Grounded Agentic Workflows</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Pardis Taghavi, Santosh Bhavani</p>
+  <p class="one-line">本文研究面向大型代码仓库的规范驱动AI编程代理，通过多代理流程和阶段级上下文检索与验证钩子，将需求、计划、任务和实现过程 grounded 到仓库证据中以减少幻觉和架构违规。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM coding agents</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM coding agents">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Spec-driven development (SDD) with AI coding agents provides a structured workflow, but agents often remain &#34;context blind&#34; in large, evolving repositories, leading to hallucinated APIs and architectural violations. We present Spec Kit Agents, a multi-agent SDD pipeline (with PM and developer roles) that adds phase-level, context-grounding hooks. Read-only probing hooks ground each stage (Specify, Plan, Tasks, Implement) in repository evidence, while validation hooks check intermediate artifacts against the environment. We evaluate 128 runs covering 32 features across five repositories. Context-grounding hooks improve judged quality by +0.15 on a 1-5 composite LLM-as-judge score (+3.0 percent of the full score; Wilcoxon signed-rank, p &lt; 0.05) while maintaining 99.7-100 percent repository-level test compatibility. We further evaluate the framework on SWE-bench Lite, where augmentation hooks improve baseline by 1.7 percent, achieving 58.2 percent Pass@1.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.05278" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.05278" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/sbhavani/speckit-agents" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="learning versatile humanoid manipulation with touch dreaming"
+  data-summary="该论文面向接触丰富的真实世界人形机器人灵巧操作，结合强化学习全身控制、vr遥操作数据采集和带触觉未来预测的多模态transformer行为克隆来学习接触感知策略。"
+  data-topic="tactile robot manipulation"
+  data-institution="CMU Safe AI Lab"
+  data-date="2026-04-15"
+  data-paper-id="2604.13015"
+  data-original-institution="CMU Safe AI Lab"
+  data-original-topic="tactile robot manipulation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.13015" target="_blank" rel="noreferrer">Learning Versatile Humanoid Manipulation with Touch Dreaming</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yaru Niu, Zhenlong Fang, Binghong Chen, +8 more</p>
+  <p class="one-line">该论文面向接触丰富的真实世界人形机器人灵巧操作，结合强化学习全身控制、VR遥操作数据采集和带触觉未来预测的多模态Transformer行为克隆来学习接触感知策略。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">CMU Safe AI Lab</span>
+    <span class="tag topic" data-tag-role="topic">tactile robot manipulation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="CMU Safe AI Lab">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="tactile robot manipulation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Humanoid robots promise general-purpose assistance, yet real-world humanoid loco-manipulation remains challenging because it requires whole-body stability, dexterous hands, and contact-aware perception under frequent contact changes. In this work, we study dexterous, contact-rich humanoid loco-manipulation. We first develop an RL-based whole-body controller that provides stable lower-body and torso execution during complex manipulation. Built on this controller, we develop a whole-body humanoid data collection system that combines VR-based teleoperation with human-to-humanoid motion mapping, enabling efficient collection of real-world demonstrations. We then propose Humanoid Transformer with Touch Dreaming (HTD), a multimodal encoder--decoder Transformer that models touch as a core modality alongside multi-view vision and proprioception. HTD is trained in a single stage with behavioral cloning augmented by touch dreaming: in addition to predicting action chunks, the policy predicts future hand-joint forces and future tactile latents, encouraging the shared Transformer trunk to learn contact-aware representations for dexterous interaction. Across five contact-rich tasks, Insert-T, Book Organization, Towel Folding, Cat Litter Scooping, and Tea Serving, HTD achieves a 90.9% relative improvement in average success rate over the stronger baseline. Ablation results further show that latent-space tactile prediction is more effective than raw tactile prediction, yielding a 30% relative gain in success rate. These results demonstrate that combining robust whole-body execution, scalable humanoid data collection, and predictive touch-centered learning enables versatile, high-dexterity humanoid manipulation in the real world. Project webpage: humanoid-touch-dream.github.io.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.13015" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.13015" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://humanoid-touch-dream.github.io/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/chrisyrniu/humanoid-touch-dream" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="domain-specific latent representations improve the fidelity of diffusion-based medical image super-resolution"
+  data-summary="本文研究扩散式医学图像超分辨率，证明使用在大规模医学图像上预训练的领域专用vae替代通用stable diffusion vae可显著提升潜空间重建保真度并稳定改善下游超分辨率效果。"
+  data-topic="image restoration"
+  data-institution="Global"
+  data-date="2026-04-15"
+  data-paper-id="2604.12152"
+  data-original-institution="Global"
+  data-original-topic="image restoration"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12152" target="_blank" rel="noreferrer">Domain-Specific Latent Representations Improve the Fidelity of Diffusion-Based Medical Image Super-Resolution</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Sebastian Cajas, Ashaba Judith, Rahul Gorijavolu, +8 more</p>
+  <p class="one-line">本文研究扩散式医学图像超分辨率，证明使用在大规模医学图像上预训练的领域专用VAE替代通用Stable Diffusion VAE可显著提升潜空间重建保真度并稳定改善下游超分辨率效果。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Global</span>
+    <span class="tag topic" data-tag-role="topic">image restoration</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Global">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="image restoration">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Latent diffusion models for medical image super-resolution universally inherit variational autoencoders designed for natural photographs. We show that this default choice, not the diffusion architecture, is the dominant constraint on reconstruction quality. In a controlled experiment holding all other pipeline components fixed, replacing the generic Stable Diffusion VAE with MedVAE, a domain-specific autoencoder pretrained on more than 1.6 million medical images, yields +2.91 to +3.29 dB PSNR improvement across knee MRI, brain MRI, and chest X-ray (n = 1,820; Cohen&#39;s d = 1.37 to 1.86, all p &lt; 10^{-20}, Wilcoxon signed-rank). Wavelet decomposition localises the advantage to the finest spatial frequency bands encoding anatomically relevant fine structure. Ablations across inference schedules, prediction targets, and generative architectures confirm the gap is stable within plus or minus 0.15 dB, while hallucination rates remain comparable between methods (Cohen&#39;s h &lt; 0.02 across all datasets), establishing that reconstruction fidelity and generative hallucination are governed by independent pipeline components. These results provide a practical screening criterion: autoencoder reconstruction quality, measurable without diffusion training, predicts downstream SR performance (R^2 = 0.67), suggesting that domain-specific VAE selection should precede diffusion architecture search. Code and trained model weights are publicly available at https://github.com/sebasmos/latent-sr.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12152" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12152" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/sebasmos/latent-sr" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="seeing through touch: tactile-driven visual localization of material regions"
+  data-summary="本文研究触觉驱动的视觉材料区域定位，通过密集跨模态特征交互学习局部视触觉对齐，并结合多材料场景数据与材料多样性配对策略生成触觉显著图以实现材料分割。"
+  data-topic="visual grounding"
+  data-institution="KAIST"
+  data-date="2026-04-15"
+  data-paper-id="2604.11579"
+  data-original-institution="KAIST"
+  data-original-topic="visual grounding"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.11579" target="_blank" rel="noreferrer">Seeing Through Touch: Tactile-Driven Visual Localization of Material Regions</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Seongyu Kim, Seungwoo Lee, Hyeonggon Ryu, +2 more</p>
+  <p class="one-line">本文研究触觉驱动的视觉材料区域定位，通过密集跨模态特征交互学习局部视触觉对齐，并结合多材料场景数据与材料多样性配对策略生成触觉显著图以实现材料分割。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">KAIST</span>
+    <span class="tag topic" data-tag-role="topic">visual grounding</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="KAIST">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="visual grounding">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>We address the problem of tactile localization, where the goal is to identify image regions that share the same material properties as a tactile input. Existing visuo-tactile methods rely on global alignment and thus fail to capture the fine-grained local correspondences required for this task. The challenge is amplified by existing datasets, which predominantly contain close-up, low-diversity images. We propose a model that learns local visuo-tactile alignment via dense cross-modal feature interactions, producing tactile saliency maps for touch-conditioned material segmentation. To overcome dataset constraints, we introduce: (i) in-the-wild multi-material scene images that expand visual diversity, and (ii) a material-diversity pairing strategy that aligns each tactile sample with visually varied yet tactilely consistent images, improving contextual localization and robustness to weak signals. We also construct two new tactile-grounded material segmentation datasets for quantitative evaluation. Experiments on both new and existing benchmarks show that our approach substantially outperforms prior visuo-tactile methods in tactile localization.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.11579" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.11579" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://mm.kaist.ac.kr/projects/SeeingThroughTouch/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/kaistmm/SeeingThroughTouch" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="pokerl: reinforcement learning for pokemon red"
+  data-summary="本文面向《pokemon red》这一长时程稀疏奖励游戏环境，提出结合仿真器环境封装、循环/刷菜单抑制机制与分层密集奖励设计的深度强化学习训练系统，以提升ppo智能体完成早期游戏任务的稳定性。"
+  data-topic="game reinforcement learning"
+  data-institution="texasaandm"
+  data-date="2026-04-15"
+  data-paper-id="2604.10812"
+  data-original-institution="texasaandm"
+  data-original-topic="game reinforcement learning"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.10812" target="_blank" rel="noreferrer">PokeRL: Reinforcement Learning for Pokemon Red</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Dheeraj Mudireddy, Sai Patibandla</p>
+  <p class="one-line">本文面向《Pokemon Red》这一长时程稀疏奖励游戏环境，提出结合仿真器环境封装、循环/刷菜单抑制机制与分层密集奖励设计的深度强化学习训练系统，以提升PPO智能体完成早期游戏任务的稳定性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">texasaandm</span>
+    <span class="tag topic" data-tag-role="topic">game reinforcement learning</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="texasaandm">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="game reinforcement learning">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Pokemon Red is a long-horizon JRPG with sparse rewards, partial observability, and quirky control mechanics that make it a challenging benchmark for reinforcement learning. While recent work has shown that PPO agents can clear the first two gyms using heavy reward shaping and engineered observations, training remains brittle in practice, with agents often degenerating into action loops, menu spam, or unproductive wandering. In this paper, we present PokeRL, a modular system that trains deep reinforcement learning agents to complete early game tasks in Pokemon Red, including exiting the player&#39;s house, exploring Pallet Town to reach tall grass, and winning the first rival battle. Our main contributions are a loop-aware environment wrapper around the PyBoy emulator with map masking, a multi-layer anti-loop and anti-spam mechanism, and a dense hierarchical reward design. We argue that practical systems like PokeRL, which explicitly model failure modes such as loops and spam, are a necessary intermediate step between toy benchmarks and full Pokemon League champion agents. Code is available at https://github.com/reddheeraj/PokemonRL</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.10812" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.10812" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/reddheeraj/PokemonRL" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="beyond perception errors: semantic fixation in large vision-language models"
+  data-summary="本文研究大型视觉语言模型在规则被重新定义时仍固守熟悉语义先验的“语义固着”现象，并通过受控多模态基准、提示干预、后训练实验和激活转向分析其机制与可编辑性。"
+  data-topic="multimodal benchmark evaluation"
+  data-institution="Unknown"
+  data-date="2026-04-15"
+  data-paper-id="2604.12119"
+  data-original-institution="Unknown"
+  data-original-topic="multimodal benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.12119" target="_blank" rel="noreferrer">Beyond Perception Errors: Semantic Fixation in Large Vision-Language Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>2 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Md Tanvirul Alam</p>
+  <p class="one-line">本文研究大型视觉语言模型在规则被重新定义时仍固守熟悉语义先验的“语义固着”现象，并通过受控多模态基准、提示干预、后训练实验和激活转向分析其机制与可编辑性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">multimodal benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large vision-language models (VLMs) often rely on familiar semantic priors, but existing evaluations do not cleanly separate perception failures from rule-mapping failures. We study this behavior as semantic fixation: preserving a default interpretation even when the prompt specifies an alternative, equally valid mapping. To isolate this effect, we introduce VLM-Fix, a controlled benchmark over four abstract strategy games that evaluates identical terminal board states under paired standard and inverse rule formulations. Across 14 open and closed VLMs, accuracy consistently favors standard rules, revealing a robust semantic-fixation gap. Prompt interventions support this mechanism: neutral alias prompts substantially narrow the inverse-rule gap, while semantically loaded aliases reopen it. Post-training is strongly rule-aligned: training on one rule improves same-rule transfer but hurts opposite-rule transfer, while joint-rule training improves broader transfer. To test external validity beyond synthetic games, we evaluate analogous defamiliarization interventions on VLMBias and observe the same qualitative pattern. Finally, late-layer activation steering partially recovers degraded performance, indicating that semantic-fixation errors are at least partly editable in late representations. Project page, code, and dataset available at https://maveryn.github.io/vlm-fix/.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.12119" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.12119" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://maveryn.github.io/vlm-fix/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/maveryn/vlm-fix" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="when reasoning models hurt behavioral simulation: a solver-sampler mismatch in multi-agent llm negotiation"
+  data-summary="本文研究多智能体大语言模型谈判中的行为仿真，比较无反思、有限反思和原生推理条件，指出更强推理可能因求解器与采样器目标不匹配而降低仿真保真度。"
+  data-topic="LLM agent behavior modeling"
+  data-institution="Unknown"
+  data-date="2026-04-15"
+  data-paper-id="2604.11840"
+  data-original-institution="Unknown"
+  data-original-topic="LLM agent behavior modeling"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.11840" target="_blank" rel="noreferrer">When Reasoning Models Hurt Behavioral Simulation: A Solver-Sampler Mismatch in Multi-Agent LLM Negotiation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>2 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Sandro Andric</p>
+  <p class="one-line">本文研究多智能体大语言模型谈判中的行为仿真，比较无反思、有限反思和原生推理条件，指出更强推理可能因求解器与采样器目标不匹配而降低仿真保真度。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent behavior modeling</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent behavior modeling">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large language models are increasingly used as agents in social, economic, and policy simulations. A common assumption is that stronger reasoning should improve simulation fidelity. We argue that this assumption can fail when the objective is not to solve a strategic problem, but to sample plausible boundedly rational behavior. In such settings, reasoning-enhanced models can become better solvers and worse simulators: they can over-optimize for strategically dominant actions, collapse compromise-oriented terminal behavior, and sometimes exhibit a diversity-without-fidelity pattern in which local variation survives without outcome-level fidelity. We study this solver-sampler mismatch in three multi-agent negotiation environments adapted from earlier simulation work: an ambiguous fragmented-authority trading-limits scenario, an ambiguous unified-opposition trading-limits scenario, and a new-domain grid-curtailment case in emergency electricity management. We compare three reflection conditions, no reflection, bounded reflection, and native reasoning, across two primary model families and then extend the same protocol to direct OpenAI runs with GPT-4.1 and GPT-5.2. Across all three experiments, bounded reflection produces substantially more diverse and compromise-oriented trajectories than either no reflection or native reasoning. In the direct OpenAI extension, GPT-5.2 native ends in authority decisions in 45 of 45 runs across the three experiments, while GPT-5.2 bounded recovers compromise outcomes in every environment. The contribution is not a claim that reasoning is generally harmful. It is a methodological warning: model capability and simulation fidelity are different objectives, and behavioral simulation should qualify models as samplers, not only as solvers.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.11840" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.11840" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://www.sandric.co" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="spatial competence benchmark"
+  data-summary="该论文提出spatial competence benchmark，通过分层空间任务、可执行输出以及确定性检查器和仿真评估器来系统评估大模型的空间表征、结构推断与受约束行动规划能力。"
+  data-topic="multimodal spatial reasoning"
+  data-institution="Unknown"
+  data-date="2026-04-15"
+  data-paper-id="2604.09594"
+  data-original-institution="Unknown"
+  data-original-topic="multimodal spatial reasoning"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.09594" target="_blank" rel="noreferrer">Spatial Competence Benchmark</a></h3>
+    </div>
+    <div class="metrics">
+      <span>2 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Jash Vira, Ashley Harris</p>
+  <p class="one-line">该论文提出Spatial Competence Benchmark，通过分层空间任务、可执行输出以及确定性检查器和仿真评估器来系统评估大模型的空间表征、结构推断与受约束行动规划能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">multimodal spatial reasoning</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal spatial reasoning">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Spatial competence is the quality of maintaining a consistent internal representation of an environment and using it to infer discrete structure and plan actions under constraints. Prevailing spatial evaluations for large models are limited to probing isolated primitives through 3D transformations or visual question answering. We introduce the Spatial Competence Benchmark (SCBench), spanning three hierarchical capability buckets whose tasks require executable outputs verified by deterministic checkers or simulator-based evaluators. On SCBench, three frontier models exhibit monotonically decreasing accuracy up the capability ladder. Sweeping output-token caps shows that accuracy gains concentrate at low budgets and saturate quickly, and failures are dominated by locally plausible geometry that breaks global constraints. We release the task generators, verifiers, and visualisation tooling.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.09594" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.09594" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/ashleyharris-maptek-com-au/SpatialCompetenceBenchmark" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="spotsound: enhancing large audio-language models with fine-grained temporal grounding"
+  data-summary="本文面向大型音频语言模型的长音频事件时间定位问题，提出带有抑制缺失事件幻觉时间戳训练目标的模型，并构建高难度细粒度时序定位基准以提升真实场景下的音频事件 grounding 能力。"
+  data-topic="audio-language models"
+  data-institution="Unknown"
+  data-date="2026-04-15"
+  data-paper-id="2604.13023"
+  data-original-institution="Unknown"
+  data-original-topic="audio-language models"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.13023" target="_blank" rel="noreferrer">SpotSound: Enhancing Large Audio-Language Models with Fine-Grained Temporal Grounding</a></h3>
+    </div>
+    <div class="metrics">
+      <span>1 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Luoyi Sun, Xiao Zhou, Zeqian Li, +3 more</p>
+  <p class="one-line">本文面向大型音频语言模型的长音频事件时间定位问题，提出带有抑制缺失事件幻觉时间戳训练目标的模型，并构建高难度细粒度时序定位基准以提升真实场景下的音频事件 grounding 能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">audio-language models</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="audio-language models">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large Audio-Language Models (ALMs) have recently demonstrated remarkable capabilities in holistic audio understanding, yet they remain unreliable for temporal grounding, i.e., the task of pinpointing exactly when an event occurs within long-form audio. This limitation stems from two factors: training data dominated by clip-level supervision lacking precise timestamps, and benchmarks that fail to simulate real-world scenarios where short events are obscured by dense background sounds. In this paper, we introduce SpotSound, an audio language model designed for grounding audio events. SpotSound incorporates a novel training objective, specifically designed to suppress hallucinated timestamps for events absent from the input. Additionally, we present SpotSound-Bench, a challenging temporal grounding benchmark where target events occupy less than ~10\% of each clip, creating a rigorous `needle-in-a-haystack&#39; evaluation. Experiments demonstrate that SpotSound achieves state-of-the-art results on temporal grounding benchmarks while maintaining robust performance across general downstream audio-language tasks. Code, models and benchmark are released on https://loiesun.github.io/spotsound/</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.13023" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.13023" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://loiesun.github.io/spotsound/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/LoieSun/SpotSound" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="3dtv: a feedforward interpolation network for real-time view synthesis"
+  data-summary="本文提出一种用于实时自由视点合成的前馈稀疏视角插值网络，通过delaunay三视角选择、姿态感知深度金字塔、特征重投影与遮挡感知融合，在无需场景特定优化的情况下实现低延迟多视角视频渲染。"
+  data-topic="neural rendering"
+  data-institution="Univerity of Bonn"
+  data-date="2026-04-15"
+  data-paper-id="2604.11211"
+  data-original-institution="Univerity of Bonn"
+  data-original-topic="neural rendering"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.11211" target="_blank" rel="noreferrer">3DTV: A Feedforward Interpolation Network for Real-Time View Synthesis</a></h3>
+    </div>
+    <div class="metrics">
+      <span>1 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Stefan Schulz, Fernando Edelstein, Hannah Dröge, +2 more</p>
+  <p class="one-line">本文提出一种用于实时自由视点合成的前馈稀疏视角插值网络，通过Delaunay三视角选择、姿态感知深度金字塔、特征重投影与遮挡感知融合，在无需场景特定优化的情况下实现低延迟多视角视频渲染。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Univerity of Bonn</span>
+    <span class="tag topic" data-tag-role="topic">neural rendering</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Univerity of Bonn">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="neural rendering">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Real-time free-viewpoint rendering requires balancing multi-camera redundancy with the latency constraints of interactive applications. We address this challenge by combining lightweight geometry with learning and propose 3DTV, a feedforward network for real-time sparse-view interpolation. A Delaunay-based triplet selection ensures angular coverage for each target view. Building on this, we introduce a pose-aware depth module that estimates a coarse-to-fine depth pyramid, enabling efficient feature reprojection and occlusion-aware blending. Unlike methods that require scene-specific optimization, 3DTV runs feedforward without retraining, making it practical for AR/VR, telepresence, and interactive applications. Our experiments on challenging multi-view video datasets demonstrate that 3DTV consistently achieves a strong balance of quality and efficiency, outperforming recent real-time novel-view baselines. Crucially, 3DTV avoids explicit proxies, enabling robust rendering across diverse scenes. This makes it a practical solution for low-latency multi-view streaming and interactive rendering.
+  Project Page: https://stefanmschulz.github.io/3DTV_webpage/</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.11211" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.11211" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://stefanmschulz.github.io/3DTV_webpage/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/StefanMSchulz/3DTV" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="conscientia: can llm agents learn to strategize? emergent deception and trust in a multi-agent nyc simulation"
+  data-summary="本文构建一个纽约城市多智能体仿真环境，并通过kto迭代优化llm智能体策略，以研究对抗激励下信任、欺骗与有限战略行为的涌现。"
+  data-topic="LLM agent behavior modeling"
+  data-institution="Unknown"
+  data-date="2026-04-15"
+  data-paper-id="2604.09746"
+  data-original-institution="Unknown"
+  data-original-topic="LLM agent behavior modeling"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-15</p>
+      <h3><a href="https://huggingface.co/papers/2604.09746" target="_blank" rel="noreferrer">CONSCIENTIA: Can LLM Agents Learn to Strategize? Emergent Deception and Trust in a Multi-Agent NYC Simulation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>1 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Aarush Sinha, Arion Das, Soumyadeep Nag, +7 more</p>
+  <p class="one-line">本文构建一个纽约城市多智能体仿真环境，并通过KTO迭代优化LLM智能体策略，以研究对抗激励下信任、欺骗与有限战略行为的涌现。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent behavior modeling</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent behavior modeling">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>As large language models (LLMs) are increasingly deployed as autonomous agents, understanding how strategic behavior emerges in multi-agent environments has become an important alignment challenge. We take a neutral empirical stance and construct a controlled environment in which strategic behavior can be directly observed and measured. We introduce a large-scale multi-agent simulation in a simplified model of New York City, where LLM-driven agents interact under opposing incentives. Blue agents aim to reach their destinations efficiently, while Red agents attempt to divert them toward billboard-heavy routes using persuasive language to maximize advertising revenue. Hidden identities make navigation socially mediated, forcing agents to decide when to trust or deceive. We study policy learning through an iterative simulation pipeline that updates agent policies across repeated interaction rounds using Kahneman-Tversky Optimization (KTO). Blue agents are optimized to reduce billboard exposure while preserving navigation efficiency, whereas Red agents adapt to exploit remaining weaknesses. Across iterations, the best Blue policy improves task success from 46.0% to 57.3%, although susceptibility remains high at 70.7%. Later policies exhibit stronger selective cooperation while preserving trajectory efficiency. However, a persistent safety-helpfulness trade-off remains: policies that better resist adversarial steering do not simultaneously maximize task completion. Overall, our results show that LLM agents can exhibit limited strategic behavior, including selective trust and deception, while remaining highly vulnerable to adversarial persuasion.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.09746" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.09746" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article>      </div>
+    </main>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

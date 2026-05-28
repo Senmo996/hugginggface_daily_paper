@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2026-05-04 - Hugging Face Daily Papers</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Daily archive</p>
+        <h1>2026-05-04</h1>
+      </div>
+      <div class="stats">
+        <a href="../index.html">Index</a>
+        <span>21 papers</span>
+      </div>
+    </header>
+
+    <main class="daily-page">
+      <div class="paper-grid">
+<article
+  class="paper-card"
+  data-title="unividx: a unified multimodal framework for versatile video generation via diffusion priors"
+  data-summary="本文提出一个基于视频扩散模型先验的统一多模态视频生成框架，通过随机条件掩码、按模态门控lora和跨模态自注意力实现多种像素对齐模态之间的灵活条件生成。"
+  data-topic="video diffusion"
+  data-institution="unknown"
+  data-date="2026-05-04"
+  data-paper-id="2605.00658"
+  data-original-institution="unknown"
+  data-original-topic="video diffusion"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00658" target="_blank" rel="noreferrer">UniVidX: A Unified Multimodal Framework for Versatile Video Generation via Diffusion Priors</a></h3>
+    </div>
+    <div class="metrics">
+      <span>84 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Houyuan Chen, Hong Li, Xianghao Kong, +8 more</p>
+  <p class="one-line">本文提出一个基于视频扩散模型先验的统一多模态视频生成框架，通过随机条件掩码、按模态门控LoRA和跨模态自注意力实现多种像素对齐模态之间的灵活条件生成。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">video diffusion</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="video diffusion">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Recent progress has shown that video diffusion models (VDMs) can be repurposed for diverse multimodal graphics tasks. However, existing methods often train separate models for each problem setting, which fixes the input-output mapping and limits the modeling of correlations across modalities. We present UniVidX, a unified multimodal framework that leverages VDM priors for versatile video generation. UniVidX formulates pixel-aligned tasks as conditional generation in a shared multimodal space, adapts to modality-specific distributions while preserving the backbone&#39;s native priors, and promotes cross-modal consistency during synthesis. It is built on three key designs. Stochastic Condition Masking (SCM) randomly partitions modalities into clean conditions and noisy targets during training, enabling omni-directional conditional generation instead of fixed mappings. Decoupled Gated LoRA (DGL) introduces per-modality LoRAs that are activated when a modality serves as the generation target, preserving the strong priors of the VDM. Cross-Modal Self-Attention (CMSA) shares keys and values across modalities while keeping modality-specific queries, facilitating information exchange and inter-modal alignment. We instantiate UniVidX in two domains: UniVid-Intrinsic, for RGB videos and intrinsic maps including albedo, irradiance, and normal; and UniVid-Alpha, for blended RGB videos and their constituent RGBA layers. Experiments show that both models achieve performance competitive with state-of-the-art methods across distinct tasks and generalize robustly to in-the-wild scenarios, even when trained on fewer than 1,000 videos. Project page: https://houyuanchen111.github.io/UniVidX.github.io/</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00658" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00658" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://houyuanchen111.github.io/UniVidX.github.io/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/houyuanchen111/UniVidX" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="web2bigtable: a bi-level multi-agent llm system for internet-scale information search and extraction"
+  data-summary="该论文提出一种双层多智能体llm框架，通过任务分解、并行网页搜索、共享工作区和外部记忆驱动的运行—验证—反思闭环来实现互联网规模的信息检索与结构化表格抽取。"
+  data-topic="LLM multi-agent coordination"
+  data-institution="Unknown"
+  data-date="2026-05-04"
+  data-paper-id="2604.27221"
+  data-original-institution="Unknown"
+  data-original-topic="LLM multi-agent coordination"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2604.27221" target="_blank" rel="noreferrer">Web2BigTable: A Bi-Level Multi-Agent LLM System for Internet-Scale Information Search and Extraction</a></h3>
+    </div>
+    <div class="metrics">
+      <span>38 upvotes</span>
+      <span>5 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yuxuan Huang, Yihang Chen, Zhiyuan He, +6 more</p>
+  <p class="one-line">该论文提出一种双层多智能体LLM框架，通过任务分解、并行网页搜索、共享工作区和外部记忆驱动的运行—验证—反思闭环来实现互联网规模的信息检索与结构化表格抽取。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM multi-agent coordination</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM multi-agent coordination">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Agentic web search increasingly faces two distinct demands: deep reasoning over a single target, and structured aggregation across many entities and heterogeneous sources. Current systems struggle on both fronts. Breadth-oriented tasks demand schema-aligned outputs with wide coverage and cross-entity consistency, while depth-oriented tasks require coherent reasoning over long, branching search trajectories. We introduce Web2BigTable, a multi-agent framework for web-to-table search that supports both regimes. Web2BigTable adopts a bi-level architecture in which an upper-level orchestrator decomposes the task into sub-problems and lower-level worker agents solve them in parallel. Through a closed-loop run--verify--reflect process, the framework jointly improves decomposition and execution over time via persistent, human-readable external memory, with self-evolving updates to each single-agent. During execution, workers coordinate through a shared workspace that makes partial findings visible, allowing them to reduce redundant exploration, reconcile conflicting evidence, and adapt to emerging coverage gaps. Web2BigTable sets a new state of the art on WideSearch, reaching an Avg@4 Success Rate of 38.50 (7.5times the second best at 5.10), Row F1 of 63.53 (+25.03 over the second best), and Item F1 of 80.12 (+14.42 over the second best). It also generalises to depth-oriented search on XBench-DeepSearch, achieving 73.0 accuracy. Code is available at https://github.com/web2bigtable/web2bigtable.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.27221" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.27221" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/web2bigtable/web2bigtable" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="let vit speak: generative language-image pre-training"
+  data-summary="本文提出一种面向多模态大语言模型的生成式语言-图像预训练框架，通过让vit直接基于视觉 tokens 预测语言 tokens 来用标准语言建模目标对齐视觉编码器与自回归llm。"
+  data-topic="generative vision pretraining"
+  data-institution="ByteDance"
+  data-date="2026-05-04"
+  data-paper-id="2605.00809"
+  data-original-institution="ByteDance"
+  data-original-topic="generative vision pretraining"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00809" target="_blank" rel="noreferrer">Let ViT Speak: Generative Language-Image Pre-training</a></h3>
+    </div>
+    <div class="metrics">
+      <span>33 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yan Fang, Mengcheng Lan, Zilong Huang, +7 more</p>
+  <p class="one-line">本文提出一种面向多模态大语言模型的生成式语言-图像预训练框架，通过让ViT直接基于视觉 tokens 预测语言 tokens 来用标准语言建模目标对齐视觉编码器与自回归LLM。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">ByteDance</span>
+    <span class="tag topic" data-tag-role="topic">generative vision pretraining</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="ByteDance">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="generative vision pretraining">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>In this paper, we present Generative Language-Image Pre-training (GenLIP), a minimalist generative pretraining framework for Vision Transformers (ViTs) designed for multimodal large language models (MLLMs). To better align vision encoders with the autoregressive nature of LLMs, GenLIP trains a ViT to predict language tokens directly from visual tokens using a standard language modeling objective, without contrastive batch construction or an additional text decoder. This design offers three key advantages: (1) Simplicity: a single transformer jointly models visual and textual tokens; (2) Scalability: it scales effectively with both data and model size; and (3) Performance: it achieves competitive or superior results across diverse multimodal benchmarks. Trained on 8B samples from Recap-DataComp-1B, GenLIP matches or surpasses strong baselines despite using substantially less pretraining data. After continued pretraining on multi-resolution images at native aspect ratios, GenLIP further improves on detail-sensitive tasks such as OCR and chart understanding, making it a strong foundation for vision encoders in MLLMs.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00809" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00809" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://yanfangcs.github.io/vitspeak/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/YanFangCS/GenLIP" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="map2world: segment map conditioned text to 3d world generation"
+  data-summary="本文提出一种由任意形状与尺度的语义分割地图和文本条件驱动的3d世界生成框架，并通过细节增强网络与资产生成器先验提升大规模场景的一致性、可控性和细节质量。"
+  data-topic="3D scene generation"
+  data-institution="Unknown"
+  data-date="2026-05-04"
+  data-paper-id="2605.00781"
+  data-original-institution="Unknown"
+  data-original-topic="3D scene generation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00781" target="_blank" rel="noreferrer">Map2World: Segment Map Conditioned Text to 3D World Generation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>25 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Jaeyoung Chung, Suyoung Lee, Jianfeng Xiang, +2 more</p>
+  <p class="one-line">本文提出一种由任意形状与尺度的语义分割地图和文本条件驱动的3D世界生成框架，并通过细节增强网络与资产生成器先验提升大规模场景的一致性、可控性和细节质量。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">3D scene generation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="3D scene generation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>3D world generation is essential for applications such as immersive content creation or autonomous driving simulation. Recent advances in 3D world generation have shown promising results; however, these methods are constrained by grid layouts and suffer from inconsistencies in object scale throughout the entire world. In this work, we introduce a novel framework, Map2World, that first enables 3D world generation conditioned on user-defined segment maps of arbitrary shapes and scales, ensuring global-scale consistency and flexibility across expansive environments. To further enhance the quality, we propose a detail enhancer network that generates fine details of the world. The detail enhancer enables the addition of fine-grained details without compromising overall scene coherence by incorporating global structure information. We design the entire pipeline to leverage strong priors from asset generators, achieving robust generalization across diverse domains, even under limited training data for scene generation. Extensive experiments demonstrate that our method significantly outperforms existing approaches in user-controllability, scale consistency, and content coherence, enabling users to generate 3D worlds under more complex conditions.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00781" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00781" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://robot0321.github.io/Map2World/index.html" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="from skill text to skill structure: the scheduling-structural-logical representation for agent skills"
+  data-summary="本文提出一种面向llm智能体可复用技能的结构化表示方法，将调度信号、执行结构与逻辑层面的动作和资源证据分离，并通过llm归一化器提升技能发现与风险评估效果。"
+  data-topic="LLM agent skill retrieval"
+  data-institution="Peking University"
+  data-date="2026-05-04"
+  data-paper-id="2604.24026"
+  data-original-institution="Peking University"
+  data-original-topic="LLM agent skill retrieval"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2604.24026" target="_blank" rel="noreferrer">From Skill Text to Skill Structure: The Scheduling-Structural-Logical Representation for Agent Skills</a></h3>
+    </div>
+    <div class="metrics">
+      <span>21 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Qiliang Liang, Hansi Wang, Zhong Liang, +1 more</p>
+  <p class="one-line">本文提出一种面向LLM智能体可复用技能的结构化表示方法，将调度信号、执行结构与逻辑层面的动作和资源证据分离，并通过LLM归一化器提升技能发现与风险评估效果。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Peking University</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent skill retrieval</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Peking University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent skill retrieval">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>LLM agents increasingly rely on reusable skills, capability packages that combine instructions, control flow, constraints, and tool calls. In most current agent systems, however, skills are still represented by text-heavy artifacts, including SKILL.md-style documents and structured records whose machine-usable evidence remains embedded largely in natural-language descriptions. This poses a challenge for skill-centered agent systems: managing skill collections and using skills to support agent both require reasoning over invocation interfaces, execution structure, and concrete side effects that are often entangled in a single textual surface. An explicit representation of skill knowledge may therefore help make these artifacts easier for machines to acquire and leverage. Drawing on Memory Organization Packets, Script Theory, and Conceptual Dependency from Schank and Abelson&#39;s classical work on linguistic knowledge representation, we introduce what is, to our knowledge, the first structured representation for agent skill artifacts that disentangles skill-level scheduling signals, scene-level execution structure, and logic-level action and resource-use evidence: the Scheduling-Structural-Logical (SSL) representation. We instantiate SSL with an LLM-based normalizer and evaluate it on a corpus of skills in two tasks, Skill Discovery and Risk Assessment, and superiorly outperform the text-only baselines: in Skill Discovery, SSL improves MRR from 0.573 to 0.707; in Risk Assessment, it improves macro F1 from 0.744 to 0.787. These findings reveal that explicit, source-grounded structure makes agent skills easier to search and review. They also suggest that SSL is best understood as a practical step toward more inspectable, reusable, and operationally actionable skill representations for agent systems, rather than as a finished standard or an end-to-end mechanism for managing and using skills.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.24026" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.24026" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="stable-gflownet: toward diverse and robust llm red-teaming via contrastive trajectory balance"
+  data-summary="本文面向大语言模型安全红队攻击生成，提出一种通过对比式轨迹平衡、鲁棒掩码和流畅性稳定器提升生成流网络训练稳定性与攻击多样性的方法。"
+  data-topic="LLM security red-teaming"
+  data-institution="unknown"
+  data-date="2026-05-04"
+  data-paper-id="2605.00553"
+  data-original-institution="unknown"
+  data-original-topic="LLM security red-teaming"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00553" target="_blank" rel="noreferrer">Stable-GFlowNet: Toward Diverse and Robust LLM Red-Teaming via Contrastive Trajectory Balance</a></h3>
+    </div>
+    <div class="metrics">
+      <span>17 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Minchan Kwon, Sunghyun Baek, Minseo Kim, +3 more</p>
+  <p class="one-line">本文面向大语言模型安全红队攻击生成，提出一种通过对比式轨迹平衡、鲁棒掩码和流畅性稳定器提升生成流网络训练稳定性与攻击多样性的方法。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM security red-teaming</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM security red-teaming">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large Language Model (LLM) Red-Teaming, which proactively identifies vulnerabilities of LLMs, is an essential process for ensuring safety. Finding effective and diverse attacks in red-teaming is important, but achieving both is challenging. Generative Flow Networks (GFNs) that perform distribution matching are a promising methods, but they are notorious for training instability and mode collapse. In particular, unstable rewards in red-teaming accelerate mode collapse. We propose Stable-GFN (S-GFN), which eliminates partition function Z estimation in GFN and reduces training instability. S-GFN avoids Z-estimation through pairwise comparisons and employs a robust masking methodology against noisy rewards. Additionally, we propose a fluency stabilizer to prevent the model from getting stuck in local optima that produce gibberish. S-GFN provides more stable training while maintaining the optimal policy of GFN. We demonstrate the overwhelming attack performance and diversity of S-GFN across various settings.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00553" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00553" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="prox-e: fine-grained 3d shape editing via primitive-based abstractions"
+  data-summary="该论文提出一种免训练的细粒度3d形状编辑框架，通过将输入形状抽象为几何基元并利用视觉语言模型生成基元级结构修改，再引导3d生成模型实现局部编辑与身份保持。"
+  data-topic="3D shape editing"
+  data-institution="Unknown"
+  data-date="2026-05-04"
+  data-paper-id="2604.23774"
+  data-original-institution="Unknown"
+  data-original-topic="3D shape editing"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2604.23774" target="_blank" rel="noreferrer">Prox-E: Fine-Grained 3D Shape Editing via Primitive-Based Abstractions</a></h3>
+    </div>
+    <div class="metrics">
+      <span>17 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Etai Sella, Hao Phung, Nitay Amiel, +3 more</p>
+  <p class="one-line">该论文提出一种免训练的细粒度3D形状编辑框架，通过将输入形状抽象为几何基元并利用视觉语言模型生成基元级结构修改，再引导3D生成模型实现局部编辑与身份保持。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">3D shape editing</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="3D shape editing">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Text-based 2D image editing models have recently reached an impressive level of maturity, motivating a growing body of work that heavily depends on these models to drive 3D edits. While effective for appearance-based modifications, such 2D-centric 3D editing pipelines often struggle with fine-grained 3D editing, where localized structural changes must be applied while strictly preserving an object&#39;s overall identity. To address this limitation, we propose Prox-E, a training-free framework that enables fine-grained 3D control through an explicit, primitive-based geometric abstraction. Our framework first abstracts an input 3D shape into a compact set of geometric primitives. A pretrained vision-language model (VLM) then edits this abstraction to specify primitive-level changes. These structural edits are subsequently used to guide a 3D generative model, enabling fine-grained, localized modifications while preserving unchanged regions of the original shape. Through extensive experiments, we demonstrate that our method consistently balances identity preservation, shape quality, and instruction fidelity more effectively than various existing approaches, including 2D-based 3D editors and training-based methods.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.23774" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.23774" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://etaisella.github.io/Prox-E/" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="odysseus: scaling vlms to 100+ turn decision-making in games via reinforcement learning"
+  data-summary="本文研究如何通过带轻量级回合级评论器的ppo强化学习稳定训练视觉语言模型，使其在视觉游戏中完成100回合以上的长程多模态决策任务。"
+  data-topic="multimodal reinforcement learning"
+  data-institution="Princeton University"
+  data-date="2026-05-04"
+  data-paper-id="2605.00347"
+  data-original-institution="Princeton University"
+  data-original-topic="multimodal reinforcement learning"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00347" target="_blank" rel="noreferrer">Odysseus: Scaling VLMs to 100+ Turn Decision-Making in Games via Reinforcement Learning</a></h3>
+    </div>
+    <div class="metrics">
+      <span>16 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Chengshuai Shi, Wenzhe Li, Xinran Liang, +10 more</p>
+  <p class="one-line">本文研究如何通过带轻量级回合级评论器的PPO强化学习稳定训练视觉语言模型，使其在视觉游戏中完成100回合以上的长程多模态决策任务。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Princeton University</span>
+    <span class="tag topic" data-tag-role="topic">multimodal reinforcement learning</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Princeton University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal reinforcement learning">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Given the rapidly growing capabilities of vision-language models (VLMs), extending them to interactive decision-making tasks such as video games has emerged as a promising frontier. However, existing approaches either rely on large-scale supervised fine-tuning (SFT) on human trajectories or apply reinforcement learning (RL) only in relatively short-horizon settings (typically around 20--30 turns). In this work, we study RL-based training of VLMs for long-horizon decision-making in Super Mario Land, a visually grounded environment requiring 100+ turns of interaction with coordinated perception, reasoning, and action. We begin with a systematic investigation of key algorithmic components and propose an adapted variant of PPO with a lightweight turn-level critic, which substantially improves training stability and sample efficiency over critic-free methods such as GRPO and Reinforce++. We further show that pretrained VLMs provide strong action priors, significantly improving sample efficiency during RL training and reducing the need for manual design choices such as action engineering, compared to classical deep RL trained from scratch. Building on these insights, we introduce Odysseus, an open training framework for VLM agents, achieving substantial gains across multiple levels of the game and at least 3 times average game progresses than frontier models. Moreover, the trained models exhibit consistent improvements under both in-game and cross-game generalization settings, while maintaining general-domain capabilities. Overall, our results identify key ingredients for making RL stable and effective in long-horizon, multi-modal settings, and provide practical guidance for developing VLMs as embodied agents.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00347" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00347" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://odysseus-project.github.io" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="learning while deploying: fleet-scale reinforcement learning for generalist robot policies"
+  data-summary="该论文提出一种面向机器人集群部署的离线到在线强化学习框架，通过收集自主执行与人类干预数据持续改进通用视觉-语言-动作机器人策略。"
+  data-topic="multimodal reinforcement learning"
+  data-institution="unknown"
+  data-date="2026-05-04"
+  data-paper-id="2605.00416"
+  data-original-institution="unknown"
+  data-original-topic="multimodal reinforcement learning"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00416" target="_blank" rel="noreferrer">Learning while Deploying: Fleet-Scale Reinforcement Learning for Generalist Robot Policies</a></h3>
+    </div>
+    <div class="metrics">
+      <span>12 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yi Wang, Xinchen Li, Pengwei Xie, +13 more</p>
+  <p class="one-line">该论文提出一种面向机器人集群部署的离线到在线强化学习框架，通过收集自主执行与人类干预数据持续改进通用视觉-语言-动作机器人策略。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">multimodal reinforcement learning</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal reinforcement learning">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Generalist robot policies increasingly benefit from large-scale pretraining, but offline data alone is insufficient for robust real-world deployment. Deployed robots encounter distribution shifts, long-tail failures, task variations, and human correction opportunities that fixed demonstration datasets cannot fully capture. We present Learning While Deploying (LWD), a fleet-scale offline-to-online reinforcement learning framework for continual post-training of generalist Vision-Language-Action (VLA) policies. Starting from a pretrained VLA policy, LWD closes the loop between deployment, shared physical experience, policy improvement, and redeployment by using autonomous rollouts and human interventions collected across a robot fleet. To stabilize learning from heterogeneous, sparse-reward fleet data, LWD combines Distributional Implicit Value Learning (DIVL) for robust value estimation with Q-learning via Adjoint Matching (QAM) for policy extraction in flow-based VLA action generators. We validate LWD on a fleet of 16 dual-arm robots across eight real-world manipulation tasks, including semantic grocery restocking and 3--5 minute long-horizon tasks. A single generalist policy improves as fleet experience accumulates, reaching an average success rate of 95%, with the largest gains on long-horizon tasks.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00416" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00416" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="end-to-end autoregressive image generation with 1d semantic tokenizer"
+  data-summary="该论文提出一种端到端联合优化重建与生成的1d语义视觉tokenizer训练流程，用于提升自回归图像生成模型的潜表示质量和生成效果。"
+  data-topic="visual tokenization"
+  data-institution="ByteDance Seed"
+  data-date="2026-05-04"
+  data-paper-id="2605.00503"
+  data-original-institution="ByteDance Seed"
+  data-original-topic="visual tokenization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00503" target="_blank" rel="noreferrer">End-to-End Autoregressive Image Generation with 1D Semantic Tokenizer</a></h3>
+    </div>
+    <div class="metrics">
+      <span>12 upvotes</span>
+      <span>1 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Wenda Chu, Bingliang Zhang, Jiaqi Han, +4 more</p>
+  <p class="one-line">该论文提出一种端到端联合优化重建与生成的1D语义视觉Tokenizer训练流程，用于提升自回归图像生成模型的潜表示质量和生成效果。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">ByteDance Seed</span>
+    <span class="tag topic" data-tag-role="topic">visual tokenization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="ByteDance Seed">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="visual tokenization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Autoregressive image modeling relies on visual tokenizers to compress images into compact latent representations. We design an end-to-end training pipeline that jointly optimizes reconstruction and generation, enabling direct supervision from generation results to the tokenizer. This contrasts with prior two-stage approaches that train tokenizers and generative models separately. We further investigate leveraging vision foundation models to improve 1D tokenizers for autoregressive modeling. Our autoregressive generative model achieves strong empirical results, including a state-of-the-art FID score of 1.48 without guidance on ImageNet 256x256 generation.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00503" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00503" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="better models, faster training: sigmoid attention for single-cell foundation models"
+  data-summary="本文研究将 sigmoid attention 作为 softmax attention 的替代机制用于单细胞生物基础模型，通过理论分析、稳定性压力测试和高效 triton gpu 内核实现来提升表示质量、训练速度与训练稳定性。"
+  data-topic="attention mechanism optimization"
+  data-institution="Merck &amp; Co., Inc."
+  data-date="2026-05-04"
+  data-paper-id="2604.27124"
+  data-original-institution="Merck &amp; Co., Inc."
+  data-original-topic="attention mechanism optimization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2604.27124" target="_blank" rel="noreferrer">Better Models, Faster Training: Sigmoid Attention for single-cell Foundation Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>11 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Vijay Sadashivaiah, Georgios Dasoulas, Judith Mueller, +1 more</p>
+  <p class="one-line">本文研究将 sigmoid attention 作为 softmax attention 的替代机制用于单细胞生物基础模型，通过理论分析、稳定性压力测试和高效 Triton GPU 内核实现来提升表示质量、训练速度与训练稳定性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Merck &amp; Co., Inc.</span>
+    <span class="tag topic" data-tag-role="topic">attention mechanism optimization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Merck &amp; Co., Inc.">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="attention mechanism optimization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Training stable biological foundation models requires rethinking attention mechanisms: we find that using sigmoid attention as a drop in replacement for softmax attention a) produces better learned representations: on six diverse single-cell datasets, sigmoid achieves 25% higher cell-type separation, better cell-type cohesion metrics, and lower validation loss, b) faster training, models with sigmoid attention train up to 10% faster than their softmax counterparts, and c) more stable training by eliminating inherent sources of instability in softmax attention. We establish that sigmoid attention has globally bounded derivatives (leq 0.25) as opposed to softmax, and a diagonal Jacobian structure in contrast with softmax&#39;s dense coupling, which together help alleviate training instabilities. In stress tests on 160M-parameter bidirectional attention models trained without gradient clipping on 8K-token sequences, softmax diverges catastrophically, with gradients exploding by four orders of magnitude, while sigmoid remains stable. Finally, we implement and open-source TritonSigmoid, an efficient GPU kernel that achieves 515 TFLOPS on H100 GPUs, outperforming both FlashAttention-2 and FlashSigmoid, with native padding support, which is essential for biological sequences. Our results establish sigmoid attention as both theoretically grounded and empirically superior for biological foundation models. Code is available at https://github.com/MSDLLCpapers/triton-sigmoid</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.27124" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.27124" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="when do diffusion models learn to generate multiple objects?"
+  data-summary="本文通过构建受控的多对象数据生成框架并训练文本到图像扩散模型，系统分析数据规模、场景复杂度、计数与组合留出对多对象组合生成能力的影响。"
+  data-topic="text-to-image generation"
+  data-institution="unknown"
+  data-date="2026-05-04"
+  data-paper-id="2605.00273"
+  data-original-institution="unknown"
+  data-original-topic="text-to-image generation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00273" target="_blank" rel="noreferrer">When Do Diffusion Models learn to Generate Multiple Objects?</a></h3>
+    </div>
+    <div class="metrics">
+      <span>9 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yujin Jeong, Arnas Uselis, Iro Laina, +2 more</p>
+  <p class="one-line">本文通过构建受控的多对象数据生成框架并训练文本到图像扩散模型，系统分析数据规模、场景复杂度、计数与组合留出对多对象组合生成能力的影响。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">text-to-image generation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="text-to-image generation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Text-to-image diffusion models achieve impressive visual fidelity, yet they remain unreliable in multi-object generation. Despite extensive empirical evidence of these failures, the underlying causes remain unclear. We begin by asking how much of this limitation arises from the data itself. To disentangle data effects, we consider two regimes across different dataset sizes: (1) concept generalization, where each individual concept is observed during training under potentially imbalanced data distributions, and (2) compositional generalization, where specific combinations of concepts are systematically held out. To study these regimes, we introduce mosaic (Multi-Object Spatial relations, AttrIbution, Counting), a controlled framework for dataset generation. By training diffusion models on mosaic, we find that scene complexity plays a dominant role rather than concept imbalance, and that counting is uniquely difficult to learn in low-data regimes. Moreover, compositional generalization collapses as more concept combinations are held out during training. These findings highlight fundamental limitations of diffusion models and motivate stronger inductive biases and data design for robust multi-object compositional generation.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00273" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00273" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/eugene6923/MOSAIC" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="trees to flows and back: unifying decision trees and diffusion models"
+  data-summary="本文从数学上建立分层决策树与扩散过程在极限情形下的对应关系，提出全局轨迹得分匹配统一优化视角，并将其用于表格生成加速和树模型到神经网络的蒸馏。"
+  data-topic="diffusion model theory"
+  data-institution="Technical University of Munich"
+  data-date="2026-05-04"
+  data-paper-id="2605.00414"
+  data-original-institution="Technical University of Munich"
+  data-original-topic="diffusion model theory"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00414" target="_blank" rel="noreferrer">Trees to Flows and Back: Unifying Decision Trees and Diffusion Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>7 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Sai Niranjan Ramachandran, Suvrit Sra</p>
+  <p class="one-line">本文从数学上建立分层决策树与扩散过程在极限情形下的对应关系，提出全局轨迹得分匹配统一优化视角，并将其用于表格生成加速和树模型到神经网络的蒸馏。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Technical University of Munich</span>
+    <span class="tag topic" data-tag-role="topic">diffusion model theory</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Technical University of Munich">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="diffusion model theory">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Decision trees and diffusion models are ostensibly disparate model classes, one discrete and hierarchical, the other continuous and dynamic. This work unifies the two by establishing a crisp mathematical correspondence between hierarchical decision trees and diffusion processes in appropriate limiting regimes. Our unification reveals a shared optimization principle: Global Trajectory Score Matching (GTSM), for which gradient boosting (in an idealized version) is asymptotically optimal. We underscore the conceptual value of our work through two key practical instantiations: \treeflow, which achieves competitive generation quality on tabular data with higher fidelity and a 2\times computational speedup, and \dsmtree, a novel distillation method that transfers hierarchical decision logic into neural networks, matching teacher performance within 2\% on many benchmarks.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00414" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00414" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="mascing: configurable mixture-of-experts behavior via activation steering masks"
+  data-summary="本文提出一种面向混合专家大语言模型的激活引导框架，通过学习路由行为并在推理时施加专家选择掩码来无需重训练地配置安全相关行为。"
+  data-topic="LLM activation steering"
+  data-institution="unknown"
+  data-date="2026-05-04"
+  data-paper-id="2604.27818"
+  data-original-institution="unknown"
+  data-original-topic="LLM activation steering"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2604.27818" target="_blank" rel="noreferrer">MASCing: Configurable Mixture-of-Experts Behavior via Activation Steering Masks</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Jona te Lintelo, Lichao Wu, Marina Krček, +2 more</p>
+  <p class="one-line">本文提出一种面向混合专家大语言模型的激活引导框架，通过学习路由行为并在推理时施加专家选择掩码来无需重训练地配置安全相关行为。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM activation steering</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM activation steering">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Mixture-of-Experts (MoE) architectures in Large Language Models (LLMs) have significantly reduced inference costs through sparse activation. However, this sparse activation paradigm also introduces new safety challenges. Since only a subset of experts is engaged for each input, model behavior becomes coupled to routing decisions, yielding a difficult-to-control mechanism that can vary across safety-relevant scenarios. At the same time, adapting model behavior through full fine-tuning or retraining is costly, especially when developers need to rapidly configure the same model for different safety objectives. We present MASCing (MoE Activation Steering Configuration), the first framework that enables flexible reconfiguration of MoE behavior across diverse safety scenarios without retraining. MASCing uses an LSTM-based surrogate model to capture cross-layer routing dependencies and map routing logits to downstream behaviors. It then optimizes a steering matrix to identify behavior-relevant expert circuits and, at inference time, applies steering masks to the routing gates to override expert selection. This enables targeted enhancement or suppression of specific behaviors while preserving general language utility. To demonstrate its reconfigurability, we apply MASCing to two different safety-related objectives and observe consistent gains with negligible overhead across seven open-source MoE models. For multi-turn jailbreak defense, it improves the average defense success rate from 52.5% to 83.9%, with gains of up to 89.2%. For adult-content generation, MASCing enables models to comply with such requests that would otherwise be refused, increasing the average generation success rate from 52.6% to 82.0%, with gains of up to 93.0%. These results establish MASCing as a practical, lightweight, and flexible framework for scenario-specific safety reconfiguration in MoE models.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.27818" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.27818" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/jonatelintelo/MASCing" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="soft anisotropic diagrams for differentiable image representation"
+  data-summary="本文提出一种基于软各向异性加权voronoi划分的可微图像表示，通过自适应站点、局部top-k近邻传播和gpu优先优化实现高效渲染、压缩与可微管线集成。"
+  data-topic="neural rendering"
+  data-institution="Unknown"
+  data-date="2026-05-04"
+  data-paper-id="2604.21984"
+  data-original-institution="Unknown"
+  data-original-topic="neural rendering"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2604.21984" target="_blank" rel="noreferrer">Soft Anisotropic Diagrams for Differentiable Image Representation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Laki Iinbor, Zhiyang Dou, Wojciech Matusik</p>
+  <p class="one-line">本文提出一种基于软各向异性加权Voronoi划分的可微图像表示，通过自适应站点、局部top-K近邻传播和GPU优先优化实现高效渲染、压缩与可微管线集成。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">neural rendering</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="neural rendering">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>We introduce Soft Anisotropic Diagrams (SAD), an explicit and differentiable image representation parameterized by a set of adaptive sites in the image plane. In SAD, each site specifies an anisotropic metric and an additively weighted distance score, and we compute pixel colors as a softmax blend over a small per-pixel top-K subset of sites. We induce a soft anisotropic additively weighted Voronoi partition (i.e., an Apollonius diagram) with learnable per-site temperatures, preserving informative gradients while allowing clear, content-aligned boundaries and explicit ownership. Such a formulation enables efficient rendering by maintaining a per-query top-K map that approximates nearest neighbors under the same shading score, allowing GPU-friendly, fixed-size local computation. We update this list using our top-K propagation scheme inspired by jump flooding, augmented with stochastic injection to provide probabilistic global coverage. Training follows a GPU-first pipeline with gradient-weighted initialization, Adam optimization, and adaptive budget control through densification and pruning. Across standard benchmarks, SAD consistently outperforms Image-GS and Instant-NGP at matched bitrate. On Kodak, SAD reaches 46.0 dB PSNR with 2.2 s encoding time (vs. 28 s for Image-GS), and delivers 4-19 times end-to-end training speedups over state-of-the-art baselines. We demonstrate the effectiveness of SAD by showcasing the seamless integration with differentiable pipelines for forward and inverse problems, efficiency of fast random access, and compact storage.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.21984" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.21984" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://luckyiyi.github.io/SAD/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/LuckyIYI/SAD" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="talker-t2av: joint talking audio-video generation with autoregressive diffusion modeling"
+  data-summary="本文提出一种用于说话人音视频联合生成的自回归扩散框架，通过共享高层跨模态建模骨干与音频、视频专用扩散解码器提升唇形同步、画质和音质一致性。"
+  data-topic="talking face generation"
+  data-institution="Unknown"
+  data-date="2026-05-04"
+  data-paper-id="2604.23586"
+  data-original-institution="Unknown"
+  data-original-topic="talking face generation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2604.23586" target="_blank" rel="noreferrer">Talker-T2AV: Joint Talking Audio-Video Generation with Autoregressive Diffusion Modeling</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zhen Ye, Xu Tan, Aoxiong Yin, +8 more</p>
+  <p class="one-line">本文提出一种用于说话人音视频联合生成的自回归扩散框架，通过共享高层跨模态建模骨干与音频、视频专用扩散解码器提升唇形同步、画质和音质一致性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">talking face generation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="talking face generation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Joint audio-video generation models have shown that unified generation yields stronger cross-modal coherence than cascaded approaches. However, existing models couple modalities throughout denoising via pervasive attention, treating high-level semantics and low-level details in a fully entangled manner. This is suboptimal for talking head synthesis: while audio and facial motion are semantically correlated, their low-level realizations (acoustic signals and visual textures) follow distinct rendering processes. Enforcing joint modeling across all levels causes unnecessary entanglement and reduces efficiency. We propose Talker-T2AV, an autoregressive diffusion framework where high-level cross-modal modeling occurs in a shared backbone, while low-level refinement uses modality-specific decoders. A shared autoregressive language model jointly reasons over audio and video in a unified patch-level token space. Two lightweight diffusion transformer heads decode the hidden states into frame-level audio and video latents. Experiments on talking portrait benchmarks show Talker-T2AV outperforms dual-branch baselines in lip-sync accuracy, video quality, and audio quality, achieving stronger cross-modal consistency than cascaded pipelines.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.23586" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.23586" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://talker-t2av.github.io" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/zhenye234/Talker-T2AV" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="online self-calibration against hallucination in vision-language models"
+  data-summary="该论文面向视觉语言模型幻觉抑制，利用模型自身的判别验证能力结合蒙特卡洛树搜索和双粒度奖励构造在线偏好数据，并通过直接偏好优化进行自校准。"
+  data-topic="multimodal reward modeling"
+  data-institution="unknown"
+  data-date="2026-05-04"
+  data-paper-id="2605.00323"
+  data-original-institution="unknown"
+  data-original-topic="multimodal reward modeling"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00323" target="_blank" rel="noreferrer">Online Self-Calibration Against Hallucination in Vision-Language Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Minghui Chen, Chenxu Yang, Hengjie Zhu, +3 more</p>
+  <p class="one-line">该论文面向视觉语言模型幻觉抑制，利用模型自身的判别验证能力结合蒙特卡洛树搜索和双粒度奖励构造在线偏好数据，并通过直接偏好优化进行自校准。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">multimodal reward modeling</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal reward modeling">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large Vision-Language Models (LVLMs) often suffer from hallucinations, generating descriptions that include visual details absent from the input image. Recent preference alignment methods typically rely on supervision distilled from stronger models such as GPT. However, this offline paradigm introduces a Supervision-Perception Mismatch: the student model is forced to align with fine-grained details beyond its perceptual capacity, learning to guess rather than to see. To obtain reliable self-supervision for online learning, we identify a Generative-Discriminative Gap within LVLMs, where models exhibit higher accuracy on discriminative verification than open-ended generation. Leveraging this capability, we propose Online Self-CAlibRation (OSCAR), a framework that integrates Monte Carlo Tree Search with a Dual-Granularity Reward Mechanism to construct preference data and iteratively refines the model via Direct Preference Optimization. Extensive experiments demonstrate that OSCAR achieves state-of-the-art performance on hallucination benchmarks while improving general multimodal capabilities.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00323" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00323" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="learning to act and cooperate for distributed black-box consensus optimization"
+  data-summary="本文研究分布式黑盒共识优化，提出由大语言模型基于历史轨迹稀疏指导智能体内部动作与外部协作模式的多智能体自设计框架，以提升非凸异构环境中的优化质量、收敛效率和通信效率。"
+  data-topic="LLM multi-agent coordination"
+  data-institution="unknown"
+  data-date="2026-05-04"
+  data-paper-id="2605.00691"
+  data-original-institution="unknown"
+  data-original-topic="LLM multi-agent coordination"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00691" target="_blank" rel="noreferrer">Learning to Act and Cooperate for Distributed Black-Box Consensus Optimization</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zi-Bo Qin, Feng-Feng Wei, Tai-You Chen, +1 more</p>
+  <p class="one-line">本文研究分布式黑盒共识优化，提出由大语言模型基于历史轨迹稀疏指导智能体内部动作与外部协作模式的多智能体自设计框架，以提升非凸异构环境中的优化质量、收敛效率和通信效率。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM multi-agent coordination</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM multi-agent coordination">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Distributed blackbox consensus optimization is a fundamental problem in multi-agent systems, where agents must improve a global objective using only local objective queries and limited neighbor communication. Existing methods largely rely on handcrafted update rules and static cooperation patterns, which often struggle to balance local adaptation, global coordination, and communication efficiency in heterogeneous nonconvex environments. In this paper, we take an initial step toward trajectory-driven self-design for distributed black-box consensus optimization. We first redesign the agent-level swarm dynamics with an adaptive internal mechanism tailored to decentralized consensus settings, improving the balance between exploration, convergence, and local escape. Built on top of this adaptive execution layer, we propose Learning to Act and Cooperate (LACMAS), a trajectorydriven framework in which large language models provide sparse highlevel guidance for shaping both agentinternal action behaviors and agentexternal cooperation patterns from historical optimization trajectories. We further introduce a phased cognitive scheduling strategy to activate different forms of adaptation in a resource-aware manner. Experiments on standard distributed black-box benchmarks and real-world distributed tasks show that LAC-MAS consistently improves solution quality, convergence efficiency, and communication efficiency over strong baselines, suggesting a practical route from handcrafted distributed coordination toward self-designing multi-agent optimization systems.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00691" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00691" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="themis: training robust multilingual code reward models for flexible multi-criteria scoring"
+  data-summary="本文构建多语言多标准代码偏好基准与大规模偏好数据集，并训练不同规模的代码奖励模型以实现灵活、鲁棒的跨语言代码质量评分。"
+  data-topic="reward modeling"
+  data-institution="Themis"
+  data-date="2026-05-04"
+  data-paper-id="2605.00754"
+  data-original-institution="Themis"
+  data-original-topic="reward modeling"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00754" target="_blank" rel="noreferrer">Themis: Training Robust Multilingual Code Reward Models for Flexible Multi-Criteria Scoring</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Indraneil Paul, Glavaš Glavas, Iryna Gurevych</p>
+  <p class="one-line">本文构建多语言多标准代码偏好基准与大规模偏好数据集，并训练不同规模的代码奖励模型以实现灵活、鲁棒的跨语言代码质量评分。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Themis</span>
+    <span class="tag topic" data-tag-role="topic">reward modeling</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Themis">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="reward modeling">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Reward models (RMs) have become an indispensable fixture of the language model (LM) post-training playbook, enabling policy alignment and test-time scaling. Research on the application of RMs in code generation, however, has been comparatively sparse, with existing work largely focusing on execution feedback. This choice constrains post-training to optimizing functional correctness over self-contained executable code. In this work, we examine the training and evaluation of multilingual, multi-criteria code RMs. To this end, we first compile Themis-CodeRewardBench, a benchmark to evaluate code RMs across five preference dimensions (i.e., criteria) and eight programming languages, on which we profile 50+ code, math, and general-purpose RMs. Observing the limited proficiency of current RMs beyond scoring for functional correctness, we develop Themis-CodePreference, the largest open-source collection of code preferences to date (more than 350k preference pairs), and use it to train Themis-RM, a suite of multilingual code reward models for flexible multi-criteria scoring, ranging in size from 600M to 32B parameters. Our experiments and ablations demonstrate positive scaling trends, strong cross-lingual transfer when training on diverse preferences, and the importance of multi-criteria training for reliable code reward modeling.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00754" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00754" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/iNeil77/Themis" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="analogretriever: learning cross-modal representations for analog circuit retrieval"
+  data-summary="本文面向模拟电路知识产权复用中的跨模态搜索问题，构建修复后的电路数据集，并用视觉语言模型、关系图卷积网络和课程式对比学习将原理图、功能描述与网表映射到统一嵌入空间以实现高效检索。"
+  data-topic="multimodal embedding"
+  data-institution="unknown"
+  data-date="2026-05-04"
+  data-paper-id="2604.23195"
+  data-original-institution="unknown"
+  data-original-topic="multimodal embedding"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2604.23195" target="_blank" rel="noreferrer">AnalogRetriever: Learning Cross-Modal Representations for Analog Circuit Retrieval</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yihan Wang, Lei Li, Yao Lai, +2 more</p>
+  <p class="one-line">本文面向模拟电路知识产权复用中的跨模态搜索问题，构建修复后的电路数据集，并用视觉语言模型、关系图卷积网络和课程式对比学习将原理图、功能描述与网表映射到统一嵌入空间以实现高效检索。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">multimodal embedding</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal embedding">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Analog circuit design relies heavily on reusing existing intellectual property (IP), yet searching across heterogeneous representations such as SPICE netlists, schematics, and functional descriptions remains challenging. Existing methods are largely limited to exact matching within a single modality, failing to capture cross-modal semantic relationships. To bridge this gap, we present AnalogRetriever, a unified tri-modal retrieval framework for analog circuit search. We first build a high-quality dataset on top of Masala-CHAI through a two-stage repair pipeline that raises the netlist compile rate from 22\% to 100\%. Built on this foundation, AnalogRetriever encodes schematics and descriptions with a vision-language model and netlists with a port-aware relational graph convolutional network, mapping all three modalities into a shared embedding space via curriculum contrastive learning. Experiments show that AnalogRetriever achieves an average Recall@1 of 75.2\% across all six cross-modal retrieval directions, significantly outperforming existing baselines. When integrated into the AnalogCoder agentic framework as a retrieval-augmented generation module, it consistently improves functional pass rates and enables previously unsolved tasks to be completed. Our code and dataset will be released.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.23195" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.23195" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="lase: language-adversarial speaker encoding for indic cross-script identity preservation"
+  data-summary="本文提出一种在冻结wavlm上结合监督对比学习与梯度反转语言对抗训练的说话人编码器，以在印地语系跨文字语音克隆中保持说话人身份并消除语言/文字泄漏。"
+  data-topic="speaker representation learning"
+  data-institution="Praxel"
+  data-date="2026-05-04"
+  data-paper-id="2605.00777"
+  data-original-institution="Praxel"
+  data-original-topic="speaker representation learning"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-05-04</p>
+      <h3><a href="https://huggingface.co/papers/2605.00777" target="_blank" rel="noreferrer">LASE: Language-Adversarial Speaker Encoding for Indic Cross-Script Identity Preservation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>2 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Venkata Pushpak Teja Menta</p>
+  <p class="one-line">本文提出一种在冻结WavLM上结合监督对比学习与梯度反转语言对抗训练的说话人编码器，以在印地语系跨文字语音克隆中保持说话人身份并消除语言/文字泄漏。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Praxel</span>
+    <span class="tag topic" data-tag-role="topic">speaker representation learning</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Praxel">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="speaker representation learning">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>A speaker encoder used in multilingual voice cloning should treat the same speaker identically regardless of which script the audio was uttered in. Off-the-shelf encoders do not, and the failure is accent-conditional. On a 1043-pair Western-accented voice corpus across English, Hindi, Telugu, and Tamil, WavLM-base-plus-sv loses 0.082 absolute cosine similarity when the same voice changes script and ECAPA-TDNN loses 0.105. On a 1369-pair Indian-accented voice corpus, the gap shrinks to 0.006 (WavLM-SV) and 0.044 (ECAPA-TDNN). The leak is largest where it matters most for cross-script TTS: when a system projects a non-Indic-trained voice into Indic scripts. We present LASE (Language-Adversarial Speaker Encoder), a small projection head over frozen WavLM-base-plus trained with two losses: a supervised contrastive loss over voice identity, and a gradient-reversal cross-entropy against a 4-language classifier that pushes the embedding to be language-uninformative while remaining speaker-informative. Trained on 1118 quality-gated cross-script pairs synthesised from 8 commercial multilingual voices, LASE&#39;s residual gap is consistent with zero on both corpora (Delta = 0.013 Western, Delta = 0.026 Indian; both bootstrap 95% CIs include zero) and amplifies the cross-script-vs-floor margin 2.4-2.7x over both baselines. An ECAPA+GRL ablation shows the GRL objective improves either backbone but the WavLM choice contributes too. In synthetic multi-speaker diarisation, LASE matches ECAPA-TDNN on cross-script speaker recall (0.788 vs 0.789) with ~100x less training data. We release the r1 checkpoint, both corpora, and the bootstrap recipe.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2605.00777" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2605.00777" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/praxelhq/lase" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/praxelhq/lase" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article>      </div>
+    </main>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

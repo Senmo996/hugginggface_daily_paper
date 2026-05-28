@@ -1,0 +1,1980 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2026-04-02 - Hugging Face Daily Papers</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Daily archive</p>
+        <h1>2026-04-02</h1>
+      </div>
+      <div class="stats">
+        <a href="../index.html">Index</a>
+        <span>30 papers</span>
+      </div>
+    </header>
+
+    <main class="daily-page">
+      <div class="paper-grid">
+<article
+  class="paper-card"
+  data-title="clawkeeper: comprehensive safety protection for openclaw agents through skills, plugins, and watchers"
+  data-summary="该论文面向具备工具调用、文件访问和命令执行能力的自主智能体运行时安全，提出通过指令级策略注入、运行时插件防护和解耦系统监视器相结合的实时多层安全框架来检测并干预高风险行为。"
+  data-topic="LLM safety monitoring"
+  data-institution="Unknown"
+  data-date="2026-04-02"
+  data-paper-id="2603.24414"
+  data-original-institution="Unknown"
+  data-original-topic="LLM safety monitoring"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.24414" target="_blank" rel="noreferrer">ClawKeeper: Comprehensive Safety Protection for OpenClaw Agents Through Skills, Plugins, and Watchers</a></h3>
+    </div>
+    <div class="metrics">
+      <span>183 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Songyang Liu, Chaozhuo Li, Chenxu Wang, +8 more</p>
+  <p class="one-line">该论文面向具备工具调用、文件访问和命令执行能力的自主智能体运行时安全，提出通过指令级策略注入、运行时插件防护和解耦系统监视器相结合的实时多层安全框架来检测并干预高风险行为。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM safety monitoring</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM safety monitoring">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>OpenClaw has rapidly established itself as a leading open-source autonomous agent runtime, offering powerful capabilities including tool integration, local file access, and shell command execution. However, these broad operational privileges introduce critical security vulnerabilities, transforming model errors into tangible system-level threats such as sensitive data leakage, privilege escalation, and malicious third-party skill execution. Existing security measures for the OpenClaw ecosystem remain highly fragmented, addressing only isolated stages of the agent lifecycle rather than providing holistic protection. To bridge this gap, we present ClawKeeper, a real-time security framework that integrates multi-dimensional protection mechanisms across three complementary architectural layers. (1) Skill-based protection operates at the instruction level, injecting structured security policies directly into the agent context to enforce environment-specific constraints and cross-platform boundaries. (2) Plugin-based protection serves as an internal runtime enforcer, providing configuration hardening, proactive threat detection, and continuous behavioral monitoring throughout the execution pipeline. (3) Watcher-based protection introduces a novel, decoupled system-level security middleware that continuously verifies agent state evolution. It enables real-time execution intervention without coupling to the agent&#39;s internal logic, supporting operations such as halting high-risk actions or enforcing human confirmation. We argue that this Watcher paradigm holds strong potential to serve as a foundational building block for securing next-generation autonomous agent systems. Extensive qualitative and quantitative evaluations demonstrate the effectiveness and robustness of ClawKeeper across diverse threat scenarios. We release our code.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.24414" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.24414" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://huggingface.co/datasets/xunyoyo/clawkeeper" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/SafeAI-Lab-X/ClawKeeper" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="terminal agents suffice for enterprise automation"
+  data-summary="本文研究面向企业自动化的llm代理，提出并评估仅依赖终端和文件系统、通过平台api执行任务的低层程序化代理，以验证其相对复杂工具协议或网页代理的有效性。"
+  data-topic="tool-augmented agents"
+  data-institution="ServiceNow-AI"
+  data-date="2026-04-02"
+  data-paper-id="2604.00073"
+  data-original-institution="ServiceNow-AI"
+  data-original-topic="tool-augmented agents"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00073" target="_blank" rel="noreferrer">Terminal Agents Suffice for Enterprise Automation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>96 upvotes</span>
+      <span>7 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Patrice Bechard, Orlando Marquez Ayala, Emily Chen, +5 more</p>
+  <p class="one-line">本文研究面向企业自动化的LLM代理，提出并评估仅依赖终端和文件系统、通过平台API执行任务的低层程序化代理，以验证其相对复杂工具协议或网页代理的有效性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">ServiceNow-AI</span>
+    <span class="tag topic" data-tag-role="topic">tool-augmented agents</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="ServiceNow-AI">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="tool-augmented agents">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>There has been growing interest in building agents that can interact with digital platforms to execute meaningful enterprise tasks autonomously. Among the approaches explored are tool-augmented agents built on abstractions such as Model Context Protocol (MCP) and web agents that operate through graphical interfaces. Yet, it remains unclear whether such complex agentic systems are necessary given their cost and operational overhead. We argue that a coding agent equipped only with a terminal and a filesystem can solve many enterprise tasks more effectively by interacting directly with platform APIs. We evaluate this hypothesis across diverse real-world systems and show that these low-level terminal agents match or outperform more complex agent architectures. Our findings suggest that simple programmatic interfaces, combined with strong foundation models, are sufficient for practical enterprise automation.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00073" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00073" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="miroeval: benchmarking multimodal deep research agents in process and outcome"
+  data-summary="本文提出一个面向多模态深度研究智能体的动态基准与评估框架，从最终报告质量、事实核验和研究过程三个维度系统评测其真实研究能力。"
+  data-topic="LLM agent benchmark evaluation"
+  data-institution="MiroMind AI"
+  data-date="2026-04-02"
+  data-paper-id="2603.28407"
+  data-original-institution="MiroMind AI"
+  data-original-topic="LLM agent benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.28407" target="_blank" rel="noreferrer">MiroEval: Benchmarking Multimodal Deep Research Agents in Process and Outcome</a></h3>
+    </div>
+    <div class="metrics">
+      <span>71 upvotes</span>
+      <span>5 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Fangda Ye, Yuxin Hu, Pengxiang Zhu, +19 more</p>
+  <p class="one-line">本文提出一个面向多模态深度研究智能体的动态基准与评估框架，从最终报告质量、事实核验和研究过程三个维度系统评测其真实研究能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">MiroMind AI</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="MiroMind AI">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Recent progress in deep research systems has been impressive, but evaluation still lags behind real user needs. Existing benchmarks predominantly assess final reports using fixed rubrics, failing to evaluate the underlying research process. Most also offer limited multimodal coverage, rely on synthetic tasks that do not reflect real-world query complexity, and cannot be refreshed as knowledge evolves. To address these gaps, we introduce MiroEval, a benchmark and evaluation framework for deep research systems. The benchmark comprises 100 tasks (70 text-only, 30 multimodal), all grounded in real user needs and constructed via a dual-path pipeline that supports periodic updates, enabling a live and evolving setting. The proposed evaluation suite assesses deep research systems along three complementary dimensions: adaptive synthesis quality evaluation with task-specific rubrics, agentic factuality verification via active retrieval and reasoning over both web sources and multimodal attachments, and process-centric evaluation audits how the system searches, reasons, and refines throughout its investigation. Evaluation across 13 systems yields three principal findings: the three evaluation dimensions capture complementary aspects of system capability, with each revealing distinct strengths and weaknesses across systems; process quality serves as a reliable predictor of overall outcome while revealing weaknesses invisible to output-level metrics; and multimodal tasks pose substantially greater challenges, with most systems declining by 3 to 10 points. The MiroThinker series achieves the most balanced performance, with MiroThinker-H1 ranking the highest overall in both settings. Human verification and robustness results confirm the reliability of the benchmark and evaluation framework. MiroEval provides a holistic diagnostic tool for the next generation of deep research agents.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.28407" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.28407" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://miroeval-ai.github.io/website/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/MiroMindAI/MiroEval" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="embarrassingly simple self-distillation improves code generation"
+  data-summary="本文研究一种无需教师模型、验证器或强化学习的简单自蒸馏方法，通过采样大语言模型自身代码输出并进行监督微调来提升代码生成性能。"
+  data-topic="on-policy distillation"
+  data-institution="Apple"
+  data-date="2026-04-02"
+  data-paper-id="2604.01193"
+  data-original-institution="Apple"
+  data-original-topic="on-policy distillation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.01193" target="_blank" rel="noreferrer">Embarrassingly Simple Self-Distillation Improves Code Generation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>54 upvotes</span>
+      <span>8 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Ruixiang Zhang, Richard He Bai, Huangjie Zheng, +3 more</p>
+  <p class="one-line">本文研究一种无需教师模型、验证器或强化学习的简单自蒸馏方法，通过采样大语言模型自身代码输出并进行监督微调来提升代码生成性能。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Apple</span>
+    <span class="tag topic" data-tag-role="topic">on-policy distillation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Apple">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="on-policy distillation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Can a large language model (LLM) improve at code generation using only its own raw outputs, without a verifier, a teacher model, or reinforcement learning? We answer in the affirmative with simple self-distillation (SSD): sample solutions from the model with certain temperature and truncation configurations, then fine-tune on those samples with standard supervised fine-tuning. SSD improves Qwen3-30B-Instruct from 42.4% to 55.3% pass@1 on LiveCodeBench v6, with gains concentrating on harder problems, and it generalizes across Qwen and Llama models at 4B, 8B, and 30B scale, including both instruct and thinking variants. To understand why such a simple method can work, we trace these gains to a precision-exploration conflict in LLM decoding and show that SSD reshapes token distributions in a context-dependent way, suppressing distractor tails where precision matters while preserving useful diversity where exploration matters. Taken together, SSD offers a complementary post-training direction for improving LLM code generation.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.01193" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.01193" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/apple/ml-ssd" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="vision2web: a hierarchical benchmark for visual website development with agent verification"
+  data-summary="该论文提出一个面向视觉网站开发的分层基准，通过真实网站任务和由gui代理验证器与vlm评审组成的工作流式验证来评估多模态编码代理的端到端开发能力。"
+  data-topic="multimodal benchmark evaluation"
+  data-institution="Z.ai"
+  data-date="2026-04-02"
+  data-paper-id="2603.26648"
+  data-original-institution="Z.ai"
+  data-original-topic="multimodal benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.26648" target="_blank" rel="noreferrer">Vision2Web: A Hierarchical Benchmark for Visual Website Development with Agent Verification</a></h3>
+    </div>
+    <div class="metrics">
+      <span>43 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zehai He, Wenyi Hong, Zhen Yang, +4 more</p>
+  <p class="one-line">该论文提出一个面向视觉网站开发的分层基准，通过真实网站任务和由GUI代理验证器与VLM评审组成的工作流式验证来评估多模态编码代理的端到端开发能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Z.ai</span>
+    <span class="tag topic" data-tag-role="topic">multimodal benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Z.ai">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Recent advances in large language models have improved the capabilities of coding agents, yet systematic evaluation of complex, end-to-end website development remains limited. To address this gap, we introduce Vision2Web, a hierarchical benchmark for visual website development, spanning from static UI-to-code generation, interactive multi-page frontend reproduction, to long-horizon full-stack website development. The benchmark is constructed from real-world websites and comprises a total of 193 tasks across 16 categories, with 918 prototype images and 1,255 test cases. To support flexible, thorough and reliable evaluation, we propose workflow-based agent verification paradigm based on two complementary components: a GUI agent verifier and a VLM-based judge. We evaluate multiple visual language models instantiated under different coding-agent frameworks, revealing substantial performance gaps at all task levels, with state-of-the-art models still struggling on full-stack development.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.26648" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.26648" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://vision2web-bench.github.io/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/zai-org/Vision2Web" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="vigor-bench: how far are visual generative models from zero-shot visual reasoners?"
+  data-summary="本文提出vigor-bench基准，通过跨图像到图像与视频任务、过程与结果双轨评测、证据驱动自动裁判和细粒度诊断分析来评估视觉生成模型的零样本物理、因果与空间推理能力。"
+  data-topic="multimodal benchmark evaluation"
+  data-institution="meituan"
+  data-date="2026-04-02"
+  data-paper-id="2603.25823"
+  data-original-institution="meituan"
+  data-original-topic="multimodal benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.25823" target="_blank" rel="noreferrer">ViGoR-Bench: How Far Are Visual Generative Models From Zero-Shot Visual Reasoners?</a></h3>
+    </div>
+    <div class="metrics">
+      <span>43 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Haonan Han, Jiancheng Huang, Xiaopeng Sun, +7 more</p>
+  <p class="one-line">本文提出ViGoR-Bench基准，通过跨图像到图像与视频任务、过程与结果双轨评测、证据驱动自动裁判和细粒度诊断分析来评估视觉生成模型的零样本物理、因果与空间推理能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">meituan</span>
+    <span class="tag topic" data-tag-role="topic">multimodal benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="meituan">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Beneath the stunning visual fidelity of modern AIGC models lies a &#34;logical desert&#34;, where systems fail tasks that require physical, causal, or complex spatial reasoning. Current evaluations largely rely on superficial metrics or fragmented benchmarks, creating a ``performance mirage&#39;&#39; that overlooks the generative process. To address this, we introduce ViGoR Vision-G}nerative Reasoning-centric Benchmark), a unified framework designed to dismantle this mirage. ViGoR distinguishes itself through four key innovations: 1) holistic cross-modal coverage bridging Image-to-Image and Video tasks; 2) a dual-track mechanism evaluating both intermediate processes and final results; 3) an evidence-grounded automated judge ensuring high human alignment; and 4) granular diagnostic analysis that decomposes performance into fine-grained cognitive dimensions. Experiments on over 20 leading models reveal that even state-of-the-art systems harbor significant reasoning deficits, establishing ViGoR as a critical ``stress test&#39;&#39; for the next generation of intelligent vision models. The demo have been available at https://vincenthancoder.github.io/ViGoR-Bench/</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.25823" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.25823" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://vincenthancoder.github.io/ViGoR-Bench/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/VincentHancoder/ViGoR-Bench-Eval" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="reasoning shift: how context silently shortens llm reasoning"
+  data-summary="本文系统评估不同上下文条件下推理型大语言模型的行为变化，发现冗长无关信息、多轮对话和复杂任务嵌套会显著缩短其推理轨迹并减少自我验证。"
+  data-topic="LLM reasoning evaluation"
+  data-institution="Unknown"
+  data-date="2026-04-02"
+  data-paper-id="2604.01161"
+  data-original-institution="Unknown"
+  data-original-topic="LLM reasoning evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.01161" target="_blank" rel="noreferrer">Reasoning Shift: How Context Silently Shortens LLM Reasoning</a></h3>
+    </div>
+    <div class="metrics">
+      <span>32 upvotes</span>
+      <span>5 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Gleb Rodionov</p>
+  <p class="one-line">本文系统评估不同上下文条件下推理型大语言模型的行为变化，发现冗长无关信息、多轮对话和复杂任务嵌套会显著缩短其推理轨迹并减少自我验证。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM reasoning evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM reasoning evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large language models (LLMs) exhibiting test-time scaling behavior, such as extended reasoning traces and self-verification, have demonstrated remarkable performance on complex, long-term reasoning tasks. However, the robustness of these reasoning behaviors remains underexplored. To investigate this, we conduct a systematic evaluation of multiple reasoning models across three scenarios: (1) problems augmented with lengthy, irrelevant context; (2) multi-turn conversational settings with independent tasks; and (3) problems presented as a subtask within a complex task. We observe an interesting phenomenon: reasoning models tend to produce much shorter reasoning traces (up to 50%) for the same problem under different context conditions compared to the traces produced when the problem is presented in isolation. A finer-grained analysis reveals that this compression is associated with a decrease in self-verification and uncertainty management behaviors, such as double-checking. While this behavioral shift does not compromise performance on straightforward problems, it might affect performance on more challenging tasks. We hope our findings draw additional attention to both the robustness of reasoning models and the problem of context management for LLMs and LLM-based agents.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.01161" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.01161" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="quitobench: a high-quality open time series forecasting benchmark"
+  data-summary="本文提出一个基于大规模支付宝业务流量数据、按趋势季节性与可预测性等机制均衡划分的开放时间序列预测基准，用于系统评估深度学习模型、基础模型和统计方法在不同上下文长度、数据规模与模型规模下的表现。"
+  data-topic="time series benchmark evaluation"
+  data-institution="Unknown"
+  data-date="2026-04-02"
+  data-paper-id="2603.26017"
+  data-original-institution="Unknown"
+  data-original-topic="time series benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.26017" target="_blank" rel="noreferrer">QuitoBench: A High-Quality Open Time Series Forecasting Benchmark</a></h3>
+    </div>
+    <div class="metrics">
+      <span>31 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Siqiao Xue, Zhaoyang Zhu, Wei Zhang, +7 more</p>
+  <p class="one-line">本文提出一个基于大规模支付宝业务流量数据、按趋势季节性与可预测性等机制均衡划分的开放时间序列预测基准，用于系统评估深度学习模型、基础模型和统计方法在不同上下文长度、数据规模与模型规模下的表现。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">time series benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="time series benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Time series forecasting is critical across finance, healthcare, and cloud computing, yet progress is constrained by a fundamental bottleneck: the scarcity of large-scale, high-quality benchmarks. To address this gap, we introduce QuitoBench, a regime-balanced benchmark for time series forecasting with coverage across eight trendtimesseasonalitytimesforecastability (TSF) regimes, designed to capture forecasting-relevant properties rather than application-defined domain labels. The benchmark is built upon Quito, a billion-scale time series corpus of application traffic from Alipay spanning nine business domains. Benchmarking 10 models from deep learning, foundation models, and statistical baselines across 232,200 evaluation instances, we report four key findings: (i) a context-length crossover where deep learning models lead at short context (L=96) but foundation models dominate at long context (L ge 576); (ii) forecastability is the dominant difficulty driver, producing a 3.64 times MAE gap across regimes; (iii) deep learning models match or surpass foundation models at 59 times fewer parameters; and (iv) scaling the amount of training data provides substantially greater benefit than scaling model size for both model families. These findings are validated by strong cross-benchmark and cross-metric consistency. Our open-source release enables reproducible, regime-aware evaluation for time series forecasting research.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.26017" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.26017" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="hippocamp: benchmarking contextual agents on personal computers"
+  data-summary="本文提出一个面向个人电脑多模态文件管理的智能体评测基准，通过真实用户文件系统、问答任务和密集标注轨迹系统分析现有多模态大模型在用户画像、长程检索、跨模态推理与证据 grounding 上的能力瓶颈。"
+  data-topic="LLM agent benchmark evaluation"
+  data-institution="Nanyang Technological University"
+  data-date="2026-04-02"
+  data-paper-id="2604.01221"
+  data-original-institution="Nanyang Technological University"
+  data-original-topic="LLM agent benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.01221" target="_blank" rel="noreferrer">HippoCamp: Benchmarking Contextual Agents on Personal Computers</a></h3>
+    </div>
+    <div class="metrics">
+      <span>30 upvotes</span>
+      <span>1 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zhe Yang, Shulin Tian, Kairui Hu, +9 more</p>
+  <p class="one-line">本文提出一个面向个人电脑多模态文件管理的智能体评测基准，通过真实用户文件系统、问答任务和密集标注轨迹系统分析现有多模态大模型在用户画像、长程检索、跨模态推理与证据 grounding 上的能力瓶颈。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Nanyang Technological University</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Nanyang Technological University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>We present HippoCamp, a new benchmark designed to evaluate agents&#39; capabilities on multimodal file management. Unlike existing agent benchmarks that focus on tasks like web interaction, tool use, or software automation in generic settings, HippoCamp evaluates agents in user-centric environments to model individual user profiles and search massive personal files for context-aware reasoning. Our benchmark instantiates device-scale file systems over real-world profiles spanning diverse modalities, comprising 42.4 GB of data across over 2K real-world files. Building upon the raw files, we construct 581 QA pairs to assess agents&#39; capabilities in search, evidence perception, and multi-step reasoning. To facilitate fine-grained analysis, we provide 46.1K densely annotated structured trajectories for step-wise failure diagnosis. We evaluate a wide range of state-of-the-art multimodal large language models (MLLMs) and agentic methods on HippoCamp. Our comprehensive experiments reveal a significant performance gap: even the most advanced commercial models achieve only 48.3% accuracy in user profiling, struggling particularly with long-horizon retrieval and cross-modal reasoning within dense personal file systems. Furthermore, our step-wise failure diagnosis identifies multimodal perception and evidence grounding as the primary bottlenecks. Ultimately, HippoCamp exposes the critical limitations of current agents in realistic, user-centric environments and provides a robust foundation for developing next-generation personal AI assistants.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.01221" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.01221" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://hippocamp-ai.github.io/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/Savannah-yz/HippoCamp" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="gaussiangpt: towards autoregressive 3d gaussian scene generation"
+  data-summary="该论文提出一种基于向量量化离散潜表示和因果transformer自回归建模的3d高斯场景生成方法，用逐token预测替代扩散式整体优化以支持补全、外绘和可控采样。"
+  data-topic="3D scene generation"
+  data-institution="Technical University of Munich"
+  data-date="2026-04-02"
+  data-paper-id="2603.26661"
+  data-original-institution="Technical University of Munich"
+  data-original-topic="3D scene generation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.26661" target="_blank" rel="noreferrer">GaussianGPT: Towards Autoregressive 3D Gaussian Scene Generation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>25 upvotes</span>
+      <span>1 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Nicolas von Lützow, Barbara Rössle, Katharina Schmid, +1 more</p>
+  <p class="one-line">该论文提出一种基于向量量化离散潜表示和因果Transformer自回归建模的3D高斯场景生成方法，用逐token预测替代扩散式整体优化以支持补全、外绘和可控采样。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Technical University of Munich</span>
+    <span class="tag topic" data-tag-role="topic">3D scene generation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Technical University of Munich">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="3D scene generation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Most recent advances in 3D generative modeling rely on diffusion or flow-matching formulations. We instead explore a fully autoregressive alternative and introduce GaussianGPT, a transformer-based model that directly generates 3D Gaussians via next-token prediction, thus facilitating full 3D scene generation. We first compress Gaussian primitives into a discrete latent grid using a sparse 3D convolutional autoencoder with vector quantization. The resulting tokens are serialized and modeled using a causal transformer with 3D rotary positional embedding, enabling sequential generation of spatial structure and appearance. Unlike diffusion-based methods that refine scenes holistically, our formulation constructs scenes step-by-step, naturally supporting completion, outpainting, controllable sampling via temperature, and flexible generation horizons. This formulation leverages the compositional inductive biases and scalability of autoregressive modeling while operating on explicit representations compatible with modern neural rendering pipelines, positioning autoregressive transformers as a complementary paradigm for controllable and context-aware 3D generation.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.26661" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.26661" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://nicolasvonluetzow.github.io/GaussianGPT/" target="_blank" rel="noreferrer">Project</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="brevity constraints reverse performance hierarchies in language models"
+  data-summary="本文系统评估不同规模语言模型在多类基准上的表现，发现大模型的自发冗长会导致错误，并通过简洁回答约束证明规模感知的提示设计可逆转原有性能层级。"
+  data-topic="LLM reasoning evaluation"
+  data-institution="unknown"
+  data-date="2026-04-02"
+  data-paper-id="2604.00025"
+  data-original-institution="unknown"
+  data-original-topic="LLM reasoning evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00025" target="_blank" rel="noreferrer">Brevity Constraints Reverse Performance Hierarchies in Language Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>23 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">MD Azizul Hakim</p>
+  <p class="one-line">本文系统评估不同规模语言模型在多类基准上的表现，发现大模型的自发冗长会导致错误，并通过简洁回答约束证明规模感知的提示设计可逆转原有性能层级。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM reasoning evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM reasoning evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Standard evaluation protocols reveal a counterintuitive phenomenon: on 7.7% of benchmark problems spanning five datasets, larger language models underperform smaller ones by 28.4 percentage points despite 10-100x more parameters. Through systematic evaluation of 31 models (0.5B-405B parameters) across 1,485 problems, we identify the mechanism as spontaneous scale-dependent verbosity that introduces errors through overelaboration. Causal intervention experiments demonstrate this reflects correctable prompt design rather than fundamental capability limitations. Constraining large models to produce brief responses improves accuracy by 26 percentage points and reduces performance gaps by up to two-thirds. Most critically, brevity constraints completely reverse performance hierarchies on mathematical reasoning and scientific knowledge benchmarks, with large models achieving 7.7-15.9 percentage point advantages over small models -- direct inversions of the original gaps. These reversals prove large models possess superior latent capabilities that universal prompting masks. We validate findings through three independent contamination tests and demonstrate inverse scaling operates continuously across the full parameter spectrum, with dataset-specific optimal scales ranging from 0.5B to 3.0B parameters. Our results establish that maximizing large model performance requires scale-aware prompt engineering rather than universal evaluation protocols, with immediate implications for deployment: prompt adaptation simultaneously improves accuracy and reduces computational costs.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00025" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00025" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/logicsame/Brevity-Constraints-Reverse-Performance-Hierarchies-in-Language-Models" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="universal yoco for efficient depth scaling"
+  data-summary="本文提出universal yoco，通过将yoco解码器架构与浅层参数共享递归计算结合，在保持恒定全局kv缓存和高效预填充的同时提升大语言模型的推理时深度扩展效率。"
+  data-topic="LLM architecture optimization"
+  data-institution="Microsoft Research"
+  data-date="2026-04-02"
+  data-paper-id="2604.01220"
+  data-original-institution="Microsoft Research"
+  data-original-topic="LLM architecture optimization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.01220" target="_blank" rel="noreferrer">Universal YOCO for Efficient Depth Scaling</a></h3>
+    </div>
+    <div class="metrics">
+      <span>19 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yutao Sun, Li Dong, Tianzhu Ye, +3 more</p>
+  <p class="one-line">本文提出Universal YOCO，通过将YOCO解码器架构与浅层参数共享递归计算结合，在保持恒定全局KV缓存和高效预填充的同时提升大语言模型的推理时深度扩展效率。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Microsoft Research</span>
+    <span class="tag topic" data-tag-role="topic">LLM architecture optimization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Microsoft Research">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM architecture optimization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>The rise of test-time scaling has remarkably boosted the reasoning and agentic proficiency of Large Language Models (LLMs). Yet, standard Transformers struggle to scale inference-time compute efficiently, as conventional looping strategies suffer from high computational overhead and a KV cache that inflates alongside model depth. We present Universal YOCO (YOCO-U), which combines the YOCO decoder-decoder architecture with recursive computation to achieve a synergistic effect greater than either alone. Built on the YOCO framework, YOCO-U implements a Universal Self-Decoder that performs multiple iterations via parameter sharing, while confining the iterative process to shallow, efficient-attention layers. This combination yields a favorable capability-efficiency tradeoff that neither YOCO nor recursion achieves independently. The YOCO architecture provides a constant global KV cache and linear pre-filling, while partial recursion enhances representational depth with limited overhead. Together, YOCO-U improves token utility and scaling behavior while maintaining efficient inference. Empirical results confirm that YOCO-U remains highly competitive in general and long-context benchmarks, demonstrating that the integration of efficient-attention architectures and recursive computation is a promising direction for scalable LLMs.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.01220" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.01220" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="perceptioncomp: a video benchmark for complex perception-centric reasoning"
+  data-summary="本文提出一个人工标注的视频基准，用于评估多模态大模型在需要跨时间证据整合、组合逻辑、空间与时间推理的长程感知中心视频理解任务上的能力。"
+  data-topic="multimodal benchmark evaluation"
+  data-institution="unknown"
+  data-date="2026-04-02"
+  data-paper-id="2603.26653"
+  data-original-institution="unknown"
+  data-original-topic="multimodal benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.26653" target="_blank" rel="noreferrer">PerceptionComp: A Video Benchmark for Complex Perception-Centric Reasoning</a></h3>
+    </div>
+    <div class="metrics">
+      <span>18 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Shaoxuan Li, Zhixuan Zhao, Hanze Deng, +9 more</p>
+  <p class="one-line">本文提出一个人工标注的视频基准，用于评估多模态大模型在需要跨时间证据整合、组合逻辑、空间与时间推理的长程感知中心视频理解任务上的能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">multimodal benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>We introduce PerceptionComp, a manually annotated benchmark for complex, long-horizon, perception-centric video reasoning. PerceptionComp is designed so that no single moment is sufficient: answering each question requires multiple temporally separated pieces of visual evidence and compositional constraints under conjunctive and sequential logic, spanning perceptual subtasks such as objects, attributes, relations, locations, actions, and events, and requiring skills including semantic recognition, visual correspondence, temporal reasoning, and spatial reasoning. The benchmark contains 1,114 highly complex questions on 279 videos from diverse domains including city walk tours, indoor villa tours, video games, and extreme outdoor sports, with 100% manual annotation. Human studies show that PerceptionComp requires substantial test-time thinking and repeated perception steps: participants take much longer than on prior benchmarks, and accuracy drops to near chance (18.97%) when rewatching is disallowed. State-of-the-art MLLMs also perform substantially worse on PerceptionComp than on existing benchmarks: the best model in our evaluation, Gemini-3-Flash, reaches only 45.96% accuracy in the five-choice setting, while open-source models remain below 40%. These results suggest that perception-centric long-horizon video reasoning remains a major bottleneck, and we hope PerceptionComp will help drive progress in perceptual reasoning.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.26653" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.26653" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://perceptioncomp.github.io/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/hrinnnn/PerceptionComp" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="paper reconstruction evaluation: evaluating presentation and hallucination in ai-written papers"
+  data-summary="该论文提出paperrecon评估框架，通过让ai编码代理根据论文概览重构完整论文并与原文对比，从呈现质量和幻觉风险两个维度系统评估ai写作科研论文的可靠性。"
+  data-topic="LLM agent benchmark evaluation"
+  data-institution="University of Tokyo"
+  data-date="2026-04-02"
+  data-paper-id="2604.01128"
+  data-original-institution="University of Tokyo"
+  data-original-topic="LLM agent benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.01128" target="_blank" rel="noreferrer">Paper Reconstruction Evaluation: Evaluating Presentation and Hallucination in AI-written Papers</a></h3>
+    </div>
+    <div class="metrics">
+      <span>15 upvotes</span>
+      <span>1 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Atsuyuki Miyai, Mashiro Toyooka, Zaiying Zhao, +3 more</p>
+  <p class="one-line">该论文提出PaperRecon评估框架，通过让AI编码代理根据论文概览重构完整论文并与原文对比，从呈现质量和幻觉风险两个维度系统评估AI写作科研论文的可靠性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">University of Tokyo</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="University of Tokyo">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>This paper introduces the first systematic evaluation framework for quantifying the quality and risks of papers written by modern coding agents. While AI-driven paper writing has become a growing concern, rigorous evaluation of the quality and potential risks of AI-written papers remains limited, and a unified understanding of their reliability is still lacking. We introduce Paper Reconstruction Evaluation (PaperRecon), an evaluation framework in which an overview (overview.md) is created from an existing paper, after which an agent generates a full paper based on the overview and minimal additional resources, and the result is subsequently compared against the original paper. PaperRecon disentangles the evaluation of the AI-written papers into two orthogonal dimensions, Presentation and Hallucination, where Presentation is evaluated using a rubric and Hallucination is assessed via agentic evaluation grounded in the original paper source. For evaluation, we introduce PaperWrite-Bench, a benchmark of 51 papers from top-tier venues across diverse domains published after 2025. Our experiments reveal a clear trade-off: while both ClaudeCode and Codex improve with model advances, ClaudeCode achieves higher presentation quality at the cost of more than 10 hallucinations per paper on average, whereas Codex produces fewer hallucinations but lower presentation quality. This work takes a first step toward establishing evaluation frameworks for AI-driven paper writing and improving the understanding of its risks within the research community.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.01128" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.01128" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://agent4science-utokyo.github.io/PaperRecon_HP/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/Agent4Science-UTokyo/PaperRecon" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="proactive agent research environment: simulating active users to evaluate proactive assistants"
+  data-summary="本文提出一个用有限状态机建模数字应用并模拟主动用户的环境与基准，用于评估主动式智能体的上下文观察、目标推断、干预时机和多应用协作能力。"
+  data-topic="LLM agent benchmark evaluation"
+  data-institution="UC Santa Barbara NLP Group"
+  data-date="2026-04-02"
+  data-paper-id="2604.00842"
+  data-original-institution="UC Santa Barbara NLP Group"
+  data-original-topic="LLM agent benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00842" target="_blank" rel="noreferrer">Proactive Agent Research Environment: Simulating Active Users to Evaluate Proactive Assistants</a></h3>
+    </div>
+    <div class="metrics">
+      <span>15 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Deepak Nathani, Cheng Zhang, Chang Huan, +7 more</p>
+  <p class="one-line">本文提出一个用有限状态机建模数字应用并模拟主动用户的环境与基准，用于评估主动式智能体的上下文观察、目标推断、干预时机和多应用协作能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">UC Santa Barbara NLP Group</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="UC Santa Barbara NLP Group">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Proactive agents that anticipate user needs and autonomously execute tasks hold great promise as digital assistants, yet the lack of realistic user simulation frameworks hinders their development. Existing approaches model apps as flat tool-calling APIs, failing to capture the stateful and sequential nature of user interaction in digital environments and making realistic user simulation infeasible. We introduce Proactive Agent Research Environment (Pare), a framework for building and evaluating proactive agents in digital environments. Pare models applications as finite state machines with stateful navigation and state-dependent action space for the user simulator, enabling active user simulation. Building on this foundation, we present Pare-Bench, a benchmark of 143 diverse tasks spanning communication, productivity, scheduling, and lifestyle apps, designed to test context observation, goal inference, intervention timing, and multi-app orchestration.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00842" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00842" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://dnathani.net/pare/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/deepakn97/pare" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="a survey of on-policy distillation for large language models"
+  data-summary="本文综述了大语言模型的在线策略蒸馏方法，提出基于在线样本的统一 f-散度框架，并从反馈信号、教师访问方式和损失粒度三个维度系统梳理相关研究与开放问题。"
+  data-topic="on-policy distillation"
+  data-institution="unknown"
+  data-date="2026-04-02"
+  data-paper-id="2604.00626"
+  data-original-institution="unknown"
+  data-original-topic="on-policy distillation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00626" target="_blank" rel="noreferrer">A Survey of On-Policy Distillation for Large Language Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>13 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Mingyang Song, Mao Zheng</p>
+  <p class="one-line">本文综述了大语言模型的在线策略蒸馏方法，提出基于在线样本的统一 f-散度框架，并从反馈信号、教师访问方式和损失粒度三个维度系统梳理相关研究与开放问题。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">on-policy distillation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="on-policy distillation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Knowledge distillation has become a primary mechanism for transferring reasoning and domain expertise from frontier Large Language Models (LLMs) to smaller, deployable students. However, the dominant paradigm remains off-policy: students train on static teacher-generated data and never encounter their own errors during learning. This train--test mismatch, an instance of exposure bias, causes prediction errors to compound autoregressively at inference time. On-Policy Distillation (OPD) addresses this by letting the student generate its own trajectories and receive teacher feedback on these self-generated outputs, grounding distillation in the theory of interactive imitation learning. Despite rapid growth spanning divergence minimization, reward-guided learning, and self-play, the OPD literature remains fragmented with no unified treatment. This survey provides the first comprehensive overview of OPD for LLMs. We introduce a unified f-divergence framework over on-policy samples and organize the landscape along three orthogonal dimensions: feedback signal (logit-based, outcome-based, or self-play), teacher access (white-box, black-box, or teacher-free), and loss granularity (token-level, sequence-level, or hybrid). We systematically analyze representative methods, examine industrial deployments, and identify open problems including distillation scaling laws, uncertainty-aware feedback, and agent-level distillation.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00626" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00626" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="think, act, build: an agentic framework with vision language models for zero-shot 3d visual grounding"
+  data-summary="本文提出一种基于视觉语言模型的智能体框架，将零样本3d视觉定位分解为2d语义跟踪与多视角几何重建，以从rgb-d序列中动态构建目标的3d表示。"
+  data-topic="visual grounding"
+  data-institution="Unknown"
+  data-date="2026-04-02"
+  data-paper-id="2604.00528"
+  data-original-institution="Unknown"
+  data-original-topic="visual grounding"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00528" target="_blank" rel="noreferrer">Think, Act, Build: An Agentic Framework with Vision Language Models for Zero-Shot 3D Visual Grounding</a></h3>
+    </div>
+    <div class="metrics">
+      <span>12 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Haibo Wang, Zihao Lin, Zhiyang Xu, +1 more</p>
+  <p class="one-line">本文提出一种基于视觉语言模型的智能体框架，将零样本3D视觉定位分解为2D语义跟踪与多视角几何重建，以从RGB-D序列中动态构建目标的3D表示。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">visual grounding</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="visual grounding">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>3D Visual Grounding (3D-VG) aims to localize objects in 3D scenes via natural language descriptions. While recent advancements leveraging Vision-Language Models (VLMs) have explored zero-shot possibilities, they typically suffer from a static workflow relying on preprocessed 3D point clouds, essentially degrading grounding into proposal matching. To bypass this reliance, our core motivation is to decouple the task: leveraging 2D VLMs to resolve complex spatial semantics, while relying on deterministic multi-view geometry to instantiate the 3D structure. Driven by this insight, we propose &#34;Think, Act, Build (TAB)&#34;, a dynamic agentic framework that reformulates 3D-VG tasks as a generative 2D-to-3D reconstruction paradigm operating directly on raw RGB-D streams. Specifically, guided by a specialized 3D-VG skill, our VLM agent dynamically invokes visual tools to track and reconstruct the target across 2D frames. Crucially, to overcome the multi-view coverage deficit caused by strict VLM semantic tracking, we introduce the Semantic-Anchored Geometric Expansion, a mechanism that first anchors the target in a reference video clip and then leverages multi-view geometry to propagate its spatial location across unobserved frames. This enables the agent to &#34;Build&#34; the target&#39;s 3D representation by aggregating these multi-view features via camera parameters, directly mapping 2D visual cues to 3D coordinates. Furthermore, to ensure rigorous assessment, we identify flaws such as reference ambiguity and category errors in existing benchmarks and manually refine the incorrect queries. Extensive experiments on ScanRefer and Nr3D demonstrate that our framework, relying entirely on open-source models, significantly outperforms previous zero-shot methods and even surpasses fully supervised baselines.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00528" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00528" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/WHB139426/TAB-Agent" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="do phone-use agents respect your privacy?"
+  data-summary="本文提出一个可验证的手机使用智能体隐私评测框架，通过隐私契约、可观测的模拟应用和规则审计来衡量移动任务执行中的权限访问、最小披露与用户可控记忆。"
+  data-topic="LLM agent benchmark evaluation"
+  data-institution="Unknown"
+  data-date="2026-04-02"
+  data-paper-id="2604.00986"
+  data-original-institution="Unknown"
+  data-original-topic="LLM agent benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00986" target="_blank" rel="noreferrer">Do Phone-Use Agents Respect Your Privacy?</a></h3>
+    </div>
+    <div class="metrics">
+      <span>9 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zhengyang Tang, Ke Ji, Xidong Wang, +19 more</p>
+  <p class="one-line">本文提出一个可验证的手机使用智能体隐私评测框架，通过隐私契约、可观测的模拟应用和规则审计来衡量移动任务执行中的权限访问、最小披露与用户可控记忆。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>We study whether phone-use agents respect privacy while completing benign mobile tasks. This question has remained hard to answer because privacy-compliant behavior is not operationalized for phone-use agents, and ordinary apps do not reveal exactly what data agents type into which form entries during execution. To make this question measurable, we introduce MyPhoneBench, a verifiable evaluation framework for privacy behavior in mobile agents. We operationalize privacy-respecting phone use as permissioned access, minimal disclosure, and user-controlled memory through a minimal privacy contract, iMy, and pair it with instrumented mock apps plus rule-based auditing that make unnecessary permission requests, deceptive re-disclosure, and unnecessary form filling observable and reproducible. Across five frontier models on 10 mobile apps and 300 tasks, we find that task success, privacy-compliant task completion, and later-session use of saved preferences are distinct capabilities, and no single model dominates all three. Evaluating success and privacy jointly reshuffles the model ordering relative to either metric alone. The most persistent failure mode across models is simple data minimization: agents still fill optional personal entries that the task does not require. These results show that privacy failures arise from over-helpful execution of benign tasks, and that success-only evaluation overestimates the deployment readiness of current phone-use agents. All code, mock apps, and agent trajectories are publicly available at~ https://github.com/tangzhy/MyPhoneBench.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00986" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00986" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/FreedomIntelligence/MyPhoneBench" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="revision or re-solving? decomposing second-pass gains in multi-llm pipelines"
+  data-summary="本文通过受控分解实验分析多llm二次修订流水线的收益来源，区分重解、脚手架和内容效应，并揭示其效果取决于任务结构与草稿质量。"
+  data-topic="LLM reasoning evaluation"
+  data-institution="Carnegie Mellon University"
+  data-date="2026-04-02"
+  data-paper-id="2604.01029"
+  data-original-institution="Carnegie Mellon University"
+  data-original-topic="LLM reasoning evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.01029" target="_blank" rel="noreferrer">Revision or Re-Solving? Decomposing Second-Pass Gains in Multi-LLM Pipelines</a></h3>
+    </div>
+    <div class="metrics">
+      <span>8 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Jingjie Ning, Xueqi Li, Chengyu Yu</p>
+  <p class="one-line">本文通过受控分解实验分析多LLM二次修订流水线的收益来源，区分重解、脚手架和内容效应，并揭示其效果取决于任务结构与草稿质量。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Carnegie Mellon University</span>
+    <span class="tag topic" data-tag-role="topic">LLM reasoning evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Carnegie Mellon University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM reasoning evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Multi-LLM revision pipelines, in which a second model reviews and improves a draft produced by a first, are widely assumed to derive their gains from genuine error correction. We question this assumption with a controlled decomposition experiment that uses four matched conditions to separate second-pass gains into three additive components: re-solving, scaffold, and content. We evaluate this design across two model pairs on three benchmarks spanning knowledge-intensive MCQ and competitive programming. Our results show that the gains of multi-LLM revision are not monolithic, but depend on task structure, draft quality, and the type of draft information. On MCQ tasks, where the answer space is constrained and drafts provide little structural guidance, most gains are consistent with stronger-model re-solving, and directly routing queries to the stronger model can be more effective than revising a weak draft. On code generation tasks, however, two-stage prompting remains useful because even semantically null drafts can provide substantial structural scaffolding, while weak draft content can be harmful. Finally, role-reversed experiments show that strong drafts clearly benefit weak reviewers. Ultimately, our findings demonstrate that the utility of multi-LLM revision is dynamically bottlenecked by task structure and draft quality, necessitating more targeted pipeline designs rather than blanket revision strategies.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.01029" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.01029" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="unimixer: a unified architecture for scaling laws in recommendation systems"
+  data-summary="本文提出unimixer统一推荐系统中注意力、tokenmixer和因子分解机等可扩展架构，通过可学习的参数化特征混合模块与轻量化设计提升推荐模型的缩放效率和性能。"
+  data-topic="recommendation model scaling"
+  data-institution="kuaishou technology"
+  data-date="2026-04-02"
+  data-paper-id="2604.00590"
+  data-original-institution="kuaishou technology"
+  data-original-topic="recommendation model scaling"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00590" target="_blank" rel="noreferrer">UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems</a></h3>
+    </div>
+    <div class="metrics">
+      <span>8 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Mingming Ha, Guanchen Wang, Linxun Chen, +9 more</p>
+  <p class="one-line">本文提出UniMixer统一推荐系统中注意力、TokenMixer和因子分解机等可扩展架构，通过可学习的参数化特征混合模块与轻量化设计提升推荐模型的缩放效率和性能。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">kuaishou technology</span>
+    <span class="tag topic" data-tag-role="topic">recommendation model scaling</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="kuaishou technology">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="recommendation model scaling">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>In recent years, the scaling laws of recommendation models have attracted increasing attention, which govern the relationship between performance and parameters/FLOPs of recommenders. Currently, there are three mainstream architectures for achieving scaling in recommendation models, namely attention-based, TokenMixer-based, and factorization-machine-based methods, which exhibit fundamental differences in both design philosophy and architectural structure. In this paper, we propose a unified scaling architecture for recommendation systems, namely UniMixer, to improve scaling efficiency and establish a unified theoretical framework that unifies the mainstream scaling blocks. By transforming the rule-based TokenMixer to an equivalent parameterized structure, we construct a generalized parameterized feature mixing module that allows the token mixing patterns to be optimized and learned during model training. Meanwhile, the generalized parameterized token mixing removes the constraint in TokenMixer that requires the number of heads to be equal to the number of tokens. Furthermore, we establish a unified scaling module design framework for recommender systems, which bridges the connections among attention-based, TokenMixer-based, and factorization-machine-based methods. To further boost scaling ROI, a lightweight UniMixing module is designed, UniMixing-Lite, which further compresses the model parameters and computational cost while significantly improve the model performance. The scaling curves are shown in the following figure. Extensive offline and online experiments are conducted to verify the superior scaling abilities of UniMixer.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00590" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00590" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="s0 tuning: zero-overhead adaptation of hybrid recurrent-attention models"
+  data-summary="本文提出s0 tuning，通过在混合循环-注意力语言模型中仅优化每个循环层的初始状态矩阵并冻结权重，实现少量验证监督下零推理开销的参数高效适配，并在代码与数学任务上优于或接近lora。"
+  data-topic="PEFT"
+  data-institution="Unknown"
+  data-date="2026-04-02"
+  data-paper-id="2604.01168"
+  data-original-institution="Unknown"
+  data-original-topic="PEFT"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.01168" target="_blank" rel="noreferrer">S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models</a></h3>
+    </div>
+    <div class="metrics">
+      <span>7 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Jack Young</p>
+  <p class="one-line">本文提出S0 tuning，通过在混合循环-注意力语言模型中仅优化每个循环层的初始状态矩阵并冻结权重，实现少量验证监督下零推理开销的参数高效适配，并在代码与数学任务上优于或接近LoRA。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Unknown</span>
+    <span class="tag topic" data-tag-role="topic">PEFT</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="PEFT">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Using roughly 48 execution-verified HumanEval training solutions, tuning a single initial state matrix per recurrent layer, with zero inference overhead, outperforms LoRA by +10.8 pp (p &lt; 0.001) on HumanEval. The method, which we call S0 tuning, optimizes one state matrix per recurrent layer while freezing all model weights. On Qwen3.5-4B (GatedDeltaNet hybrid), S0 tuning improves greedy pass@1 by +23.6 +/- 1.7 pp (10 seeds). On FalconH1-7B (Mamba-2 hybrid), S0 reaches 71.8% +/- 1.3 and LoRA reaches 71.4% +/- 2.4 (3 seeds), statistically indistinguishable at this sample size while requiring no weight merging. Cross-domain transfer is significant on MATH-500 (+4.8 pp, p = 0.00002, 8 seeds) and GSM8K (+2.8 pp, p = 0.0003, 10 seeds); a text-to-SQL benchmark (Spider) shows no transfer, consistent with the trajectory-steering mechanism. A prefix-tuning control on a pure Transformer (Qwen2.5-3B) degrades performance by -13.9 pp under all nine configurations tested. On Qwen3.5, a per-step state-offset variant reaches +27.1 pp, above both S0 and LoRA but with per-step inference cost. Taken together, the results show that recurrent state initialization is a strong zero-inference-overhead PEFT surface for hybrid language models when verified supervision is scarce. The tuned state is a ~48 MB file; task switching requires no weight merging or model reload. Code and library: https://github.com/jackyoung27/s0-tuning.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.01168" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.01168" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://www.jackyoung.io/research/s0-tuning" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/JackYoung27/s0-tuning" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="pixelprune: pixel-level adaptive visual token reduction via predictive coding"
+  data-summary="本文面向文档理解和gui交互中的高分辨率vlm推理开销，提出一种训练无关的像素级预测编码视觉 token 剪枝方法，在进入vit前移除冗余图像块以加速编码器和下游llm。"
+  data-topic="visual token pruning"
+  data-institution="OPPO"
+  data-date="2026-04-02"
+  data-paper-id="2604.00886"
+  data-original-institution="OPPO"
+  data-original-topic="visual token pruning"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00886" target="_blank" rel="noreferrer">PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding</a></h3>
+    </div>
+    <div class="metrics">
+      <span>6 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Nan Wang, Zhiwei Jin, Chen Chen, +1 more</p>
+  <p class="one-line">本文面向文档理解和GUI交互中的高分辨率VLM推理开销，提出一种训练无关的像素级预测编码视觉 token 剪枝方法，在进入ViT前移除冗余图像块以加速编码器和下游LLM。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">OPPO</span>
+    <span class="tag topic" data-tag-role="topic">visual token pruning</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="OPPO">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="visual token pruning">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Document understanding and GUI interaction are among the highest-value applications of Vision-Language Models (VLMs), yet they impose exceptionally heavy computational burden: fine-grained text and small UI elements demand high-resolution inputs that produce tens of thousands of visual tokens. We observe that this cost is largely wasteful -- across document and GUI benchmarks, only 22--71\% of image patches are pixel-unique, the rest being exact duplicates of another patch in the same image. We propose PixelPrune, which exploits this pixel-level redundancy through predictive-coding-based compression, pruning redundant patches before the Vision Transformer (ViT) encoder. Because it operates in pixel space prior to any neural computation, PixelPrune accelerates both the ViT encoder and the downstream LLM, covering the full inference pipeline. The method is training-free, requires no learnable parameters, and supports pixel-lossless compression (τ{=}0) as well as controlled lossy compression (τ{&gt;}0). Experiments across three model scales and document and GUI benchmarks show that PixelPrune maintains competitive task accuracy while delivering up to 4.2times inference speedup and 1.9times training acceleration. Code is available at https://github.com/OPPO-Mente-Lab/PixelPrune.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00886" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00886" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/OPPO-Mente-Lab/PixelPrune" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="understand and accelerate memory processing pipeline for disaggregated llm inference"
+  data-summary="本文将长上下文推理中的稀疏注意力、rag和压缩上下文记忆统一为llm内存处理流水线，并通过gpu-fpga异构卸载来降低推理开销与能耗。"
+  data-topic="LLM system optimization"
+  data-institution="UCLA"
+  data-date="2026-04-02"
+  data-paper-id="2603.29002"
+  data-original-institution="UCLA"
+  data-original-topic="LLM system optimization"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.29002" target="_blank" rel="noreferrer">Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference</a></h3>
+    </div>
+    <div class="metrics">
+      <span>6 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zifan He, Rui Ma, Yizhou Sun, +1 more</p>
+  <p class="one-line">本文将长上下文推理中的稀疏注意力、RAG和压缩上下文记忆统一为LLM内存处理流水线，并通过GPU-FPGA异构卸载来降低推理开销与能耗。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">UCLA</span>
+    <span class="tag topic" data-tag-role="topic">LLM system optimization</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="UCLA">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM system optimization">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that heterogeneous systems are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is 1.04sim2.2times faster and requires 1.11sim4.7times less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.29002" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.29002" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/OswaldHe/HeteroLLM" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="when users change their mind: evaluating interruptible agents in long-horizon web navigation"
+  data-summary="本文面向长程网页导航中的llm智能体，构建包含用户中途新增、修改和撤回需求的interruptbench基准与中断模拟框架，以评估多种模型在动态任务中适应目标变化和恢复执行的能力。"
+  data-topic="LLM agent benchmark evaluation"
+  data-institution="University of Illinois Chicago"
+  data-date="2026-04-02"
+  data-paper-id="2604.00892"
+  data-original-institution="University of Illinois Chicago"
+  data-original-topic="LLM agent benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00892" target="_blank" rel="noreferrer">When Users Change Their Mind: Evaluating Interruptible Agents in Long-Horizon Web Navigation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Henry Peng Zou, Chunyu Miao, Wei-Chieh Huang, +16 more</p>
+  <p class="one-line">本文面向长程网页导航中的LLM智能体，构建包含用户中途新增、修改和撤回需求的InterruptBench基准与中断模拟框架，以评估多种模型在动态任务中适应目标变化和恢复执行的能力。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">University of Illinois Chicago</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="University of Illinois Chicago">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>As LLM agents transition from short, static problem solving to executing complex, long-horizon tasks in dynamic environments, the ability to handle user interruptions, such as adding requirement or revising goals, during mid-task execution is becoming a core requirement for realistic deployment. However, existing benchmarks largely assume uninterrupted agent behavior or study interruptions only in short, unconstrained language tasks. In this paper, we present the first systematic study of interruptible agents in long-horizon, environmentally grounded web navigation tasks, where actions induce persistent state changes. We formalize three realistic interruption types, including addition, revision, and retraction, and introduce InterruptBench, a benchmark derived from WebArena-Lite that synthesizes high-quality interruption scenarios under strict semantic constraints. Using a unified interruption simulation framework, we evaluate six strong LLM backbones across single- and multi-turn interruption settings, analyzing both their effectiveness in adapting to updated intents and their efficiency in recovering from mid-task changes. Our results show that handling user interruptions effectively and efficiently during long-horizon agentic tasks remains challenging for powerful large-scale LLMs. Code and dataset are available at https://github.com/HenryPengZou/InterruptBench.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00892" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00892" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://github.com/HenryPengZou/InterruptBench" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/HenryPengZou/InterruptBench" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="memrerank: preference memory for personalized product reranking"
+  data-summary="本文研究面向电商购物智能体的个性化商品重排序，提出将用户购买历史提炼为简洁偏好记忆并用下游重排序效果通过强化学习训练记忆抽取器的方法。"
+  data-topic="LLM memory"
+  data-institution="unknown"
+  data-date="2026-04-02"
+  data-paper-id="2603.29247"
+  data-original-institution="unknown"
+  data-original-topic="LLM memory"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.29247" target="_blank" rel="noreferrer">MemRerank: Preference Memory for Personalized Product Reranking</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zhiyuan Peng, Xuyang Wu, Huaixiao Tou, +2 more</p>
+  <p class="one-line">本文研究面向电商购物智能体的个性化商品重排序，提出将用户购买历史提炼为简洁偏好记忆并用下游重排序效果通过强化学习训练记忆抽取器的方法。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">LLM memory</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM memory">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>LLM-based shopping agents increasingly rely on long purchase histories and multi-turn interactions for personalization, yet naively appending raw history to prompts is often ineffective due to noise, length, and relevance mismatch. We propose MemRerank, a preference memory framework that distills user purchase history into concise, query-independent signals for personalized product reranking. To study this problem, we build an end-to-end benchmark and evaluation framework centered on an LLM-based 1-in-5 selection task, which measures both memory quality and downstream reranking utility. We further train the memory extractor with reinforcement learning (RL), using downstream reranking performance as supervision. Experiments with two LLM-based rerankers show that MemRerank consistently outperforms no-memory, raw-history, and off-the-shelf memory baselines, yielding up to +10.61 absolute points in 1-in-5 accuracy. These results suggest that explicit preference memory is a practical and effective building block for personalization in agentic e-commerce systems.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.29247" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.29247" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="mmada-vla: large diffusion vision-language-action model with unified multi-modal instruction and generation"
+  data-summary="本文提出一种统一语言、图像与机器人连续控制的离散扩散式视觉-语言-动作模型，通过掩码令牌去噪并行生成未来目标观测和动作片段，以提升机器人长时程操作的一致性与成功率。"
+  data-topic="vision-language-action models"
+  data-institution="Westlake University"
+  data-date="2026-04-02"
+  data-paper-id="2603.25406"
+  data-original-institution="Westlake University"
+  data-original-topic="vision-language-action models"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.25406" target="_blank" rel="noreferrer">MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yang Liu, Pengxiang Ding, Tengyue Jiang, +10 more</p>
+  <p class="one-line">本文提出一种统一语言、图像与机器人连续控制的离散扩散式视觉-语言-动作模型，通过掩码令牌去噪并行生成未来目标观测和动作片段，以提升机器人长时程操作的一致性与成功率。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Westlake University</span>
+    <span class="tag topic" data-tag-role="topic">vision-language-action models</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Westlake University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="vision-language-action models">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Vision-Language-Action (VLA) models aim to control robots for manipulation from visual observations and natural-language instructions. However, existing hierarchical and autoregressive paradigms often introduce architectural overhead, suffer from temporal inconsistency and long-horizon error accumulation, and lack a mechanism to capture environment dynamics without extra modules. To this end, we present MMaDA-VLA, a fully native pre-trained large diffusion VLA model that unifies multi-modal understanding and generation in a single framework. Our key idea is a native discrete diffusion formulation that embeds language, images, and continuous robot controls into one discrete token space and trains a single backbone with masked token denoising to jointly generate a future goal observation and an action chunk in parallel. Iterative denoising enables global, order-free refinement, improving long-horizon consistency while grounding actions in predicted future visual outcomes without auxiliary world models. Experiments across simulation benchmarks and real-world tasks show state-of-the-art performance, achieving 98.0% average success on LIBERO and 4.78 average length on CALVIN.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.25406" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.25406" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://yliu-cs.github.io/MMaDA-VLA" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/yliu-cs/MMaDA-VLA" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="consistency amplifies: how behavioral variance shapes agent accuracy"
+  data-summary="本文在软件工程基准上通过多次重复运行比较不同llm智能体的行为方差、行动序列一致性与任务准确率，揭示一致性会放大正确或错误解释而不必然带来更高可靠性。"
+  data-topic="LLM agent benchmark evaluation"
+  data-institution="Snowflake"
+  data-date="2026-04-02"
+  data-paper-id="2603.25764"
+  data-original-institution="Snowflake"
+  data-original-topic="LLM agent benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.25764" target="_blank" rel="noreferrer">Consistency Amplifies: How Behavioral Variance Shapes Agent Accuracy</a></h3>
+    </div>
+    <div class="metrics">
+      <span>5 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Aman Mehta</p>
+  <p class="one-line">本文在软件工程基准上通过多次重复运行比较不同LLM智能体的行为方差、行动序列一致性与任务准确率，揭示一致性会放大正确或错误解释而不必然带来更高可靠性。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Snowflake</span>
+    <span class="tag topic" data-tag-role="topic">LLM agent benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Snowflake">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM agent benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>As LLM-based agents are deployed in production systems, understanding their behavioral consistency (whether they produce similar action sequences when given identical tasks) becomes critical for reliability. We study consistency in the context of SWE-bench, a challenging software engineering benchmark requiring complex, multi-step reasoning. Comparing Claude~4.5~Sonnet, GPT-5, and Llama-3.1-70B across 50 runs each (10 tasks times 5 runs), we find that across models, higher consistency aligns with higher accuracy: Claude achieves the lowest variance (CV: 15.2\%) and highest accuracy (58\%), GPT-5 is intermediate (CV: 32.2\%, accuracy: 32\%), and Llama shows the highest variance (CV: 47.0\%) with lowest accuracy (4\%). However, within a model, consistency can amplify both correct and incorrect interpretations. Our analysis reveals a critical nuance: consistency amplifies outcomes rather than guaranteeing correctness. 71\% of Claude&#39;s failures stem from &#34;consistent wrong interpretation&#34;: making the same incorrect assumption across all runs. Interestingly, GPT-5 achieves similar early strategic agreement as Claude (diverging at step 3.4 vs.\ 3.2) but exhibits 2.1times higher variance, suggesting that divergence timing alone does not determine consistency. These findings suggest that for production deployment, interpretation accuracy matters more than execution consistency, with implications for agent evaluation and training.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.25764" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.25764" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="benchmarking and mechanistic analysis of vision-language models for cross-depiction assembly instruction alignment"
+  data-summary="本文构建装配指令跨表征对齐基准，系统评测多种视觉语言模型在图示与视频帧之间的理解与对齐能力，并通过机制分析揭示视觉编码子空间错位和文本驱动推理带来的鲁棒性瓶颈。"
+  data-topic="multimodal benchmark evaluation"
+  data-institution="unknown"
+  data-date="2026-04-02"
+  data-paper-id="2604.00913"
+  data-original-institution="unknown"
+  data-original-topic="multimodal benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.00913" target="_blank" rel="noreferrer">Benchmarking and Mechanistic Analysis of Vision-Language Models for Cross-Depiction Assembly Instruction Alignment</a></h3>
+    </div>
+    <div class="metrics">
+      <span>4 upvotes</span>
+      <span>3 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Zhuchenyang Liu, Yao Zhang, Yu Xiao</p>
+  <p class="one-line">本文构建装配指令跨表征对齐基准，系统评测多种视觉语言模型在图示与视频帧之间的理解与对齐能力，并通过机制分析揭示视觉编码子空间错位和文本驱动推理带来的鲁棒性瓶颈。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">multimodal benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="multimodal benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>2D assembly diagrams are often abstract and hard to follow, creating a need for intelligent assistants that can monitor progress, detect errors, and provide step-by-step guidance. In mixed reality settings, such systems must recognize completed and ongoing steps from the camera feed and align them with the diagram instructions. Vision Language Models (VLMs) show promise for this task, but face a depiction gap because assembly diagrams and video frames share few visual features. To systematically assess this gap, we construct IKEA-Bench, a benchmark of 1,623 questions across 6 task types on 29 IKEA furniture products, and evaluate 19 VLMs (2B-38B) under three alignment strategies. Our key findings: (1) assembly instruction understanding is recoverable via text, but text simultaneously degrades diagram-to-video alignment; (2) architecture family predicts alignment accuracy more strongly than parameter count; (3) video understanding remains a hard bottleneck unaffected by strategy. A three-level mechanistic analysis further reveals that diagrams and video occupy disjoint ViT subspaces, and that adding text shifts models from visual to text-driven reasoning. These results identify visual encoding as the primary target for improving cross-depiction robustness. Project page: https://ryenhails.github.io/IKEA-Bench/</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.00913" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.00913" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://ryenhails.github.io/IKEA-Bench/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/Ryenhails/IKEA-Bench" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="agentwatcher: a rule-based prompt injection monitor"
+  data-summary="本文提出一种面向长上下文工具使用智能体的规则化提示注入监控方法，通过因果归因筛选关键上下文片段并让监控llm基于显式规则进行可解释检测。"
+  data-topic="LLM safety monitoring"
+  data-institution="Pennsylvania State University"
+  data-date="2026-04-02"
+  data-paper-id="2604.01194"
+  data-original-institution="Pennsylvania State University"
+  data-original-topic="LLM safety monitoring"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2604.01194" target="_blank" rel="noreferrer">AgentWatcher: A Rule-based Prompt Injection Monitor</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>4 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Yanting Wang, Wei Zou, Runpeng Geng, +1 more</p>
+  <p class="one-line">本文提出一种面向长上下文工具使用智能体的规则化提示注入监控方法，通过因果归因筛选关键上下文片段并让监控LLM基于显式规则进行可解释检测。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">Pennsylvania State University</span>
+    <span class="tag topic" data-tag-role="topic">LLM safety monitoring</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="Pennsylvania State University">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="LLM safety monitoring">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Large language models (LLMs) and their applications, such as agents, are highly vulnerable to prompt injection attacks. State-of-the-art prompt injection detection methods have the following limitations: (1) their effectiveness degrades significantly as context length increases, and (2) they lack explicit rules that define what constitutes prompt injection, causing detection decisions to be implicit, opaque, and difficult to reason about. In this work, we propose AgentWatcher to address the above two limitations. To address the first limitation, AgentWatcher attributes the LLM&#39;s output (e.g., the action of an agent) to a small set of causally influential context segments. By focusing detection on a relatively short text, AgentWatcher can be scalable to long contexts. To address the second limitation, we define a set of rules specifying what does and does not constitute a prompt injection, and use a monitor LLM to reason over these rules based on the attributed text, making the detection decisions more explainable. We conduct a comprehensive evaluation on tool-use agent benchmarks and long-context understanding datasets. The experimental results demonstrate that AgentWatcher can effectively detect prompt injection and maintain utility without attacks. The code is available at https://github.com/wang-yanting/AgentWatcher.</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2604.01194" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2604.01194" target="_blank" rel="noreferrer">arXiv</a>
+  </div>
+</article><article
+  class="paper-card"
+  data-title="ai generalisation gap in comorbid sleep disorder staging"
+  data-summary="本文研究卒中合并睡眠障碍场景下eeg自动睡眠分期模型的跨域泛化差距，并通过临床标注数据集、se-resnet加双向lstm评估和grad-cam可解释性分析揭示健康人群模型在患者数据上的失效原因。"
+  data-topic="time series benchmark evaluation"
+  data-institution="unknown"
+  data-date="2026-04-02"
+  data-paper-id="2603.23582"
+  data-original-institution="unknown"
+  data-original-topic="time series benchmark evaluation"
+>
+  <div class="card-head">
+    <div>
+      <p class="date">2026-04-02</p>
+      <h3><a href="https://huggingface.co/papers/2603.23582" target="_blank" rel="noreferrer">AI Generalisation Gap In Comorbid Sleep Disorder Staging</a></h3>
+    </div>
+    <div class="metrics">
+      <span>3 upvotes</span>
+      <span>2 comments</span>
+    </div>
+  </div>
+
+  <p class="authors">Saswata Bose, Suvadeep Maiti, Shivam Kumar Sharma, +4 more</p>
+  <p class="one-line">本文研究卒中合并睡眠障碍场景下EEG自动睡眠分期模型的跨域泛化差距，并通过临床标注数据集、SE-ResNet加双向LSTM评估和Grad-CAM可解释性分析揭示健康人群模型在患者数据上的失效原因。</p>
+
+  <div class="tags">
+    <span class="tag institution" data-tag-role="institution">unknown</span>
+    <span class="tag topic" data-tag-role="topic">time series benchmark evaluation</span>
+    <button class="tag-edit-toggle secondary" type="button" aria-expanded="false">
+      Edit tags
+    </button>
+  </div>
+
+  <div class="tag-editor">
+    <form class="tag-edit-form" hidden>
+      <label>
+        <span>Institution tag</span>
+        <input type="text" data-tag-field="institution_tag" value="unknown">
+        <span class="tag-suggestions" data-suggestion-list="institution_tag" hidden></span>
+      </label>
+      <label>
+        <span>Topic tag</span>
+        <input type="text" data-tag-field="topic_tag" value="time series benchmark evaluation">
+        <span class="tag-suggestions" data-suggestion-list="topic_tag" hidden></span>
+      </label>
+      <div class="tag-edit-actions">
+        <button class="secondary tag-edit-save" type="submit">Save draft</button>
+        <button class="secondary tag-edit-reset" type="button">Reset</button>
+        <button class="secondary tag-edit-copy" type="button">Copy JSON</button>
+        <button class="secondary tag-edit-export" type="button">Export JSON</button>
+      </div>
+      <p class="tag-edit-status muted" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <details>
+    <summary>Original abstract</summary>
+    <p>Accurate sleep staging is essential for diagnosing OSA and hypopnea in stroke patients. Although PSG is reliable, it is costly, labor-intensive, and manually scored. While deep learning enables automated EEG-based sleep staging in healthy subjects, our analysis shows poor generalization to clinical populations with disrupted sleep. Using Grad-CAM interpretations, we systematically demonstrate this limitation. We introduce iSLEEPS, a newly clinically annotated ischemic stroke dataset (to be publicly released), and evaluate a SE-ResNet plus bidirectional LSTM model for single-channel EEG sleep staging. As expected, cross-domain performance between healthy and diseased subjects is poor. Attention visualizations, supported by clinical expert feedback, show the model focuses on physiologically uninformative EEG regions in patient data. Statistical and computational analyses further confirm significant sleep architecture differences between healthy and ischemic stroke cohorts, highlighting the need for subject-aware or disease-specific models with clinical validation before deployment. A summary of the paper and the code is available at https://himalayansaswatabose.github.io/iSLEEPS_Explainability.github.io/</p>
+  </details>
+
+  <div class="links">
+    <a href="https://huggingface.co/papers/2603.23582" target="_blank" rel="noreferrer">HF</a>
+    <a href="https://arxiv.org/abs/2603.23582" target="_blank" rel="noreferrer">arXiv</a>
+      <a href="https://himalayansaswatabose.github.io/iSLEEPS_Explainability.github.io/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://github.com/HimalayanSaswataBose/iSLEEPS_GeneralisationGapAndExplainability" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article>      </div>
+    </main>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>
