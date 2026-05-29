@@ -2,6 +2,7 @@
   const cards = Array.from(document.querySelectorAll(".paper-card"));
   const searchInput = document.getElementById("searchInput");
   const searchScope = document.getElementById("searchScope");
+  const searchSubmit = document.getElementById("searchSubmit");
   const clearButton = document.getElementById("clearFilters");
   const filterButtons = Array.from(document.querySelectorAll(".tag-filter"));
   const activeFilter = document.getElementById("activeFilter");
@@ -21,18 +22,27 @@
   const topicTrendSummary = document.getElementById("topicTrendSummary");
   const risingTopicList = document.getElementById("risingTopicList");
   const institutionTopicMatrix = document.getElementById("institutionTopicMatrix");
+  const priorityTopicAdd = document.getElementById("priorityTopicAdd");
+  const priorityTopicPicker = document.getElementById("priorityTopicPicker");
+  const priorityTopicInput = document.getElementById("priorityTopicInput");
+  const priorityTopicSuggestions = document.getElementById("priorityTopicSuggestions");
+  const priorityTopicChips = document.getElementById("priorityTopicChips");
   const tagOverrideStorageKey = "hf_daily_tag_overrides";
+  const priorityTopicStorageKey = "hf_daily_priority_topics";
   const tagSuggestions = buildTagSuggestions();
 
   let currentFilter = null;
   const availableDates = parseAvailableDates();
   let selectedDate = layout && layout.dataset.latestDate ? layout.dataset.latestDate : availableDates[0];
+  let priorityTopics = loadPriorityTopics();
+  let cachedPriorityTopicOptions = [];
+  let appliedSearchQuery = "";
+  let appliedSearchScope = searchScope ? searchScope.value : "all";
 
   function matchesCard(card) {
-    const query = (searchInput && searchInput.value ? searchInput.value : "").trim().toLowerCase();
-    const hasSearchQuery = Boolean(query);
-    const searchScopeValue = searchScope ? searchScope.value : "all";
-    const searchText = searchTextFor(card, searchScopeValue).toLowerCase();
+    const query = appliedSearchQuery.toLowerCase();
+    const hasSearchQuery = Boolean(appliedSearchQuery);
+    const searchText = searchTextFor(card, appliedSearchScope).toLowerCase();
     const matchesSearch = !query || searchText.includes(query);
     const matchesFilter =
       !currentFilter || card.dataset[currentFilter.type] === currentFilter.value;
@@ -65,9 +75,12 @@
   }
 
   function render() {
+    applyTopicColors();
     cards.forEach((card) => {
       card.classList.toggle("is-hidden", !matchesCard(card));
     });
+    sortCardsByPriority();
+    renderPriorityTopicChips();
     filterButtons.forEach((button) => {
       const isActive =
         currentFilter &&
@@ -85,7 +98,7 @@
     if (dateStatus) {
       if (currentFilter) {
         dateStatus.textContent = "Tag filter is showing matching papers from all dates";
-      } else if (searchInput && searchInput.value.trim()) {
+      } else if (appliedSearchQuery) {
         dateStatus.textContent = "Search is showing matching papers from all dates";
       } else {
         dateStatus.textContent = `Showing ${selectedDate}`;
@@ -113,11 +126,24 @@
   });
 
   if (searchInput) {
-    searchInput.addEventListener("input", render);
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        applySearch();
+      }
+    });
   }
 
   if (searchScope) {
-    searchScope.addEventListener("change", render);
+    searchScope.addEventListener("change", () => {
+      if (appliedSearchQuery) {
+        applySearch();
+      }
+    });
+  }
+
+  if (searchSubmit) {
+    searchSubmit.addEventListener("click", applySearch);
   }
 
   if (clearButton) {
@@ -126,15 +152,25 @@
       if (searchInput) {
         searchInput.value = "";
       }
+      appliedSearchQuery = "";
+      appliedSearchScope = searchScope ? searchScope.value : "all";
       render();
     });
   }
 
   setupDateArchive();
+  setupPriorityTopics();
   setupTopicTrends();
   setupInstitutionTopicMatrix();
   setupTagEditors();
   loadGlobalTagSuggestions();
+  applyTopicColors();
+
+  function applySearch() {
+    appliedSearchQuery = searchInput ? searchInput.value.trim() : "";
+    appliedSearchScope = searchScope ? searchScope.value : "all";
+    render();
+  }
 
   function parseAvailableDates() {
     if (!layout || !layout.dataset.availableDates) {
@@ -207,6 +243,226 @@
     selectedDate = `${dateYear.value}-${dateMonth.value}-${dateDay.value}`;
     currentFilter = null;
     render();
+  }
+
+  function setupPriorityTopics() {
+    if (
+      !priorityTopicPicker ||
+      !priorityTopicAdd ||
+      !priorityTopicInput ||
+      !priorityTopicSuggestions ||
+      !priorityTopicChips
+    ) {
+      return;
+    }
+    refreshPriorityTopicOptions();
+    priorityTopicAdd.addEventListener("click", () => {
+      const nextHidden = !priorityTopicPicker.hidden;
+      priorityTopicPicker.hidden = nextHidden;
+      priorityTopicAdd.setAttribute("aria-expanded", String(!nextHidden));
+      if (!nextHidden) {
+        priorityTopicInput.value = "";
+        renderPriorityTopicSuggestions();
+        priorityTopicInput.focus();
+      }
+    });
+    priorityTopicInput.addEventListener("input", renderPriorityTopicSuggestions);
+    priorityTopicInput.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter") {
+        return;
+      }
+      event.preventDefault();
+      choosePriorityTopic(priorityTopicInput.value);
+    });
+    priorityTopicSuggestions.addEventListener("mousedown", (event) => {
+      const option = event.target.closest("[data-topic]");
+      if (!option) {
+        return;
+      }
+      event.preventDefault();
+      choosePriorityTopic(option.dataset.topic);
+    });
+    priorityTopicPicker.addEventListener("focusout", () => {
+      window.setTimeout(() => {
+        if (!priorityTopicPicker.contains(document.activeElement)) {
+          priorityTopicPicker.hidden = true;
+          priorityTopicAdd.setAttribute("aria-expanded", "false");
+        }
+      }, 120);
+    });
+    renderPriorityTopicChips();
+  }
+
+  function renderPriorityTopicSuggestions() {
+    if (!priorityTopicSuggestions || !priorityTopicInput) {
+      return;
+    }
+    const query = priorityTopicInput.value.trim().toLowerCase();
+    const topics = cachedPriorityTopicOptions
+      .filter((topic) => !priorityTopics.includes(topic))
+      .filter((topic) => !query || topic.toLowerCase().includes(query))
+      .slice(0, 12);
+    priorityTopicSuggestions.innerHTML = "";
+    if (topics.length === 0) {
+      const empty = document.createElement("div");
+      empty.className = "priority-topic-empty";
+      empty.textContent = "No existing topic";
+      priorityTopicSuggestions.appendChild(empty);
+      return;
+    }
+    topics.forEach((topic) => {
+      const option = document.createElement("button");
+      option.className = "priority-topic-suggestion";
+      option.type = "button";
+      option.dataset.topic = topic;
+      option.setAttribute("role", "option");
+      option.textContent = topic;
+      priorityTopicSuggestions.appendChild(option);
+    });
+  }
+
+  function choosePriorityTopic(topic) {
+    const topicMatch = findPriorityTopicMatch(topic);
+    if (!topicMatch) {
+      renderPriorityTopicSuggestions();
+      return;
+    }
+    addPriorityTopic(topicMatch);
+    if (priorityTopicInput) {
+      priorityTopicInput.value = "";
+    }
+    if (priorityTopicPicker) {
+      priorityTopicPicker.hidden = true;
+    }
+    if (priorityTopicAdd) {
+      priorityTopicAdd.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  function findPriorityTopicMatch(topic) {
+    const normalized = String(topic || "").trim().toLowerCase();
+    if (!normalized) {
+      return "";
+    }
+    return cachedPriorityTopicOptions.find((item) => item.toLowerCase() === normalized) || "";
+  }
+
+  function refreshPriorityTopicOptions() {
+    cachedPriorityTopicOptions = Array.from(
+      new Set(cards.map((card) => card.dataset.topic).filter(Boolean))
+    ).sort((a, b) => a.localeCompare(b));
+  }
+
+  function sortCardsByPriority() {
+    const paperList = document.getElementById("paperList");
+    if (!paperList || priorityTopics.length === 0) {
+      return;
+    }
+    const orderedCards = cards.slice().sort((a, b) => {
+      const aPriority = priorityTopics.includes(a.dataset.topic) ? 0 : 1;
+      const bPriority = priorityTopics.includes(b.dataset.topic) ? 0 : 1;
+      if (aPriority !== bPriority) {
+        return aPriority - bPriority;
+      }
+      return cards.indexOf(a) - cards.indexOf(b);
+    });
+    orderedCards.forEach((card) => paperList.appendChild(card));
+  }
+
+  function addPriorityTopic(topic) {
+    const topicMatch = findPriorityTopicMatch(topic);
+    if (!topicMatch || priorityTopics.includes(topicMatch)) {
+      return;
+    }
+    priorityTopics = [...priorityTopics, topicMatch];
+    persistPriorityTopics(priorityTopics);
+    render();
+  }
+
+  function removePriorityTopic(topic) {
+    priorityTopics = priorityTopics.filter((item) => item !== topic);
+    persistPriorityTopics(priorityTopics);
+    render();
+  }
+
+  function renderPriorityTopicChips() {
+    if (!priorityTopicChips) {
+      return;
+    }
+    priorityTopicChips.innerHTML = "";
+    priorityTopics.forEach((topic) => {
+      const chip = document.createElement("span");
+      chip.className = "priority-topic-chip";
+      applyTopicColorToElement(chip, topic);
+      chip.textContent = topic;
+      const remove = document.createElement("button");
+      remove.className = "priority-topic-remove";
+      remove.type = "button";
+      remove.setAttribute("aria-label", `Remove ${topic}`);
+      remove.textContent = "x";
+      remove.addEventListener("click", () => removePriorityTopic(topic));
+      chip.appendChild(remove);
+      priorityTopicChips.appendChild(chip);
+    });
+  }
+
+  function applyTopicColors() {
+    cards.forEach((card) => {
+      const topicTag = card.querySelector('[data-tag-role="topic"]');
+      if (topicTag) {
+        topicTag.classList.toggle("is-priority-topic", isPriorityTopic(card.dataset.topic));
+        if (isPriorityTopic(card.dataset.topic)) {
+          applyTopicColorToElement(topicTag, card.dataset.topic);
+        } else {
+          clearTopicColorFromElement(topicTag);
+        }
+      }
+    });
+  }
+
+  function isPriorityTopic(topic) {
+    return priorityTopics.includes(topic);
+  }
+
+  function applyTopicColorToElement(element, topic) {
+    const color = topicColor(topic);
+    element.style.setProperty("--topic-bg", color.background);
+    element.style.setProperty("--topic-border", color.border);
+    element.style.setProperty("--topic-fg", color.foreground);
+  }
+
+  function clearTopicColorFromElement(element) {
+    element.style.removeProperty("--topic-bg");
+    element.style.removeProperty("--topic-border");
+    element.style.removeProperty("--topic-fg");
+  }
+
+  function topicColor(topic) {
+    const text = String(topic || "");
+    let hash = 0;
+    for (let index = 0; index < text.length; index += 1) {
+      hash = (hash * 31 + text.charCodeAt(index)) >>> 0;
+    }
+    const hue = hash % 360;
+    const saturation = 52 + (hash % 14);
+    return {
+      background: `hsl(${hue} ${saturation}% 93%)`,
+      border: `hsl(${hue} ${Math.max(38, saturation - 8)}% 76%)`,
+      foreground: `hsl(${hue} 42% 28%)`,
+    };
+  }
+
+  function loadPriorityTopics() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(priorityTopicStorageKey) || "[]");
+      return Array.isArray(parsed) ? parsed.filter(Boolean) : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function persistPriorityTopics(topics) {
+    localStorage.setItem(priorityTopicStorageKey, JSON.stringify(topics));
   }
 
   function setupTagEditors() {
@@ -516,6 +772,8 @@
     if (topicTag) {
       topicTag.textContent = topic;
     }
+    refreshPriorityTopicOptions();
+    applyTopicColors();
   }
 
   function loadStoredTagOverrides() {

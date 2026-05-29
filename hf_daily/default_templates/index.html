@@ -49,6 +49,7 @@
             </section>
           </section>
         </div>
+        <a class="trend-toggle" href="topics.html">Topics</a>
         <a class="trend-toggle" href="matrix.html">Matrix</a>
         <div class="stats">
           <span>{{ papers|length }} papers</span>
@@ -123,9 +124,20 @@
                 <option value="topic">Topic</option>
                 <option value="institution">Institution</option>
               </select>
+              <button id="searchSubmit" class="secondary search-submit" type="button">Search</button>
             </span>
           </label>
           <button id="clearFilters" class="secondary">Clear filters</button>
+        </div>
+        <div class="priority-topics-row" aria-label="Interested topics">
+          <div id="priorityTopicChips" class="priority-topic-chips"></div>
+          <div class="priority-topic-add">
+            <button id="priorityTopicAdd" class="priority-topic-add-button" type="button" aria-expanded="false" aria-controls="priorityTopicPicker">+</button>
+            <div id="priorityTopicPicker" class="priority-topic-picker" hidden>
+              <input id="priorityTopicInput" class="priority-topic-input" type="text" autocomplete="off" placeholder="Type topic..." aria-label="Type an existing topic" aria-controls="priorityTopicSuggestions">
+              <div id="priorityTopicSuggestions" class="priority-topic-suggestions" role="listbox"></div>
+            </div>
+          </div>
         </div>
         <div id="activeFilter" class="active-filter"></div>
         <div id="paperList" class="paper-grid">

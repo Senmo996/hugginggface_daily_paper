@@ -64,6 +64,14 @@ class SiteBuilder:
 
         index_template = self.env.get_template("index.html")
         matrix_template = self.env.get_template("matrix.html")
+        topics_template = self.env.get_template("topics.html")
+        all_topics = [
+            {"name": tag, "count": count}
+            for tag, count in sorted(
+                topic_counts.items(),
+                key=lambda item: (-item[1], item[0].casefold()),
+            )
+        ]
 
         (self.paths.site_dir / "index.html").write_text(
             index_template.render(
@@ -85,6 +93,15 @@ class SiteBuilder:
             matrix_template.render(
                 dates=dates,
                 papers=papers,
+            ),
+            encoding="utf-8",
+        )
+
+        (self.paths.site_dir / "topics.html").write_text(
+            topics_template.render(
+                dates=dates,
+                papers=papers,
+                topics=all_topics,
             ),
             encoding="utf-8",
         )

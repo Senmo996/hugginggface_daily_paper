@@ -44,6 +44,7 @@ def test_build_generates_index_matrix_and_search_data_without_daily_pages(tmp_pa
 
     index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
     matrix = (paths.site_dir / "matrix.html").read_text(encoding="utf-8")
+    topics = (paths.site_dir / "topics.html").read_text(encoding="utf-8")
     styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
     search = json.loads((paths.site_dir / "assets" / "papers.json").read_text(encoding="utf-8"))
 
@@ -55,6 +56,13 @@ def test_build_generates_index_matrix_and_search_data_without_daily_pages(tmp_pa
     assert "native vision-language modeling" in index
     assert "Original abstract." in index
     assert "Institution x Topic" in matrix
+    assert '<a class="trend-toggle" href="topics.html">Topics</a>' in index
+    assert "All Topics" in topics
+    assert "native vision-language modeling" in topics
+    assert "1 paper" in topics
+    assert '<a href="index.html">Index</a>' in topics
+    assert ".topic-list" in styles
+    assert ".topic-list-item" in styles
     assert search["papers"][0]["id"] == "2605.00001"
     assert search["topic_tags"] == ["native vision-language modeling"]
     assert search["institution_tags"] == ["Existing University"]
@@ -301,8 +309,55 @@ def test_index_script_searches_across_all_dates(tmp_path):
 
     app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
 
-    assert "const hasSearchQuery = Boolean(query);" in app
+    assert "const hasSearchQuery = Boolean(appliedSearchQuery);" in app
     assert "currentFilter || hasSearchQuery || !layout ? true" in app
+
+
+def test_index_search_runs_only_after_submit(tmp_path):
+    paths = ProjectPaths(tmp_path)
+    write_json(
+        paths.daily_dir / "2026-05-28.json",
+        {
+            "date": "2026-05-28",
+            "papers": [
+                {
+                    "id": "2605.00001",
+                    "daily_date": "2026-05-28",
+                    "title": "Cached Search Paper",
+                    "summary": "Full original abstract for search cache.",
+                    "authors": ["A. Author"],
+                    "published_at": "2026-05-28T00:00:00.000Z",
+                    "upvotes": 1,
+                    "num_comments": 0,
+                    "one_sentence_summary": "Cached summary.",
+                    "institution_tag": "Example University",
+                    "topic_tag": "LLM search",
+                    "hf_url": "https://huggingface.co/papers/2605.00001",
+                    "arxiv_url": "https://arxiv.org/abs/2605.00001",
+                    "project_page": None,
+                    "github_repo": None,
+                }
+            ],
+        },
+    )
+
+    SiteBuilder(paths).build()
+
+    app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
+    index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
+
+    assert '<button id="searchSubmit" class="secondary search-submit" type="button">Search</button>' in index
+    assert 'const searchSubmit = document.getElementById("searchSubmit");' in app
+    assert "let appliedSearchQuery = \"\";" in app
+    assert "let appliedSearchScope = searchScope ? searchScope.value : \"all\";" in app
+    assert "function applySearch()" in app
+    assert "appliedSearchQuery = searchInput ? searchInput.value.trim() : \"\";" in app
+    assert "const query = appliedSearchQuery.toLowerCase();" in app
+    assert "const hasSearchQuery = Boolean(appliedSearchQuery);" in app
+    assert 'searchSubmit.addEventListener("click", applySearch);' in app
+    assert 'searchInput.addEventListener("keydown"' in app
+    assert 'searchInput.addEventListener("input", render);' not in app
+    assert 'searchScope.addEventListener("change", render);' not in app
 
 
 def test_index_renders_search_scope_selector(tmp_path):
@@ -379,14 +434,104 @@ def test_index_script_filters_search_by_selected_scope(tmp_path):
     app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
 
     assert 'const searchScope = document.getElementById("searchScope");' in app
-    assert "const searchScopeValue = searchScope ? searchScope.value : \"all\";" in app
-    assert "searchTextFor(card, searchScopeValue)" in app
+    assert "let appliedSearchScope = searchScope ? searchScope.value : \"all\";" in app
+    assert "searchTextFor(card, appliedSearchScope)" in app
     assert 'case "title":' in app
     assert 'case "summary":' in app
     assert 'case "tag":' in app
     assert 'case "topic":' in app
     assert 'case "institution":' in app
-    assert 'searchScope.addEventListener("change", render);' in app
+    assert 'searchScope.addEventListener("change"' in app
+    assert "applySearch();" in app
+
+
+def test_index_supports_priority_topic_selection(tmp_path):
+    paths = ProjectPaths(tmp_path)
+    write_json(
+        paths.daily_dir / "2026-05-28.json",
+        {
+            "date": "2026-05-28",
+            "papers": [
+                {
+                    "id": "2605.00001",
+                    "daily_date": "2026-05-28",
+                    "title": "General Paper",
+                    "summary": "Original abstract.",
+                    "authors": ["A. Author"],
+                    "published_at": "2026-05-28T00:00:00.000Z",
+                    "upvotes": 1,
+                    "num_comments": 0,
+                    "one_sentence_summary": "Summary.",
+                    "institution_tag": "Example University",
+                    "topic_tag": "general topic",
+                    "hf_url": "https://huggingface.co/papers/2605.00001",
+                    "arxiv_url": "https://arxiv.org/abs/2605.00001",
+                    "project_page": None,
+                    "github_repo": None,
+                },
+                {
+                    "id": "2605.00002",
+                    "daily_date": "2026-05-28",
+                    "title": "Preferred Paper",
+                    "summary": "Original abstract.",
+                    "authors": ["B. Author"],
+                    "published_at": "2026-05-28T00:00:00.000Z",
+                    "upvotes": 2,
+                    "num_comments": 0,
+                    "one_sentence_summary": "Summary.",
+                    "institution_tag": "Example University",
+                    "topic_tag": "preferred topic",
+                    "hf_url": "https://huggingface.co/papers/2605.00002",
+                    "arxiv_url": "https://arxiv.org/abs/2605.00002",
+                    "project_page": None,
+                    "github_repo": None,
+                },
+            ],
+        },
+    )
+
+    SiteBuilder(paths).build()
+
+    index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
+    app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
+    styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
+
+    assert '<div class="priority-topics-row" aria-label="Interested topics">' in index
+    assert '<div id="priorityTopicChips" class="priority-topic-chips"></div>' in index
+    assert '<button id="priorityTopicAdd" class="priority-topic-add-button" type="button" aria-expanded="false" aria-controls="priorityTopicPicker">+</button>' in index
+    assert '<div id="priorityTopicPicker" class="priority-topic-picker" hidden>' in index
+    assert '<input id="priorityTopicInput" class="priority-topic-input" type="text" autocomplete="off" placeholder="Type topic..." aria-label="Type an existing topic" aria-controls="priorityTopicSuggestions">' in index
+    assert '<div id="priorityTopicSuggestions" class="priority-topic-suggestions" role="listbox"></div>' in index
+    assert 'const priorityTopicStorageKey = "hf_daily_priority_topics";' in app
+    assert "setupPriorityTopics();" in app
+    assert "function renderPriorityTopicChips()" in app
+    assert "function renderPriorityTopicSuggestions()" in app
+    assert "function choosePriorityTopic(topic)" in app
+    assert "function findPriorityTopicMatch(topic)" in app
+    assert "let cachedPriorityTopicOptions = [];" in app
+    assert "function refreshPriorityTopicOptions()" in app
+    assert "cachedPriorityTopicOptions" in app
+    assert "allTopics()" not in app
+    assert "function addPriorityTopic(topic)" in app
+    assert "const topicMatch = findPriorityTopicMatch(topic);" in app
+    assert "function removePriorityTopic(topic)" in app
+    assert "function applyTopicColorToElement(element, topic)" in app
+    assert "function topicColor(topic)" in app
+    assert "function isPriorityTopic(topic)" in app
+    assert "topicTag.classList.toggle(\"is-priority-topic\", isPriorityTopic(card.dataset.topic));" in app
+    assert 'element.style.setProperty("--topic-bg", color.background);' in app
+    assert "function sortCardsByPriority()" in app
+    assert "paperList.appendChild(card)" in app
+    assert "priorityTopicAdd.addEventListener(\"click\"" in app
+    assert "priorityTopicInput.addEventListener(\"input\"" in app
+    assert "priorityTopicSuggestions.addEventListener(\"mousedown\"" in app
+    assert ".priority-topic-chip" in styles
+    assert ".priority-topic-remove" in styles
+    assert ".priority-topic-add-button" in styles
+    assert ".priority-topic-input" in styles
+    assert ".priority-topic-suggestions" in styles
+    assert "background: var(--topic-bg, #eef4fa);" in styles
+    assert "border-color: var(--topic-border, #c6d8e6);" in styles
 
 
 def test_index_renders_topic_trends_header_panel(tmp_path):

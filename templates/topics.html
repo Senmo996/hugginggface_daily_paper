@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Topics - Hugging Face Daily Papers</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Topic index</p>
+        <h1>All Topics</h1>
+      </div>
+      <div class="stats">
+        <a href="index.html">Index</a>
+        <a href="matrix.html">Matrix</a>
+        <span>{{ topics|length }} topics</span>
+        <span>{{ papers|length }} papers</span>
+      </div>
+    </header>
+
+    <main class="topics-page">
+      <section class="topic-list" aria-label="All topics">
+        {% for topic in topics %}
+          <article class="topic-list-item">
+            <a href="index.html" data-topic="{{ topic.name }}">{{ topic.name }}</a>
+            <span>{{ topic.count }} paper{% if topic.count != 1 %}s{% endif %}</span>
+          </article>
+        {% else %}
+          <p class="muted">No topics available.</p>
+        {% endfor %}
+      </section>
+    </main>
+  </body>
+</html>
