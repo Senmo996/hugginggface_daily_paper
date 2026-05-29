@@ -88,6 +88,7 @@ Analytics:
 - User-selected topic curves.
 - Rising topic ranking by comparing the current range with the previous range.
 - Institution x Topic matrix on a separate page.
+- No standalone `site/daily/YYYY-MM-DD.html` pages are generated anymore; date switching happens on the homepage.
 
 ## Local Data
 
@@ -98,9 +99,9 @@ Analytics:
 - `data/tags/topic_aliases.json`: reviewed topic merge aliases.
 - `data/tags/institution_aliases.json`: reviewed institution merge aliases.
 - `data/tags/tag_overrides.json`: manual per-paper tag corrections from admin mode.
-- `site/`: generated static website.
+- `site/`: generated static website with the homepage, matrix page, and shared static assets.
 
-Public repositories should not include `.env`, `data/raw/`, `data/daily/`, or `site/`.
+Public repositories should still exclude `.env`, `data/raw/`, `data/daily/`, and backup directories. `site/` is currently tracked so the generated archive can be viewed and published directly.
 
 ## Codex Skills
 

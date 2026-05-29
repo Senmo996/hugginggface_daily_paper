@@ -88,6 +88,7 @@ python -m hf_daily admin
 - 用户可指定想查看的 topic 曲线。
 - topic 异动榜：对比当前区间和前一区间，查看增长最快的 topic。
 - Institution x Topic 矩阵：独立页面展示 top institutions 与 topics 的交叉分布。
+- 不再生成 `site/daily/YYYY-MM-DD.html` 这类每日独立页面；日期切换都在首页内完成。
 
 ## 本地数据
 
@@ -98,14 +99,14 @@ python -m hf_daily admin
 - `data/tags/topic_aliases.json`：经过人工确认的 topic 合并 alias。
 - `data/tags/institution_aliases.json`：经过人工确认的 institution 合并 alias。
 - `data/tags/tag_overrides.json`：网页管理模式写入的手动标签修正。
-- `site/`：生成的静态网站。
+- `site/`：生成的静态网站，只包含首页、矩阵页和共享静态资源。
 
 每篇论文最终有两个核心标签：
 
 - `institution_tag`：优先来自 Hugging Face 的 organization 字段，缺失时由模型保守推断。
 - `topic_tag`：英文、中等粒度的方法或研究方向标签，会优先复用已有 topic。
 
-公开仓库默认不提交 `.env`、`data/raw/`、`data/daily/` 和 `site/`。请不要把 API key 或私有生成数据提交到公开仓库。
+公开仓库仍然不提交 `.env`、`data/raw/`、`data/daily/` 和备份目录。`site/` 当前会提交到仓库，方便直接查看和发布。请不要把 API key、原始数据或本地生成数据提交到公开仓库。
 
 ## Codex Skills
 

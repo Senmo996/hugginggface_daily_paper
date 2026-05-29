@@ -58,13 +58,11 @@ class SiteBuilder:
 
         if self.paths.site_dir.exists():
             shutil.rmtree(self.paths.site_dir)
-        (self.paths.site_dir / "daily").mkdir(parents=True, exist_ok=True)
         (self.paths.site_dir / "assets").mkdir(parents=True, exist_ok=True)
 
         self._copy_static_assets()
 
         index_template = self.env.get_template("index.html")
-        daily_template = self.env.get_template("daily.html")
         matrix_template = self.env.get_template("matrix.html")
 
         (self.paths.site_dir / "index.html").write_text(
@@ -82,26 +80,6 @@ class SiteBuilder:
             ),
             encoding="utf-8",
         )
-
-        for payload in daily_payloads:
-            daily_papers = [
-                _apply_tag_overrides(
-                    _apply_institution_alias(
-                        _apply_topic_alias(paper, topic_aliases),
-                        institution_aliases,
-                    ),
-                    tag_overrides,
-                )
-                for paper in payload.get("papers", [])
-            ]
-            (self.paths.site_dir / "daily" / f"{payload['date']}.html").write_text(
-                daily_template.render(
-                    date=payload["date"],
-                    generated_at=payload.get("generated_at"),
-                    papers=daily_papers,
-                ),
-                encoding="utf-8",
-            )
 
         (self.paths.site_dir / "matrix.html").write_text(
             matrix_template.render(

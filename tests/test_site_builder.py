@@ -11,7 +11,7 @@ def write_json(path, payload):
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
 
-def test_build_generates_index_daily_page_and_search_data(tmp_path):
+def test_build_generates_index_matrix_and_search_data_without_daily_pages(tmp_path):
     paths = ProjectPaths(tmp_path)
     write_json(
         paths.daily_dir / "2026-05-28.json",
@@ -43,20 +43,22 @@ def test_build_generates_index_daily_page_and_search_data(tmp_path):
     SiteBuilder(paths).build()
 
     index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
-    daily = (paths.site_dir / "daily" / "2026-05-28.html").read_text(encoding="utf-8")
+    matrix = (paths.site_dir / "matrix.html").read_text(encoding="utf-8")
     styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
     search = json.loads((paths.site_dir / "assets" / "papers.json").read_text(encoding="utf-8"))
 
     assert "Date Archive" in index
     assert "Institution Tags" in index
     assert "Topic Tags" in index
-    assert "Native VLM" in daily
-    assert "A native VLM learns pixel-word alignment end to end." in daily
-    assert "native vision-language modeling" in daily
-    assert "Original abstract." in daily
+    assert "Native VLM" in index
+    assert "A native VLM learns pixel-word alignment end to end." in index
+    assert "native vision-language modeling" in index
+    assert "Original abstract." in index
+    assert "Institution x Topic" in matrix
     assert search["papers"][0]["id"] == "2605.00001"
     assert search["topic_tags"] == ["native vision-language modeling"]
     assert search["institution_tags"] == ["Existing University"]
+    assert not (paths.site_dir / "daily").exists()
     assert "width: min(860px, 100%);" in styles
     assert "grid-template-columns: repeat(3, minmax(0, 1fr));" in styles
     assert "@media (max-width: 1200px)" in styles
@@ -176,8 +178,7 @@ def test_empty_daily_payloads_are_excluded_from_date_archive(tmp_path):
     assert json.loads(html.unescape(match.group(1))) == ["2026-05-28"]
     assert 'data-latest-date="2026-05-28"' in index
     assert search["dates"] == ["2026-05-28"]
-    assert (paths.site_dir / "daily" / "2026-05-28.html").exists()
-    assert not (paths.site_dir / "daily" / "2026-05-27.html").exists()
+    assert not (paths.site_dir / "daily").exists()
 
 
 def test_index_script_supports_in_place_date_and_all_history_tag_filtering(tmp_path):
@@ -878,7 +879,6 @@ def test_tag_overrides_are_applied_to_built_site_without_rewriting_daily_data(tm
     SiteBuilder(paths).build()
 
     index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
-    daily_page = (paths.site_dir / "daily" / "2026-05-28.html").read_text(encoding="utf-8")
     search = json.loads((paths.site_dir / "assets" / "papers.json").read_text(encoding="utf-8"))
     daily = json.loads((paths.daily_dir / "2026-05-28.json").read_text(encoding="utf-8"))
 
@@ -889,7 +889,7 @@ def test_tag_overrides_are_applied_to_built_site_without_rewriting_daily_data(tm
     assert search["institution_tags"] == ["Correct Institute"]
     assert search["topic_tags"] == ["correct topic"]
     assert "Correct Institute" in index
-    assert "correct topic" in daily_page
+    assert "correct topic" in index
     assert daily["papers"][0]["institution_tag"] == "Wrong Lab"
     assert daily["papers"][0]["topic_tag"] == "wrong topic"
 
@@ -925,7 +925,6 @@ def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     SiteBuilder(paths).build()
 
     index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
-    daily_page = (paths.site_dir / "daily" / "2026-05-28.html").read_text(encoding="utf-8")
     app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
     styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
 
@@ -949,7 +948,8 @@ def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     assert 'data-suggestion-list="topic_tag"' in index
     assert 'tag-edit-copy' in index
     assert 'tag-edit-export' in index
-    assert '<script src="../assets/app.js"></script>' in daily_page
+    assert '<script src="assets/app.js"></script>' in index
+    assert not (paths.site_dir / "daily").exists()
     assert 'const tagOverrideStorageKey = "hf_daily_tag_overrides";' in app
     assert "setupTagEditors();" in app
     assert "function isAdminMode(" in app
