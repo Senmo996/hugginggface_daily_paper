@@ -24,7 +24,7 @@
       <section class="topic-list" aria-label="All topics">
         {% for topic in topics %}
           <article class="topic-list-item">
-            <a href="index.html" data-topic="{{ topic.name }}">{{ topic.name }}</a>
+            <a href="index.html?topic={{ topic.name|url_quote }}" data-topic="{{ topic.name }}">{{ topic.name }}</a>
             <span>{{ topic.count }} paper{% if topic.count != 1 %}s{% endif %}</span>
           </article>
         {% else %}

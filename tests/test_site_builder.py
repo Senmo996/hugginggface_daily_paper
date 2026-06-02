@@ -46,6 +46,7 @@ def test_build_generates_index_matrix_and_search_data_without_daily_pages(tmp_pa
     matrix = (paths.site_dir / "matrix.html").read_text(encoding="utf-8")
     topics = (paths.site_dir / "topics.html").read_text(encoding="utf-8")
     styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
+    app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
     search = json.loads((paths.site_dir / "assets" / "papers.json").read_text(encoding="utf-8"))
 
     assert "Date Archive" in index
@@ -59,6 +60,9 @@ def test_build_generates_index_matrix_and_search_data_without_daily_pages(tmp_pa
     assert '<a class="trend-toggle" href="topics.html">Topics</a>' in index
     assert "All Topics" in topics
     assert "native vision-language modeling" in topics
+    assert 'href="index.html?topic=native%20vision-language%20modeling"' in topics
+    assert "function applyTopicFilterFromUrl()" in app
+    assert 'const topic = params.get("topic");' in app
     assert "1 paper" in topics
     assert '<a href="index.html">Index</a>' in topics
     assert ".topic-list" in styles

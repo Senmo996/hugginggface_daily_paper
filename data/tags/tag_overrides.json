@@ -24,11 +24,17 @@
     "2605.08129": {
       "institution_tag": "alibaba-inc"
     },
+    "2605.25378": {
+      "institution_tag": "Qwen"
+    },
     "2605.27905": {
       "institution_tag": "Hong Kong University of Science and Technology(GuangZhou)"
     },
     "2605.28805": {
       "institution_tag": "Tsinghua University"
+    },
+    "2605.30263": {
+      "institution_tag": "Shengshu"
     }
   }
 }

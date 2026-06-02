@@ -164,11 +164,29 @@
   setupInstitutionTopicMatrix();
   setupTagEditors();
   loadGlobalTagSuggestions();
+  applyTopicFilterFromUrl();
   applyTopicColors();
 
   function applySearch() {
     appliedSearchQuery = searchInput ? searchInput.value.trim() : "";
     appliedSearchScope = searchScope ? searchScope.value : "all";
+    render();
+  }
+
+  function applyTopicFilterFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const topic = params.get("topic");
+    if (!topic) {
+      return;
+    }
+    currentFilter = {
+      type: "topic",
+      value: topic,
+    };
+    appliedSearchQuery = "";
+    if (searchInput) {
+      searchInput.value = "";
+    }
     render();
   }
 

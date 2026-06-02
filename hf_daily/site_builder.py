@@ -4,6 +4,7 @@ import shutil
 from collections import Counter
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -28,6 +29,7 @@ class SiteBuilder:
             lstrip_blocks=True,
         )
         self.env.filters["author_list"] = author_list
+        self.env.filters["url_quote"] = lambda value: quote(str(value), safe="")
 
     def build(self) -> None:
         daily_payloads = self._load_daily_payloads()
