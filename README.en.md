@@ -12,6 +12,24 @@ Main features:
 - Local admin mode for manually correcting wrong institution/topic tags.
 - Project-level topic and institution merge-review skills. Alias writes require explicit human approval.
 
+## Screenshots
+
+The homepage shows paper cards by date with search and tag filtering:
+
+![Homepage](pic/index.png)
+
+The topic trend panel tracks research-direction changes across a selected date range:
+
+![Topic trend](pic/trend.png)
+
+The Topics page lists historical topics and their paper counts:
+
+![Topics](pic/topics.png)
+
+The Institution x Topic matrix shows cross-distribution between institutions and research directions:
+
+![Institution x Topic matrix](<pic/Top institution-topic matrix.png>)
+
 ## Setup
 
 ```powershell
@@ -88,7 +106,6 @@ Analytics:
 - User-selected topic curves.
 - Rising topic ranking by comparing the current range with the previous range.
 - Institution x Topic matrix on a separate page.
-- No standalone `site/daily/YYYY-MM-DD.html` pages are generated anymore; date switching happens on the homepage.
 
 ## Local Data
 
@@ -99,9 +116,7 @@ Analytics:
 - `data/tags/topic_aliases.json`: reviewed topic merge aliases.
 - `data/tags/institution_aliases.json`: reviewed institution merge aliases.
 - `data/tags/tag_overrides.json`: manual per-paper tag corrections from admin mode.
-- `site/`: generated static website with the homepage, matrix page, and shared static assets.
-
-Public repositories should still exclude `.env`, `data/raw/`, `data/daily/`, and backup directories. `site/` is currently tracked so the generated archive can be viewed and published directly.
+- `site/`: locally generated static website with the homepage, matrix page, and shared static assets; this directory is no longer synced to GitHub.
 
 ## Codex Skills
 
