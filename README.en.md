@@ -12,6 +12,10 @@ Main features:
 - Local admin mode for manually correcting wrong institution/topic tags.
 - Project-level topic and institution merge-review skills. Alias writes require explicit human approval.
 
+## Quick Preview
+
+The repository keeps a generated `site/` snapshot. After `git clone`, open `site/index.html` directly to preview the example website; later locally regenerated `site/` content is not synced to GitHub.
+
 ## Screenshots
 
 The homepage shows paper cards by date with search and tag filtering:

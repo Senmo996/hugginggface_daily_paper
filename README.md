@@ -12,6 +12,10 @@
 - 本地管理模式，可在网页里手动修正错误的 institution/topic tag。
 - topic 和 institution 合并审查 skill，所有合并都必须经过人工确认后才写入 alias。
 
+## 快速体验
+
+仓库保留了一份已生成的 `site/` 快照。`git clone` 后可以直接打开 `site/index.html` 查看示例网页；后续本地重新生成的 `site/` 内容不会继续同步到 GitHub。
+
 ## 界面预览
 
 首页按日期展示论文卡片，并支持搜索和 tag 筛选：
