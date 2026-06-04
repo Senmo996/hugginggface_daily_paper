@@ -1,5 +1,6 @@
 (function () {
-  const cards = Array.from(document.querySelectorAll(".paper-card"));
+  let cards = Array.from(document.querySelectorAll(".paper-card"));
+  const paperList = document.getElementById("paperList");
   const searchInput = document.getElementById("searchInput");
   const searchScope = document.getElementById("searchScope");
   const searchSubmit = document.getElementById("searchSubmit");
@@ -38,6 +39,12 @@
   let cachedPriorityTopicOptions = [];
   let appliedSearchQuery = "";
   let appliedSearchScope = searchScope ? searchScope.value : "all";
+  let searchIndexPayload = null;
+  let searchIndexPromise = null;
+  let tagSuggestionsLoaded = false;
+  let renderSequence = 0;
+  const dailyPayloadPromises = new Map();
+  const scriptAssetPromises = new Map();
 
   function matchesCard(card) {
     const query = appliedSearchQuery.toLowerCase();
@@ -75,6 +82,14 @@
   }
 
   function render() {
+    if (layout && paperList) {
+      renderIndexPapers();
+      return;
+    }
+    renderVisibleCards();
+  }
+
+  function renderVisibleCards() {
     applyTopicColors();
     cards.forEach((card) => {
       card.classList.toggle("is-hidden", !matchesCard(card));
@@ -103,6 +118,156 @@
       } else {
         dateStatus.textContent = `Showing ${selectedDate}`;
       }
+    }
+  }
+
+  function renderIndexPapers() {
+    const requestId = ++renderSequence;
+    const hasSearchQuery = Boolean(appliedSearchQuery);
+    const loader =
+      currentFilter || hasSearchQuery
+        ? loadSearchIndex().then((payload) => filterIndexPapers(payload.papers || []))
+        : loadPapersForDate(selectedDate).then((payload) => payload.papers || []);
+
+    setIndexStatus("Loading papers...");
+    loader
+      .then((papers) => {
+        if (requestId !== renderSequence) {
+          return;
+        }
+        renderPaperCards(papers, { compact: currentFilter || hasSearchQuery });
+        updateFilterUi();
+        updateIndexStatus(papers.length);
+      })
+      .catch(() => {
+        if (requestId !== renderSequence) {
+          return;
+        }
+        paperList.innerHTML = "";
+        const empty = document.createElement("p");
+        empty.className = "empty";
+        empty.textContent = "Unable to load papers for this view.";
+        paperList.appendChild(empty);
+        cards = [];
+        updateFilterUi();
+        setIndexStatus("Unable to load papers for this view.");
+      });
+  }
+
+  function filterIndexPapers(papers) {
+    const query = appliedSearchQuery.toLowerCase();
+    const hasSearchQuery = Boolean(appliedSearchQuery);
+    return papers.filter((paper) => {
+      const matchesSearch = !query || paperMatchesSearch(paper, appliedSearchScope);
+      const matchesFilter =
+        !currentFilter || tagValueForPaper(paper, currentFilter.type) === currentFilter.value;
+      const matchesDate =
+        currentFilter || hasSearchQuery || !layout ? true : paper.daily_date === selectedDate;
+      return matchesSearch && matchesFilter && matchesDate;
+    });
+  }
+
+  function paperMatchesSearch(paper, scope) {
+    const query = appliedSearchQuery.toLowerCase();
+    return searchTextForPaper(paper, scope).toLowerCase().includes(query);
+  }
+
+  function searchTextForPaper(paper, scope) {
+    switch (scope) {
+      case "title":
+        return paper.title || "";
+      case "summary":
+        return paper.one_sentence_summary || "";
+      case "tag":
+        return [paper.topic_tag, paper.institution_tag].join(" ");
+      case "topic":
+        return paper.topic_tag || "";
+      case "institution":
+        return paper.institution_tag || "";
+      default:
+        return [
+          paper.title,
+          paper.one_sentence_summary,
+          paper.topic_tag,
+          paper.institution_tag,
+        ].join(" ");
+    }
+  }
+
+  function tagValueForPaper(paper, type) {
+    return type === "topic" ? paper.topic_tag || "" : paper.institution_tag || "";
+  }
+
+  function renderPaperCards(papers, options) {
+    const sortedPapers = sortPapersByPriority(papers);
+    paperList.innerHTML = "";
+    if (sortedPapers.length === 0) {
+      const empty = document.createElement("p");
+      empty.className = "empty";
+      empty.textContent = "No matching papers.";
+      paperList.appendChild(empty);
+      cards = [];
+      renderPriorityTopicChips();
+      return;
+    }
+    sortedPapers.forEach((paper) => {
+      const card = createPaperCard(paper, options || {});
+      paperList.appendChild(card);
+    });
+    cards = Array.from(paperList.querySelectorAll(".paper-card"));
+    setupTagEditors();
+    applyTopicColors();
+    renderPriorityTopicChips();
+  }
+
+  function sortPapersByPriority(papers) {
+    if (priorityTopics.length === 0) {
+      return papers.slice();
+    }
+    return papers
+      .map((paper, index) => ({ paper, index }))
+      .sort((a, b) => {
+        const aPriority = priorityTopics.includes(a.paper.topic_tag) ? 0 : 1;
+        const bPriority = priorityTopics.includes(b.paper.topic_tag) ? 0 : 1;
+        if (aPriority !== bPriority) {
+          return aPriority - bPriority;
+        }
+        return a.index - b.index;
+      })
+      .map((item) => item.paper);
+  }
+
+  function updateFilterUi() {
+    filterButtons.forEach((button) => {
+      const isActive =
+        currentFilter &&
+        button.dataset.filterType === currentFilter.type &&
+        button.dataset.filterValue === currentFilter.value;
+      button.classList.toggle("is-active", Boolean(isActive));
+    });
+    if (activeFilter) {
+      activeFilter.textContent = currentFilter
+        ? `Filtering all dates by ${currentFilter.type}: ${currentFilter.value}`
+        : "";
+    }
+  }
+
+  function updateIndexStatus(count) {
+    if (!dateStatus) {
+      return;
+    }
+    if (currentFilter) {
+      dateStatus.textContent = `${count} matching papers across all dates`;
+    } else if (appliedSearchQuery) {
+      dateStatus.textContent = `${count} search results across all dates`;
+    } else {
+      dateStatus.textContent = `Showing ${selectedDate}`;
+    }
+  }
+
+  function setIndexStatus(message) {
+    if (dateStatus) {
+      dateStatus.textContent = message;
     }
   }
 
@@ -163,9 +328,13 @@
   setupTopicTrends();
   setupInstitutionTopicMatrix();
   setupTagEditors();
-  loadGlobalTagSuggestions();
   applyTopicFilterFromUrl();
   applyTopicColors();
+
+  if (layout && paperList) {
+    refreshPriorityTopicOptions();
+    render();
+  }
 
   function applySearch() {
     appliedSearchQuery = searchInput ? searchInput.value.trim() : "";
@@ -188,6 +357,225 @@
       searchInput.value = "";
     }
     render();
+  }
+
+  function loadPapersForDate(date) {
+    if (!date) {
+      return Promise.resolve({ date: "", papers: [] });
+    }
+    if (!dailyPayloadPromises.has(date)) {
+      dailyPayloadPromises.set(date, loadJsonAsset(`assets/daily/${date}.json`, `assets/daily/${date}.js`, date));
+    }
+    return dailyPayloadPromises.get(date);
+  }
+
+  function loadSearchIndex() {
+    if (searchIndexPayload) {
+      return Promise.resolve(searchIndexPayload);
+    }
+    if (!searchIndexPromise) {
+      searchIndexPromise = loadJsonAsset("assets/papers-index.json", "assets/papers-index.js", "papers-index")
+        .then((payload) => {
+          searchIndexPayload = payload;
+          return payload;
+        });
+    }
+    return searchIndexPromise;
+  }
+
+  function loadJsonAsset(jsonPath, scriptPath, key) {
+    return fetch(jsonPath)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("asset not found");
+        }
+        return response.json();
+      })
+      .catch(() => loadScriptAsset(scriptPath, key));
+  }
+
+  function loadScriptAsset(scriptPath, key) {
+    if (!scriptAssetPromises.has(scriptPath)) {
+      scriptAssetPromises.set(
+        scriptPath,
+        new Promise((resolve, reject) => {
+          const existing = window.HFDailyData && window.HFDailyData[key];
+          if (existing) {
+            resolve(existing);
+            return;
+          }
+          const script = document.createElement("script");
+          script.src = scriptPath;
+          script.onload = () => {
+            const payload = window.HFDailyData && window.HFDailyData[key];
+            if (payload) {
+              resolve(payload);
+            } else {
+              reject(new Error("asset script did not register data"));
+            }
+          };
+          script.onerror = () => reject(new Error("asset script failed"));
+          document.head.appendChild(script);
+        })
+      );
+    }
+    return scriptAssetPromises.get(scriptPath);
+  }
+
+  function createPaperCard(paper, options) {
+    const card = document.createElement("article");
+    card.className = "paper-card";
+    card.dataset.title = String(paper.title || "").toLowerCase();
+    card.dataset.summary = String(paper.one_sentence_summary || "").toLowerCase();
+    card.dataset.topic = paper.topic_tag || "";
+    card.dataset.institution = paper.institution_tag || "";
+    card.dataset.date = paper.daily_date || "";
+    card.dataset.paperId = paper.id || "";
+    card.dataset.originalInstitution = paper.original_institution_tag || paper.institution_tag || "";
+    card.dataset.originalTopic = paper.original_topic_tag || paper.topic_tag || "";
+
+    const cardHead = document.createElement("div");
+    cardHead.className = "card-head";
+
+    const titleWrap = document.createElement("div");
+    const date = document.createElement("p");
+    date.className = "date";
+    date.textContent = paper.daily_date || "";
+    const title = document.createElement("h3");
+    const titleLink = document.createElement("a");
+    titleLink.href = paper.hf_url || "#";
+    titleLink.target = "_blank";
+    titleLink.rel = "noreferrer";
+    titleLink.textContent = paper.title || "Untitled paper";
+    title.appendChild(titleLink);
+    titleWrap.appendChild(date);
+    titleWrap.appendChild(title);
+
+    const metrics = document.createElement("div");
+    metrics.className = "metrics";
+    appendTextElement(metrics, "span", `${paper.upvotes || 0} upvotes`);
+    appendTextElement(metrics, "span", `${paper.num_comments || 0} comments`);
+    cardHead.appendChild(titleWrap);
+    cardHead.appendChild(metrics);
+    card.appendChild(cardHead);
+
+    appendTextElement(card, "p", authorList(paper.authors), "authors");
+    appendTextElement(card, "p", paper.one_sentence_summary || "", "one-line");
+
+    const tags = document.createElement("div");
+    tags.className = "tags";
+    const institutionTag = appendTextElement(tags, "span", paper.institution_tag || "", "tag institution");
+    institutionTag.dataset.tagRole = "institution";
+    const topicTag = appendTextElement(tags, "span", paper.topic_tag || "", "tag topic");
+    topicTag.dataset.tagRole = "topic";
+    const editToggle = document.createElement("button");
+    editToggle.className = "tag-edit-toggle secondary";
+    editToggle.type = "button";
+    editToggle.setAttribute("aria-expanded", "false");
+    editToggle.textContent = "Edit tags";
+    tags.appendChild(editToggle);
+    card.appendChild(tags);
+
+    card.appendChild(createTagEditor(paper));
+    if (!options.compact && paper.summary) {
+      const details = document.createElement("details");
+      const summary = document.createElement("summary");
+      summary.textContent = "Original abstract";
+      const abstract = document.createElement("p");
+      abstract.textContent = paper.summary;
+      details.appendChild(summary);
+      details.appendChild(abstract);
+      card.appendChild(details);
+    }
+    card.appendChild(createLinks(paper));
+    return card;
+  }
+
+  function appendTextElement(parent, tagName, text, className) {
+    const element = document.createElement(tagName);
+    if (className) {
+      element.className = className;
+    }
+    element.textContent = text;
+    parent.appendChild(element);
+    return element;
+  }
+
+  function authorList(authors) {
+    if (!Array.isArray(authors) || authors.length === 0) {
+      return "Unknown authors";
+    }
+    if (authors.length <= 3) {
+      return authors.join(", ");
+    }
+    return `${authors.slice(0, 3).join(", ")}, +${authors.length - 3} more`;
+  }
+
+  function createTagEditor(paper) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "tag-editor";
+    const form = document.createElement("form");
+    form.className = "tag-edit-form";
+    form.hidden = true;
+    form.appendChild(createTagField("Institution tag", "institution_tag", paper.institution_tag || ""));
+    form.appendChild(createTagField("Topic tag", "topic_tag", paper.topic_tag || ""));
+
+    const actions = document.createElement("div");
+    actions.className = "tag-edit-actions";
+    [
+      ["tag-edit-save", "submit", "Save draft"],
+      ["tag-edit-reset", "button", "Reset"],
+      ["tag-edit-copy", "button", "Copy JSON"],
+      ["tag-edit-export", "button", "Export JSON"],
+    ].forEach(([className, type, text]) => {
+      const button = document.createElement("button");
+      button.className = `secondary ${className}`;
+      button.type = type;
+      button.textContent = text;
+      actions.appendChild(button);
+    });
+    form.appendChild(actions);
+    appendTextElement(form, "p", "", "tag-edit-status muted");
+    wrapper.appendChild(form);
+    return wrapper;
+  }
+
+  function createTagField(labelText, field, value) {
+    const label = document.createElement("label");
+    appendTextElement(label, "span", labelText);
+    const input = document.createElement("input");
+    input.type = "text";
+    input.dataset.tagField = field;
+    input.value = value;
+    label.appendChild(input);
+    const suggestions = document.createElement("span");
+    suggestions.className = "tag-suggestions";
+    suggestions.dataset.suggestionList = field;
+    suggestions.hidden = true;
+    label.appendChild(suggestions);
+    return label;
+  }
+
+  function createLinks(paper) {
+    const links = document.createElement("div");
+    links.className = "links";
+    addPaperLink(links, paper.hf_url, "HF");
+    addPaperLink(links, paper.arxiv_url, "arXiv");
+    addPaperLink(links, paper.project_page, "Project");
+    addPaperLink(links, paper.github_repo, "GitHub");
+    return links;
+  }
+
+  function addPaperLink(parent, href, text) {
+    if (!href) {
+      return;
+    }
+    const link = document.createElement("a");
+    link.href = href;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.textContent = text;
+    parent.appendChild(link);
   }
 
   function parseAvailableDates() {
@@ -280,11 +668,13 @@
       priorityTopicAdd.setAttribute("aria-expanded", String(!nextHidden));
       if (!nextHidden) {
         priorityTopicInput.value = "";
-        renderPriorityTopicSuggestions();
+        ensureGlobalTagSuggestions().then(renderPriorityTopicSuggestions);
         priorityTopicInput.focus();
       }
     });
-    priorityTopicInput.addEventListener("input", renderPriorityTopicSuggestions);
+    priorityTopicInput.addEventListener("input", () => {
+      ensureGlobalTagSuggestions().then(renderPriorityTopicSuggestions);
+    });
     priorityTopicInput.addEventListener("keydown", (event) => {
       if (event.key !== "Enter") {
         return;
@@ -367,7 +757,10 @@
 
   function refreshPriorityTopicOptions() {
     cachedPriorityTopicOptions = Array.from(
-      new Set(cards.map((card) => card.dataset.topic).filter(Boolean))
+      new Set([
+        ...cards.map((card) => card.dataset.topic).filter(Boolean),
+        ...tagSuggestions.topic_tag,
+      ])
     ).sort((a, b) => a.localeCompare(b));
   }
 
@@ -492,6 +885,10 @@
       if (!paperId || !form || !toggle) {
         return;
       }
+      if (card.dataset.tagEditorReady === "true") {
+        return;
+      }
+      card.dataset.tagEditorReady = "true";
 
       if (overrides.paper_overrides[paperId]) {
         applyTagValues(card, overrides.paper_overrides[paperId]);
@@ -504,6 +901,9 @@
         const isOpen = form.hidden;
         form.hidden = !isOpen;
         toggle.setAttribute("aria-expanded", String(isOpen));
+        if (isOpen) {
+          ensureGlobalTagSuggestions();
+        }
       });
 
       form.addEventListener("submit", (event) => {
@@ -568,17 +968,25 @@
   }
 
   function loadGlobalTagSuggestions() {
-    fetch(papersJsonPath())
-      .then((response) => response.json())
-      .then((payload) => {
+    const loader = layout ? loadSearchIndex() : fetch(papersJsonPath()).then((response) => response.json());
+    return loader.then((payload) => {
         const papers = Array.isArray(payload.papers) ? payload.papers : [];
         papers.forEach((paper) => {
           addTagSuggestion("institution_tag", paper.institution_tag);
           addTagSuggestion("topic_tag", paper.topic_tag);
         });
+        refreshPriorityTopicOptions();
         refreshOpenTagSuggestions();
       })
       .catch(() => {});
+  }
+
+  function ensureGlobalTagSuggestions() {
+    if (tagSuggestionsLoaded) {
+      return Promise.resolve();
+    }
+    tagSuggestionsLoaded = true;
+    return loadGlobalTagSuggestions();
   }
 
   function papersJsonPath() {
@@ -605,10 +1013,12 @@
       if (!field || !list) {
         return;
       }
-      input.addEventListener("input", () => renderTagSuggestions(input, list, field));
+      input.addEventListener("input", () => {
+        ensureGlobalTagSuggestions().then(() => renderTagSuggestions(input, list, field));
+      });
       input.addEventListener("focus", () => {
         selectTagInputOnFocus(input);
-        renderTagSuggestions(input, list, field);
+        ensureGlobalTagSuggestions().then(() => renderTagSuggestions(input, list, field));
       });
       input.addEventListener("keydown", (event) => {
         if (event.key === "Escape") {
@@ -725,7 +1135,12 @@
       });
     }
     persistTagOverrides(overrides);
-    render();
+    if (layout && paperList) {
+      applyTopicColors();
+      refreshPriorityTopicOptions();
+    } else {
+      render();
+    }
   }
 
   function isAdminMode() {
@@ -774,7 +1189,12 @@
       institution_tag: card.dataset.originalInstitution || "",
       topic_tag: card.dataset.originalTopic || "",
     });
-    render();
+    if (layout && paperList) {
+      applyTopicColors();
+      refreshPriorityTopicOptions();
+    } else {
+      render();
+    }
   }
 
   function applyTagValues(card, values) {
@@ -907,16 +1327,20 @@
   }
 
   function populateTrendTopics() {
-    const topics = Array.from(
-      new Set(cards.map((card) => card.dataset.topic).filter(Boolean))
-    ).sort((a, b) => a.localeCompare(b));
-    trendTopicSelect.innerHTML = "";
-    topics.forEach((topic) => {
-      const option = document.createElement("option");
-      option.value = topic;
-      option.textContent = topic;
-      trendTopicSelect.appendChild(option);
-    });
+    loadSearchIndex()
+      .then((payload) => {
+        const topics = Array.from(
+          new Set((payload.papers || []).map((paper) => paper.topic_tag).filter(Boolean))
+        ).sort((a, b) => a.localeCompare(b));
+        trendTopicSelect.innerHTML = "";
+        topics.forEach((topic) => {
+          const option = document.createElement("option");
+          option.value = topic;
+          option.textContent = topic;
+          trendTopicSelect.appendChild(option);
+        });
+      })
+      .catch(() => {});
   }
 
   function defaultTrendRangeDates() {
@@ -924,26 +1348,31 @@
   }
 
   function renderTopicTrends() {
-    const start = trendStartDate.value <= trendEndDate.value ? trendStartDate.value : trendEndDate.value;
-    const end = trendStartDate.value <= trendEndDate.value ? trendEndDate.value : trendStartDate.value;
-    const rangeDates = availableDates
-      .filter((date) => date >= start && date <= end)
-      .slice()
-      .reverse();
-    const selectedTopics = Array.from(trendTopicSelect.selectedOptions).map((option) => option.value);
-    const topics = selectedTopics.length > 0 ? selectedTopics : topTopicsForRange(rangeDates).slice(0, 5);
-    const series = buildTopicTrendSeries(rangeDates, topics);
-    renderTopicTrendChart(series, rangeDates);
-    renderTopicTrendLegend(series);
-    renderTopicTrendSummary(series);
-    renderRisingTopics(buildRisingTopics(rangeDates));
+    loadSearchIndex()
+      .then((payload) => {
+        const papers = payload.papers || [];
+        const start = trendStartDate.value <= trendEndDate.value ? trendStartDate.value : trendEndDate.value;
+        const end = trendStartDate.value <= trendEndDate.value ? trendEndDate.value : trendStartDate.value;
+        const rangeDates = availableDates
+          .filter((date) => date >= start && date <= end)
+          .slice()
+          .reverse();
+        const selectedTopics = Array.from(trendTopicSelect.selectedOptions).map((option) => option.value);
+        const topics = selectedTopics.length > 0 ? selectedTopics : topTopicsForRange(rangeDates, papers).slice(0, 5);
+        const series = buildTopicTrendSeries(rangeDates, topics, papers);
+        renderTopicTrendChart(series, rangeDates);
+        renderTopicTrendLegend(series);
+        renderTopicTrendSummary(series);
+        renderRisingTopics(buildRisingTopics(rangeDates, papers));
+      })
+      .catch(() => {});
   }
 
-  function topTopicsForRange(rangeDates) {
+  function topTopicsForRange(rangeDates, papers) {
     const counts = new Map();
-    cards.forEach((card) => {
-      const topic = card.dataset.topic;
-      if (!topic || !rangeDates.includes(card.dataset.date)) {
+    papers.forEach((paper) => {
+      const topic = paper.topic_tag;
+      if (!topic || !rangeDates.includes(paper.daily_date)) {
         return;
       }
       counts.set(topic, (counts.get(topic) || 0) + 1);
@@ -953,11 +1382,11 @@
       .map(([topic]) => topic);
   }
 
-  function buildTopicTrendSeries(rangeDates, topics) {
+  function buildTopicTrendSeries(rangeDates, topics, papers) {
     return topics.map((topic, index) => {
       const values = rangeDates.map((date) => {
-        return cards.filter(
-          (card) => card.dataset.date === date && card.dataset.topic === topic
+        return papers.filter(
+          (paper) => paper.daily_date === date && paper.topic_tag === topic
         ).length;
       });
       const total = values.reduce((sum, value) => sum + value, 0);
@@ -987,15 +1416,15 @@
     return ascendingDates.slice(start, firstIndex);
   }
 
-  function buildRisingTopics(rangeDates) {
+  function buildRisingTopics(rangeDates, papers) {
     const previousDates = previousRangeFor(rangeDates);
     const topics = Array.from(
-      new Set(cards.map((card) => card.dataset.topic).filter(Boolean))
+      new Set(papers.map((paper) => paper.topic_tag).filter(Boolean))
     );
     return topics
       .map((topic) => {
-        const currentCount = countTopicInRange(topic, rangeDates);
-        const previousCount = countTopicInRange(topic, previousDates);
+        const currentCount = countTopicInRange(topic, rangeDates, papers);
+        const previousCount = countTopicInRange(topic, previousDates, papers);
         const delta = currentCount - previousCount;
         const percent = previousCount === 0 ? null : Math.round((delta / previousCount) * 100);
         return { topic, currentCount, previousCount, delta, percent };
@@ -1005,9 +1434,9 @@
       .slice(0, 5);
   }
 
-  function countTopicInRange(topic, rangeDates) {
-    return cards.filter(
-      (card) => card.dataset.topic === topic && rangeDates.includes(card.dataset.date)
+  function countTopicInRange(topic, rangeDates, papers) {
+    return papers.filter(
+      (paper) => paper.topic_tag === topic && rangeDates.includes(paper.daily_date)
     ).length;
   }
 

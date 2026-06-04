@@ -52,7 +52,7 @@
         <a class="trend-toggle" href="topics.html">Topics</a>
         <a class="trend-toggle" href="matrix.html">Matrix</a>
         <div class="stats">
-          <span>{{ papers|length }} papers</span>
+          <span>{{ total_papers|default(papers|length, true) }} papers</span>
           <span>{{ dates|length }} days</span>
         </div>
       </div>

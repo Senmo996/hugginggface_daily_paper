@@ -48,6 +48,12 @@ def test_build_generates_index_matrix_and_search_data_without_daily_pages(tmp_pa
     styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
     app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
     search = json.loads((paths.site_dir / "assets" / "papers.json").read_text(encoding="utf-8"))
+    search_index = json.loads(
+        (paths.site_dir / "assets" / "papers-index.json").read_text(encoding="utf-8")
+    )
+    daily_payload = json.loads(
+        (paths.site_dir / "assets" / "daily" / "2026-05-28.json").read_text(encoding="utf-8")
+    )
 
     assert "Date Archive" in index
     assert "Institution Tags" in index
@@ -70,6 +76,9 @@ def test_build_generates_index_matrix_and_search_data_without_daily_pages(tmp_pa
     assert search["papers"][0]["id"] == "2605.00001"
     assert search["topic_tags"] == ["native vision-language modeling"]
     assert search["institution_tags"] == ["Existing University"]
+    assert search_index["papers"][0]["id"] == "2605.00001"
+    assert "summary" not in search_index["papers"][0]
+    assert daily_payload["papers"][0]["summary"] == "Original abstract."
     assert not (paths.site_dir / "daily").exists()
     assert "width: min(860px, 100%);" in styles
     assert "grid-template-columns: repeat(3, minmax(0, 1fr));" in styles
@@ -125,8 +134,18 @@ def test_index_defaults_to_latest_date_and_renders_date_selectors(tmp_path):
 
     index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
 
+    daily_latest = json.loads(
+        (paths.site_dir / "assets" / "daily" / "2026-05-28.json").read_text(encoding="utf-8")
+    )
+    daily_older = json.loads(
+        (paths.site_dir / "assets" / "daily" / "2026-05-27.json").read_text(encoding="utf-8")
+    )
+    search_index = json.loads(
+        (paths.site_dir / "assets" / "papers-index.json").read_text(encoding="utf-8")
+    )
+
     assert "Latest Paper" in index
-    assert "Older Paper" in index
+    assert "Older Paper" not in index
     assert 'data-latest-date="2026-05-28"' in index
     assert '<select id="dateYear"' in index
     assert '<select id="dateMonth"' in index
@@ -137,12 +156,14 @@ def test_index_defaults_to_latest_date_and_renders_date_selectors(tmp_path):
     assert match is not None
     assert json.loads(html.unescape(match.group(1))) == ["2026-05-28", "2026-05-27"]
     assert 'data-date="2026-05-28"' in index
-    older_card = re.search(
-        r'<article\s+class="([^"]*paper-card[^"]*)"\s+data-title="older paper"',
-        index,
-    )
-    assert older_card is not None
-    assert "is-hidden" in older_card.group(1)
+    assert 'data-date="2026-05-27"' not in index
+    assert daily_latest["papers"][0]["title"] == "Latest Paper"
+    assert daily_older["papers"][0]["title"] == "Older Paper"
+    assert [paper["title"] for paper in search_index["papers"]] == [
+        "Latest Paper",
+        "Older Paper",
+    ]
+    assert "summary" not in search_index["papers"][0]
 
 
 def test_empty_daily_payloads_are_excluded_from_date_archive(tmp_path):
@@ -184,12 +205,18 @@ def test_empty_daily_payloads_are_excluded_from_date_archive(tmp_path):
 
     index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
     search = json.loads((paths.site_dir / "assets" / "papers.json").read_text(encoding="utf-8"))
+    search_index = json.loads(
+        (paths.site_dir / "assets" / "papers-index.json").read_text(encoding="utf-8")
+    )
 
     match = re.search(r'data-available-dates="([^"]+)"', index)
     assert match is not None
     assert json.loads(html.unescape(match.group(1))) == ["2026-05-28"]
     assert 'data-latest-date="2026-05-28"' in index
     assert search["dates"] == ["2026-05-28"]
+    assert search_index["dates"] == ["2026-05-28"]
+    assert (paths.site_dir / "assets" / "daily" / "2026-05-28.json").exists()
+    assert not (paths.site_dir / "assets" / "daily" / "2026-05-27.json").exists()
     assert not (paths.site_dir / "daily").exists()
 
 
@@ -251,8 +278,9 @@ def test_index_script_supports_in_place_date_and_all_history_tag_filtering(tmp_p
     app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
 
     assert "selectedDate" in app
-    assert "card.dataset.date === selectedDate" in app
-    assert "currentFilter || hasSearchQuery || !layout ? true" in app
+    assert "function loadPapersForDate(date)" in app
+    assert "function loadSearchIndex()" in app
+    assert "function renderIndexPapers()" in app
     assert "renderSelectedDate" in app
 
 
@@ -313,8 +341,9 @@ def test_index_script_searches_across_all_dates(tmp_path):
 
     app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
 
+    assert "function filterIndexPapers(papers)" in app
     assert "const hasSearchQuery = Boolean(appliedSearchQuery);" in app
-    assert "currentFilter || hasSearchQuery || !layout ? true" in app
+    assert "paperMatchesSearch(paper, appliedSearchScope)" in app
 
 
 def test_index_search_runs_only_after_submit(tmp_path):
@@ -1109,7 +1138,11 @@ def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     assert "Saved to data/tags/tag_overrides.json and rebuilt site." in app
     assert "const tagSuggestions = buildTagSuggestions();" in app
     assert "function buildTagSuggestions(" in app
-    assert "loadGlobalTagSuggestions();" in app
+    initialization_block = app[
+        app.index("setupTagEditors();") : app.index("applyTopicFilterFromUrl();")
+    ]
+    assert "loadGlobalTagSuggestions();" not in initialization_block
+    assert "function ensureGlobalTagSuggestions(" in app
     assert "function loadGlobalTagSuggestions(" in app
     assert "function papersJsonPath(" in app
     assert 'fetch(papersJsonPath())' in app

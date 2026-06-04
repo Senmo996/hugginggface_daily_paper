@@ -15,6 +15,23 @@ PACKAGE_DIR = Path(__file__).resolve().parent
 DEFAULT_TEMPLATES_DIR = PACKAGE_DIR / "default_templates"
 DEFAULT_STATIC_DIR = PACKAGE_DIR / "default_static"
 TAG_LIMIT = 20
+INDEX_FIELDS = [
+    "id",
+    "daily_date",
+    "title",
+    "authors",
+    "one_sentence_summary",
+    "institution_tag",
+    "topic_tag",
+    "original_institution_tag",
+    "original_topic_tag",
+    "hf_url",
+    "arxiv_url",
+    "project_page",
+    "github_repo",
+    "upvotes",
+    "num_comments",
+]
 
 
 class SiteBuilder:
@@ -49,6 +66,11 @@ class SiteBuilder:
         ]
         dates = [payload["date"] for payload in daily_payloads]
         latest_payload = daily_payloads[0] if daily_payloads else {"date": None, "papers": []}
+        latest_papers = [
+            paper
+            for paper in papers
+            if paper.get("daily_date") == latest_payload.get("date")
+        ]
         topic_counts = Counter(paper.get("topic_tag") for paper in papers if paper.get("topic_tag"))
         institution_counts = Counter(
             paper.get("institution_tag")
@@ -60,7 +82,7 @@ class SiteBuilder:
 
         if self.paths.site_dir.exists():
             shutil.rmtree(self.paths.site_dir)
-        (self.paths.site_dir / "assets").mkdir(parents=True, exist_ok=True)
+        (self.paths.site_dir / "assets" / "daily").mkdir(parents=True, exist_ok=True)
 
         self._copy_static_assets()
 
@@ -78,9 +100,10 @@ class SiteBuilder:
         (self.paths.site_dir / "index.html").write_text(
             index_template.render(
                 dates=dates,
-                papers=papers,
+                papers=latest_papers,
                 all_papers=papers,
                 latest_date=latest_payload.get("date"),
+                total_papers=len(papers),
                 topic_tags=topic_tags,
                 institution_tags=institution_tags,
                 counts={
@@ -117,6 +140,29 @@ class SiteBuilder:
                 "institution_tags": institution_tags,
             },
         )
+        self._write_json_asset(
+            self.paths.site_dir / "assets" / "papers-index",
+            {
+                "papers": [_paper_index_entry(paper) for paper in papers],
+                "dates": dates,
+                "topic_tags": topic_tags,
+                "institution_tags": institution_tags,
+            },
+        )
+        for payload in daily_payloads:
+            date = str(payload.get("date", "")).strip()
+            if not date:
+                continue
+            date_papers = [
+                paper for paper in papers if paper.get("daily_date") == date
+            ]
+            self._write_json_asset(
+                self.paths.site_dir / "assets" / "daily" / date,
+                {
+                    "date": date,
+                    "papers": date_papers,
+                },
+            )
 
     def _load_daily_payloads(self) -> list[dict[str, Any]]:
         if not self.paths.daily_dir.exists():
@@ -136,6 +182,15 @@ class SiteBuilder:
                 target = self.paths.site_dir / "assets" / source.name
                 if source.is_file():
                     shutil.copy2(source, target)
+
+    def _write_json_asset(self, base_path: Path, payload: dict[str, Any]) -> None:
+        write_json(base_path.with_suffix(".json"), payload)
+        js_payload = _json_to_js_payload(payload)
+        base_path.with_suffix(".js").write_text(
+            f"window.HFDailyData = window.HFDailyData || {{}};\n"
+            f"window.HFDailyData[{js_payload['key']}] = {js_payload['value']};\n",
+            encoding="utf-8",
+        )
 
     def _load_topic_aliases(self) -> dict[str, str]:
         payload = read_json(self.paths.topic_aliases, {"aliases": {}})
@@ -245,3 +300,20 @@ def _apply_tag_overrides(
 
 def _normalize_topic(topic: Any) -> str:
     return " ".join(str(topic or "").strip().casefold().split())
+
+
+def _paper_index_entry(paper: dict[str, Any]) -> dict[str, Any]:
+    return {
+        field: paper.get(field)
+        for field in INDEX_FIELDS
+        if paper.get(field) not in [None, ""]
+    }
+
+
+def _json_to_js_payload(payload: dict[str, Any]) -> dict[str, str]:
+    import json
+
+    return {
+        "key": json.dumps(str(payload.get("date") or "papers-index"), ensure_ascii=False),
+        "value": json.dumps(payload, ensure_ascii=False),
+    }
