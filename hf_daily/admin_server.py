@@ -38,10 +38,16 @@ class AdminRequestHandler(SimpleHTTPRequestHandler):
         super().end_headers()
 
     def do_POST(self) -> None:
-        if self.path != "/api/tag-overrides":
-            self.send_error(HTTPStatus.NOT_FOUND, "Unknown admin endpoint")
+        if self.path == "/api/tag-overrides":
+            self._handle_tag_overrides()
+            return
+        if self.path == "/api/priority-topics":
+            self._handle_priority_topics()
             return
 
+        self.send_error(HTTPStatus.NOT_FOUND, "Unknown admin endpoint")
+
+    def _handle_tag_overrides(self) -> None:
         try:
             payload = self._read_json_body()
             paper_id = str(payload.get("paper_id", "")).strip()
@@ -51,6 +57,17 @@ class AdminRequestHandler(SimpleHTTPRequestHandler):
             overrides = _update_tag_override(self.server.paths, paper_id, payload)
             SiteBuilder(self.server.paths).build()
             self._send_json({"status": "saved", "paper_overrides": overrides["paper_overrides"]})
+        except json.JSONDecodeError:
+            self._send_json({"error": "Invalid JSON body"}, HTTPStatus.BAD_REQUEST)
+        except OSError as exc:
+            self._send_json({"error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+    def _handle_priority_topics(self) -> None:
+        try:
+            payload = self._read_json_body()
+            topics = _update_priority_topics(self.server.paths, payload)
+            SiteBuilder(self.server.paths).build()
+            self._send_json({"status": "saved", "topics": topics["topics"]})
         except json.JSONDecodeError:
             self._send_json({"error": "Invalid JSON body"}, HTTPStatus.BAD_REQUEST)
         except OSError as exc:
@@ -95,4 +112,27 @@ def _update_tag_override(
 
     cleaned = {"paper_overrides": dict(sorted(paper_overrides.items()))}
     write_json(paths.tag_overrides, cleaned)
+    return cleaned
+
+
+def _update_priority_topics(
+    paths: ProjectPaths,
+    payload: dict[str, Any],
+) -> dict[str, list[str]]:
+    raw_topics = payload.get("topics", [])
+    if not isinstance(raw_topics, list):
+        raise json.JSONDecodeError("topics must be a list", json.dumps(payload), 0)
+
+    topics: list[str] = []
+    seen: set[str] = set()
+    for raw_topic in raw_topics:
+        topic = str(raw_topic or "").strip()
+        key = topic.casefold()
+        if not topic or key in seen:
+            continue
+        topics.append(topic)
+        seen.add(key)
+
+    cleaned = {"topics": topics}
+    write_json(paths.priority_topics, cleaned)
     return cleaned

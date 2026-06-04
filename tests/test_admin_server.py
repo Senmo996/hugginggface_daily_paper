@@ -127,6 +127,39 @@ def test_admin_server_deletes_override_when_no_tags_are_sent(tmp_path):
     assert search["papers"][0]["topic_tag"] == "wrong topic"
 
 
+def test_admin_server_saves_priority_topics_and_rebuilds_site(tmp_path):
+    paths = ProjectPaths(tmp_path)
+    write_daily_fixture(paths)
+    SiteBuilder(paths).build()
+    server = create_admin_server(paths, "127.0.0.1", 0)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+
+    try:
+        connection = http.client.HTTPConnection("127.0.0.1", server.server_port, timeout=5)
+        connection.request(
+            "POST",
+            "/api/priority-topics",
+            body=json.dumps({"topics": ["speculative decoding", "PEFT", "speculative decoding"]}),
+            headers={"Content-Type": "application/json"},
+        )
+        response = connection.getresponse()
+        payload = json.loads(response.read().decode("utf-8"))
+    finally:
+        server.shutdown()
+        server.server_close()
+        thread.join(timeout=5)
+
+    priority_topics = json.loads(paths.priority_topics.read_text(encoding="utf-8"))
+    index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
+
+    assert response.status == 200
+    assert payload == {"status": "saved", "topics": ["speculative decoding", "PEFT"]}
+    assert priority_topics == {"topics": ["speculative decoding", "PEFT"]}
+    assert "speculative decoding" in index
+    assert "PEFT" in index
+
+
 def test_admin_server_disables_browser_cache_for_static_assets(tmp_path):
     paths = ProjectPaths(tmp_path)
     write_daily_fixture(paths)

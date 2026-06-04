@@ -62,6 +62,7 @@
       class="layout"
       data-latest-date="{{ latest_date }}"
       data-available-dates="{{ dates|tojson|forceescape }}"
+      data-priority-topics="{{ priority_topics|default([], true)|tojson|forceescape }}"
     >
       <aside class="sidebar">
         <section>

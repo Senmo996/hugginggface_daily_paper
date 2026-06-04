@@ -590,6 +590,18 @@
     }
   }
 
+  function parseSeedPriorityTopics() {
+    if (!layout || !layout.dataset.priorityTopics) {
+      return [];
+    }
+    try {
+      const parsed = JSON.parse(layout.dataset.priorityTopics);
+      return Array.isArray(parsed) ? parsed.filter(Boolean) : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
   function setupDateArchive() {
     if (!dateYear || !dateMonth || !dateDay || availableDates.length === 0) {
       return;
@@ -864,16 +876,34 @@
   }
 
   function loadPriorityTopics() {
+    const topics = [];
+    const seen = new Set();
+    function addTopic(topic) {
+      const value = String(topic || "").trim();
+      const key = value.toLowerCase();
+      if (!value || seen.has(key)) {
+        return;
+      }
+      topics.push(value);
+      seen.add(key);
+    }
+    parseSeedPriorityTopics().forEach(addTopic);
     try {
       const parsed = JSON.parse(localStorage.getItem(priorityTopicStorageKey) || "[]");
-      return Array.isArray(parsed) ? parsed.filter(Boolean) : [];
+      if (Array.isArray(parsed)) {
+        parsed.forEach(addTopic);
+      }
     } catch (error) {
-      return [];
+      return topics;
     }
+    return topics;
   }
 
   function persistPriorityTopics(topics) {
     localStorage.setItem(priorityTopicStorageKey, JSON.stringify(topics));
+    if (isAdminMode()) {
+      savePriorityTopicsToAdmin(topics).catch(() => {});
+    }
   }
 
   function setupTagEditors() {
@@ -1159,6 +1189,23 @@
         paper_id: card.dataset.paperId,
         institution_tag: overrideValues.institution_tag,
         topic_tag: overrideValues.topic_tag,
+      }),
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error("save failed");
+      }
+      return response.json();
+    });
+  }
+
+  function savePriorityTopicsToAdmin(topics) {
+    return fetch("/api/priority-topics", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        topics,
       }),
     }).then((response) => {
       if (!response.ok) {

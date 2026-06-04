@@ -53,6 +53,7 @@ class SiteBuilder:
         topic_aliases = self._load_topic_aliases()
         institution_aliases = self._load_institution_aliases()
         tag_overrides = self._load_tag_overrides()
+        priority_topics = self._load_priority_topics()
         papers = [
             _apply_tag_overrides(
                 _apply_institution_alias(
@@ -104,6 +105,7 @@ class SiteBuilder:
                 all_papers=papers,
                 latest_date=latest_payload.get("date"),
                 total_papers=len(papers),
+                priority_topics=priority_topics,
                 topic_tags=topic_tags,
                 institution_tags=institution_tags,
                 counts={
@@ -232,6 +234,13 @@ class SiteBuilder:
                 normalized[str(paper_id).strip()] = clean_fields
         return normalized
 
+    def _load_priority_topics(self) -> list[str]:
+        payload = read_json(self.paths.priority_topics, {"topics": []})
+        topics = payload.get("topics", [])
+        if not isinstance(topics, list):
+            return []
+        return _unique_clean_strings(topics)
+
 
 def author_list(authors: list[str], limit: int = 3) -> str:
     if not authors:
@@ -300,6 +309,19 @@ def _apply_tag_overrides(
 
 def _normalize_topic(topic: Any) -> str:
     return " ".join(str(topic or "").strip().casefold().split())
+
+
+def _unique_clean_strings(values: list[Any]) -> list[str]:
+    cleaned: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        topic = str(value or "").strip()
+        key = topic.casefold()
+        if not topic or key in seen:
+            continue
+        cleaned.append(topic)
+        seen.add(key)
+    return cleaned
 
 
 def _paper_index_entry(paper: dict[str, Any]) -> dict[str, Any]:

@@ -50,6 +50,10 @@ class ProjectPaths:
         return self.tags_dir / "tag_overrides.json"
 
     @property
+    def priority_topics(self) -> Path:
+        return self.tags_dir / "priority_topics.json"
+
+    @property
     def templates_dir(self) -> Path:
         return self.root / "templates"
 

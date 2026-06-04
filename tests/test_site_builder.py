@@ -548,6 +548,9 @@ def test_index_supports_priority_topic_selection(tmp_path):
     assert "function addPriorityTopic(topic)" in app
     assert "const topicMatch = findPriorityTopicMatch(topic);" in app
     assert "function removePriorityTopic(topic)" in app
+    assert "function parseSeedPriorityTopics()" in app
+    assert "function savePriorityTopicsToAdmin(topics)" in app
+    assert 'fetch("/api/priority-topics"' in app
     assert "function applyTopicColorToElement(element, topic)" in app
     assert "function topicColor(topic)" in app
     assert "function isPriorityTopic(topic)" in app
@@ -565,6 +568,45 @@ def test_index_supports_priority_topic_selection(tmp_path):
     assert ".priority-topic-suggestions" in styles
     assert "background: var(--topic-bg, #eef4fa);" in styles
     assert "border-color: var(--topic-border, #c6d8e6);" in styles
+
+
+def test_index_seeds_priority_topics_from_project_data(tmp_path):
+    paths = ProjectPaths(tmp_path)
+    write_json(paths.priority_topics, {"topics": ["speculative decoding"]})
+    write_json(
+        paths.daily_dir / "2026-05-28.json",
+        {
+            "date": "2026-05-28",
+            "papers": [
+                {
+                    "id": "2605.00001",
+                    "daily_date": "2026-05-28",
+                    "title": "Speculative Paper",
+                    "summary": "Original abstract.",
+                    "authors": ["A. Author"],
+                    "published_at": "2026-05-28T00:00:00.000Z",
+                    "upvotes": 1,
+                    "num_comments": 0,
+                    "one_sentence_summary": "Summary.",
+                    "institution_tag": "Example University",
+                    "topic_tag": "speculative decoding",
+                    "hf_url": "https://huggingface.co/papers/2605.00001",
+                    "arxiv_url": "https://arxiv.org/abs/2605.00001",
+                    "project_page": None,
+                    "github_repo": None,
+                }
+            ],
+        },
+    )
+
+    SiteBuilder(paths).build()
+
+    index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
+    app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
+
+    assert 'data-priority-topics="[&#34;speculative decoding&#34;]"' in index
+    assert "function parseSeedPriorityTopics()" in app
+    assert "parseSeedPriorityTopics()" in app
 
 
 def test_index_renders_topic_trends_header_panel(tmp_path):
