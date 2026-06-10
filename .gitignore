@@ -11,3 +11,5 @@ data/daily/
 data/backup-*/
 site/
 scripts/
+*.log
+tests/

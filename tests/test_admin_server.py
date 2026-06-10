@@ -180,3 +180,25 @@ def test_admin_server_disables_browser_cache_for_static_assets(tmp_path):
 
     assert response.status == 200
     assert response.getheader("Cache-Control") == "no-store"
+
+
+def test_admin_server_redirects_root_to_index(tmp_path):
+    paths = ProjectPaths(tmp_path)
+    write_daily_fixture(paths)
+    SiteBuilder(paths).build()
+    server = create_admin_server(paths, "127.0.0.1", 0)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+
+    try:
+        connection = http.client.HTTPConnection("127.0.0.1", server.server_port, timeout=5)
+        connection.request("GET", "/")
+        response = connection.getresponse()
+        response.read()
+    finally:
+        server.shutdown()
+        server.server_close()
+        thread.join(timeout=5)
+
+    assert response.status == 302
+    assert response.getheader("Location") == "/index.html"

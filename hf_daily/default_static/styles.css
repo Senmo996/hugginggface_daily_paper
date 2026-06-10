@@ -458,8 +458,24 @@ h3 {
 .priority-topics-row {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
   margin: -4px 0 8px;
+}
+
+.priority-topic-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid #d4dde2;
+  border-radius: 0;
+  background: #ffffff;
+  color: #52616a;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .priority-topic-chips {

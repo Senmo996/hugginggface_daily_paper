@@ -530,6 +530,11 @@ def test_index_supports_priority_topic_selection(tmp_path):
     styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
 
     assert '<div class="priority-topics-row" aria-label="Interested topics">' in index
+    assert '<span class="priority-topic-label">关注topic：</span>' in index
+    assert re.search(
+        r'<span class="priority-topic-label">关注topic：</span>\s*<div id="priorityTopicChips"',
+        index,
+    )
     assert '<div id="priorityTopicChips" class="priority-topic-chips"></div>' in index
     assert '<button id="priorityTopicAdd" class="priority-topic-add-button" type="button" aria-expanded="false" aria-controls="priorityTopicPicker">+</button>' in index
     assert '<div id="priorityTopicPicker" class="priority-topic-picker" hidden>' in index
@@ -561,6 +566,7 @@ def test_index_supports_priority_topic_selection(tmp_path):
     assert "priorityTopicAdd.addEventListener(\"click\"" in app
     assert "priorityTopicInput.addEventListener(\"input\"" in app
     assert "priorityTopicSuggestions.addEventListener(\"mousedown\"" in app
+    assert ".priority-topic-label" in styles
     assert ".priority-topic-chip" in styles
     assert ".priority-topic-remove" in styles
     assert ".priority-topic-add-button" in styles

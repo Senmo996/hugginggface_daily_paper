@@ -37,6 +37,15 @@ class AdminRequestHandler(SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         super().end_headers()
 
+    def do_GET(self) -> None:
+        if self.path == "/":
+            self.send_response(HTTPStatus.FOUND)
+            self.send_header("Location", "/index.html")
+            self.end_headers()
+            return
+
+        super().do_GET()
+
     def do_POST(self) -> None:
         if self.path == "/api/tag-overrides":
             self._handle_tag_overrides()
