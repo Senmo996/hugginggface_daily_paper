@@ -23,7 +23,7 @@ class AdminHTTPServer(ThreadingHTTPServer):
 
 def create_admin_server(
     paths: ProjectPaths,
-    host: str = "127.0.0.1",
+    host: str = "0.0.0.0",
     port: int = 8765,
 ) -> AdminHTTPServer:
     handler = partial(AdminRequestHandler, directory=str(paths.site_dir))

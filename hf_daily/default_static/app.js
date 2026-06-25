@@ -28,6 +28,11 @@
   const priorityTopicInput = document.getElementById("priorityTopicInput");
   const priorityTopicSuggestions = document.getElementById("priorityTopicSuggestions");
   const priorityTopicChips = document.getElementById("priorityTopicChips");
+  const selectVisiblePapers = document.getElementById("selectVisiblePapers");
+  const clearPaperSelection = document.getElementById("clearPaperSelection");
+  const downloadSelectedPapers = document.getElementById("downloadSelectedPapers");
+  const downloadSelectedPdfScript = document.getElementById("downloadSelectedPdfScript");
+  const downloadStatus = document.getElementById("downloadStatus");
   const tagOverrideStorageKey = "hf_daily_tag_overrides";
   const priorityTopicStorageKey = "hf_daily_priority_topics";
   const tagSuggestions = buildTagSuggestions();
@@ -43,6 +48,8 @@
   let searchIndexPromise = null;
   let tagSuggestionsLoaded = false;
   let renderSequence = 0;
+  const selectedPaperIds = new Set();
+  const selectedPapers = new Map();
   const dailyPayloadPromises = new Map();
   const scriptAssetPromises = new Map();
 
@@ -96,6 +103,7 @@
     });
     sortCardsByPriority();
     renderPriorityTopicChips();
+    syncPaperSelectionControls();
     filterButtons.forEach((button) => {
       const isActive =
         currentFilter &&
@@ -218,6 +226,7 @@
     setupTagEditors();
     applyTopicColors();
     renderPriorityTopicChips();
+    syncPaperSelectionControls();
   }
 
   function sortPapersByPriority(papers) {
@@ -322,6 +331,8 @@
       render();
     });
   }
+
+  setupPaperDownloads();
 
   setupDateArchive();
   setupPriorityTopics();
@@ -433,6 +444,7 @@
     card.dataset.paperId = paper.id || "";
     card.dataset.originalInstitution = paper.original_institution_tag || paper.institution_tag || "";
     card.dataset.originalTopic = paper.original_topic_tag || paper.topic_tag || "";
+    card.dataset.paperPayload = encodePaperPayload(paper);
 
     const cardHead = document.createElement("div");
     cardHead.className = "card-head";
@@ -561,9 +573,26 @@
     links.className = "links";
     addPaperLink(links, paper.hf_url, "HF");
     addPaperLink(links, paper.arxiv_url, "arXiv");
+    addPaperLink(links, arxivPdfUrl(paper), "PDF");
     addPaperLink(links, paper.project_page, "Project");
     addPaperLink(links, paper.github_repo, "GitHub");
+    links.appendChild(createPaperSelectControl(paper));
     return links;
+  }
+
+  function createPaperSelectControl(paper) {
+    const selectRow = document.createElement("label");
+    selectRow.className = "paper-select";
+    const selectInput = document.createElement("input");
+    selectInput.type = "checkbox";
+    selectInput.className = "paper-select-input";
+    selectInput.checked = selectedPaperIds.has(paper.id || "");
+    selectInput.addEventListener("change", () => {
+      updatePaperSelection(paper, selectInput.checked);
+    });
+    selectRow.appendChild(selectInput);
+    selectRow.append(document.createTextNode("Select"));
+    return selectRow;
   }
 
   function addPaperLink(parent, href, text) {
@@ -576,6 +605,222 @@
     link.rel = "noreferrer";
     link.textContent = text;
     parent.appendChild(link);
+  }
+
+  function setupPaperDownloads() {
+    if (!selectVisiblePapers || !clearPaperSelection || !downloadSelectedPapers) {
+      return;
+    }
+    selectVisiblePapers.addEventListener("click", () => {
+      visibleCards().forEach((card) => {
+        const paper = paperFromCard(card);
+        if (!paper || !paper.id) {
+          return;
+        }
+        selectedPaperIds.add(paper.id);
+        selectedPapers.set(paper.id, paper);
+      });
+      syncPaperSelectionControls();
+    });
+    clearPaperSelection.addEventListener("click", () => {
+      selectedPaperIds.clear();
+      selectedPapers.clear();
+      syncPaperSelectionControls();
+    });
+    downloadSelectedPapers.addEventListener("click", () => {
+      exportSelectedPapersMarkdown();
+    });
+    if (downloadSelectedPdfScript) {
+      downloadSelectedPdfScript.addEventListener("click", () => {
+        exportSelectedPapersPdfScript();
+      });
+    }
+    syncPaperSelectionControls();
+  }
+
+  function visibleCards() {
+    return cards.filter((card) => !card.classList.contains("is-hidden"));
+  }
+
+  function updatePaperSelection(paper, selected) {
+    if (!paper || !paper.id) {
+      return;
+    }
+    if (selected) {
+      selectedPaperIds.add(paper.id);
+      selectedPapers.set(paper.id, paper);
+    } else {
+      selectedPaperIds.delete(paper.id);
+      selectedPapers.delete(paper.id);
+    }
+    syncPaperSelectionControls();
+  }
+
+  function syncPaperSelectionControls() {
+    if (cards.length > 0) {
+      cards.forEach((card) => {
+        const input = card.querySelector(".paper-select-input");
+        if (input) {
+          input.checked = selectedPaperIds.has(card.dataset.paperId);
+        }
+      });
+    }
+    if (downloadSelectedPapers) {
+      downloadSelectedPapers.disabled = selectedPaperIds.size === 0;
+    }
+    if (downloadSelectedPdfScript) {
+      downloadSelectedPdfScript.disabled = selectedPaperIds.size === 0;
+    }
+    if (downloadStatus) {
+      const visibleCount = visibleCards().length;
+      downloadStatus.textContent = `${selectedPaperIds.size} selected / ${visibleCount} visible`;
+    }
+  }
+
+  function exportSelectedPapersMarkdown() {
+    const papers = Array.from(selectedPaperIds)
+      .map((paperId) => selectedPapers.get(paperId))
+      .filter(Boolean);
+    if (papers.length === 0) {
+      return;
+    }
+    downloadTextFile(selectedPapersFilename(papers), selectedPapersMarkdown(papers), "text/markdown");
+  }
+
+  function exportSelectedPapersPdfScript() {
+    const papers = Array.from(selectedPaperIds)
+      .map((paperId) => selectedPapers.get(paperId))
+      .filter(Boolean);
+    if (papers.length === 0) {
+      return;
+    }
+    downloadTextFile(selectedPdfScriptFilename(papers), selectedPapersPdfScript(papers), "text/plain");
+  }
+
+  function selectedPapersFilename(papers) {
+    const scope = currentFilter ? currentFilter.value : appliedSearchQuery || selectedDate || "papers";
+    const cleanScope = String(scope)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 60) || "papers";
+    return `hf-daily-${cleanScope}-${papers.length}-papers.md`;
+  }
+
+  function selectedPdfScriptFilename(papers) {
+    return selectedPapersFilename(papers).replace(/\.md$/, "-download-pdfs.ps1");
+  }
+
+  function selectedPapersMarkdown(papers) {
+    const lines = [
+      "# Hugging Face Daily Papers Selection",
+      "",
+      `Exported: ${new Date().toISOString()}`,
+      `Count: ${papers.length}`,
+      "",
+    ];
+    papers.forEach((paper, index) => {
+      lines.push(`## ${index + 1}. ${paper.title || "Untitled paper"}`);
+      lines.push("");
+      lines.push(`- Date: ${paper.daily_date || ""}`);
+      lines.push(`- Authors: ${authorList(paper.authors)}`);
+      lines.push(`- Institution tag: ${paper.institution_tag || ""}`);
+      lines.push(`- Topic tag: ${paper.topic_tag || ""}`);
+      lines.push(`- HF: ${paper.hf_url || ""}`);
+      lines.push(`- arXiv: ${paper.arxiv_url || ""}`);
+      lines.push(`- PDF: ${arxivPdfUrl(paper) || ""}`);
+      if (paper.project_page) {
+        lines.push(`- Project: ${paper.project_page}`);
+      }
+      if (paper.github_repo) {
+        lines.push(`- GitHub: ${paper.github_repo}`);
+      }
+      lines.push("");
+      lines.push(paper.one_sentence_summary || "");
+      lines.push("");
+    });
+    return `${lines.join("\n")}\n`;
+  }
+
+  function selectedPapersPdfScript(papers) {
+    const lines = [
+      "$ErrorActionPreference = \"Stop\"",
+      "$OutputEncoding = [System.Text.Encoding]::UTF8",
+      "$targetDir = Join-Path (Get-Location) \"hf-daily-pdfs\"",
+      "New-Item -ItemType Directory -Force -Path $targetDir | Out-Null",
+      "$papers = @(",
+    ];
+    papers.forEach((paper, index) => {
+      const pdfUrl = arxivPdfUrl(paper);
+      if (!pdfUrl) {
+        return;
+      }
+      lines.push("  @{");
+      lines.push(`    Index = ${index + 1}`);
+      lines.push(`    Id = ${psString(paper.id || `paper-${index + 1}`)}`);
+      lines.push(`    Title = ${psString(oneLineText(paper.title || "Untitled paper"))}`);
+      lines.push(`    PdfUrl = ${psString(pdfUrl)}`);
+      lines.push("  }");
+    });
+    lines.push(")");
+    lines.push("foreach ($paper in $papers) {");
+    lines.push("  $safeTitle = ($paper.Title -replace '[\\\\/:*?\"<>|\\r\\n\\t]', '_').Trim()");
+    lines.push("  $safeTitle = ($safeTitle -replace '\\s+', ' ')");
+    lines.push("  if ($safeTitle.Length -gt 120) { $safeTitle = $safeTitle.Substring(0, 120) }");
+    lines.push("  $fileName = \"{0:000}-{1}-{2}.pdf\" -f $paper.Index, $paper.Id, $safeTitle");
+    lines.push("  $target = Join-Path $targetDir $fileName");
+    lines.push("  Write-Output \"Downloading $($paper.Id)\"");
+    lines.push("  Invoke-WebRequest -Uri $paper.PdfUrl -OutFile $target");
+    lines.push("}");
+    lines.push("Write-Output \"Done: $targetDir\"");
+    return `${lines.join("\n")}\n`;
+  }
+
+  function psString(value) {
+    return `"${String(value).replace(/`/g, "``").replace(/\$/g, "`$").replace(/"/g, "`\"")}"`;
+  }
+
+  function oneLineText(value) {
+    return String(value).replace(/[\r\n\t]+/g, " ").replace(/\s+/g, " ").trim();
+  }
+
+  function downloadTextFile(filename, content, type) {
+    const blob = new Blob([content], { type });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }
+
+  function encodePaperPayload(paper) {
+    try {
+      return encodeURIComponent(JSON.stringify(paper));
+    } catch (error) {
+      return "";
+    }
+  }
+
+  function paperFromCard(card) {
+    if (!card || !card.dataset.paperPayload) {
+      return null;
+    }
+    try {
+      return JSON.parse(decodeURIComponent(card.dataset.paperPayload));
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function arxivPdfUrl(paper) {
+    const arxivUrl = paper && paper.arxiv_url;
+    if (!arxivUrl) {
+      return "";
+    }
+    return arxivUrl.replace("/abs/", "/pdf/");
   }
 
   function parseAvailableDates() {
@@ -983,28 +1228,17 @@
   }
 
   function buildTagSuggestions() {
-    const suggestions = {
+    return {
       institution_tag: [],
       topic_tag: [],
-    };
-    cards.forEach((card) => {
-      addTagSuggestionTo(suggestions, "institution_tag", card.dataset.institution);
-      addTagSuggestionTo(suggestions, "topic_tag", card.dataset.topic);
-    });
-    return {
-      institution_tag: suggestions.institution_tag,
-      topic_tag: suggestions.topic_tag,
     };
   }
 
   function loadGlobalTagSuggestions() {
-    const loader = layout ? loadSearchIndex() : fetch(papersJsonPath()).then((response) => response.json());
-    return loader.then((payload) => {
-        const papers = Array.isArray(payload.papers) ? payload.papers : [];
-        papers.forEach((paper) => {
-          addTagSuggestion("institution_tag", paper.institution_tag);
-          addTagSuggestion("topic_tag", paper.topic_tag);
-        });
+    return loadJsonAsset(tagSuggestionsJsonPath(), tagSuggestionsScriptPath(), "tag-suggestions")
+      .then((payload) => {
+        addTagSuggestions("institution_tag", payload.institution_tag);
+        addTagSuggestions("topic_tag", payload.topic_tag);
         refreshPriorityTopicOptions();
         refreshOpenTagSuggestions();
       })
@@ -1019,8 +1253,19 @@
     return loadGlobalTagSuggestions();
   }
 
-  function papersJsonPath() {
-    return window.location.pathname.includes("/daily/") ? "../assets/papers.json" : "assets/papers.json";
+  function tagSuggestionsJsonPath() {
+    return window.location.pathname.includes("/daily/") ? "../tag-suggestions.json" : "assets/tag-suggestions.json";
+  }
+
+  function tagSuggestionsScriptPath() {
+    return window.location.pathname.includes("/daily/") ? "../tag-suggestions.js" : "assets/tag-suggestions.js";
+  }
+
+  function addTagSuggestions(field, tags) {
+    if (!Array.isArray(tags)) {
+      return;
+    }
+    tags.forEach((tag) => addTagSuggestion(field, tag));
   }
 
   function addTagSuggestion(field, tag) {

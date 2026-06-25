@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Institution x Topic Matrix - Hugging Face Daily Papers</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css?v={{ asset_version }}">
   </head>
   <body>
     <header class="topbar">
@@ -24,6 +24,6 @@
       <div id="institutionTopicMatrix" class="matrix-table"></div>
     </main>
     <script id="matrixPapersData" type="application/json">{{ papers|tojson }}</script>
-    <script src="assets/app.js"></script>
+    <script src="assets/app.js?v={{ asset_version }}"></script>
   </body>
 </html>

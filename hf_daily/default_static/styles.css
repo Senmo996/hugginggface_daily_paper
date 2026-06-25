@@ -587,6 +587,32 @@ h3 {
   font-size: 13px;
 }
 
+.download-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border: 1px solid #dbe1e5;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.download-status {
+  margin: 0;
+  color: #52616a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .secondary {
   min-height: 40px;
   padding: 8px 12px;
@@ -625,6 +651,30 @@ h3 {
 
 .paper-card.is-hidden {
   display: none;
+}
+
+.paper-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  margin-left: auto;
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 1px solid #d4dde2;
+  border-radius: 6px;
+  background: #f8fafb;
+  color: #52616a;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.paper-select input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: #0f5b78;
 }
 
 .card-head {
@@ -801,6 +851,7 @@ summary {
 .links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 12px;
   font-size: 14px;
 }

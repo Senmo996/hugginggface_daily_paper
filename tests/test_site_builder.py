@@ -434,6 +434,66 @@ def test_index_renders_search_scope_selector(tmp_path):
     assert '<option value="institution">Institution</option>' in index
 
 
+def test_index_supports_selecting_and_downloading_filtered_papers(tmp_path):
+    paths = ProjectPaths(tmp_path)
+    write_json(
+        paths.daily_dir / "2026-05-28.json",
+        {
+            "date": "2026-05-28",
+            "papers": [
+                {
+                    "id": "2605.00001",
+                    "daily_date": "2026-05-28",
+                    "title": "Downloadable Paper",
+                    "summary": "Original abstract.",
+                    "authors": ["A. Author"],
+                    "published_at": "2026-05-28T00:00:00.000Z",
+                    "upvotes": 1,
+                    "num_comments": 0,
+                    "one_sentence_summary": "Summary.",
+                    "institution_tag": "Example University",
+                    "topic_tag": "RAG retrieval",
+                    "hf_url": "https://huggingface.co/papers/2605.00001",
+                    "arxiv_url": "https://arxiv.org/abs/2605.00001",
+                    "project_page": None,
+                    "github_repo": None,
+                }
+            ],
+        },
+    )
+
+    SiteBuilder(paths).build()
+
+    index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
+    app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
+    styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
+
+    assert '<div class="download-panel" aria-label="Paper download actions">' in index
+    assert '<button id="selectVisiblePapers" class="secondary" type="button">Select results</button>' in index
+    assert '<button id="clearPaperSelection" class="secondary" type="button">Clear selection</button>' in index
+    assert '<button id="downloadSelectedPapers" class="secondary" type="button" disabled>Download list</button>' in index
+    assert '<button id="downloadSelectedPdfScript" class="secondary" type="button" disabled>Download PDF script</button>' in index
+    assert '<p id="downloadStatus" class="download-status">0 selected</p>' in index
+    assert 'const selectedPaperIds = new Set();' in app
+    assert "function setupPaperDownloads()" in app
+    assert "function exportSelectedPapersMarkdown()" in app
+    assert "function exportSelectedPapersPdfScript()" in app
+    assert "function selectedPapersMarkdown(papers)" in app
+    assert "function selectedPapersPdfScript(papers)" in app
+    assert 'link.download = filename;' in app
+    assert 'addPaperLink(links, arxivPdfUrl(paper), "PDF");' in app
+    assert "links.appendChild(createPaperSelectControl(paper));" in app
+    assert "function createPaperSelectControl(paper)" in app
+    assert 'Invoke-WebRequest -Uri $paper.PdfUrl -OutFile $target' in app
+    assert "function oneLineText(value)" in app
+    assert "replace(/[\\r\\n\\t]+/g, \" \")" in app
+    assert "-replace '[\\\\\\\\/:*?\\\"<>|\\\\r\\\\n\\\\t]', '_'" in app
+    assert "paper.arxiv_url || \"\"" in app
+    assert ".download-panel" in styles
+    assert ".paper-select" in styles
+    assert "margin-left: auto;" in styles
+
+
 def test_index_script_filters_search_by_selected_scope(tmp_path):
     paths = ProjectPaths(tmp_path)
     write_json(
@@ -1123,6 +1183,33 @@ def test_tag_overrides_are_applied_to_built_site_without_rewriting_daily_data(tm
 def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     paths = ProjectPaths(tmp_path)
     write_json(
+        paths.institution_tags,
+        {
+            "institutions": [
+                {
+                    "name": "Example University",
+                    "created_at": "2026-05-28T00:00:00Z",
+                    "usage_count": 1,
+                    "examples": ["2605.00001"],
+                }
+            ]
+        },
+    )
+    write_json(
+        paths.topic_tags,
+        {
+            "topics": [
+                {
+                    "name": "vision-language modeling",
+                    "description": "Vision-language model methods.",
+                    "created_at": "2026-05-28T00:00:00Z",
+                    "usage_count": 1,
+                    "examples": ["2605.00001"],
+                }
+            ]
+        },
+    )
+    write_json(
         paths.daily_dir / "2026-05-28.json",
         {
             "date": "2026-05-28",
@@ -1153,6 +1240,9 @@ def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
     app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
     styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
+    tag_suggestions = json.loads(
+        (paths.site_dir / "assets" / "tag-suggestions.json").read_text(encoding="utf-8")
+    )
 
     assert 'data-paper-id="2605.00001"' in index
     assert 'data-original-institution="Example University"' in index
@@ -1174,8 +1264,13 @@ def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     assert 'data-suggestion-list="topic_tag"' in index
     assert 'tag-edit-copy' in index
     assert 'tag-edit-export' in index
-    assert '<script src="assets/app.js"></script>' in index
+    assert re.search(r'<link rel="stylesheet" href="assets/styles\.css\?v=\d+">', index)
+    assert re.search(r'<script src="assets/app\.js\?v=\d+"></script>', index)
     assert not (paths.site_dir / "daily").exists()
+    assert tag_suggestions == {
+        "institution_tag": ["Example University"],
+        "topic_tag": ["vision-language modeling"],
+    }
     assert 'const tagOverrideStorageKey = "hf_daily_tag_overrides";' in app
     assert "setupTagEditors();" in app
     assert "function isAdminMode(" in app
@@ -1186,14 +1281,18 @@ def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     assert "Saved to data/tags/tag_overrides.json and rebuilt site." in app
     assert "const tagSuggestions = buildTagSuggestions();" in app
     assert "function buildTagSuggestions(" in app
+    assert "function tagSuggestionsJsonPath(" in app
+    assert "function tagSuggestionsScriptPath(" in app
     initialization_block = app[
         app.index("setupTagEditors();") : app.index("applyTopicFilterFromUrl();")
     ]
     assert "loadGlobalTagSuggestions();" not in initialization_block
     assert "function ensureGlobalTagSuggestions(" in app
     assert "function loadGlobalTagSuggestions(" in app
-    assert "function papersJsonPath(" in app
-    assert 'fetch(papersJsonPath())' in app
+    assert 'loadJsonAsset(tagSuggestionsJsonPath(), tagSuggestionsScriptPath(), "tag-suggestions")' in app
+    assert 'fetch(papersJsonPath())' not in app
+    assert 'addTagSuggestion("institution_tag", paper.institution_tag)' not in app
+    assert 'addTagSuggestion("topic_tag", paper.topic_tag)' not in app
     assert "refreshOpenTagSuggestions();" in app
     assert "function refreshOpenTagSuggestions(" in app
     assert "function selectTagInputOnFocus(" in app
@@ -1211,8 +1310,35 @@ def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     assert ".tag-suggestion" in styles
 
 
-def test_tag_autocomplete_trims_dom_suggestions_before_deduping(tmp_path):
+def test_tag_autocomplete_uses_tag_library_assets_instead_of_paper_data(tmp_path):
     paths = ProjectPaths(tmp_path)
+    write_json(
+        paths.institution_tags,
+        {
+            "institutions": [
+                {
+                    "name": "Zhejiang University",
+                    "created_at": "2026-05-28T00:00:00Z",
+                    "usage_count": 50,
+                    "examples": ["2605.00001"],
+                }
+            ]
+        },
+    )
+    write_json(
+        paths.topic_tags,
+        {
+            "topics": [
+                {
+                    "name": "speculative decoding",
+                    "description": "Speculative decoding methods.",
+                    "created_at": "2026-05-28T00:00:00Z",
+                    "usage_count": 2,
+                    "examples": ["2605.00001"],
+                }
+            ]
+        },
+    )
     write_json(
         paths.daily_dir / "2026-05-28.json",
         {
@@ -1228,8 +1354,8 @@ def test_tag_autocomplete_trims_dom_suggestions_before_deduping(tmp_path):
                     "upvotes": 1,
                     "num_comments": 0,
                     "one_sentence_summary": "Summary.",
-                    "institution_tag": "Shanghai AI Lab ",
-                    "topic_tag": "vision-language modeling ",
+                    "institution_tag": "Zhejiang university",
+                    "topic_tag": "paper-specific topic",
                     "hf_url": "https://huggingface.co/papers/2605.00001",
                     "arxiv_url": "https://arxiv.org/abs/2605.00001",
                     "project_page": None,
@@ -1242,10 +1368,19 @@ def test_tag_autocomplete_trims_dom_suggestions_before_deduping(tmp_path):
     SiteBuilder(paths).build()
 
     app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
+    tag_suggestions = json.loads(
+        (paths.site_dir / "assets" / "tag-suggestions.json").read_text(encoding="utf-8")
+    )
 
-    assert 'addTagSuggestionTo(suggestions, "institution_tag", card.dataset.institution);' in app
-    assert 'addTagSuggestionTo(suggestions, "topic_tag", card.dataset.topic);' in app
+    assert tag_suggestions == {
+        "institution_tag": ["Zhejiang University"],
+        "topic_tag": ["speculative decoding"],
+    }
+    assert "Zhejiang university" not in tag_suggestions["institution_tag"]
+    assert "paper-specific topic" not in tag_suggestions["topic_tag"]
     assert "function addTagSuggestionTo(suggestions, field, tag)" in app
     assert 'const value = String(tag || "").trim();' in app
+    assert 'addTagSuggestionTo(suggestions, "institution_tag", card.dataset.institution);' not in app
+    assert 'addTagSuggestionTo(suggestions, "topic_tag", card.dataset.topic);' not in app
     assert "suggestions.institution_tag.add(card.dataset.institution)" not in app
     assert "suggestions.topic_tag.add(card.dataset.topic)" not in app

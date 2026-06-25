@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import shutil
 from collections import Counter
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
@@ -49,6 +50,7 @@ class SiteBuilder:
         self.env.filters["url_quote"] = lambda value: quote(str(value), safe="")
 
     def build(self) -> None:
+        asset_version = _asset_version()
         daily_payloads = self._load_daily_payloads()
         topic_aliases = self._load_topic_aliases()
         institution_aliases = self._load_institution_aliases()
@@ -105,6 +107,7 @@ class SiteBuilder:
                 all_papers=papers,
                 latest_date=latest_payload.get("date"),
                 total_papers=len(papers),
+                asset_version=asset_version,
                 priority_topics=priority_topics,
                 topic_tags=topic_tags,
                 institution_tags=institution_tags,
@@ -120,6 +123,7 @@ class SiteBuilder:
             matrix_template.render(
                 dates=dates,
                 papers=papers,
+                asset_version=asset_version,
             ),
             encoding="utf-8",
         )
@@ -129,6 +133,7 @@ class SiteBuilder:
                 dates=dates,
                 papers=papers,
                 topics=all_topics,
+                asset_version=asset_version,
             ),
             encoding="utf-8",
         )
@@ -151,6 +156,16 @@ class SiteBuilder:
                 "institution_tags": institution_tags,
             },
         )
+        self._write_json_asset(
+            self.paths.site_dir / "assets" / "tag-suggestions",
+            {
+                "institution_tag": self._load_tag_names(
+                    self.paths.institution_tags,
+                    "institutions",
+                ),
+                "topic_tag": self._load_tag_names(self.paths.topic_tags, "topics"),
+            },
+        )
         for payload in daily_payloads:
             date = str(payload.get("date", "")).strip()
             if not date:
@@ -163,6 +178,7 @@ class SiteBuilder:
                 {
                     "date": date,
                     "papers": date_papers,
+                    "asset_version": asset_version,
                 },
             )
 
@@ -187,7 +203,7 @@ class SiteBuilder:
 
     def _write_json_asset(self, base_path: Path, payload: dict[str, Any]) -> None:
         write_json(base_path.with_suffix(".json"), payload)
-        js_payload = _json_to_js_payload(payload)
+        js_payload = _json_to_js_payload(payload, base_path.name)
         base_path.with_suffix(".js").write_text(
             f"window.HFDailyData = window.HFDailyData || {{}};\n"
             f"window.HFDailyData[{js_payload['key']}] = {js_payload['value']};\n",
@@ -240,6 +256,17 @@ class SiteBuilder:
         if not isinstance(topics, list):
             return []
         return _unique_clean_strings(topics)
+
+    def _load_tag_names(self, path: Path, key: str) -> list[str]:
+        payload = read_json(path, {key: []})
+        values = payload.get(key, [])
+        if not isinstance(values, list):
+            return []
+        names = [
+            item.get("name") if isinstance(item, dict) else item
+            for item in values
+        ]
+        return sorted(_unique_clean_strings(names), key=str.casefold)
 
 
 def author_list(authors: list[str], limit: int = 3) -> str:
@@ -332,10 +359,14 @@ def _paper_index_entry(paper: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def _json_to_js_payload(payload: dict[str, Any]) -> dict[str, str]:
+def _json_to_js_payload(payload: dict[str, Any], fallback_key: str) -> dict[str, str]:
     import json
 
     return {
-        "key": json.dumps(str(payload.get("date") or "papers-index"), ensure_ascii=False),
+        "key": json.dumps(str(payload.get("date") or fallback_key), ensure_ascii=False),
         "value": json.dumps(payload, ensure_ascii=False),
     }
+
+
+def _asset_version() -> str:
+    return datetime.now(UTC).strftime("%Y%m%d%H%M%S")

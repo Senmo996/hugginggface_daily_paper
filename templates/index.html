@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hugging Face Daily Papers</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css?v={{ asset_version }}">
   </head>
   <body>
     <header class="topbar">
@@ -141,6 +141,15 @@
             </div>
           </div>
         </div>
+        <div class="download-panel" aria-label="Paper download actions">
+          <div class="download-actions">
+            <button id="selectVisiblePapers" class="secondary" type="button">Select results</button>
+            <button id="clearPaperSelection" class="secondary" type="button">Clear selection</button>
+            <button id="downloadSelectedPapers" class="secondary" type="button" disabled>Download list</button>
+            <button id="downloadSelectedPdfScript" class="secondary" type="button" disabled>Download PDF script</button>
+          </div>
+          <p id="downloadStatus" class="download-status">0 selected</p>
+        </div>
         <div id="activeFilter" class="active-filter"></div>
         <div id="paperList" class="paper-grid">
           {% for paper in papers %}
@@ -151,6 +160,6 @@
         </div>
       </section>
     </main>
-    <script src="assets/app.js"></script>
+    <script src="assets/app.js?v={{ asset_version }}"></script>
   </body>
 </html>
