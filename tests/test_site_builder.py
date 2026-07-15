@@ -428,10 +428,20 @@ def test_cross_date_results_are_rendered_in_batches(tmp_path):
     ) in index
     assert "const SEARCH_RESULT_BATCH_SIZE = 100;" in app
     assert "let visibleResultLimit = SEARCH_RESULT_BATCH_SIZE;" in app
-    assert "papers.slice(0, visibleResultLimit)" in app
+    assert "sortedPapers.slice(0, visibleResultLimit)" in app
     assert "function resetVisibleResultLimit()" in app
     assert "function updateLoadMoreControl(" in app
     assert "visibleResultLimit += SEARCH_RESULT_BATCH_SIZE;" in app
+    render_start = app.index("function renderIndexPapers()")
+    render_end = app.index("function filterIndexPapers(", render_start)
+    render_function = app[render_start:render_end]
+    sort_position = render_function.index(
+        "const sortedPapers = sortPapersByPriority(papers);"
+    )
+    slice_position = render_function.index(
+        "sortedPapers.slice(0, visibleResultLimit)"
+    )
+    assert sort_position < slice_position
 
 
 def test_index_renders_search_scope_selector(tmp_path):

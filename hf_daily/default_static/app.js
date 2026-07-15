@@ -149,9 +149,10 @@
         if (requestId !== renderSequence) {
           return;
         }
+        const sortedPapers = sortPapersByPriority(papers);
         const visiblePapers = isCrossDateView
-          ? papers.slice(0, visibleResultLimit)
-          : papers;
+          ? sortedPapers.slice(0, visibleResultLimit)
+          : sortedPapers;
         renderPaperCards(visiblePapers, { compact: isCrossDateView });
         updateFilterUi();
         updateIndexStatus(visiblePapers.length, papers.length);
@@ -218,9 +219,8 @@
   }
 
   function renderPaperCards(papers, options) {
-    const sortedPapers = sortPapersByPriority(papers);
     paperList.innerHTML = "";
-    if (sortedPapers.length === 0) {
+    if (papers.length === 0) {
       const empty = document.createElement("p");
       empty.className = "empty";
       empty.textContent = "No matching papers.";
@@ -229,7 +229,7 @@
       renderPriorityTopicChips();
       return;
     }
-    sortedPapers.forEach((paper) => {
+    papers.forEach((paper) => {
       const card = createPaperCard(paper, options || {});
       paperList.appendChild(card);
     });
