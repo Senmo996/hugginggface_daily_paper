@@ -48,6 +48,7 @@
   let appliedSearchScope = searchScope ? searchScope.value : "all";
   let searchIndexPayload = null;
   let searchIndexPromise = null;
+  let trendTopicsPromise = null;
   let tagSuggestionsLoaded = false;
   let renderSequence = 0;
   let visibleResultLimit = SEARCH_RESULT_BATCH_SIZE;
@@ -1655,8 +1656,8 @@
   }
 
   function populateTrendTopics() {
-    return loadSearchIndex()
-      .then((payload) => {
+    if (!trendTopicsPromise) {
+      trendTopicsPromise = loadSearchIndex().then((payload) => {
         const topics = Array.from(
           new Set((payload.papers || []).map((paper) => paper.topic_tag).filter(Boolean))
         ).sort((a, b) => a.localeCompare(b));
@@ -1668,6 +1669,8 @@
           trendTopicSelect.appendChild(option);
         });
       });
+    }
+    return trendTopicsPromise;
   }
 
   function defaultTrendRangeDates() {

@@ -939,6 +939,12 @@ def test_index_script_calculates_and_renders_topic_trends(tmp_path):
     assert "populateTrendTopics();" not in setup_prefix
     assert "populateTrendTopics()" in open_handler
     assert ".then(renderTopicTrends)" in open_handler
+    assert "let trendTopicsPromise = null;" in app
+    populate_start = app.index("function populateTrendTopics()")
+    populate_end = app.index("function defaultTrendRangeDates()", populate_start)
+    populate_function = app[populate_start:populate_end]
+    assert "if (!trendTopicsPromise)" in populate_function
+    assert "return trendTopicsPromise;" in populate_function
     assert "const defaultTrendDates = defaultTrendRangeDates();" in app
     assert "function buildTopicTrendSeries(" in app
     assert "function renderTopicTrendChart(" in app
