@@ -410,6 +410,30 @@ def test_index_search_runs_only_after_submit(tmp_path):
     assert 'searchScope.addEventListener("change", render);' not in app
 
 
+def test_cross_date_results_are_rendered_in_batches(tmp_path):
+    paths = ProjectPaths(tmp_path)
+    write_json(
+        paths.daily_dir / "2026-05-28.json",
+        {"date": "2026-05-28", "papers": []},
+    )
+
+    SiteBuilder(paths).build()
+
+    index = (paths.site_dir / "index.html").read_text(encoding="utf-8")
+    app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
+
+    assert (
+        '<button id="loadMorePapers" class="secondary" type="button" hidden>'
+        "Load more</button>"
+    ) in index
+    assert "const SEARCH_RESULT_BATCH_SIZE = 100;" in app
+    assert "let visibleResultLimit = SEARCH_RESULT_BATCH_SIZE;" in app
+    assert "papers.slice(0, visibleResultLimit)" in app
+    assert "function resetVisibleResultLimit()" in app
+    assert "function updateLoadMoreControl(" in app
+    assert "visibleResultLimit += SEARCH_RESULT_BATCH_SIZE;" in app
+
+
 def test_index_renders_search_scope_selector(tmp_path):
     paths = ProjectPaths(tmp_path)
     write_json(

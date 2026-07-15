@@ -640,6 +640,12 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.load-more-row {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
 .paper-card {
   display: grid;
   gap: 12px;

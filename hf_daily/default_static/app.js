@@ -33,6 +33,8 @@
   const downloadSelectedPapers = document.getElementById("downloadSelectedPapers");
   const downloadSelectedPdfScript = document.getElementById("downloadSelectedPdfScript");
   const downloadStatus = document.getElementById("downloadStatus");
+  const loadMorePapers = document.getElementById("loadMorePapers");
+  const SEARCH_RESULT_BATCH_SIZE = 100;
   const tagOverrideStorageKey = "hf_daily_tag_overrides";
   const priorityTopicStorageKey = "hf_daily_priority_topics";
   const tagSuggestions = buildTagSuggestions();
@@ -48,6 +50,7 @@
   let searchIndexPromise = null;
   let tagSuggestionsLoaded = false;
   let renderSequence = 0;
+  let visibleResultLimit = SEARCH_RESULT_BATCH_SIZE;
   const selectedPaperIds = new Set();
   const selectedPapers = new Map();
   const dailyPayloadPromises = new Map();
@@ -132,20 +135,26 @@
   function renderIndexPapers() {
     const requestId = ++renderSequence;
     const hasSearchQuery = Boolean(appliedSearchQuery);
+    const isCrossDateView = Boolean(currentFilter || hasSearchQuery);
     const loader =
-      currentFilter || hasSearchQuery
+      isCrossDateView
         ? loadSearchIndex().then((payload) => filterIndexPapers(payload.papers || []))
         : loadPapersForDate(selectedDate).then((payload) => payload.papers || []);
 
     setIndexStatus("Loading papers...");
+    updateLoadMoreControl(0, 0, false);
     loader
       .then((papers) => {
         if (requestId !== renderSequence) {
           return;
         }
-        renderPaperCards(papers, { compact: currentFilter || hasSearchQuery });
+        const visiblePapers = isCrossDateView
+          ? papers.slice(0, visibleResultLimit)
+          : papers;
+        renderPaperCards(visiblePapers, { compact: isCrossDateView });
         updateFilterUi();
-        updateIndexStatus(papers.length);
+        updateIndexStatus(visiblePapers.length, papers.length);
+        updateLoadMoreControl(visiblePapers.length, papers.length, isCrossDateView);
       })
       .catch(() => {
         if (requestId !== renderSequence) {
@@ -158,6 +167,7 @@
         paperList.appendChild(empty);
         cards = [];
         updateFilterUi();
+        updateLoadMoreControl(0, 0, false);
         setIndexStatus("Unable to load papers for this view.");
       });
   }
@@ -261,17 +271,31 @@
     }
   }
 
-  function updateIndexStatus(count) {
+  function updateIndexStatus(visibleCount, totalCount) {
     if (!dateStatus) {
       return;
     }
+    const countLabel = visibleCount < totalCount
+      ? `Showing ${visibleCount} of ${totalCount}`
+      : String(totalCount);
     if (currentFilter) {
-      dateStatus.textContent = `${count} matching papers across all dates`;
+      dateStatus.textContent = `${countLabel} matching papers across all dates`;
     } else if (appliedSearchQuery) {
-      dateStatus.textContent = `${count} search results across all dates`;
+      dateStatus.textContent = `${countLabel} search results across all dates`;
     } else {
       dateStatus.textContent = `Showing ${selectedDate}`;
     }
+  }
+
+  function resetVisibleResultLimit() {
+    visibleResultLimit = SEARCH_RESULT_BATCH_SIZE;
+  }
+
+  function updateLoadMoreControl(visibleCount, totalCount, isCrossDateView) {
+    if (!loadMorePapers) {
+      return;
+    }
+    loadMorePapers.hidden = !isCrossDateView || visibleCount >= totalCount;
   }
 
   function setIndexStatus(message) {
@@ -295,6 +319,7 @@
       } else {
         currentFilter = next;
       }
+      resetVisibleResultLimit();
       render();
     });
   });
@@ -328,6 +353,14 @@
       }
       appliedSearchQuery = "";
       appliedSearchScope = searchScope ? searchScope.value : "all";
+      resetVisibleResultLimit();
+      render();
+    });
+  }
+
+  if (loadMorePapers) {
+    loadMorePapers.addEventListener("click", () => {
+      visibleResultLimit += SEARCH_RESULT_BATCH_SIZE;
       render();
     });
   }
@@ -350,6 +383,7 @@
   function applySearch() {
     appliedSearchQuery = searchInput ? searchInput.value.trim() : "";
     appliedSearchScope = searchScope ? searchScope.value : "all";
+    resetVisibleResultLimit();
     render();
   }
 
@@ -367,6 +401,7 @@
     if (searchInput) {
       searchInput.value = "";
     }
+    resetVisibleResultLimit();
     render();
   }
 
