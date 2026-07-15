@@ -1832,76 +1832,20 @@
     if (!institutionTopicMatrix) {
       return;
     }
-    loadPapersForMatrix()
-      .then((papers) => {
-        renderInstitutionTopicMatrix(buildInstitutionTopicMatrix(papers));
-      })
-      .catch(() => {
-        institutionTopicMatrix.innerHTML = "";
-        appendMatrixCell("Unable to load matrix data.", "matrix-head");
-      });
-  }
-
-  function loadPapersForMatrix() {
-    const embeddedData = document.getElementById("matrixPapersData");
-    if (embeddedData && embeddedData.textContent) {
-      return Promise.resolve(JSON.parse(embeddedData.textContent));
+    try {
+      renderInstitutionTopicMatrix(loadInstitutionTopicMatrix());
+    } catch (error) {
+      institutionTopicMatrix.innerHTML = "";
+      appendMatrixCell("Unable to load matrix data.", "matrix-head");
     }
-    return fetch("assets/papers.json")
-      .then((response) => response.json())
-      .then((payload) => Array.isArray(payload.papers) ? payload.papers : []);
   }
 
-  function buildInstitutionTopicMatrix(papers) {
-    const institutionCounts = new Map();
-    const topicCounts = new Map();
-    papers.forEach((paper) => {
-      const strippedInstitution = (paper.institution_tag || "").trim().toLowerCase();
-      const institution = (paper.institution_tag || "").trim();
-      const topic = (paper.topic_tag || "").trim();
-      if (!institution || strippedInstitution !== "unknown") {
-        if (institution && topic) {
-          institutionCounts.set(institution, (institutionCounts.get(institution) || 0) + 1);
-          topicCounts.set(topic, (topicCounts.get(topic) || 0) + 1);
-        }
-      }
-    });
-
-    const institutions = topKeys(institutionCounts).slice(0, 40);
-    const globalTopics = topKeys(topicCounts).slice(0, 20);
-    const localTopics = localTopTopicsForInstitutions(papers, institutions);
-    const topics = Array.from(new Set([...globalTopics, ...localTopics]));
-    const counts = new Map();
-    papers.forEach((paper) => {
-      const institution = (paper.institution_tag || "").trim();
-      const topic = (paper.topic_tag || "").trim();
-      if (!institutions.includes(institution) || !topics.includes(topic)) {
-        return;
-      }
-      const key = `${institution}\u0000${topic}`;
-      counts.set(key, (counts.get(key) || 0) + 1);
-    });
-
-    return { institutions, topics, counts };
-  }
-
-  function localTopTopicsForInstitutions(papers, institutions) {
-    return institutions.flatMap((institution) => {
-      const counts = new Map();
-      papers.forEach((paper) => {
-        const topic = (paper.topic_tag || "").trim();
-        if (paper.institution_tag === institution && topic) {
-          counts.set(topic, (counts.get(topic) || 0) + 1);
-        }
-      });
-      return topKeys(counts).slice(0, 3);
-    });
-  }
-
-  function topKeys(counts) {
-    return Array.from(counts.entries())
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-      .map(([key]) => key);
+  function loadInstitutionTopicMatrix() {
+    const embeddedData = document.getElementById("matrixData");
+    if (!embeddedData || !embeddedData.textContent) {
+      return { institutions: [], topics: [], values: [] };
+    }
+    return JSON.parse(embeddedData.textContent);
   }
 
   function renderInstitutionTopicMatrix(matrix) {
@@ -1909,12 +1853,13 @@
     institutionTopicMatrix.style.gridTemplateColumns = `minmax(170px, 1.2fr) repeat(${matrix.topics.length}, minmax(46px, 1fr))`;
     appendMatrixCell("Institution", "matrix-head matrix-corner");
     matrix.topics.forEach((topic) => appendMatrixCell(topic, "matrix-head"));
-    const maxValue = Math.max(1, ...Array.from(matrix.counts.values()));
+    const values = Array.isArray(matrix.values) ? matrix.values : [];
+    const maxValue = Math.max(1, ...values.flat());
 
-    matrix.institutions.forEach((institution) => {
+    matrix.institutions.forEach((institution, rowIndex) => {
       appendMatrixCell(institution, "matrix-institution");
-      matrix.topics.forEach((topic) => {
-        const value = matrix.counts.get(`${institution}\u0000${topic}`) || 0;
+      matrix.topics.forEach((topic, columnIndex) => {
+        const value = (values[rowIndex] || [])[columnIndex] || 0;
         const cell = appendMatrixCell(String(value || ""), "matrix-value");
         cell.style.background = matrixCellColor(value, maxValue);
         cell.title = `${institution} / ${topic}: ${value}`;

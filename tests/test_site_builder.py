@@ -2,13 +2,30 @@ import html
 import json
 import re
 
-from hf_daily.site_builder import SiteBuilder
+from hf_daily.site_builder import SiteBuilder, _build_institution_topic_matrix
 from hf_daily.storage import ProjectPaths
 
 
 def write_json(path, payload):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+
+def test_build_institution_topic_matrix_returns_dense_ranked_payload():
+    papers = [
+        {"institution_tag": "Alpha Lab", "topic_tag": "topic-b"},
+        {"institution_tag": "Alpha Lab", "topic_tag": "topic-b"},
+        {"institution_tag": "Alpha Lab", "topic_tag": "local-topic"},
+        {"institution_tag": "Beta Lab", "topic_tag": "topic-a"},
+        {"institution_tag": "Beta Lab", "topic_tag": "topic-a"},
+        {"institution_tag": "Unknown", "topic_tag": "ignored-topic"},
+    ]
+
+    assert _build_institution_topic_matrix(papers) == {
+        "institutions": ["Alpha Lab", "Beta Lab"],
+        "topics": ["topic-a", "topic-b", "local-topic"],
+        "values": [[0, 2, 1], [2, 0, 0]],
+    }
 
 
 def test_build_generates_index_matrix_and_search_data_without_daily_pages(tmp_path):
@@ -763,15 +780,26 @@ def test_index_renders_institution_topic_matrix_panel(tmp_path):
     assert 'id="matrixPanel"' not in index
     assert "Institution x Topic" in matrix
     assert '<div id="institutionTopicMatrix" class="matrix-table"></div>' in matrix
-    assert '<script id="matrixPapersData" type="application/json">' in matrix
-    assert "2605.00001" in matrix
+    match = re.search(
+        r'<script id="matrixData" type="application/json">(.*?)</script>',
+        matrix,
+        re.DOTALL,
+    )
+    assert match is not None
+    assert json.loads(match.group(1)) == {
+        "institutions": ["Example University"],
+        "topics": ["vision-language modeling"],
+        "values": [[1]],
+    }
+    assert "2605.00001" not in matrix
+    assert "Original abstract." not in matrix
     assert '<a href="index.html">Index</a>' in matrix
     assert ".matrix-table" in styles
     assert ".matrix-cell" in styles
     assert "max-height: calc(100vh - 150px);" in styles
 
 
-def test_index_script_calculates_and_renders_institution_topic_matrix(tmp_path):
+def test_index_script_loads_and_renders_institution_topic_matrix(tmp_path):
     paths = ProjectPaths(tmp_path)
     write_json(
         paths.daily_dir / "2026-05-28.json",
@@ -805,18 +833,12 @@ def test_index_script_calculates_and_renders_institution_topic_matrix(tmp_path):
 
     assert 'const institutionTopicMatrix = document.getElementById("institutionTopicMatrix");' in app
     assert "setupInstitutionTopicMatrix();" in app
-    assert "loadPapersForMatrix()" in app
-    assert "function buildInstitutionTopicMatrix(" in app
-    assert "function loadPapersForMatrix(" in app
-    assert 'document.getElementById("matrixPapersData")' in app
-    assert 'fetch("assets/papers.json")' in app
-    assert "function localTopTopicsForInstitutions(" in app
+    assert "function loadInstitutionTopicMatrix(" in app
+    assert 'document.getElementById("matrixData")' in app
     assert "function renderInstitutionTopicMatrix(" in app
-    assert ".slice(0, 40)" in app
-    assert ".slice(0, 20)" in app
-    assert ".slice(0, 3)" in app
-    assert "new Set([...globalTopics, ...localTopics])" in app
-    assert 'strippedInstitution !== "unknown"' in app
+    assert "function buildInstitutionTopicMatrix(" not in app
+    assert "function loadPapersForMatrix(" not in app
+    assert 'fetch("assets/papers.json")' not in app
 
 
 def test_index_script_calculates_and_renders_topic_trends(tmp_path):

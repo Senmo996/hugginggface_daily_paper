@@ -14,7 +14,7 @@
       </div>
       <div class="stats">
         <a href="index.html">Index</a>
-        <span>{{ papers|length }} papers</span>
+        <span>{{ total_papers }} papers</span>
         <span>{{ dates|length }} days</span>
       </div>
     </header>
@@ -23,7 +23,7 @@
       <p class="muted">Top 40 institutions by paper count against global top topics plus each institution's strongest local topics.</p>
       <div id="institutionTopicMatrix" class="matrix-table"></div>
     </main>
-    <script id="matrixPapersData" type="application/json">{{ papers|tojson }}</script>
+    <script id="matrixData" type="application/json">{{ matrix_data|tojson }}</script>
     <script src="assets/app.js?v={{ asset_version }}"></script>
   </body>
 </html>

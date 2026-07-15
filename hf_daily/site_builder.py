@@ -16,6 +16,9 @@ PACKAGE_DIR = Path(__file__).resolve().parent
 DEFAULT_TEMPLATES_DIR = PACKAGE_DIR / "default_templates"
 DEFAULT_STATIC_DIR = PACKAGE_DIR / "default_static"
 TAG_LIMIT = 20
+MATRIX_INSTITUTION_LIMIT = 40
+MATRIX_GLOBAL_TOPIC_LIMIT = 20
+MATRIX_LOCAL_TOPIC_LIMIT = 3
 INDEX_FIELDS = [
     "id",
     "daily_date",
@@ -56,24 +59,24 @@ class SiteBuilder:
         institution_aliases = self._load_institution_aliases()
         tag_overrides = self._load_tag_overrides()
         priority_topics = self._load_priority_topics()
-        papers = [
-            _apply_tag_overrides(
-                _apply_institution_alias(
-                    _apply_topic_alias(paper, topic_aliases),
-                    institution_aliases,
-                ),
-                tag_overrides,
-            )
-            for payload in daily_payloads
-            for paper in payload.get("papers", [])
-        ]
+        papers: list[dict[str, Any]] = []
+        papers_by_date: dict[str, list[dict[str, Any]]] = {}
+        for payload in daily_payloads:
+            for source_paper in payload.get("papers", []):
+                paper = _apply_tag_overrides(
+                    _apply_institution_alias(
+                        _apply_topic_alias(source_paper, topic_aliases),
+                        institution_aliases,
+                    ),
+                    tag_overrides,
+                )
+                papers.append(paper)
+                paper_date = str(paper.get("daily_date") or "").strip()
+                if paper_date:
+                    papers_by_date.setdefault(paper_date, []).append(paper)
         dates = [payload["date"] for payload in daily_payloads]
         latest_payload = daily_payloads[0] if daily_payloads else {"date": None, "papers": []}
-        latest_papers = [
-            paper
-            for paper in papers
-            if paper.get("daily_date") == latest_payload.get("date")
-        ]
+        latest_papers = papers_by_date.get(latest_payload.get("date"), [])
         topic_counts = Counter(paper.get("topic_tag") for paper in papers if paper.get("topic_tag"))
         institution_counts = Counter(
             paper.get("institution_tag")
@@ -122,7 +125,8 @@ class SiteBuilder:
         (self.paths.site_dir / "matrix.html").write_text(
             matrix_template.render(
                 dates=dates,
-                papers=papers,
+                matrix_data=_build_institution_topic_matrix(papers),
+                total_papers=len(papers),
                 asset_version=asset_version,
             ),
             encoding="utf-8",
@@ -170,14 +174,11 @@ class SiteBuilder:
             date = str(payload.get("date", "")).strip()
             if not date:
                 continue
-            date_papers = [
-                paper for paper in papers if paper.get("daily_date") == date
-            ]
             self._write_json_asset(
                 self.paths.site_dir / "assets" / "daily" / date,
                 {
                     "date": date,
-                    "papers": date_papers,
+                    "papers": papers_by_date.get(date, []),
                     "asset_version": asset_version,
                 },
             )
@@ -285,6 +286,53 @@ def _top_tags(counts: Counter[str]) -> list[str]:
             key=lambda item: (-item[1], item[0].casefold()),
         )[:TAG_LIMIT]
     ]
+
+
+def _ranked_keys(counts: Counter[str], limit: int) -> list[str]:
+    return [
+        key
+        for key, _count in sorted(
+            counts.items(),
+            key=lambda item: (-item[1], item[0].casefold()),
+        )[:limit]
+    ]
+
+
+def _build_institution_topic_matrix(
+    papers: list[dict[str, Any]],
+) -> dict[str, Any]:
+    institution_counts: Counter[str] = Counter()
+    topic_counts: Counter[str] = Counter()
+    local_counts: dict[str, Counter[str]] = {}
+
+    for paper in papers:
+        institution = str(paper.get("institution_tag") or "").strip()
+        topic = str(paper.get("topic_tag") or "").strip()
+        if not _is_public_institution_tag(institution) or not topic:
+            continue
+        institution_counts[institution] += 1
+        topic_counts[topic] += 1
+        local_counts.setdefault(institution, Counter())[topic] += 1
+
+    institutions = _ranked_keys(institution_counts, MATRIX_INSTITUTION_LIMIT)
+    topics = _ranked_keys(topic_counts, MATRIX_GLOBAL_TOPIC_LIMIT)
+    topics.extend(
+        topic
+        for institution in institutions
+        for topic in _ranked_keys(
+            local_counts[institution],
+            MATRIX_LOCAL_TOPIC_LIMIT,
+        )
+        if topic not in topics
+    )
+    return {
+        "institutions": institutions,
+        "topics": topics,
+        "values": [
+            [local_counts[institution].get(topic, 0) for topic in topics]
+            for institution in institutions
+        ],
+    }
 
 
 def _is_public_institution_tag(tag: Any) -> bool:
