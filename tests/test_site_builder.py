@@ -897,10 +897,24 @@ def test_index_script_calculates_and_renders_topic_trends(tmp_path):
     SiteBuilder(paths).build()
 
     app = (paths.site_dir / "assets" / "app.js").read_text(encoding="utf-8")
+    setup_start = app.index("function setupTopicTrends()")
+    listener_start = app.index(
+        'topicTrendToggle.addEventListener("click"',
+        setup_start,
+    )
+    setup_prefix = app[setup_start:listener_start]
+    listener_end = app.index(
+        "trendStartDate.addEventListener",
+        listener_start,
+    )
+    open_handler = app[listener_start:listener_end]
 
     assert 'const topicTrendToggle = document.getElementById("topicTrendToggle");' in app
     assert 'const topicTrendChart = document.getElementById("topicTrendChart");' in app
     assert "setupTopicTrends();" in app
+    assert "populateTrendTopics();" not in setup_prefix
+    assert "populateTrendTopics()" in open_handler
+    assert ".then(renderTopicTrends)" in open_handler
     assert "const defaultTrendDates = defaultTrendRangeDates();" in app
     assert "function buildTopicTrendSeries(" in app
     assert "function renderTopicTrendChart(" in app

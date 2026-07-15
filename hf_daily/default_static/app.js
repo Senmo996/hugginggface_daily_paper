@@ -1593,14 +1593,15 @@
     const defaultTrendDates = defaultTrendRangeDates();
     populateSelect(trendStartDate, availableDates.slice().reverse(), defaultTrendDates[0]);
     populateSelect(trendEndDate, availableDates.slice().reverse(), defaultTrendDates[defaultTrendDates.length - 1]);
-    populateTrendTopics();
 
     topicTrendToggle.addEventListener("click", () => {
       const isOpen = topicTrendPanel.hidden;
       topicTrendPanel.hidden = !isOpen;
       topicTrendToggle.setAttribute("aria-expanded", String(isOpen));
       if (isOpen) {
-        renderTopicTrends();
+        populateTrendTopics()
+          .then(renderTopicTrends)
+          .catch(() => {});
       }
     });
 
@@ -1619,7 +1620,7 @@
   }
 
   function populateTrendTopics() {
-    loadSearchIndex()
+    return loadSearchIndex()
       .then((payload) => {
         const topics = Array.from(
           new Set((payload.papers || []).map((paper) => paper.topic_tag).filter(Boolean))
@@ -1631,8 +1632,7 @@
           option.textContent = topic;
           trendTopicSelect.appendChild(option);
         });
-      })
-      .catch(() => {});
+      });
   }
 
   function defaultTrendRangeDates() {
