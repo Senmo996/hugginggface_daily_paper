@@ -186,9 +186,10 @@ The repository includes `.github/workflows/daily.yml`. Every day at 09:15 Asia/S
 Complete these repository settings before the first run:
 
 1. Create `OPENAI_API_KEY` and `OPENAI_MODEL` under `Settings -> Secrets and variables -> Actions`. Also create `OPENAI_BASE_URL` when using a compatible endpoint. Never commit credentials.
-2. Select `Read and write permissions` under `Settings -> Actions -> General -> Workflow permissions` so the job can persist daily data.
-3. Select `GitHub Actions` under `Settings -> Pages -> Build and deployment -> Source`.
-4. After pushing the changes, run `Actions -> Daily Hugging Face Papers -> Run workflow` once and verify the secrets, data commit, and Pages deployment.
+2. Select `GitHub Actions` under `Settings -> Pages -> Build and deployment -> Source`.
+3. After pushing the changes, run `Actions -> Daily Hugging Face Papers -> Run workflow` once and verify the secrets, data commit, and Pages deployment.
+
+The workflow requests the minimum required `contents: write` permission at the job level. If `Persist resumable daily state` still reports a permission error, review the default-branch protection rules or the repository's Actions policy.
 
 GitHub-hosted runners cannot reach the local `127.0.0.1:7900` proxy, so the workflow explicitly disables it. `data/raw/` and the locally generated `site/` directory remain uncommitted; Pages uses the build artifact uploaded by each run.
 

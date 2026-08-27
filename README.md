@@ -227,9 +227,10 @@ Register-ScheduledTask `
 首次运行前需要完成以下仓库设置：
 
 1. 在 `Settings -> Secrets and variables -> Actions` 中创建 `OPENAI_API_KEY`、`OPENAI_MODEL`，使用兼容服务时再创建 `OPENAI_BASE_URL`。不要把密钥写入仓库。
-2. 在 `Settings -> Actions -> General -> Workflow permissions` 中选择 `Read and write permissions`，允许任务提交每日数据。
-3. 在 `Settings -> Pages -> Build and deployment -> Source` 中选择 `GitHub Actions`。
-4. 推送代码后，在 `Actions -> Daily Hugging Face Papers` 中先执行一次 `Run workflow`，确认密钥、数据提交和 Pages 部署均成功。
+2. 在 `Settings -> Pages -> Build and deployment -> Source` 中选择 `GitHub Actions`。
+3. 推送代码后，在 `Actions -> Daily Hugging Face Papers` 中先执行一次 `Run workflow`，确认密钥、数据提交和 Pages 部署均成功。
+
+workflow 已按 job 申请最小必要的 `contents: write` 权限。如果 `Persist resumable daily state` 步骤仍提示权限不足，再检查默认分支保护规则或仓库的 Actions 权限策略。
 
 GitHub runner 无法访问本机的 `127.0.0.1:7900` 代理，因此 workflow 会显式关闭脚本的本地代理。`data/raw/` 和本地生成的 `site/` 仍不提交到仓库；Pages 使用每次任务上传的构建产物。
 
