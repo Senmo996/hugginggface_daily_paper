@@ -14,6 +14,8 @@ Main features:
 
 ## Quick Preview
 
+[Open the live Hugging Face Daily Papers site](https://senmo996.github.io/hugginggface_daily_paper/)
+
 The repository keeps a generated `site/` snapshot. After `git clone`, open `site/index.html` directly to preview the example website; later locally regenerated `site/` content is not synced to GitHub.
 
 ## Screenshots

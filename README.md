@@ -14,6 +14,8 @@
 
 ## 快速体验
 
+[在线访问 Hugging Face Daily Papers](https://senmo996.github.io/hugginggface_daily_paper/)
+
 仓库保留了一份已生成的 `site/` 快照。`git clone` 后可以直接打开 `site/index.html` 查看示例网页；后续本地重新生成的 `site/` 内容不会继续同步到 GitHub。
 
 ## 界面预览
