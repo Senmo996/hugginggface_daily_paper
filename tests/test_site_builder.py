@@ -641,9 +641,9 @@ def test_index_supports_priority_topic_selection(tmp_path):
     styles = (paths.site_dir / "assets" / "styles.css").read_text(encoding="utf-8")
 
     assert '<div class="priority-topics-row" aria-label="Interested topics">' in index
-    assert '<span class="priority-topic-label">关注topic：</span>' in index
+    assert '<span class="priority-topic-label">关注 topic（仅保存在本浏览器）：</span>' in index
     assert re.search(
-        r'<span class="priority-topic-label">关注topic：</span>\s*<div id="priorityTopicChips"',
+        r'<span class="priority-topic-label">关注 topic（仅保存在本浏览器）：</span>\s*<div id="priorityTopicChips"',
         index,
     )
     assert '<div id="priorityTopicChips" class="priority-topic-chips"></div>' in index
@@ -1325,12 +1325,12 @@ def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     assert 'data-original-topic="vision-language modeling"' in index
     assert 'data-tag-role="institution"' in index
     assert 'data-tag-role="topic"' in index
-    assert '<button class="tag-edit-toggle secondary" type="button" aria-expanded="false">' in index
+    assert '<button class="tag-edit-toggle secondary" type="button" aria-expanded="false" hidden>' in index
     assert re.search(
         r'<div class="tags">\s*'
         r'<span class="tag institution" data-tag-role="institution">Example University</span>\s*'
         r'<span class="tag topic" data-tag-role="topic">vision-language modeling</span>\s*'
-        r'<button class="tag-edit-toggle secondary" type="button" aria-expanded="false">',
+        r'<button class="tag-edit-toggle secondary" type="button" aria-expanded="false" hidden>',
         index,
     )
     assert '<form class="tag-edit-form" hidden>' in index
@@ -1350,6 +1350,8 @@ def test_pages_render_manual_tag_editor_and_export_controls(tmp_path):
     assert 'const tagOverrideStorageKey = "hf_daily_tag_overrides";' in app
     assert "setupTagEditors();" in app
     assert "function isAdminMode(" in app
+    assert "toggle.hidden = !adminMode;" in app
+    assert "const storedTopics = localStorage.getItem(priorityTopicStorageKey);" in app
     assert "function saveTagOverrideToAdmin(" in app
     assert "function overrideValuesForSave(" in app
     assert "hostname === \"127.0.0.1\" || hostname === \"localhost\"" in app

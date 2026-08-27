@@ -519,6 +519,7 @@
     const editToggle = document.createElement("button");
     editToggle.className = "tag-edit-toggle secondary";
     editToggle.type = "button";
+    editToggle.hidden = true;
     editToggle.setAttribute("aria-expanded", "false");
     editToggle.textContent = "Edit tags";
     tags.appendChild(editToggle);
@@ -1168,15 +1169,26 @@
       topics.push(value);
       seen.add(key);
     }
-    parseSeedPriorityTopics().forEach(addTopic);
-    try {
-      const parsed = JSON.parse(localStorage.getItem(priorityTopicStorageKey) || "[]");
-      if (Array.isArray(parsed)) {
-        parsed.forEach(addTopic);
-      }
-    } catch (error) {
+
+    const seedTopics = parseSeedPriorityTopics();
+    if (isAdminMode()) {
+      seedTopics.forEach(addTopic);
       return topics;
     }
+
+    try {
+      const storedTopics = localStorage.getItem(priorityTopicStorageKey);
+      if (storedTopics !== null) {
+        const parsed = JSON.parse(storedTopics);
+        if (Array.isArray(parsed)) {
+          parsed.forEach(addTopic);
+          return topics;
+        }
+      }
+    } catch (error) {
+      // Fall back to the site defaults when browser storage is unavailable or invalid.
+    }
+    seedTopics.forEach(addTopic);
     return topics;
   }
 
@@ -1188,7 +1200,8 @@
   }
 
   function setupTagEditors() {
-    const overrides = loadStoredTagOverrides();
+    const adminMode = isAdminMode();
+    const overrides = adminMode ? loadStoredTagOverrides() : { paper_overrides: {} };
     cards.forEach((card) => {
       const paperId = card.dataset.paperId;
       const form = card.querySelector(".tag-edit-form");
@@ -1200,6 +1213,11 @@
         return;
       }
       card.dataset.tagEditorReady = "true";
+      toggle.hidden = !adminMode;
+      form.hidden = true;
+      if (!adminMode) {
+        return;
+      }
 
       if (overrides.paper_overrides[paperId]) {
         applyTagValues(card, overrides.paper_overrides[paperId]);

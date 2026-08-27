@@ -1,6 +1,15 @@
 name: Daily Hugging Face Papers
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/daily.yml"
+      - "hf_daily/**"
+      - "templates/**"
+      - "data/tags/**"
+      - "pyproject.toml"
   schedule:
     - cron: "15 9 * * *"
       timezone: "Asia/Shanghai"

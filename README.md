@@ -93,6 +93,8 @@ python -m hf_daily admin
 
 打开命令行输出的本地地址，在论文卡片中点击 `Edit tags`，修改标签后点击 `Save draft`。修改会写入 `data/tags/tag_overrides.json`，并自动重建站点。原始的 `data/daily/*.json` 不会被改写。
 
+公开 GitHub Pages 页面会隐藏文章 tag 编辑器；“关注 topic”属于访客个人偏好，只保存在当前浏览器，不会修改公共数据。
+
 输入新标签时，页面会基于当前已有标签提供自动补全。例如输入 `ali` 时，可以提示已有的 `alibaba-inc` 等标签。
 
 ## 网站功能

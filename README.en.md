@@ -93,6 +93,8 @@ python -m hf_daily admin
 
 Open the printed local URL, click `Edit tags` on a paper card, update the tags, and click `Save draft`. Changes are written to `data/tags/tag_overrides.json`, and the site is rebuilt automatically. The original `data/daily/*.json` files are not rewritten.
 
+The public GitHub Pages site hides paper tag editors. Interested topics are per-visitor preferences stored only in the current browser and do not modify public data.
+
 Tag inputs support autocomplete from existing topic and institution tags.
 
 ## Website Features
