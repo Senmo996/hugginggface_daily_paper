@@ -114,7 +114,7 @@ python -m hf_daily admin
 ## 本地数据
 
 - `data/raw/YYYY-MM-DD.json`：Hugging Face API 原始响应。
-- `data/daily/YYYY-MM-DD.json`：标准化后的论文、摘要和标签。
+- `data/daily/YYYY-MM-DD.json`：标准化后的论文、摘要和标签；该目录会提交到仓库，作为 GitHub Actions 每日续跑的持久状态。
 - `data/tags/topics.json`：本地 topic tag 库。
 - `data/tags/institutions.json`：本地 institution tag 库。
 - `data/tags/topic_aliases.json`：经过人工确认的 topic 合并 alias。
@@ -216,36 +216,22 @@ Register-ScheduledTask `
 
 默认日期使用本地 Asia/Shanghai 日期。如需固定日期，可传入 `--date YYYY-MM-DD`。
 
-## GitHub Actions 示例
+## GitHub Actions 每日自动运行
 
-如果需要在 GitHub 自动生成，可保存为 `.github/workflows/daily.yml`：
+仓库已经提供 `.github/workflows/daily.yml`。它会在每天北京时间 09:15 自动：
 
-```yaml
-name: Daily Hugging Face Papers
+1. 抓取并生成截至前一天的论文数据；
+2. 将 `data/daily/` 和更新后的 tag 数据提交回默认分支，以便失败后续跑；
+3. 构建静态网站并部署到 GitHub Pages。
 
-on:
-  schedule:
-    - cron: "0 1 * * *"
-  workflow_dispatch:
+首次运行前需要完成以下仓库设置：
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: python -m pip install -e .
-      - run: python -m hf_daily run
-        env:
-          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-```
+1. 在 `Settings -> Secrets and variables -> Actions` 中创建 `OPENAI_API_KEY`、`OPENAI_MODEL`，使用兼容服务时再创建 `OPENAI_BASE_URL`。不要把密钥写入仓库。
+2. 在 `Settings -> Actions -> General -> Workflow permissions` 中选择 `Read and write permissions`，允许任务提交每日数据。
+3. 在 `Settings -> Pages -> Build and deployment -> Source` 中选择 `GitHub Actions`。
+4. 推送代码后，在 `Actions -> Daily Hugging Face Papers` 中先执行一次 `Run workflow`，确认密钥、数据提交和 Pages 部署均成功。
+
+GitHub runner 无法访问本机的 `127.0.0.1:7900` 代理，因此 workflow 会显式关闭脚本的本地代理。`data/raw/` 和本地生成的 `site/` 仍不提交到仓库；Pages 使用每次任务上传的构建产物。
 
 ## 测试
 

@@ -24,6 +24,10 @@
     "2605.08129": {
       "institution_tag": "alibaba-inc"
     },
+    "2605.13527": {
+      "institution_tag": "Shanghai Jiao Tong University",
+      "topic_tag": "LLM agent skill learning"
+    },
     "2605.25378": {
       "institution_tag": "Qwen"
     },
@@ -34,10 +38,14 @@
       "institution_tag": "Tsinghua University"
     },
     "2605.29343": {
+      "institution_tag": "shanghai ailab",
       "topic_tag": "speculative decoding"
     },
     "2605.30263": {
       "institution_tag": "Shengshu"
+    },
+    "2606.10917": {
+      "topic_tag": "LLM agent infrastructure"
     }
   }
 }

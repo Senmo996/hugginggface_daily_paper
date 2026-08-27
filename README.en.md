@@ -114,7 +114,7 @@ Analytics:
 ## Local Data
 
 - `data/raw/YYYY-MM-DD.json`: raw Hugging Face API response.
-- `data/daily/YYYY-MM-DD.json`: normalized papers with generated summaries and tags.
+- `data/daily/YYYY-MM-DD.json`: normalized papers with generated summaries and tags; this directory is committed as persistent state for resumable GitHub Actions runs.
 - `data/tags/topics.json`: local topic tag library.
 - `data/tags/institutions.json`: local institution tag library.
 - `data/tags/topic_aliases.json`: reviewed topic merge aliases.
@@ -175,36 +175,22 @@ Register-ScheduledTask `
 
 The default date uses the local Asia/Shanghai date. Pass `--date YYYY-MM-DD` for a fixed date.
 
-## GitHub Actions Example
+## Daily GitHub Actions Automation
 
-Save this as `.github/workflows/daily.yml` if you want automated generation in GitHub:
+The repository includes `.github/workflows/daily.yml`. Every day at 09:15 Asia/Shanghai time it:
 
-```yaml
-name: Daily Hugging Face Papers
+1. fetches and generates paper data through the previous day;
+2. commits `data/daily/` and updated tag data back to the default branch so failed runs can resume;
+3. builds the static site and deploys it to GitHub Pages.
 
-on:
-  schedule:
-    - cron: "0 1 * * *"
-  workflow_dispatch:
+Complete these repository settings before the first run:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: python -m pip install -e .
-      - run: python -m hf_daily run
-        env:
-          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-```
+1. Create `OPENAI_API_KEY` and `OPENAI_MODEL` under `Settings -> Secrets and variables -> Actions`. Also create `OPENAI_BASE_URL` when using a compatible endpoint. Never commit credentials.
+2. Select `Read and write permissions` under `Settings -> Actions -> General -> Workflow permissions` so the job can persist daily data.
+3. Select `GitHub Actions` under `Settings -> Pages -> Build and deployment -> Source`.
+4. After pushing the changes, run `Actions -> Daily Hugging Face Papers -> Run workflow` once and verify the secrets, data commit, and Pages deployment.
+
+GitHub-hosted runners cannot reach the local `127.0.0.1:7900` proxy, so the workflow explicitly disables it. `data/raw/` and the locally generated `site/` directory remain uncommitted; Pages uses the build artifact uploaded by each run.
 
 ## Testing
 
