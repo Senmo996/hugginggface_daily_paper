@@ -53,7 +53,7 @@ class OpenAICompatibleClient:
             messages=build_generation_messages(paper, existing_topics, known_institution),
         )
         content = response.choices[0].message.content or "{}"
-        data = json.loads(content)
+        data = parse_json_object(content)
         return LLMGeneration(
             one_sentence_summary=str(data["one_sentence_summary"]).strip(),
             institution_tag=str(data.get("institution_tag") or known_institution or "Unknown").strip(),
@@ -61,6 +61,33 @@ class OpenAICompatibleClient:
             topic_description=str(data.get("topic_description") or data["topic_tag"]).strip(),
             topic_is_new=bool(data.get("topic_is_new", False)),
         )
+
+
+def parse_json_object(content: str) -> dict[str, Any]:
+    text = content.strip()
+    if not text:
+        return {}
+
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError:
+        data = _decode_first_json_object(text)
+
+    if not isinstance(data, dict):
+        raise ValueError("LLM response must be a JSON object")
+    return data
+
+
+def _decode_first_json_object(text: str) -> Any:
+    decoder = json.JSONDecoder()
+    start = text.find("{")
+    while start != -1:
+        try:
+            data, _ = decoder.raw_decode(text[start:])
+            return data
+        except json.JSONDecodeError:
+            start = text.find("{", start + 1)
+    raise json.JSONDecodeError("No JSON object found", text, 0)
 
 
 def build_generation_messages(

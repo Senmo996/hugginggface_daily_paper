@@ -1,6 +1,6 @@
 import json
 
-from hf_daily.llm import build_generation_messages
+from hf_daily.llm import build_generation_messages, parse_json_object
 
 
 def test_generation_prompt_requests_medium_granularity_topic_tags():
@@ -63,3 +63,14 @@ def test_generation_prompt_instructs_model_not_to_reuse_over_specific_existing_t
 
     assert "Do not reuse an existing tag if it is paper-specific" in system_prompt
     assert "rename it to a reusable method-family tag" in system_prompt
+
+
+def test_parse_json_object_tolerates_extra_text_after_object():
+    payload = parse_json_object(
+        '{"one_sentence_summary":"摘要","topic_tag":"world models"}\n\nextra text'
+    )
+
+    assert payload == {
+        "one_sentence_summary": "摘要",
+        "topic_tag": "world models",
+    }
