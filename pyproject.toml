@@ -23,6 +23,10 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
+[tool.setuptools.packages.find]
+include = ["hf_daily*"]
+namespaces = false
+
 [tool.setuptools.package-data]
 hf_daily = [
   "default_templates/*.html",
