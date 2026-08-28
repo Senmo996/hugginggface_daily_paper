@@ -757,10 +757,11 @@
     {
       "name": "Apodex",
       "created_at": "2026-08-18T02:06:35Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2608.11341",
-        "2608.23283"
+        "2608.23283",
+        "2608.24979"
       ]
     },
     {
@@ -1406,9 +1407,10 @@
     {
       "name": "BytedTsinghua-SIA",
       "created_at": "2026-07-14T17:02:33Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2607.05394"
+        "2607.05394",
+        "2608.19098"
       ]
     },
     {
@@ -1827,6 +1829,14 @@
       ]
     },
     {
+      "name": "CoLab Lab",
+      "created_at": "2026-08-28T02:59:07Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.25832"
+      ]
+    },
+    {
       "name": "Columbia University",
       "created_at": "2026-05-28T09:32:33Z",
       "usage_count": 3,
@@ -2052,9 +2062,10 @@
     {
       "name": "DaLian University of Technology",
       "created_at": "2026-05-28T18:13:08Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2603.00695"
+        "2603.00695",
+        "2608.25864"
       ]
     },
     {
@@ -2195,12 +2206,13 @@
     {
       "name": "DeepSeek",
       "created_at": "2026-05-28T15:08:09Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2512.24880",
         "2601.20552",
         "2602.21548",
-        "2607.05147"
+        "2607.05147",
+        "2608.25512"
       ]
     },
     {
@@ -3822,6 +3834,14 @@
       ]
     },
     {
+      "name": "Institut Polytechnique de Paris (Télécom SudParis)",
+      "created_at": "2026-08-28T03:00:49Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.25625"
+      ]
+    },
+    {
       "name": "Institut Teknologi Bandung",
       "created_at": "2026-05-28T16:21:18Z",
       "usage_count": 3,
@@ -4057,9 +4077,10 @@
     {
       "name": "JD.com",
       "created_at": "2026-07-29T01:02:46Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2607.21694"
+        "2607.21694",
+        "2608.23383"
       ]
     },
     {
@@ -5926,14 +5947,16 @@
     {
       "name": "Nanyang Technological University Singapore",
       "created_at": "2026-05-28T18:31:05Z",
-      "usage_count": 6,
+      "usage_count": 8,
       "examples": [
         "2603.10652",
         "2606.23267",
         "2606.26904",
         "2606.30308",
         "2606.30026",
-        "2607.29122"
+        "2607.29122",
+        "2608.26005",
+        "2608.25580"
       ]
     },
     {
@@ -5959,7 +5982,7 @@
     {
       "name": "National University of Singapore",
       "created_at": "2026-05-28T06:35:49Z",
-      "usage_count": 39,
+      "usage_count": 40,
       "examples": [
         "2603.27666",
         "2604.00830",
@@ -5999,7 +6022,8 @@
         "2608.17310",
         "2608.13556",
         "2608.13558",
-        "2608.23566"
+        "2608.23566",
+        "2608.25593"
       ]
     },
     {
@@ -6157,6 +6181,14 @@
         "2606.02320",
         "2606.22883",
         "2607.24821"
+      ]
+    },
+    {
+      "name": "NJUHML",
+      "created_at": "2026-08-28T02:58:28Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.14652"
       ]
     },
     {
@@ -6722,6 +6754,14 @@
       "usage_count": 1,
       "examples": [
         "2601.15220"
+      ]
+    },
+    {
+      "name": "Parker Jones Neural Processing Lab (PNPL)",
+      "created_at": "2026-08-28T03:01:30Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.25204"
       ]
     },
     {
@@ -8151,9 +8191,10 @@
     {
       "name": "SJTU VisionXLab",
       "created_at": "2026-05-28T18:29:42Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2603.12247"
+        "2603.12247",
+        "2608.21839"
       ]
     },
     {
@@ -8446,6 +8487,14 @@
       ]
     },
     {
+      "name": "Stanford University; Meta",
+      "created_at": "2026-08-28T03:00:13Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.26070"
+      ]
+    },
+    {
       "name": "StarDoc-AI",
       "created_at": "2026-08-19T01:06:53Z",
       "usage_count": 1,
@@ -8621,7 +8670,7 @@
     {
       "name": "Technical University of Munich",
       "created_at": "2026-05-28T06:32:36Z",
-      "usage_count": 12,
+      "usage_count": 13,
       "examples": [
         "2603.26661",
         "2604.13226",
@@ -8634,7 +8683,8 @@
         "2603.17662",
         "2603.24649",
         "2606.03287",
-        "2606.20527"
+        "2606.20527",
+        "2608.15062"
       ]
     },
     {
@@ -9012,7 +9062,7 @@
     {
       "name": "The University of Hong Kong",
       "created_at": "2026-05-28T06:53:25Z",
-      "usage_count": 22,
+      "usage_count": 23,
       "examples": [
         "2604.08064",
         "2604.18564",
@@ -9035,7 +9085,8 @@
         "2603.28489",
         "2606.01048",
         "2607.08768",
-        "2608.13552"
+        "2608.13552",
+        "2608.26067"
       ]
     },
     {
@@ -9084,11 +9135,12 @@
     {
       "name": "Tianjin University",
       "created_at": "2026-05-28T07:03:13Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2604.12627",
         "2603.15132",
-        "2606.30319"
+        "2606.30319",
+        "2608.24479"
       ]
     },
     {
@@ -9529,6 +9581,14 @@
       ]
     },
     {
+      "name": "Ulm University",
+      "created_at": "2026-08-28T03:02:01Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.21140"
+      ]
+    },
+    {
       "name": "Ulsan National Institute of Science and Technology",
       "created_at": "2026-05-28T06:57:01Z",
       "usage_count": 1,
@@ -9733,14 +9793,15 @@
     {
       "name": "University of California, Los Angeles",
       "created_at": "2026-05-28T05:25:13Z",
-      "usage_count": 8,
+      "usage_count": 9,
       "examples": [
         "2605.27028",
         "2602.02459",
         "2602.17080",
         "2602.21534",
         "2606.12882",
-        "2606.16122"
+        "2606.16122",
+        "2608.19556"
       ]
     },
     {
@@ -9843,7 +9904,7 @@
     {
       "name": "University of Illinois at Urbana-Champaign",
       "created_at": "2026-05-28T05:26:02Z",
-      "usage_count": 42,
+      "usage_count": 43,
       "examples": [
         "2605.26396",
         "2603.28590",
@@ -9884,7 +9945,8 @@
         "2607.26178",
         "2608.12307",
         "2608.06867",
-        "2608.21278"
+        "2608.21278",
+        "2608.19583"
       ]
     },
     {
@@ -10393,7 +10455,7 @@
     {
       "name": "Unknown",
       "created_at": "2026-05-28T05:23:48Z",
-      "usage_count": 1691,
+      "usage_count": 1701,
       "examples": [
         "2605.28820",
         "2605.28805",
@@ -12067,7 +12129,17 @@
         "2608.24763",
         "2608.23691",
         "2608.24882",
-        "2608.23918"
+        "2608.23918",
+        "2608.24987",
+        "2608.23256",
+        "2608.25927",
+        "2608.25529",
+        "2608.23564",
+        "2608.24138",
+        "2608.24099",
+        "2608.24358",
+        "2608.24909",
+        "2608.22071"
       ]
     },
     {
@@ -12106,10 +12178,11 @@
     {
       "name": "USC Information Sciences Institute",
       "created_at": "2026-05-28T09:44:31Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2605.22880",
-        "2601.06463"
+        "2601.06463",
+        "2608.21832"
       ]
     },
     {
@@ -12201,9 +12274,10 @@
     {
       "name": "Video-Reason",
       "created_at": "2026-05-28T17:44:29Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2602.20159"
+        "2602.20159",
+        "2608.26105"
       ]
     },
     {
@@ -12674,7 +12748,7 @@
     {
       "name": "Zhejiang University",
       "created_at": "2026-05-28T06:34:40Z",
-      "usage_count": 51,
+      "usage_count": 52,
       "examples": [
         "2604.02268",
         "2604.03679",
@@ -12726,7 +12800,8 @@
         "2607.28048",
         "2608.07341",
         "2608.12743",
-        "2608.19567"
+        "2608.19567",
+        "2608.23318"
       ]
     },
     {
