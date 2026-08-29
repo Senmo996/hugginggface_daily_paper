@@ -1001,12 +1001,13 @@
       "name": "CAD generation",
       "description": "Methods for generating structured, editable computer-aided design representations such as BReps or parametric surfaces from text, images, point clouds, meshes, or other inputs.",
       "created_at": "2026-05-28T18:15:08Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2603.05607",
         "2606.26299",
         "2608.00799",
-        "2608.16485"
+        "2608.16485",
+        "2608.26238"
       ]
     },
     {
@@ -1780,9 +1781,10 @@
       "name": "embodied navigation benchmark",
       "description": "该标签涵盖具身智能体在真实或模拟环境中的导航与空间推理评估基准，包括路径规划、地标搜索和城市级探索等任务。",
       "created_at": "2026-08-18T02:02:52Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2608.08814"
+        "2608.08814",
+        "2608.27456"
       ]
     },
     {
@@ -1822,9 +1824,10 @@
       "name": "evolution strategies",
       "description": "Evolution strategies as gradient-free black-box optimization for LLM parameter-level fine-tuning, enabling full-parameter updates with small GPU footprints and long-horizon credit assignment.",
       "created_at": "2026-08-20T01:01:25Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2608.17310"
+        "2608.17310",
+        "2608.27351"
       ]
     },
     {
@@ -1949,6 +1952,15 @@
       "usage_count": 1,
       "examples": [
         "2605.26449"
+      ]
+    },
+    {
+      "name": "generative game rendering",
+      "description": "Research on using generative models (e.g., video or image foundation models) to render interactive game worlds in real time, decoupling gameplay logic and world state from visual generation, in the spirit of neural and generative game engines.",
+      "created_at": "2026-08-29T07:56:02Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.27168"
       ]
     },
     {
@@ -2448,6 +2460,15 @@
       ]
     },
     {
+      "name": "image-to-3D generation",
+      "description": "Generation of 3D assets with geometry, appearance, and physically based rendering materials from one or more input images, spanning latent diffusion or flow-based generative pipelines and Gaussian or mesh output representations.",
+      "created_at": "2026-08-29T07:56:21Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.23943"
+      ]
+    },
+    {
       "name": "image-to-image translation",
       "description": "Methods for translating images between visual domains or tasks, including diffusion-based, paired, unpaired, and unified image transformation frameworks.",
       "created_at": "2026-06-04T01:02:49Z",
@@ -2912,7 +2933,7 @@
       "name": "LLM agent data curation",
       "description": "Methods for selecting, filtering, labeling, or prioritizing interaction trajectories from LLM-based agents to support evaluation, preference data construction, and post-deployment improvement.",
       "created_at": "2026-05-28T06:37:12Z",
-      "usage_count": 40,
+      "usage_count": 41,
       "examples": [
         "2604.00356",
         "2604.10480",
@@ -2952,7 +2973,8 @@
         "2608.05466",
         "2608.06352",
         "2608.18580",
-        "2608.23181"
+        "2608.23181",
+        "2608.27260"
       ]
     },
     {
@@ -3180,7 +3202,7 @@
       "name": "LLM agent skill learning",
       "description": "Methods for enabling LLM agents to acquire, store, reuse, evaluate, and refine reusable skills or tool-like procedures over time to improve long-horizon task solving and transfer.",
       "created_at": "2026-05-28T05:55:37Z",
-      "usage_count": 71,
+      "usage_count": 72,
       "examples": [
         "2605.27366",
         "2605.27209",
@@ -3252,21 +3274,23 @@
         "2608.14036",
         "2608.18852",
         "2608.13120",
-        "2607.21596"
+        "2607.21596",
+        "2608.27454"
       ]
     },
     {
       "name": "LLM agent skill retrieval",
       "description": "Methods for retrieving, selecting, and organizing reusable skills or tools from large libraries to improve LLM-based agent execution under context and efficiency constraints.",
       "created_at": "2026-05-28T06:52:22Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2604.05333",
         "2604.20987",
         "2604.24026",
         "2601.21123",
         "2606.04391",
-        "2607.22639"
+        "2607.22639",
+        "2608.25500"
       ]
     },
     {
@@ -3293,7 +3317,7 @@
       "name": "LLM agent training",
       "description": "Training methods for LLM-based agents, including fine-grained credit assignment, reward shaping, and step-level supervision to improve long-horizon task performance.",
       "created_at": "2026-08-18T01:36:14Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2608.05102",
         "2608.06113",
@@ -3301,7 +3325,8 @@
         "2608.17528",
         "2608.20634",
         "2608.23283",
-        "2608.23318"
+        "2608.23318",
+        "2608.15763"
       ]
     },
     {
@@ -5324,12 +5349,13 @@
       "name": "ML evaluation infrastructure",
       "description": "Studies or methods focused on the software systems, harnesses, workflows, and engineering practices that support machine learning model evaluation, including data loading, model invocation, metric computation, dependency management, and result reporting.",
       "created_at": "2026-05-28T09:43:27Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2605.24213",
         "2512.22334",
         "2601.02933",
-        "2603.09821"
+        "2603.09821",
+        "2608.19269"
       ]
     },
     {
@@ -5945,7 +5971,7 @@
       "name": "multimodal benchmark evaluation",
       "description": "Evaluation methods and benchmarks for assessing multimodal models, including vision-language model robustness, generalization, and reasoning under controlled dataset variations.",
       "created_at": "2026-05-28T05:38:43Z",
-      "usage_count": 161,
+      "usage_count": 162,
       "examples": [
         "2605.27311",
         "2605.26396",
@@ -6105,7 +6131,8 @@
         "2607.27670",
         "2608.11616",
         "2608.14075",
-        "2608.26105"
+        "2608.26105",
+        "2608.26993"
       ]
     },
     {
@@ -6337,14 +6364,15 @@
       "name": "multimodal prompting",
       "description": "Methods that improve vision-language model behavior through prompt design, visual input transformations, in-context examples, or structured multimodal cues without changing model weights.",
       "created_at": "2026-05-28T06:43:06Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2604.04838",
         "2605.05886",
         "2602.08439",
         "2602.23229",
         "2607.25537",
-        "2608.11367"
+        "2608.11367",
+        "2608.23172"
       ]
     },
     {
@@ -7047,7 +7075,7 @@
       "name": "on-policy distillation",
       "description": "Methods for training student models using teacher feedback on the student's own generated trajectories, often improving imitation learning, alignment, or policy transfer compared with purely offline sequence-level distillation.",
       "created_at": "2026-05-28T05:38:18Z",
-      "usage_count": 126,
+      "usage_count": 127,
       "examples": [
         "2605.27028",
         "2604.01193",
@@ -7173,7 +7201,8 @@
         "2608.21500",
         "2608.24696",
         "2608.24987",
-        "2608.19098"
+        "2608.19098",
+        "2608.26872"
       ]
     },
     {
@@ -7663,9 +7692,10 @@
       "name": "recursive self-improvement",
       "description": "Recursive self-improvement refers to methods where an LLM agent iteratively applies a fixed meta-operation to its own outputs to generate higher-level reasoning layers, enabling emergent depth without modifying the editing machinery.",
       "created_at": "2026-08-27T01:03:41Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2608.24735"
+        "2608.24735",
+        "2608.26530"
       ]
     },
     {
@@ -8640,14 +8670,15 @@
       "name": "tactile robot manipulation",
       "description": "Research on robot manipulation policies that use tactile sensing, contact prediction, and multimodal perception to improve dexterous or contact-rich manipulation in real-world settings.",
       "created_at": "2026-05-28T07:05:47Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2604.13015",
         "2602.13579",
         "2603.23481",
         "2607.23782",
         "2607.23783",
-        "2608.18701"
+        "2608.18701",
+        "2608.25798"
       ]
     },
     {
@@ -8713,9 +8744,10 @@
       "name": "test-time training",
       "description": "模型在测试时通过内部学习规则更新快速权重的序列建模方法，涵盖不同组件设计、损失函数及模块化实现。",
       "created_at": "2026-08-18T01:43:24Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2608.07110"
+        "2608.07110",
+        "2608.27448"
       ]
     },
     {
@@ -9107,7 +9139,7 @@
       "name": "video editing",
       "description": "Methods for editing generated or real videos with text or other controls while preserving structure, temporal coherence, and computational efficiency.",
       "created_at": "2026-05-28T07:32:47Z",
-      "usage_count": 24,
+      "usage_count": 26,
       "examples": [
         "2604.22586",
         "2605.06535",
@@ -9132,7 +9164,9 @@
         "2608.05565",
         "2608.16328",
         "2608.17566",
-        "2608.20910"
+        "2608.20910",
+        "2608.26809",
+        "2608.27123"
       ]
     },
     {
@@ -9381,12 +9415,13 @@
       "name": "video-guided robot manipulation",
       "description": "Methods that use generated or predicted videos as motion or dynamics priors to guide robotic manipulation policies or control without requiring task-specific demonstrations.",
       "created_at": "2026-05-28T15:12:41Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2512.24766",
         "2601.16163",
         "2603.05757",
-        "2606.06194"
+        "2606.06194",
+        "2608.26103"
       ]
     },
     {
@@ -9890,6 +9925,15 @@
       ]
     },
     {
+      "name": "weak-to-strong generalization",
+      "description": "Research on leveraging signals from weaker or smaller models (e.g., failure modes, critiques, outputs) to improve stronger or larger models, at training time or inference time, including weak-to-strong generalization and small-model-guided inference for large language models.",
+      "created_at": "2026-08-29T07:56:40Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.27455"
+      ]
+    },
+    {
       "name": "weakly supervised anomaly detection",
       "description": "Methods for detecting and localizing anomalies when only coarse-grained or incomplete supervision is available, often using approaches such as multi-instance learning, prototype modeling, or consistency regularization.",
       "created_at": "2026-05-28T09:46:00Z",
@@ -9925,7 +9969,7 @@
       "name": "world model benchmark evaluation",
       "description": "Benchmarks and evaluation toolkits for assessing interactive or generative world models under standardized scenes, actions, trajectories, and consistency metrics.",
       "created_at": "2026-05-28T07:29:13Z",
-      "usage_count": 27,
+      "usage_count": 28,
       "examples": [
         "2604.21686",
         "2605.03941",
@@ -9953,14 +9997,15 @@
         "2608.11216",
         "2608.13552",
         "2608.13049",
-        "2608.16859"
+        "2608.16859",
+        "2608.27345"
       ]
     },
     {
       "name": "world models",
       "description": "Models that learn to generate or predict interactive environment dynamics from observations and actions, often for simulation, planning, or embodied agent control.",
       "created_at": "2026-05-28T05:37:10Z",
-      "usage_count": 188,
+      "usage_count": 190,
       "examples": [
         "2605.28816",
         "2603.25240",
@@ -10148,7 +10193,9 @@
         "2608.23070",
         "2608.24680",
         "2608.24882",
-        "2608.25927"
+        "2608.25927",
+        "2608.25518",
+        "2608.26200"
       ]
     },
     {
