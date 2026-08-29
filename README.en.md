@@ -181,7 +181,9 @@ The default date uses the local Asia/Shanghai date. Pass `--date YYYY-MM-DD` for
 
 ## Daily GitHub Actions Automation
 
-The repository includes `.github/workflows/daily.yml`. Every day at 09:15 Asia/Shanghai time it:
+The repository includes `.github/workflows/daily.yml`. Every day at 09:00 Asia/Shanghai time it:
+
+09:00 is the scheduled trigger time. A GitHub-hosted runner may start later when the service is busy.
 
 1. fetches and generates paper data through the previous day;
 2. commits `data/daily/` and updated tag data back to the default branch so failed runs can resume;

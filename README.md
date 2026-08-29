@@ -222,7 +222,9 @@ Register-ScheduledTask `
 
 ## GitHub Actions 每日自动运行
 
-仓库已经提供 `.github/workflows/daily.yml`。它会在每天北京时间 09:15 自动：
+仓库已经提供 `.github/workflows/daily.yml`。它会在每天北京时间 09:00 自动：
+
+09:00 是 GitHub 的计划触发时间；托管 runner 在平台繁忙时可能排队，因此实际开始时间可能稍晚。
 
 1. 抓取并生成截至前一天的论文数据；
 2. 将 `data/daily/` 和更新后的 tag 数据提交回默认分支，以便失败后续跑；
