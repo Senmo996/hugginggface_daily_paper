@@ -1,8 +1,8 @@
 {
   "date": "2026-08-31",
-  "generated_at": "2026-09-02T06:39:31Z",
-  "status": "partial",
-  "paper_count": 17,
+  "generated_at": "2026-09-02T07:02:08Z",
+  "status": "complete",
+  "paper_count": 31,
   "papers": [
     {
       "id": "2608.28281",
@@ -409,35 +409,6 @@
       }
     },
     {
-      "id": "2608.23478",
-      "daily_date": "2026-08-31",
-      "title": "Act with Intent: Distilling Behavior Intent for Vision-Language-Action Models",
-      "summary": "Vision-Language-Action (VLA) models can turn multimodal context into robot actions, but their action decoders are still trained largely by behavior cloning. This supervises which motor command was demonstrated while leaving implicit the local objective served by the behavior under the instruction. Future-based supervision enriches action learning with frames, latent observations, trajectories, or motion representations, but these signals capture particular realizations of what may happen rather than the shared semantic objective of the forthcoming behavior. We propose Intention Distillation (INDI), which distills behavior-level intent into the action decoder. During training, a frozen teacher VLM interprets a demonstrated segment from the current observation, instruction, coarse action summary, and corresponding execution video. From its standard inputs, the deployed VLA recovers the resulting multimodal intent representation at an intermediate decoder layer and uses it to organize action prediction together with representations of how the behavior unfolds and what it achieves. On SimplerEnv-Bridge, INDI improves GR00T-N1.7 from 64.3% to 84.7%, and on RoboCasa Kitchen it improves the controlled GR00T-N1.7 baseline from 64.1% to 70.3%, with consistent gains on π_{0.5} across both benchmarks. In real-world tasks, INDI improves average success from 62.0% to 68.7%, with gains of up to 12.0 pp on longer-horizon tasks. Further analyses show that the recovered latent is used by the decoder, captures behavior objective and execution progress, and organizes downstream predictions in an objective-dependent manner. These results show that action decoders benefit from explicitly modeling the semantic objective of the behavior they generate.",
-      "authors": [
-        "Sangoh Lee",
-        "Sangwoo Mo",
-        "Wook-Shin Han"
-      ],
-      "published_at": "2026-08-24T00:00:00.000Z",
-      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
-      "upvotes": 29,
-      "num_comments": 2,
-      "ai_keywords": [],
-      "institution": "Pohang University of Science and Technology",
-      "hf_url": "https://huggingface.co/papers/2608.23478",
-      "arxiv_url": "https://arxiv.org/abs/2608.23478",
-      "project_page": "https://leesangoh.github.io/indi-project-page/",
-      "github_repo": "https://github.com/Leesangoh/INDI",
-      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.23478.png",
-      "one_sentence_summary": "该论文针对视觉-语言-动作（VLA）模型动作解码器仅依赖行为克隆而缺乏对行为语义目标的显式建模问题，提出意图蒸馏方法INDI，将冻结教师VLM从演示片段与执行视频中提取的行为级意图表示蒸馏到VLA解码器中间层，用以组织动作预测，从而在仿真与真实机器人操作任务上显著提升成功率。",
-      "institution_tag": "Pohang University of Science and Technology",
-      "topic_tag": "vision-language-action models",
-      "model_metadata": {
-        "topic_is_new": false,
-        "generated_at": "2026-09-02T06:36:11Z"
-      }
-    },
-    {
       "id": "2608.27763",
       "daily_date": "2026-08-31",
       "title": "Fast Weight Attention for Continual Learning",
@@ -489,6 +460,35 @@
       "model_metadata": {
         "topic_is_new": true,
         "generated_at": "2026-09-02T06:36:43Z"
+      }
+    },
+    {
+      "id": "2608.23478",
+      "daily_date": "2026-08-31",
+      "title": "Act with Intent: Distilling Behavior Intent for Vision-Language-Action Models",
+      "summary": "Vision-Language-Action (VLA) models can turn multimodal context into robot actions, but their action decoders are still trained largely by behavior cloning. This supervises which motor command was demonstrated while leaving implicit the local objective served by the behavior under the instruction. Future-based supervision enriches action learning with frames, latent observations, trajectories, or motion representations, but these signals capture particular realizations of what may happen rather than the shared semantic objective of the forthcoming behavior. We propose Intention Distillation (INDI), which distills behavior-level intent into the action decoder. During training, a frozen teacher VLM interprets a demonstrated segment from the current observation, instruction, coarse action summary, and corresponding execution video. From its standard inputs, the deployed VLA recovers the resulting multimodal intent representation at an intermediate decoder layer and uses it to organize action prediction together with representations of how the behavior unfolds and what it achieves. On SimplerEnv-Bridge, INDI improves GR00T-N1.7 from 64.3% to 84.7%, and on RoboCasa Kitchen it improves the controlled GR00T-N1.7 baseline from 64.1% to 70.3%, with consistent gains on π_{0.5} across both benchmarks. In real-world tasks, INDI improves average success from 62.0% to 68.7%, with gains of up to 12.0 pp on longer-horizon tasks. Further analyses show that the recovered latent is used by the decoder, captures behavior objective and execution progress, and organizes downstream predictions in an objective-dependent manner. These results show that action decoders benefit from explicitly modeling the semantic objective of the behavior they generate.",
+      "authors": [
+        "Sangoh Lee",
+        "Sangwoo Mo",
+        "Wook-Shin Han"
+      ],
+      "published_at": "2026-08-24T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 29,
+      "num_comments": 2,
+      "ai_keywords": [],
+      "institution": "Pohang University of Science and Technology",
+      "hf_url": "https://huggingface.co/papers/2608.23478",
+      "arxiv_url": "https://arxiv.org/abs/2608.23478",
+      "project_page": "https://leesangoh.github.io/indi-project-page/",
+      "github_repo": "https://github.com/Leesangoh/INDI",
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.23478.png",
+      "one_sentence_summary": "该论文针对视觉-语言-动作（VLA）模型动作解码器仅依赖行为克隆而缺乏对行为语义目标的显式建模问题，提出意图蒸馏方法INDI，将冻结教师VLM从演示片段与执行视频中提取的行为级意图表示蒸馏到VLA解码器中间层，用以组织动作预测，从而在仿真与真实机器人操作任务上显著提升成功率。",
+      "institution_tag": "Pohang University of Science and Technology",
+      "topic_tag": "vision-language-action models",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T06:36:11Z"
       }
     },
     {
@@ -729,6 +729,564 @@
       "model_metadata": {
         "topic_is_new": false,
         "generated_at": "2026-09-02T06:39:31Z"
+      }
+    },
+    {
+      "id": "2608.24777",
+      "daily_date": "2026-08-31",
+      "title": "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing",
+      "summary": "LLM-based agents can interact with external environments through tool invocation, but this capability also introduces security risks such as file modification, information leakage, and unauthorized actions. Existing guardrails often evaluate completed trajectories, leaving pre-execution monitoring of step-level actions underexplored. We propose StepGuard, a step-level guard model that can audit completed agent trajectories and check tool actions before they are executed. To train StepGuard, we introduce StepGen, an automatic data engine that generates safe and unsafe trajectories with the same context but different actions at the risky step. To further reduce over-defense and under-defense, we propose Balance-GRPO, which dynamically balances learning between safe and unsafe actions based on their observed accuracy. Experiments show that StepGuard achieves the highest average accuracy among open-weight guard models, with performance comparable to GPT-5.4. When used to guard agents on AgentDojo and AgentDyn, StepGuard reduces mean attack success rate by 77.3% relative to the no-guard setting, while mean utility drops by only 2.8 percentage points.",
+      "authors": [
+        "Zhijie Zheng",
+        "Yu Li",
+        "Chen Qian",
+        "Yuqian Fu",
+        "Yanwei Fu",
+        "Lu Sheng",
+        "Jing Shao",
+        "Dongrui Liu"
+      ],
+      "published_at": "2026-08-25T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 14,
+      "num_comments": 2,
+      "ai_keywords": [
+        "LLM-based agents",
+        "tool invocation",
+        "step-level guard model",
+        "StepGen",
+        "Balance-GRPO",
+        "AgentDojo",
+        "AgentDyn"
+      ],
+      "institution": "AI45Research",
+      "hf_url": "https://huggingface.co/papers/2608.24777",
+      "arxiv_url": "https://arxiv.org/abs/2608.24777",
+      "project_page": "https://zheng977.github.io/StepGuard/",
+      "github_repo": "https://github.com/zheng977/StepGuard",
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.24777.png",
+      "one_sentence_summary": "该论文提出StepGuard，一种面向LLM智能体的步骤级安全护栏模型，利用自动数据引擎StepGen生成危险步骤上下文相同但行为不同的安全/不安全轨迹，并采用Balance-GRPO动态平衡两类动作的学习以降低过度防御与防御不足。",
+      "institution_tag": "AI45Research",
+      "topic_tag": "LLM safety monitoring",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T06:59:55Z"
+      }
+    },
+    {
+      "id": "2608.26794",
+      "daily_date": "2026-08-31",
+      "title": "Ring Forcing: Towards Precise Long-Term Memory for Autoregressive Video Diffusion",
+      "summary": "Scaling video generation to long durations reveals a critical bottleneck: current models lack robust long-term memory. This deficiency can be studied along two critical aspects: object permanence, the ability to precisely reproduce the appearance of objects upon re-entry; and memory capacity, the ability to process ultra-long context and use information from distant history. Robust long-term memory requires both: object permanence without sufficient context handling limits the temporal scope, while long context length without permanence fails to maintain identity. To address this, we present Ring Forcing, an autoregressive video diffusion framework designed to robustly construct and precisely utilize long-term memory. Our ring-structured training strategy enforces retrieval from distant history, effectively reconciling the trade-off between strict historical adherence and generative diversity. To expand memory capacity, we introduce a compression and timestep composition strategy. Under fixed sequence length constraints, this method extends the effective historical span to minutes-long durations and achieves a comprehensive receptive field over the entire history. Furthermore, we present a sparse RoPE mechanism to enable flexible, scalable memory adaptation while fully exploiting pre-trained priors. Extensive experiments demonstrate that Ring Forcing achieves superior minutes-long coherence and object permanence, significantly outperforming state-of-the-art methods.",
+      "authors": [
+        "Bowen Xue",
+        "Brandon Y. Feng",
+        "Chenguo Lin",
+        "Yuchen Lin",
+        "Yujia Zeng",
+        "Lvmin Zhang",
+        "Maneesh Agrawala",
+        "Honglei Yan",
+        "Panwang Pan"
+      ],
+      "published_at": "2026-08-27T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 13,
+      "num_comments": 2,
+      "ai_keywords": [
+        "autoregressive video diffusion",
+        "object permanence",
+        "memory capacity",
+        "Ring Forcing",
+        "ring-structured training",
+        "compression and timestep composition",
+        "sparse RoPE",
+        "rotary position embedding"
+      ],
+      "institution": null,
+      "hf_url": "https://huggingface.co/papers/2608.26794",
+      "arxiv_url": "https://arxiv.org/abs/2608.26794",
+      "project_page": "https://ringforcing.com",
+      "github_repo": null,
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.26794.png",
+      "one_sentence_summary": "本文提出Ring Forcing方法，通过环形结构化训练、压缩与时间步组合策略以及稀疏RoPE机制，为自回归视频扩散模型构建精确长时记忆，解决物体恒存性和记忆容量问题。",
+      "institution_tag": "Unknown",
+      "topic_tag": "video diffusion",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:00:17Z"
+      }
+    },
+    {
+      "id": "2608.28549",
+      "daily_date": "2026-08-31",
+      "title": "Video Generative Models as Geometry Learner",
+      "summary": "Recent generative approaches to geometry estimation adapt pretrained image diffusion models and treat the task as image-conditioned generation. Leveraging off-the-shelf image diffusion models, they either (i) train task-specific geometry models (for depth and surface normal estimation) independently, losing the opportunity of exploring the intrinsic correlation of these geometric targets, or (ii) jointly fine-tune modified image diffusion backbones (e.g., altered self-attention), which typically demands substantial labeled data. To overcome these limitations in a principled fashion, we repurpose pretrained video generative models as a unified and data-efficient framework for geometry estimation, formulated innovatively as a next-frames prediction task. Our method, GeoNeXt, inherits naturally structured knowledge and richer priors from the video model, while further adapting them for joint modeling of images and geometry targets (image <-> geometry), enabling more data efficient and effective learning of geometry. Extensive experiments validate our method for zero-shot monocular depth and surface normal estimation across diverse datasets, outperforming both previous task-specific and unified generative competitors while using substantially less training data. Notably, our method rivals discriminative state-of-the-art approaches trained on over 100x more data and even standouts on several benchmarks.",
+      "authors": [
+        "Haosen Yang",
+        "Jifei Song",
+        "Zhensong Zhang",
+        "Xiatian Zhu",
+        "Jiankang Deng"
+      ],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 12,
+      "num_comments": 1,
+      "ai_keywords": [
+        "pretrained video generative models",
+        "next-frames prediction",
+        "self-attention",
+        "zero-shot monocular depth estimation",
+        "surface normal estimation",
+        "joint modeling"
+      ],
+      "institution": null,
+      "hf_url": "https://huggingface.co/papers/2608.28549",
+      "arxiv_url": "https://arxiv.org/abs/2608.28549",
+      "project_page": "https://happy-hsy.github.io/projects/GeoNeXt/",
+      "github_repo": null,
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.28549.png",
+      "one_sentence_summary": "本文提出GeoNeXt，将几何估计任务转化为下一帧预测，利用预训练视频生成模型联合建模图像与几何目标，实现数据高效的单目深度和表面法线零样本估计。",
+      "institution_tag": "Unknown",
+      "topic_tag": "video diffusion",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:00:24Z"
+      }
+    },
+    {
+      "id": "2608.24115",
+      "daily_date": "2026-08-31",
+      "title": "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control",
+      "summary": "Multimodal large language models (MLLMs) can integrate long visual histories, reason under partial observability, and infer behavior from a few examples. Yet vision-language-action (VLA) models generally inherit pretrained representations without using this contextual capacity as episode memory. Memory-dependent policies address this gap through purpose-built history mechanisms. PonderPounce instead reuses an MLLM's native causal context as robot memory. Ponder, a System2 MLLM, accumulates episode observations, demonstrations, and prior cognition in its native causal context and can generate subgoal text and demonstration reasoning for internal use. Pounce, a System1 VLA, receives the current observation, instruction, and proprioception directly; through the Ponder--Pounce interface, it asynchronously receives only the newest continuous cognition token and its age. Both are jointly trained end to end without a purpose-built memory module or separate bridge pretraining. Optimized serving achieves p50 latencies of 78ms for cognition refresh and 25ms for action-model invocation, supporting 20Hz action playback. On RoboMME with base-scale training data, PonderPounce reaches 60.83% with 9B and 50.04% with 0.8B under the same Pounce architecture and interface, versus 44.51% for FrameSamp+Modul and 17.93% for the current-observation π_{0.5}. With 9x data, it reaches 75.54% versus 57.88% for FrameSamp+Modul. On RoboCasa-DC, the same interface learns from action supervision alone and reaches 12.5% versus 11.6% for the strongest published demonstration-conditioned baseline, falling to 8.6% when cognition is replaced by a learned null state.",
+      "authors": [
+        "Suhwan Choi",
+        "Jaeyoon Jung",
+        "Sungkyung Kim",
+        "Yunsung Lee",
+        "Youngjae Yu"
+      ],
+      "published_at": "2026-08-25T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 12,
+      "num_comments": 2,
+      "ai_keywords": [
+        "multimodal large language models",
+        "vision-language-action models",
+        "causal context",
+        "System2 MLLM",
+        "System1 VLA",
+        "subgoal text",
+        "demonstration reasoning",
+        "Ponder--Pounce interface",
+        "RoboMME",
+        "RoboCasa-DC"
+      ],
+      "institution": "maum-ai",
+      "hf_url": "https://huggingface.co/papers/2608.24115",
+      "arxiv_url": "https://arxiv.org/abs/2608.24115",
+      "project_page": "https://worv-ai.github.io/ponderpounce",
+      "github_repo": "https://github.com/worv-ai/PonderPounce",
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.24115.png",
+      "one_sentence_summary": "该论文提出PonderPounce，通过复用预训练多模态语言模型的因果上下文作为机器人记忆，让System2 MLLM在上下文中累积观测与演示并生成认知令牌，再异步传递给System1 VLA进行动作预测，两者端到端联合训练以实现机器人控制。",
+      "institution_tag": "maum-ai",
+      "topic_tag": "LLM memory",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:00:39Z"
+      }
+    },
+    {
+      "id": "2608.28363",
+      "daily_date": "2026-08-31",
+      "title": "EvoUndo: Recoverability-Constrained Self-Evolution for LLM Agent Harnesses",
+      "summary": "LLM agents increasingly modify their own prompts, tools, middleware, resources, and execution harnesses at runtime. Such self-evolution can improve capability, but a successful mutation may leave persistent effects that cannot be safely reversed in states different from the one in which it was created. We introduce EvoUndo, a framework for representing, synthesizing, diagnosing, and independently verifying recoverability of model-generated self-modifications across counterfactual states. Across 600 unseen one-shot self-evolution tasks, we identify 197 capability-improving mutations that fail recoverability verification. Under the original recovery representation, conventional repair strategies recover 0/197 of these natural failures. Deterministic oracle analysis recovers 48/197 under the original recovery language L0, while the extended recovery calculus increases empirical oracle recovery to 191/197. A protocol-locked 2x2 grounding-by-expressivity intervention then separates two bottlenecks: exact state-address grounding increases successful recovery from 0/48 to 38/48 (79.2%) when the original language is sufficient, while extending the recovery language enables recovery on 142/143 (99.3%) failures in the oracle-defined S1 stratum. On the primary gpt-oss-120b backbone, adding exact-address diagnostics to the richer language reduces recovery to 133/143 (93.0%); a Qwen3.8-27B replication preserves the grounding and expressivity effects but not this negative interaction, indicating that the latter is model-dependent. These results indicate that reliable agent self-evolution requires co-designing verification, state grounding, witness semantics, and recovery-language expressivity rather than relying on iterative prompting alone.",
+      "authors": [
+        "Tanmay Sah",
+        "Dolly Sah",
+        "Harshul Jain",
+        "Tanya Sah"
+      ],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 7,
+      "num_comments": 2,
+      "ai_keywords": [
+        "self-evolution",
+        "recoverability verification",
+        "counterfactual states",
+        "recovery calculus",
+        "grounding-by-expressivity",
+        "witness semantics",
+        "LLM agents"
+      ],
+      "institution": null,
+      "hf_url": "https://huggingface.co/papers/2608.28363",
+      "arxiv_url": "https://arxiv.org/abs/2608.28363",
+      "project_page": null,
+      "github_repo": null,
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.28363.png",
+      "one_sentence_summary": "本论文提出EvoUndo框架，通过恢复演算与接地-表达力干预来验证LLM代理自进化修改的可恢复性，并系统分析了状态接地和恢复语言表达力对恢复成功率的独立贡献。",
+      "institution_tag": "Unknown",
+      "topic_tag": "recursive self-improvement",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:00:50Z"
+      }
+    },
+    {
+      "id": "2608.27906",
+      "daily_date": "2026-08-31",
+      "title": "Rubric-to-Code Credit Assignment for Reinforcement Learning",
+      "summary": "Interactive web application generation requires models to produce usable HTML, CSS, and JavaScript applications from natural language requests. Unlike conventional code generation, application quality depends on multiple user-facing functional requirements, each often tied to localized code regions such as event handlers, state updates, DOM fragments, or CSS selectors. Standard GRPO collapses these structured outcomes into a single sequence-level reward and applies the resulting advantage uniformly to all tokens, weakening credit assignment. We propose Rubric-to-Code Credit Assignment (RCCA), a reinforcement learning framework that converts rubric-level functional feedback into localized optimization signals over generated code. RCCA builds training tasks around explicit functional rubrics, uses a hierarchical reward to separate format, source-code, runtime, and functional failures, and aligns evaluator-generated textual attributions with responsible code spans and generated tokens. The resulting model, Ling-RCCA-Flash, scores 41.25 on MiniAppBench, improving Ling-3.0-Flash by 32.20 points and slightly surpassing Claude Opus 4.5. It also reaches 76.19 on ArtifactsBench, improving the SFT model by 4.48 points and establishing a new top score under the official ArtifactsBench leaderboard setting by surpassing the GPT-5 score by 3.64 points, suggesting transferable implementation-level gains.",
+      "authors": [
+        "Rui Jin",
+        "Jikai Chen",
+        "Yihan Chen",
+        "Hao Zhou",
+        "Demin Zhu",
+        "Kaichen Yang",
+        "Dong Wang",
+        "Chenyi Zhuang"
+      ],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 6,
+      "num_comments": 1,
+      "ai_keywords": [
+        "GRPO",
+        "rubric-to-code credit assignment",
+        "hierarchical reward",
+        "evaluator-generated textual attributions",
+        "Ling-RCCA-Flash",
+        "MiniAppBench",
+        "ArtifactsBench"
+      ],
+      "institution": "Ant Group",
+      "hf_url": "https://huggingface.co/papers/2608.27906",
+      "arxiv_url": "https://arxiv.org/abs/2608.27906",
+      "project_page": null,
+      "github_repo": null,
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.27906.png",
+      "one_sentence_summary": "提出Rubric-to-Code Credit Assignment (RCCA)框架，将基于功能标准的细粒度反馈转化为代码区域和生成token的局部优化信号，以改善交互式Web应用代码生成中的强化学习信用分配。",
+      "institution_tag": "Ant Group",
+      "topic_tag": "LLM reinforcement learning",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:00:58Z"
+      }
+    },
+    {
+      "id": "2608.23149",
+      "daily_date": "2026-08-31",
+      "title": "Language Chain in Alignment: Cross-lingual Ranking Preference Optimization",
+      "summary": "The alignment of Large Language Models heavily relies on English-centric high-quality preference data, which often leads to suboptimal performance in other languages. In this paper, we propose Cross-lingual Ranking Preference Optimization~(CRPO), a novel framework that leverages robust preference knowledge from English to facilitate preference alignment in the target language. We design a hierarchical structure within parallel preference pairs across the target language and English to jointly optimize intra- and inter-lingual preferences, thereby enhancing language adaptation and output quality. Building on the LambdaLoss framework, CRPO goes beyond the binary comparison based optimization by providing a relative ranking signal across multiple candidate responses. Our experiments across five languages with varying resource scales demonstrate that CRPO consistently outperforms standard approaches in both instruction-following and knowledge utilization capability. Notably, the robust performance gains observed across various weighting schemes further validate the empirical effectiveness of our hierarchical design in a multilingual setup. Furthermore, our findings highlight that CRPO significantly improves both reward margins and the log-probability of desirable responses, contributing to a more stable preference manifold for cross-lingual alignment. Our code is available at https://github.com/dltmddbs100/CRPO.",
+      "authors": [
+        "Seungyoon Lee",
+        "Minhyuk Kim",
+        "Jungseob Lee",
+        "Heuiseok Lim"
+      ],
+      "published_at": "2026-08-24T11:54:36.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 4,
+      "num_comments": 2,
+      "ai_keywords": [
+        "Cross-lingual Ranking Preference Optimization",
+        "LambdaLoss",
+        "intra-lingual preferences",
+        "inter-lingual preferences",
+        "reward margins",
+        "preference manifold",
+        "cross-lingual alignment"
+      ],
+      "institution": "NLP & AI - Korea University",
+      "hf_url": "https://huggingface.co/papers/2608.23149",
+      "arxiv_url": "https://arxiv.org/abs/2608.23149",
+      "project_page": null,
+      "github_repo": "https://github.com/dltmddbs100/CRPO",
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.23149.png",
+      "one_sentence_summary": "该论文提出跨语言排序偏好优化框架（CRPO），利用英语偏好数据通过层次化平行偏好对和LambdaLoss多候选排序信号提升目标语言的对齐性能。",
+      "institution_tag": "NLP & AI - Korea University",
+      "topic_tag": "LLM preference optimization",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:01:05Z"
+      }
+    },
+    {
+      "id": "2608.28458",
+      "daily_date": "2026-08-31",
+      "title": "Acquire, Repair, Preserve: A Diagnosis-Guided Post-Training Recipe for Small-Model Dialogue Game Agents",
+      "summary": "Interactive dialogue games test a capability that static benchmarks largely leave implicit: a model must carry state across turns, interpret feedback, and choose valid actions under changing constraints. We study this setting in the LM Playschool Challenge with a 2B open-weight model, and find that many failures are not only broad knowledge failures but also local decision failures: repeated guesses, malformed actions, and violations of feedback that the model has just seen. These diagnostics motivate a training recipe organized around three steps: acquire broad game participation through supervised fine-tuning, repair mechanically verifiable failures within one targeted dialogue-game family using turn-local preference pairs, and preserve general capabilities beyond these dialogue games. In the official final evaluation, our submission improves public clemscore from 10.67 to 38.92 and closed in-domain score from 13.41 to 41.17, while approximately preserving aggregate static performance (44.14 vs. 44.24 for the baseline). Out-of-domain clemscore remains low at 7.88, with the largest gains concentrated in unseen variants of the targeted family. Our results suggest that broad SFT brings most of the model's capability improvement; turn-local supervision can be effective when failure detection is precise, with observed transfer concentrated primarily within-family.",
+      "authors": [
+        "Nan Li"
+      ],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 3,
+      "num_comments": 2,
+      "ai_keywords": [
+        "supervised fine-tuning",
+        "preference pairs",
+        "turn-local supervision",
+        "dialogue games",
+        "state tracking",
+        "feedback interpretation"
+      ],
+      "institution": "NLP Group at Utrecht University",
+      "hf_url": "https://huggingface.co/papers/2608.28458",
+      "arxiv_url": "https://arxiv.org/abs/2608.28458",
+      "project_page": null,
+      "github_repo": null,
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.28458.png",
+      "one_sentence_summary": "本文提出一种诊断引导的后训练方法，结合监督微调与回合级偏好对来修复对话游戏智能体的局部决策错误，同时保持通用能力。",
+      "institution_tag": "NLP Group at Utrecht University",
+      "topic_tag": "strategic dialogue agents",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:01:13Z"
+      }
+    },
+    {
+      "id": "2608.25375",
+      "daily_date": "2026-08-31",
+      "title": "GGSS: Geodesic-Gated Spherical Steering for Inference-Time Debiasing of Generative Vision-Language Models",
+      "summary": "Generative vision-language models (VLMs) are increasingly used in human-centered settings, yet they can produce demographically biased outputs even when images differ only in controlled attributes such as perceived race or gender. However, existing inference-time debiasers were largely designed for static embeddings or CLIP-like models rather than generative VLMs. We propose GGSS---Geodesic-Gated Spherical Steering---a norm-preserving intervention that discovers a counterfactual bias subspace on the unit hypersphere, steers visual tokens along geodesic arcs, and uses an adaptive gate to focus correction on tokens that carry stronger demographic signal. We evaluate four generative VLMs against ten adapted inference-time debiasing baselines and prompt-based mitigation under a single operating-point protocol across categorical, pairwise, and occupation-gender bias tests, while also measuring general visual-language capability. GGSS achieves the lowest average bias on all four models, significant on three of four backbones under paired permutation tests, while preserving MMStar accuracy within +/- 0.6 p.p. of the unsteered baseline. Code is available at https://github.com/dukesun99/GGSS.",
+      "authors": [
+        "Yiqun Sun",
+        "Junyu Chen",
+        "Pengfei Wei",
+        "Lawrence B. Hsieh"
+      ],
+      "published_at": "2026-08-26T04:58:40.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 3,
+      "num_comments": 2,
+      "ai_keywords": [
+        "Geodesic-Gated Spherical Steering",
+        "GGSS",
+        "counterfactual bias subspace",
+        "unit hypersphere",
+        "geodesic arcs",
+        "adaptive gate",
+        "visual tokens",
+        "generative VLMs",
+        "inference-time debiasing"
+      ],
+      "institution": null,
+      "hf_url": "https://huggingface.co/papers/2608.25375",
+      "arxiv_url": "https://arxiv.org/abs/2608.25375",
+      "project_page": null,
+      "github_repo": "https://github.com/dukesun99/GGSS",
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.25375.png",
+      "one_sentence_summary": "提出一种基于测地线门控的球形引导方法GGSS，通过在单位超球面上发现反事实偏见子空间并沿测地线弧调整视觉令牌，以在推理时减少生成式视觉-语言模型的人口统计偏见。",
+      "institution_tag": "unknown",
+      "topic_tag": "vision-language model debiasing",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:01:19Z"
+      }
+    },
+    {
+      "id": "2608.25697",
+      "daily_date": "2026-08-31",
+      "title": "LMSM: LLM Security Framework Inspired by Linux Security Modules",
+      "summary": "Large language models (LLMs) are increasingly deployed with layered defenses, yet malicious prompts can still bypass them. Interpretability methods can expose model-internal signals along the generation path that could inform enforcement, but these signals are not security controls by themselves. Deployments that adapt them for safety typically couple each signal to its own calibration, policy logic, and intervention code, so each new artifact creates integration work instead of strengthening a shared defense. We present Language Model Security Modules (LMSM), a security framework that adapts the separation behind Linux Security Modules (LSM) to LLM serving. In LMSM, a selected security backend exposes calibrated evidence, a versioned policy evaluates active rules over trusted per-request context, and a separate gate authorizes buffered output release. This design separates mediation correctness from policy effectiveness, and it allows backend, rule, or schedule changes without rebuilding request handling or enforcement. Our prototype shows the separation working in practice: with Hugging Face Transformers and continuously batched vLLM, the same substrate hosts artifact-backed sparse autoencoder (SAE) and transcoder deployments and task-fitted dense probes, preserves request-specific decisions under scheduler churn, and selectively enforces and composes multiple rules per request. On Qwen3-4B, LMSM-Checkpoint reduces HarmBench attack success rate from 39.20% to 3.32%, with XSTest false refusals rising from 2.40% to 4.40%, while retaining 98.14% of the throughput of a matched serving path that performs no monitoring work at 32 active sequences. LMSM gives advances in interpretability and model-internal analysis a common path to runtime enforcement.",
+      "authors": [
+        "XiuYu Zhang",
+        "Bonan Ruan",
+        "Junfeng Fang",
+        "An Zhang",
+        "Tat-Seng Chua",
+        "Zhenkai Liang"
+      ],
+      "published_at": "2026-08-26T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 3,
+      "num_comments": 2,
+      "ai_keywords": [
+        "sparse autoencoder",
+        "SAE",
+        "transcoder",
+        "dense probes",
+        "interpretability",
+        "Language Model Security Modules",
+        "LMSM",
+        "Linux Security Modules",
+        "LSM",
+        "HarmBench",
+        "XSTest",
+        "vLLM",
+        "Hugging Face Transformers"
+      ],
+      "institution": "National University of Singapore",
+      "hf_url": "https://huggingface.co/papers/2608.25697",
+      "arxiv_url": "https://arxiv.org/abs/2608.25697",
+      "project_page": null,
+      "github_repo": "https://github.com/xiuyuz/LMSM",
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.25697.png",
+      "one_sentence_summary": "本文提出LMSM，一个借鉴Linux安全模块设计的LLM安全框架，将稀疏自编码器、转码器、密集探针等可解释性信号作为安全后端，通过分离策略评估与输出门控实现模块化的运行时安全强制。",
+      "institution_tag": "National University of Singapore",
+      "topic_tag": "LLM safety monitoring",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:01:29Z"
+      }
+    },
+    {
+      "id": "2608.21721",
+      "daily_date": "2026-08-31",
+      "title": "Ask or Answer: A Decision Framework for Multi-Turn Health Misinformation Intervention",
+      "summary": "Correcting health misinformation in dialogue requires more than producing a factual rebuttal: users differ in what they know, what they believe, and what they need to hear, so an effective intervention often depends on first asking the right clarifying question. Yet existing methods either respond immediately or probe indiscriminately, treating clarification as either unnecessary or always beneficial. We propose Reward-Optimized Probe-and-Respond (RO-PnR), a framework that learns when asking is worth its cost. At each turn, RO-PnR chooses between probing for more information and committing to a final correction, guided by a turn-level reward that weighs the expected gain from probing against its interaction cost. To capture how user heterogeneity affects probing value, we model each simulated user with a latent state along health literacy and belief commitment. Experiments show that RO-PnR achieves the highest cost-adjusted utility across three health-misinformation datasets and three base models, using 30% fewer turns than always-probe baselines.",
+      "authors": [
+        "Xiaoying Song",
+        "Anirban Saha Anik",
+        "Jinyu Liu",
+        "Qitao Tan",
+        "Geng Yuan",
+        "Lingzi Hong"
+      ],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 3,
+      "num_comments": 2,
+      "ai_keywords": [
+        "Reward-Optimized Probe-and-Respond",
+        "turn-level reward",
+        "latent state",
+        "health literacy",
+        "belief commitment",
+        "cost-adjusted utility"
+      ],
+      "institution": null,
+      "hf_url": "https://huggingface.co/papers/2608.21721",
+      "arxiv_url": "https://arxiv.org/abs/2608.21721",
+      "project_page": null,
+      "github_repo": null,
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.21721.png",
+      "one_sentence_summary": "本文提出基于奖励优化的探查-应答决策框架（RO-PnR），在多轮健康错误信息干预中动态决定何时提问探查与何时给出最终纠正，以平衡询问收益与交互成本。",
+      "institution_tag": "unknown",
+      "topic_tag": "strategic dialogue agents",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:01:39Z"
+      }
+    },
+    {
+      "id": "2608.20965",
+      "daily_date": "2026-08-31",
+      "title": "Training, learning and inference: unified dynamics of neural systems",
+      "summary": "We define an atomic generation fact f=(u,tau,omega,z;rho), recording the origin, realized transformation, concrete occurrence, generated result and relation role. Compiled into a Generation-Fact Graph (GFG), these facts provide an AI-native, compilable scientific fact substrate preserving generation histories. We establish a GFG-based recursive scientific process in which analysis, intervention, replay and validation form facts for later cycles. Using nanoGPT, we establish unified training-learning dynamics. Training is the evolution of a parameter-optimizer system with state and memory: each actual training action enters the receiving state and produces a finite-amplitude nonlinear functional response conditioned by that state and target-specific update geometry. Learning is the persistent reorganization of distributed functional support by these responses; capability formation, maintenance, decline or recovery becomes observable when target-specific states are evaluated against their readout boundaries. Three primary coordinates - target-boundary state, target-specific update geometry and parameter-Adam receiving state - yield a second-order predictor operating before post-update outputs are read. On held-out runs, it achieved 91.43% accuracy and 91.49% macro-averaged recall across four transitions. We further establish inference as a frozen projection of training-learning dynamics. Component gating and rollback show causal recruitment and non-additive combination of query-conditioned support formed during training, deriving organizational conditions realized by Attention. Controlled feedback indicates possible double-edged reinforcement effects. ResNet/CIFAR-100 and diffusion/CIFAR-10 experiments confirm receiving-state-conditioned responses, persistent support reorganization and frozen inference projection beyond nanoGPT.",
+      "authors": [
+        "Mian Wang"
+      ],
+      "published_at": "2026-08-21T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 3,
+      "num_comments": 2,
+      "ai_keywords": [
+        "atomic generation fact",
+        "Generation-Fact Graph",
+        "nanoGPT",
+        "parameter-optimizer system",
+        "target-specific update geometry",
+        "parameter-Adam receiving state",
+        "second-order predictor",
+        "inference projection",
+        "component gating",
+        "rollback",
+        "Attention",
+        "ResNet/CIFAR-100",
+        "diffusion/CIFAR-10"
+      ],
+      "institution": null,
+      "hf_url": "https://huggingface.co/papers/2608.20965",
+      "arxiv_url": "https://arxiv.org/abs/2608.20965",
+      "project_page": null,
+      "github_repo": "https://github.com/wind342/gfg-training-learning-inference-experiments",
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.20965.png",
+      "one_sentence_summary": "本文提出基于原子生成事实及生成事实图的统一框架，将训练、学习和推理建模为神经系统的动态过程，并在 nanoGPT 等模型上验证了二阶预测器与成分门控机制。",
+      "institution_tag": "Unknown",
+      "topic_tag": "neural network training dynamics",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:01:47Z"
+      }
+    },
+    {
+      "id": "2608.26737",
+      "daily_date": "2026-08-31",
+      "title": "Generative Semantic Scene Completion",
+      "summary": "Outdoor LiDAR semantic scene completion (SSC) recovers a dense semantic voxel grid from a scan observing 1% of the target volume, under class imbalance beyond 7,000x. We recast SSC as generative semantic scene completion (GSSC): a single discrete-diffusion formulation in three roles. First, paired sparse-dense scene synthesis (PS^3) generates matched sparse LiDAR observations with their dense semantic completions, addressing the long tail at its source and yielding the PS^3-SemanticKITTI corpus we train on alongside SemanticKITTI. Second, semantic-guided generative scene completion (SGSC) generates the scene from noise with multinomial discrete diffusion, conditioned on the sparse scan through a bird's-eye-view semantic map and a sparse 3D feature stream. Third, the same framework instead refines an existing completion in one flow-matching step: structured source discrete diffusion (S^2D^2). S^2D^2 improves the mIoU of SGSC's own output and every external SSC base tested, without base retraining or test-time adaptation. On the strongest base, one step without test-time augmentation reaches 38.8% mIoU on the SemanticKITTI hidden test. To our knowledge that is the best causal, single-sweep, single-sample result on that leaderboard, +2.1 pp over the previous best published score under the same restriction. Four correction steps with eight-view test-time augmentation reach 39.2%, outside that restriction.",
+      "authors": [
+        "Shi Chen",
+        "Weifeng Ge"
+      ],
+      "published_at": "2026-08-27T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 2,
+      "num_comments": 3,
+      "ai_keywords": [
+        "semantic scene completion",
+        "discrete diffusion",
+        "multinomial diffusion",
+        "flow matching",
+        "bird's-eye-view semantic map",
+        "sparse 3D feature stream",
+        "paired sparse-dense scene synthesis",
+        "structured source discrete diffusion"
+      ],
+      "institution": null,
+      "hf_url": "https://huggingface.co/papers/2608.26737",
+      "arxiv_url": "https://arxiv.org/abs/2608.26737",
+      "project_page": "https://shichen.world/GSSC-project-page/",
+      "github_repo": "https://github.com/BillyChern/GSSC-S2D2",
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.26737.png",
+      "one_sentence_summary": "该论文将室外LiDAR语义场景补全重新表述为生成式语义场景补全，采用多级离散扩散和流匹配框架统一实现成对稀疏-稠密场景生成、语义引导的场景生成与单步场景精化。",
+      "institution_tag": "Unknown",
+      "topic_tag": "3D scene generation",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:01:56Z"
+      }
+    },
+    {
+      "id": "2608.26175",
+      "daily_date": "2026-08-31",
+      "title": "Lost in Compression: A Controlled Cross-Lingual Audit of Extractive Prompt Compressors",
+      "summary": "Extractive prompt compression promises to cut LLM inference costs by removing low-information tokens, and learned compressors such as LLMLingua-2 report strong results on English benchmarks. Most other languages already pay a token premium: the same content costs 1.3-1.8x more tokens than in English. We ask whether compression closes or widens this gap. Using fully parallel data in ten languages spanning five scripts, with controls budget-matched in the target model's tokenizer, we audit four learned compressors against four deterministic baselines, on eleven target models from ten vendors (over 250,000 evaluation calls). Three of the compressors are trained with English supervision (LLMLingua-2 XLM-R/mBERT; Kompress-v2 from the production Headroom stack); the fourth, XProvence, is trained multilingually. First, the transfer gap is real, replicates across target models and compressor backbones, and is strongly rate-dependent: at a 0.33 keep-rate English retains 57-62% of normalized context utilization while Lithuanian retains 10-24% and Chinese essentially none, despite Chinese having the smallest token premium. Second, the gap tracks compression supervision data, not architecture. All three English-trained compressors show it, deterministic methods show no comparable gap, and the multilingually trained XProvence v1 shows none. Its v2 release, retrained on translated data, empties 92% of Chinese contexts at its aggressive threshold without any warning. Third, in a harder long-context setting, aggressive learned compression drives compressed contexts to or below no-context utility in three of five non-English languages. A translate-then-compress pipeline matches or beats native compression at roughly half the token cost in three of five tested languages. We release all code, compressions, and model outputs. Safe compression budgets are much smaller outside English.",
+      "authors": [
+        "Mantas Lukauskas"
+      ],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "submitted_on_daily_at": "2026-08-31T00:00:00.000Z",
+      "upvotes": 2,
+      "num_comments": 2,
+      "ai_keywords": [
+        "extractive prompt compression",
+        "LLMLingua-2",
+        "Kompress-v2",
+        "XProvence",
+        "cross-lingual transfer gap",
+        "token premium",
+        "multilingual supervision",
+        "deterministic baselines",
+        "long-context compression"
+      ],
+      "institution": null,
+      "hf_url": "https://huggingface.co/papers/2608.26175",
+      "arxiv_url": "https://arxiv.org/abs/2608.26175",
+      "project_page": null,
+      "github_repo": "https://github.com/MantasLukauskas/lost-in-compression",
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.26175.png",
+      "one_sentence_summary": "该论文通过控制十种语言、六个压缩器和十一个目标模型的跨语言审计，系统评估抽取式提示压缩器的性能迁移，发现英语训练的压缩器在非英语语言上存在显著且与压缩率相关的性能退化，而多语言训练的XProvence v1无此差距。",
+      "institution_tag": "Unknown",
+      "topic_tag": "LLM context pruning",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-09-02T07:02:08Z"
       }
     }
   ]
