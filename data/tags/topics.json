@@ -1089,6 +1089,15 @@
       ]
     },
     {
+      "name": "causal foundation models",
+      "description": "Pretrained neural networks that estimate causal quantities such as average treatment effect on new datasets via in-context learning, without requiring model updates or fine-tuning.",
+      "created_at": "2026-09-09T05:42:37Z",
+      "usage_count": 1,
+      "examples": [
+        "2609.03003"
+      ]
+    },
+    {
       "name": "causal inference benchmark evaluation",
       "description": "Evaluation benchmarks and protocols for causal inference methods, including treatment effect estimation under realistic assumptions, simulated ground truth, and real-world datasets.",
       "created_at": "2026-05-28T18:33:00Z",
@@ -1656,14 +1665,15 @@
       "name": "discrete diffusion models",
       "description": "Methods and theory for diffusion-based generative modeling over discrete state spaces, including flexible corruption processes, reverse denoising objectives, and efficient training for large-vocabulary discrete data.",
       "created_at": "2026-05-28T18:59:14Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2603.21342",
         "2605.22765",
         "2606.29814",
         "2607.13431",
         "2608.00146",
-        "2608.10615"
+        "2608.10615",
+        "2609.04010"
       ]
     },
     {
@@ -1807,12 +1817,13 @@
       "name": "embodied agent architecture",
       "description": "Modular cognitive architectures for embodied virtual agents, integrating perception, reasoning, and action in interactive 3D environments.",
       "created_at": "2026-08-18T01:47:37Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2608.09848",
         "2608.11350",
         "2608.16590",
-        "2608.30396"
+        "2608.30396",
+        "2609.01281"
       ]
     },
     {
@@ -4559,7 +4570,7 @@
       "name": "LLM reinforcement learning",
       "description": "Online reinforcement learning methods for optimizing large language model policies, especially for reasoning tasks and exploration-exploitation control.",
       "created_at": "2026-05-28T05:38:29Z",
-      "usage_count": 225,
+      "usage_count": 226,
       "examples": [
         "2605.28109",
         "2605.28184",
@@ -4783,7 +4794,8 @@
         "2608.13622",
         "2608.23566",
         "2608.27906",
-        "2608.29252"
+        "2608.29252",
+        "2609.03241"
       ]
     },
     {
@@ -4811,7 +4823,7 @@
       "name": "LLM safety alignment",
       "description": "Methods for aligning large language models to follow safety constraints and resist unsafe or adversarial prompts, including representation-level, multilingual, and fine-tuning-based safety alignment approaches.",
       "created_at": "2026-05-28T07:05:32Z",
-      "usage_count": 27,
+      "usage_count": 28,
       "examples": [
         "2604.12710",
         "2604.13602",
@@ -4839,7 +4851,8 @@
         "2606.28525",
         "2607.26654",
         "2608.21278",
-        "2609.04714"
+        "2609.04714",
+        "2609.04482"
       ]
     },
     {
@@ -5110,7 +5123,7 @@
       "name": "LLM test-time scaling",
       "description": "Studies methods that improve or analyze large language model performance at inference time, such as sampling, voting, search, selection, and verification without changing model weights.",
       "created_at": "2026-05-28T07:12:40Z",
-      "usage_count": 34,
+      "usage_count": 35,
       "examples": [
         "2603.27844",
         "2604.16029",
@@ -5145,7 +5158,8 @@
         "2608.11994",
         "2608.18027",
         "2608.16425",
-        "2608.26070"
+        "2608.26070",
+        "2609.03254"
       ]
     },
     {
@@ -7294,7 +7308,7 @@
       "name": "on-policy distillation",
       "description": "Methods for training student models using teacher feedback on the student's own generated trajectories, often improving imitation learning, alignment, or policy transfer compared with purely offline sequence-level distillation.",
       "created_at": "2026-05-28T05:38:18Z",
-      "usage_count": 131,
+      "usage_count": 133,
       "examples": [
         "2605.27028",
         "2604.01193",
@@ -7425,7 +7439,9 @@
         "2608.31046",
         "2608.29846",
         "2609.04172",
-        "2609.05295"
+        "2609.05295",
+        "2609.02998",
+        "2608.25936"
       ]
     },
     {
@@ -9283,9 +9299,10 @@
       "name": "training data inference",
       "description": "Methods that infer properties or composition of a model's training data from released model artifacts such as weights, checkpoints, outputs, or trajectories, beyond sample-level membership inference.",
       "created_at": "2026-07-05T17:05:07Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2607.01686"
+        "2607.01686",
+        "2609.04382"
       ]
     },
     {
@@ -9336,7 +9353,7 @@
       "name": "uncertainty quantification",
       "description": "Methods for estimating, decomposing, calibrating, or acting on predictive uncertainty in machine learning models, including epistemic and aleatoric uncertainty estimation.",
       "created_at": "2026-05-28T07:37:51Z",
-      "usage_count": 23,
+      "usage_count": 24,
       "examples": [
         "2604.24170",
         "2605.01428",
@@ -9360,7 +9377,8 @@
         "2606.03437",
         "2608.14639",
         "2608.16002",
-        "2609.01072"
+        "2609.01072",
+        "2609.03005"
       ]
     },
     {
@@ -9601,11 +9619,12 @@
       "name": "video memory",
       "description": "面向视频流的记忆管理系统，支持按时间分层组织、整合为事件和重复模式，并提供相应检索能力，用于问答和主动辅助。",
       "created_at": "2026-08-18T01:34:18Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2608.02392",
         "2608.28460",
-        "2608.26671"
+        "2608.26671",
+        "2609.05533"
       ]
     },
     {
@@ -9632,11 +9651,12 @@
       "name": "video object segmentation",
       "description": "Methods for segmenting and consistently tracking object masks across video frames, especially under motion, occlusion, and viewpoint changes.",
       "created_at": "2026-05-28T15:51:35Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2601.08831",
         "2602.17807",
-        "2607.08688"
+        "2607.08688",
+        "2609.03756"
       ]
     },
     {
