@@ -302,10 +302,11 @@
       "name": "active learning",
       "description": "Methods that iteratively select the most informative unlabeled samples for annotation to improve model performance under limited labeling budgets.",
       "created_at": "2026-05-28T16:15:41Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2601.13677",
-        "2602.14279"
+        "2602.14279",
+        "2609.06806"
       ]
     },
     {
@@ -423,13 +424,14 @@
       "name": "agentic AI interpretability",
       "description": "Methods and evaluations for explaining, diagnosing, and localizing failures in multi-step LLM or agentic AI trajectories rather than only interpreting single static predictions.",
       "created_at": "2026-05-28T17:21:52Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2602.06841",
         "2603.11382",
         "2606.22936",
         "2607.12747",
-        "2608.12036"
+        "2608.12036",
+        "2609.09113"
       ]
     },
     {
@@ -447,14 +449,15 @@
       "name": "agentic co-evolution",
       "description": "关于智能体系统中多个智能体与环境相互施加适应压力、共同演化以摆脱人类固定设计的综述性研究，涵盖对抗、协作、组织适应及可演化机制等。",
       "created_at": "2026-08-18T01:48:05Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2608.10299",
         "2608.19880",
         "2608.24794",
         "2608.26582",
         "2609.00196",
-        "2609.04128"
+        "2609.04128",
+        "2609.09134"
       ]
     },
     {
@@ -873,9 +876,10 @@
       "name": "autonomous driving testing",
       "description": "研究自动驾驶系统测试的实践方法、挑战与标准框架，包括场景测试、X-in-the-loop、测试指标及相关工具与流程。",
       "created_at": "2026-08-18T01:29:50Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2607.15820"
+        "2607.15820",
+        "2609.08965"
       ]
     },
     {
@@ -1013,10 +1017,11 @@
       "name": "benchmark evaluation",
       "description": "Quantifying and analyzing when models are optimized to reproduce benchmark reference outputs instead of faithfully transcribing underdetermined or contradictory audio, typically via behavioral probes and mechanistic analyses.",
       "created_at": "2026-08-24T01:06:35Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2608.19936",
-        "2609.04173"
+        "2609.04173",
+        "2609.09657"
       ]
     },
     {
@@ -1321,13 +1326,14 @@
       "name": "deepfake detection",
       "description": "Methods for detecting synthetic or manipulated face, audio, image, or video content, especially approaches aimed at generalizing to unseen forgery techniques or generation models.",
       "created_at": "2026-05-28T15:24:54Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2601.02359",
         "2603.15026",
         "2608.06865",
         "2608.14391",
-        "2609.07670"
+        "2609.07670",
+        "2609.07369"
       ]
     },
     {
@@ -1822,13 +1828,14 @@
       "name": "embodied agent architecture",
       "description": "Modular cognitive architectures for embodied virtual agents, integrating perception, reasoning, and action in interactive 3D environments.",
       "created_at": "2026-08-18T01:47:37Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2608.09848",
         "2608.11350",
         "2608.16590",
         "2608.30396",
-        "2609.01281"
+        "2609.01281",
+        "2609.10522"
       ]
     },
     {
@@ -1973,6 +1980,15 @@
       "examples": [
         "2606.26016",
         "2607.18198"
+      ]
+    },
+    {
+      "name": "formal theorem proving",
+      "description": "Research direction on using interactive proof assistants and LLM agents to formally prove mathematical statements, including building domain-specific benchmarks like StochBench for stochastic processes.",
+      "created_at": "2026-09-11T05:39:01Z",
+      "usage_count": 1,
+      "examples": [
+        "2609.09264"
       ]
     },
     {
@@ -2270,7 +2286,7 @@
       "name": "human motion generation",
       "description": "Methods for generating realistic human motion sequences, often conditioned on text, identity, pose, or other multimodal signals, including joint modeling of body shape and motion dynamics.",
       "created_at": "2026-05-28T07:40:08Z",
-      "usage_count": 17,
+      "usage_count": 18,
       "examples": [
         "2604.25164",
         "2605.20955",
@@ -2288,7 +2304,8 @@
         "2606.15142",
         "2607.08741",
         "2608.24909",
-        "2609.04250"
+        "2609.04250",
+        "2609.00369"
       ]
     },
     {
@@ -2536,6 +2553,15 @@
       "examples": [
         "2604.08364",
         "2603.16649"
+      ]
+    },
+    {
+      "name": "image super-resolution",
+      "description": "Image super-resolution methods that reconstruct high-resolution images from low-resolution inputs, including recursive, prior-guided, and self-distillation based approaches.",
+      "created_at": "2026-09-11T05:39:28Z",
+      "usage_count": 1,
+      "examples": [
+        "2609.06490"
       ]
     },
     {
@@ -2796,7 +2822,7 @@
       "name": "LLM adaptive reasoning",
       "description": "Methods and evaluations for dynamically controlling, routing, or scaling language-model reasoning effort to balance answer quality, latency, and inference cost.",
       "created_at": "2026-05-28T05:38:00Z",
-      "usage_count": 28,
+      "usage_count": 29,
       "examples": [
         "2605.28398",
         "2603.29957",
@@ -2824,7 +2850,8 @@
         "2603.12372",
         "2603.08462",
         "2606.14694",
-        "2606.19808"
+        "2606.19808",
+        "2609.06702"
       ]
     },
     {
@@ -3274,14 +3301,15 @@
       "name": "LLM agent safety evaluation",
       "description": "Evaluation of safety-relevant behaviors and failure modes in LLM-based agents, including coercion, deception, and harmful escalation in multi-agent interactions.",
       "created_at": "2026-07-23T03:46:19Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2607.15434",
         "2607.20891",
         "2608.03700",
         "2608.04574",
         "2608.00677",
-        "2608.17597"
+        "2608.17597",
+        "2609.08126"
       ]
     },
     {
@@ -3630,7 +3658,7 @@
       "name": "LLM code generation",
       "description": "Methods that use large language models to generate, optimize, or synthesize executable code, including domain-specific programming languages such as hardware description languages.",
       "created_at": "2026-05-28T16:29:26Z",
-      "usage_count": 10,
+      "usage_count": 11,
       "examples": [
         "2601.18067",
         "2602.02554",
@@ -3641,7 +3669,8 @@
         "2605.31268",
         "2606.16827",
         "2607.04939",
-        "2608.17379"
+        "2608.17379",
+        "2609.05779"
       ]
     },
     {
@@ -4475,7 +4504,7 @@
       "name": "LLM post-training",
       "description": "Methods for adapting large language models to downstream tasks through staged training procedures, often combining supervised fine-tuning with reinforcement learning on task-specific data.",
       "created_at": "2026-08-18T01:32:17Z",
-      "usage_count": 10,
+      "usage_count": 11,
       "examples": [
         "2608.01862",
         "2608.03972",
@@ -4486,7 +4515,8 @@
         "2609.01572",
         "2609.02849",
         "2608.26730",
-        "2609.08368"
+        "2609.08368",
+        "2609.07103"
       ]
     },
     {
@@ -4598,7 +4628,7 @@
       "name": "LLM reinforcement learning",
       "description": "Online reinforcement learning methods for optimizing large language model policies, especially for reasoning tasks and exploration-exploitation control.",
       "created_at": "2026-05-28T05:38:29Z",
-      "usage_count": 227,
+      "usage_count": 228,
       "examples": [
         "2605.28109",
         "2605.28184",
@@ -4824,7 +4854,8 @@
         "2608.27906",
         "2608.29252",
         "2609.03241",
-        "2609.08404"
+        "2609.08404",
+        "2609.11042"
       ]
     },
     {
@@ -5048,7 +5079,7 @@
       "name": "LLM software engineering benchmark evaluation",
       "description": "Benchmarking and empirical evaluation of large language models on software engineering tasks such as code generation, summarization, review, repair, and patch assessment, often focusing on prompting, context design, or task-specific evaluation protocols.",
       "created_at": "2026-05-28T17:59:28Z",
-      "usage_count": 19,
+      "usage_count": 20,
       "examples": [
         "2602.23047",
         "2603.03194",
@@ -5067,7 +5098,8 @@
         "2608.09802",
         "2608.19799",
         "2608.23564",
-        "2608.27831"
+        "2608.27831",
+        "2609.08149"
       ]
     },
     {
@@ -5095,7 +5127,7 @@
       "name": "LLM system optimization",
       "description": "Methods for automatically optimizing the non-weight components of LLM applications, such as prompts, context management, retrieval logic, tool use, and orchestration code.",
       "created_at": "2026-05-28T06:28:51Z",
-      "usage_count": 49,
+      "usage_count": 51,
       "examples": [
         "2603.28052",
         "2603.29002",
@@ -5145,7 +5177,9 @@
         "2607.19712",
         "2608.13987",
         "2608.14614",
-        "2608.16157"
+        "2608.16157",
+        "2609.10226",
+        "2609.05463"
       ]
     },
     {
@@ -7202,11 +7236,12 @@
       "name": "neural speech decoding",
       "description": "Research on decoding speech and linguistic content from non-invasive neural recordings such as EEG and MEG, covering large-scale neural datasets, standardized benchmark evaluation, and decoding models aimed at non-invasive brain-to-text brain-computer interfaces.",
       "created_at": "2026-08-28T03:01:30Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2608.25204",
         "2609.02887",
-        "2609.03231"
+        "2609.03231",
+        "2609.10296"
       ]
     },
     {
@@ -7777,7 +7812,7 @@
       "name": "prompt optimization",
       "description": "Methods for improving language model behavior by searching, selecting, or refining prompts without updating model weights, including system prompt optimization and prompt subset selection.",
       "created_at": "2026-05-28T06:56:32Z",
-      "usage_count": 19,
+      "usage_count": 20,
       "examples": [
         "2604.08801",
         "2605.09271",
@@ -7797,7 +7832,8 @@
         "2606.23496",
         "2607.25675",
         "2608.17067",
-        "2609.00621"
+        "2609.00621",
+        "2609.08572"
       ]
     },
     {
@@ -8108,7 +8144,7 @@
       "name": "representation geometry evaluation",
       "description": "Evaluation and analysis of whether learned model representations preserve continuous geometric, topological, or information-theoretic structure in scientific or other structured domains.",
       "created_at": "2026-05-28T06:43:25Z",
-      "usage_count": 16,
+      "usage_count": 17,
       "examples": [
         "2604.04155",
         "2604.03480",
@@ -8125,7 +8161,8 @@
         "2605.29888",
         "2606.15760",
         "2606.19603",
-        "2606.29655"
+        "2606.29655",
+        "2609.10060"
       ]
     },
     {
@@ -8222,7 +8259,7 @@
       "name": "RLVR optimization",
       "description": "Optimization methods specifically designed for reinforcement learning with verifiable rewards, including parameter-update schemes that exploit the structure of reward-driven language model adaptation.",
       "created_at": "2026-07-23T03:47:41Z",
-      "usage_count": 11,
+      "usage_count": 12,
       "examples": [
         "2607.19331",
         "2607.19790",
@@ -8234,7 +8271,8 @@
         "2608.31075",
         "2609.02817",
         "2608.29188",
-        "2609.00444"
+        "2609.00444",
+        "2609.08650"
       ]
     },
     {
@@ -8452,12 +8490,13 @@
       "name": "scientific information extraction",
       "description": "Methods and datasets for extracting structured scientific claims, proposals, entities, or evidence from scholarly and research-related text using language models or NLP pipelines.",
       "created_at": "2026-05-28T05:57:57Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2503.08600",
         "2604.04562",
         "2604.09237",
-        "2605.10032"
+        "2605.10032",
+        "2609.06703"
       ]
     },
     {
@@ -8491,11 +8530,12 @@
       "name": "scientific reproducibility evaluation",
       "description": "Evaluation and dataset construction for assessing whether scientific claims, methods, or implementation details are faithfully reflected in associated code or reproducibility artifacts, often using LLMs for discrepancy detection.",
       "created_at": "2026-05-28T16:15:05Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2601.12910",
         "2601.18724",
-        "2603.27646"
+        "2603.27646",
+        "2609.09219"
       ]
     },
     {
@@ -8634,6 +8674,15 @@
         "2603.16844",
         "2603.19076",
         "2607.17699"
+      ]
+    },
+    {
+      "name": "sparse recovery",
+      "description": "Theoretical analysis of sample complexity and information-theoretic thresholds for sparse signal support recovery from noisy linear measurements, including sparse and sparsified measurement designs.",
+      "created_at": "2026-09-11T05:41:06Z",
+      "usage_count": 1,
+      "examples": [
+        "2509.01809"
       ]
     },
     {
@@ -9244,14 +9293,15 @@
       "name": "time series benchmark evaluation",
       "description": "Benchmarking and evaluation of time series forecasting models across diverse regimes, datasets, metrics, and scaling conditions.",
       "created_at": "2026-05-28T06:32:19Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2603.26017",
         "2603.23582",
         "2601.18744",
         "2602.19455",
         "2603.10926",
-        "2608.08119"
+        "2608.08119",
+        "2609.05405"
       ]
     },
     {
@@ -9352,10 +9402,11 @@
       "name": "training data inference",
       "description": "Methods that infer properties or composition of a model's training data from released model artifacts such as weights, checkpoints, outputs, or trajectories, beyond sample-level membership inference.",
       "created_at": "2026-07-05T17:05:07Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2607.01686",
-        "2609.04382"
+        "2609.04382",
+        "2609.02771"
       ]
     },
     {
@@ -9832,13 +9883,14 @@
       "name": "video-language models",
       "description": "Research on multimodal language models that process and reason over video content, including temporal grounding, spatial localization, video question answering, and fine-grained video understanding.",
       "created_at": "2026-05-28T15:53:34Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2601.07290",
         "2601.10611",
         "2602.08711",
         "2602.13191",
-        "2607.14935"
+        "2607.14935",
+        "2609.10355"
       ]
     },
     {
@@ -10177,7 +10229,7 @@
       "name": "visual generation reinforcement learning",
       "description": "Reinforcement learning methods for optimizing and aligning visual generative models, including reward-guided training, credit assignment, and stability mechanisms for image or visual token generation.",
       "created_at": "2026-05-28T15:17:27Z",
-      "usage_count": 28,
+      "usage_count": 29,
       "examples": [
         "2601.02256",
         "2512.24138",
@@ -10206,7 +10258,8 @@
         "2606.27608",
         "2606.27771",
         "2607.02291",
-        "2607.15273"
+        "2607.15273",
+        "2609.09187"
       ]
     },
     {
@@ -10412,7 +10465,7 @@
       "name": "world models",
       "description": "Models that learn to generate or predict interactive environment dynamics from observations and actions, often for simulation, planning, or embodied agent control.",
       "created_at": "2026-05-28T05:37:10Z",
-      "usage_count": 198,
+      "usage_count": 201,
       "examples": [
         "2605.28816",
         "2603.25240",
@@ -10610,7 +10663,10 @@
         "2609.02886",
         "2609.04196",
         "2609.07398",
-        "2609.05588"
+        "2609.05588",
+        "2608.12564",
+        "2609.10540",
+        "2609.09155"
       ]
     },
     {
