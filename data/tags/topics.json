@@ -103,7 +103,7 @@
       "name": "3D scene generation",
       "description": "Methods for generating complete 3D scenes from visual or other conditioning signals, including large-scale scene synthesis, latent-space extension, patch-wise generation, and geometry-aware refinement.",
       "created_at": "2026-05-28T06:28:32Z",
-      "usage_count": 31,
+      "usage_count": 32,
       "examples": [
         "2603.29387",
         "2603.29089",
@@ -135,7 +135,8 @@
         "2608.30821",
         "2609.05416",
         "2608.05879",
-        "2609.05594"
+        "2609.05594",
+        "2609.11499"
       ]
     },
     {
@@ -404,7 +405,7 @@
       "name": "agent security protocols",
       "description": "Cryptographic, authentication, authorization, provenance, and accountability mechanisms designed to secure agentic AI systems and multi-agent delegation workflows.",
       "created_at": "2026-05-28T06:43:39Z",
-      "usage_count": 12,
+      "usage_count": 13,
       "examples": [
         "2604.04522",
         "2604.15579",
@@ -417,7 +418,8 @@
         "2603.22350",
         "2606.10813",
         "2608.11274",
-        "2608.15888"
+        "2608.15888",
+        "2609.05903"
       ]
     },
     {
@@ -544,21 +546,22 @@
       "name": "AI memory infrastructure",
       "description": "Research on memory substrates, storage, retrieval, and state-management infrastructure that support reliable, replayable, or scalable memory for AI systems.",
       "created_at": "2026-05-28T15:11:37Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2512.22280",
         "2601.06789",
         "2603.14588",
         "2606.02775",
         "2607.11487",
-        "2607.09759"
+        "2607.09759",
+        "2609.11561"
       ]
     },
     {
       "name": "AI peer review",
       "description": "LLM-based systems that assist scholarly peer review by analyzing manuscripts, retrieving related literature, extracting claims, and grounding review comments in evidence or executable verification.",
       "created_at": "2026-05-28T06:47:22Z",
-      "usage_count": 14,
+      "usage_count": 15,
       "examples": [
         "2604.04074",
         "2605.20668",
@@ -573,7 +576,8 @@
         "2605.30329",
         "2606.28277",
         "2608.08975",
-        "2608.28612"
+        "2608.28612",
+        "2609.09076"
       ]
     },
     {
@@ -840,9 +844,10 @@
       "name": "autoformalization",
       "description": "Autoformalization of natural-language mathematical statements into machine-verified Lean 4 code, using knowledge retrieval from Mathlib and verification-guided iterative refinement to improve correctness and construct large-scale verified training data.",
       "created_at": "2026-08-20T01:03:04Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2608.14221"
+        "2608.14221",
+        "2609.11085"
       ]
     },
     {
@@ -1017,11 +1022,12 @@
       "name": "benchmark evaluation",
       "description": "Quantifying and analyzing when models are optimized to reproduce benchmark reference outputs instead of faithfully transcribing underdetermined or contradictory audio, typically via behavioral probes and mechanistic analyses.",
       "created_at": "2026-08-24T01:06:35Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2608.19936",
         "2609.04173",
-        "2609.09657"
+        "2609.09657",
+        "2609.10016"
       ]
     },
     {
@@ -2524,7 +2530,7 @@
       "name": "image restoration",
       "description": "Methods for recovering degraded images by removing artifacts such as flicker, noise, blur, or exposure inconsistencies, often using neural architectures tailored to the degradation structure.",
       "created_at": "2026-05-28T06:31:22Z",
-      "usage_count": 17,
+      "usage_count": 19,
       "examples": [
         "2603.22794",
         "2604.08172",
@@ -2542,7 +2548,9 @@
         "2606.15158",
         "2606.30030",
         "2607.02471",
-        "2608.16793"
+        "2608.16793",
+        "2609.11317",
+        "2609.11156"
       ]
     },
     {
@@ -4226,7 +4234,7 @@
       "name": "LLM latent computation",
       "description": "Research on using continuous latent representations and latent-space operations as an internal computational substrate for language models, covering architectures, representations, reasoning, planning, memory, and optimization beyond explicit token-level generation.",
       "created_at": "2026-05-28T06:34:28Z",
-      "usage_count": 21,
+      "usage_count": 22,
       "examples": [
         "2604.02029",
         "2604.06427",
@@ -4248,21 +4256,23 @@
         "2606.18023",
         "2607.19691",
         "2607.17674",
-        "2609.07821"
+        "2609.07821",
+        "2609.10715"
       ]
     },
     {
       "name": "LLM mathematical reasoning",
       "description": "Research on improving and evaluating language models for advanced mathematical problem solving, including dataset construction, reasoning trace generation, filtering, and fine-tuning for math tasks.",
       "created_at": "2026-05-28T05:37:21Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2605.28003",
         "2605.13301",
         "2601.03559",
         "2602.03837",
         "2603.18886",
-        "2608.28600"
+        "2608.28600",
+        "2609.10712"
       ]
     },
     {
@@ -5626,7 +5636,7 @@
       "name": "MLLM retrieval",
       "description": "Methods that use multimodal large language models or vision-language representations to support retrieval across images, text, and other multimodal query formats.",
       "created_at": "2026-05-28T09:32:24Z",
-      "usage_count": 27,
+      "usage_count": 28,
       "examples": [
         "2605.22552",
         "2605.24938",
@@ -5654,7 +5664,8 @@
         "2608.06060",
         "2608.20886",
         "2608.28695",
-        "2608.21450"
+        "2608.21450",
+        "2609.10745"
       ]
     },
     {
@@ -5703,20 +5714,21 @@
       "name": "model pruning",
       "description": "Methods for reducing neural network size and computation by removing parameters, structures, or subnetworks, including adaptive and input-dependent pruning strategies.",
       "created_at": "2026-05-28T16:40:26Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2601.22141",
         "2602.03295",
         "2602.17664",
         "2606.14346",
-        "2609.02496"
+        "2609.02496",
+        "2609.11412"
       ]
     },
     {
       "name": "model quantization",
       "description": "Methods for reducing model precision and deployment cost through post-training or calibration-based quantization, including quantization strategies for specialized settings such as merged or multi-expert models.",
       "created_at": "2026-05-28T09:04:58Z",
-      "usage_count": 33,
+      "usage_count": 34,
       "examples": [
         "2605.16882",
         "2605.19660",
@@ -5750,7 +5762,8 @@
         "2608.17336",
         "2609.04098",
         "2609.04490",
-        "2510.08999"
+        "2510.08999",
+        "2608.27875"
       ]
     },
     {
@@ -5890,14 +5903,15 @@
       "name": "multi-agent reinforcement learning",
       "description": "Research on learning and coordination among multiple interacting agents, including cooperation, competition, opponent modeling, and adaptation in reinforcement learning settings.",
       "created_at": "2026-05-28T17:37:51Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2602.16301",
         "2602.16928",
         "2603.02604",
         "2603.10098",
         "2603.07988",
-        "2608.17253"
+        "2608.17253",
+        "2609.11155"
       ]
     },
     {
@@ -5952,13 +5966,14 @@
       "name": "multi-vector retrieval",
       "description": "Methods for retrieval systems that represent each document or item with multiple vectors, often using late interaction scoring, including efficiency, compression, and cross-modal retrieval improvements.",
       "created_at": "2026-05-28T17:47:50Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2602.21202",
         "2603.01666",
         "2603.09930",
         "2607.04605",
-        "2607.05803"
+        "2607.05803",
+        "2609.11808"
       ]
     },
     {
@@ -6025,12 +6040,13 @@
       "name": "multilingual LLM reasoning",
       "description": "Methods that improve large language models' ability to understand, reason, and generate answers across multiple languages, often by combining cross-lingual alignment, translation, and reasoning-oriented fine-tuning.",
       "created_at": "2026-05-28T17:03:20Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2602.05940",
         "2603.19017",
         "2607.11736",
-        "2608.17744"
+        "2608.17744",
+        "2609.10445"
       ]
     },
     {
@@ -6841,7 +6857,7 @@
       "name": "multimodal spatial reasoning",
       "description": "Methods that improve or evaluate multimodal models' ability to reason about spatial relationships, viewpoint changes, geometry, and scene structure from visual inputs.",
       "created_at": "2026-05-28T06:39:22Z",
-      "usage_count": 44,
+      "usage_count": 45,
       "examples": [
         "2604.02870",
         "2603.27183",
@@ -6886,7 +6902,8 @@
         "2608.14138",
         "2608.21832",
         "2608.21140",
-        "2609.03729"
+        "2609.03729",
+        "2609.07064"
       ]
     },
     {
@@ -6914,7 +6931,7 @@
       "name": "multimodal temporal reasoning",
       "description": "Methods for improving multimodal or video-language models on temporal, causal, and event-level reasoning over video content, including structured intermediate representations and alignment objectives for reliable inference.",
       "created_at": "2026-05-28T06:56:14Z",
-      "usage_count": 14,
+      "usage_count": 15,
       "examples": [
         "2604.04415",
         "2604.11102",
@@ -6929,7 +6946,8 @@
         "2603.14935",
         "2606.27828",
         "2607.16107",
-        "2608.05631"
+        "2608.05631",
+        "2609.01515"
       ]
     },
     {
@@ -7039,7 +7057,7 @@
       "name": "native multimodal models",
       "description": "End-to-end multimodal foundation models that integrate visual and language processing within a unified architecture rather than relying on separate pretrained encoders, adapters, or late fusion pipelines.",
       "created_at": "2026-05-28T05:37:01Z",
-      "usage_count": 50,
+      "usage_count": 51,
       "examples": [
         "2605.28820",
         "2605.25979",
@@ -7089,7 +7107,8 @@
         "2607.22043",
         "2607.25948",
         "2608.08676",
-        "2609.01607"
+        "2609.01607",
+        "2609.11929"
       ]
     },
     {
@@ -7380,7 +7399,7 @@
       "name": "on-policy distillation",
       "description": "Methods for training student models using teacher feedback on the student's own generated trajectories, often improving imitation learning, alignment, or policy transfer compared with purely offline sequence-level distillation.",
       "created_at": "2026-05-28T05:38:18Z",
-      "usage_count": 134,
+      "usage_count": 135,
       "examples": [
         "2605.27028",
         "2604.01193",
@@ -7514,7 +7533,8 @@
         "2609.05295",
         "2609.02998",
         "2608.25936",
-        "2609.08798"
+        "2609.08798",
+        "2609.11699"
       ]
     },
     {
@@ -7560,9 +7580,10 @@
       "name": "optical flow estimation",
       "description": "Methods for estimating dense pixel-level motion or correspondence between video frames, including robust optical flow under real-world degradations such as blur, noise, and compression artifacts.",
       "created_at": "2026-05-28T19:01:34Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2603.23499"
+        "2603.23499",
+        "2609.11486"
       ]
     },
     {
@@ -8259,7 +8280,7 @@
       "name": "RLVR optimization",
       "description": "Optimization methods specifically designed for reinforcement learning with verifiable rewards, including parameter-update schemes that exploit the structure of reward-driven language model adaptation.",
       "created_at": "2026-07-23T03:47:41Z",
-      "usage_count": 12,
+      "usage_count": 13,
       "examples": [
         "2607.19331",
         "2607.19790",
@@ -8272,7 +8293,8 @@
         "2609.02817",
         "2608.29188",
         "2609.00444",
-        "2609.08650"
+        "2609.08650",
+        "2609.06931"
       ]
     },
     {
@@ -8382,6 +8404,15 @@
       "usage_count": 1,
       "examples": [
         "2602.17393"
+      ]
+    },
+    {
+      "name": "robotic middleware reliability",
+      "description": "Design and evaluation of middleware-level proxy and decoupling mechanisms for robotic communications to mitigate reliability issues such as backpressure, using techniques like topic splitting and dynamic rate control.",
+      "created_at": "2026-09-12T05:27:05Z",
+      "usage_count": 1,
+      "examples": [
+        "2608.15380"
       ]
     },
     {
@@ -8530,12 +8561,13 @@
       "name": "scientific reproducibility evaluation",
       "description": "Evaluation and dataset construction for assessing whether scientific claims, methods, or implementation details are faithfully reflected in associated code or reproducibility artifacts, often using LLMs for discrepancy detection.",
       "created_at": "2026-05-28T16:15:05Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2601.12910",
         "2601.18724",
         "2603.27646",
-        "2609.09219"
+        "2609.09219",
+        "2609.10539"
       ]
     },
     {
@@ -9345,11 +9377,12 @@
       "name": "tokenizer evaluation",
       "description": "Evaluation and analysis of subword tokenizers, including vocabulary size trade-offs, morphological coverage, over-segmentation, and suitability for specific languages or modeling settings.",
       "created_at": "2026-05-28T15:59:16Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2601.04469",
         "2602.06942",
-        "2607.05691"
+        "2607.05691",
+        "2609.09143"
       ]
     },
     {
@@ -10465,7 +10498,7 @@
       "name": "world models",
       "description": "Models that learn to generate or predict interactive environment dynamics from observations and actions, often for simulation, planning, or embodied agent control.",
       "created_at": "2026-05-28T05:37:10Z",
-      "usage_count": 201,
+      "usage_count": 202,
       "examples": [
         "2605.28816",
         "2603.25240",
@@ -10666,7 +10699,8 @@
         "2609.05588",
         "2608.12564",
         "2609.10540",
-        "2609.09155"
+        "2609.09155",
+        "2609.11548"
       ]
     },
     {
