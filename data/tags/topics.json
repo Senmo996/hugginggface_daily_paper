@@ -29,10 +29,11 @@
       "name": "3D code generation",
       "description": "Methods for representing and generating 3D content as executable code, including dataset construction, multi-agent generation with execution verification, and spatial reasoning feedback.",
       "created_at": "2026-10-17T05:19:46Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2610.22341",
-        "2610.26853"
+        "2610.26853",
+        "2610.31651"
       ]
     },
     {
@@ -60,7 +61,7 @@
       "name": "3D Gaussian Splatting",
       "description": "Feed-forward and optimization-based scene representations using 3D Gaussian primitives for efficient novel-view synthesis and reconstruction.",
       "created_at": "2026-07-27T01:02:15Z",
-      "usage_count": 8,
+      "usage_count": 9,
       "examples": [
         "2607.20417",
         "2608.02437",
@@ -69,7 +70,8 @@
         "2610.05289",
         "2610.20341",
         "2610.25011",
-        "2610.13177"
+        "2610.13177",
+        "2610.27712"
       ]
     },
     {
@@ -346,10 +348,11 @@
       "name": "6DoF pose estimation",
       "description": "Methods for estimating object 3D pose, orientation, rotation, and symmetry from images or multi-view observations, often supporting downstream spatial understanding and robotics tasks.",
       "created_at": "2026-05-28T15:39:50Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2601.05573",
-        "2607.15058"
+        "2607.15058",
+        "2610.31623"
       ]
     },
     {
@@ -576,7 +579,7 @@
       "name": "agentic model evaluation",
       "description": "Research on using agentic systems—such as tool-augmented, planning-based, memory-enabled, or multi-agent LLM judges—to evaluate AI models and complex multi-step outputs more reliably and verifiably.",
       "created_at": "2026-05-28T15:31:16Z",
-      "usage_count": 19,
+      "usage_count": 20,
       "examples": [
         "2601.05111",
         "2602.01640",
@@ -596,7 +599,8 @@
         "2609.15478",
         "2610.16577",
         "2610.17724",
-        "2610.19425"
+        "2610.19425",
+        "2610.31494"
       ]
     },
     {
@@ -721,6 +725,15 @@
         "2605.19516",
         "2603.18750",
         "2610.00531"
+      ]
+    },
+    {
+      "name": "AI-generated video detection",
+      "description": "Methods and benchmarks for detecting artifacts in AI-generated videos, including explainable detection and fine-grained artifact analysis.",
+      "created_at": "2026-10-24T05:25:37Z",
+      "usage_count": 1,
+      "examples": [
+        "2610.30866"
       ]
     },
     {
@@ -1080,7 +1093,7 @@
       "name": "autonomous research agents",
       "description": "LLM-based agent systems designed to conduct scientific research workflows such as literature review, experiment design, implementation, evaluation, and paper writing, often emphasizing reliability and verifiability.",
       "created_at": "2026-05-28T05:37:55Z",
-      "usage_count": 80,
+      "usage_count": 83,
       "examples": [
         "2605.26340",
         "2605.27905",
@@ -1158,7 +1171,10 @@
         "2610.24944",
         "2610.24899",
         "2610.28887",
-        "2610.28763"
+        "2610.28763",
+        "2610.31372",
+        "2610.30468",
+        "2610.04184"
       ]
     },
     {
@@ -1304,9 +1320,10 @@
       "name": "camera trajectory generation",
       "description": "Autoregressive or sequence-based models that generate camera pose trajectories conditioned on scene geometry and language, including pose tokenization, 3D anchoring, and applications to video generation and active perception.",
       "created_at": "2026-10-22T05:52:12Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2610.09513"
+        "2610.09513",
+        "2610.30753"
       ]
     },
     {
@@ -1778,7 +1795,7 @@
       "name": "diffusion language models",
       "description": "Research on non-autoregressive diffusion-based language models, including token remasking, decoding order, sampling strategies, and quality-diversity tradeoffs in text generation and reasoning.",
       "created_at": "2026-05-28T06:44:18Z",
-      "usage_count": 60,
+      "usage_count": 61,
       "examples": [
         "2604.00375",
         "2604.04215",
@@ -1839,7 +1856,8 @@
         "2610.20818",
         "2610.26542",
         "2610.28909",
-        "2610.30066"
+        "2610.30066",
+        "2610.25835"
       ]
     },
     {
@@ -2024,11 +2042,12 @@
       "name": "diffusion model inference",
       "description": "Inference-time sampling and prediction refinement methods for diffusion models, including training-free denoising trajectory aggregation, sampler correction, and statistical state-estimation approaches to improve generation fidelity.",
       "created_at": "2026-07-22T01:04:41Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2607.17972",
         "2607.22091",
-        "2607.29122"
+        "2607.29122",
+        "2610.31576"
       ]
     },
     {
@@ -2277,7 +2296,7 @@
       "name": "embodied agent architecture",
       "description": "Modular cognitive architectures for embodied virtual agents, integrating perception, reasoning, and action in interactive 3D environments.",
       "created_at": "2026-08-18T01:47:37Z",
-      "usage_count": 14,
+      "usage_count": 15,
       "examples": [
         "2608.09848",
         "2608.11350",
@@ -2292,7 +2311,8 @@
         "2610.01939",
         "2610.04929",
         "2610.07785",
-        "2610.20442"
+        "2610.20442",
+        "2610.30043"
       ]
     },
     {
@@ -2616,14 +2636,25 @@
       ]
     },
     {
+      "name": "generation-assisted understanding",
+      "description": "A methodology that leverages generation-side representations or outputs from generative models to improve the fine-grained visual understanding capability of unified multimodal models, typically via representation compression and task-conditioned retrieval.",
+      "created_at": "2026-10-24T05:23:27Z",
+      "usage_count": 2,
+      "examples": [
+        "2610.23987",
+        "2610.28889"
+      ]
+    },
+    {
       "name": "generative game rendering",
       "description": "Research on using generative models (e.g., video or image foundation models) to render interactive game worlds in real time, decoupling gameplay logic and world state from visual generation, in the spirit of neural and generative game engines.",
       "created_at": "2026-08-29T07:56:02Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2608.27168",
         "2610.12374",
-        "2610.27999"
+        "2610.27999",
+        "2610.31466"
       ]
     },
     {
@@ -2872,6 +2903,15 @@
       ]
     },
     {
+      "name": "hierarchical language generation",
+      "description": "Methods for hierarchical language modeling that separate continuous semantic latent compression from discrete text generation, often using diffusion or flow matching decoders.",
+      "created_at": "2026-10-24T05:25:20Z",
+      "usage_count": 1,
+      "examples": [
+        "2610.31305"
+      ]
+    },
+    {
       "name": "historical language change",
       "description": "利用多语言模型和稀疏特征表示对语言变化进行历时的、跨语言的计算分析，涵盖形态、句法、语义和语用层面。",
       "created_at": "2026-08-18T01:35:40Z",
@@ -2952,7 +2992,7 @@
       "name": "human-AI collaboration evaluation",
       "description": "Evaluation methods for measuring, attributing, and interpreting contributions, behaviors, and user perceptions in collaborative workflows between humans and AI systems.",
       "created_at": "2026-05-28T09:30:15Z",
-      "usage_count": 9,
+      "usage_count": 10,
       "examples": [
         "2605.21363",
         "2601.07786",
@@ -2962,7 +3002,8 @@
         "2602.01405",
         "2602.15569",
         "2603.19005",
-        "2607.20734"
+        "2607.20734",
+        "2610.27148"
       ]
     },
     {
@@ -3048,7 +3089,7 @@
       "name": "image editing",
       "description": "Methods for modifying or enhancing images through learned reasoning, generation, restoration, retouching, or controllable semantic edits.",
       "created_at": "2026-05-28T07:21:29Z",
-      "usage_count": 30,
+      "usage_count": 31,
       "examples": [
         "2604.19587",
         "2604.10268",
@@ -3079,7 +3120,8 @@
         "2610.23751",
         "2610.25404",
         "2610.22328",
-        "2610.27592"
+        "2610.27592",
+        "2610.24738"
       ]
     },
     {
@@ -3609,7 +3651,7 @@
       "name": "LLM agent benchmark evaluation",
       "description": "Benchmarks and evaluation protocols for assessing LLM-based agents on interactive capabilities such as personalization, proactivity, memory use, tool use, and long-horizon decision-making.",
       "created_at": "2026-05-28T05:56:31Z",
-      "usage_count": 225,
+      "usage_count": 226,
       "examples": [
         "2605.27141",
         "2605.24219",
@@ -3835,7 +3877,8 @@
         "2610.24087",
         "2610.25950",
         "2610.28679",
-        "2610.30113"
+        "2610.30113",
+        "2610.30181"
       ]
     },
     {
@@ -4112,7 +4155,7 @@
       "name": "LLM agent security evaluation",
       "description": "Evaluation of security risks, attack surfaces, adversarial scenarios, and defenses for LLM-based agents operating with tools, persistent state, or real-world system access.",
       "created_at": "2026-05-28T06:42:31Z",
-      "usage_count": 38,
+      "usage_count": 39,
       "examples": [
         "2604.04759",
         "2604.10577",
@@ -4150,7 +4193,8 @@
         "2609.06966",
         "2609.06140",
         "2609.22076",
-        "2610.14766"
+        "2610.14766",
+        "2610.30418"
       ]
     },
     {
@@ -4324,7 +4368,7 @@
       "name": "LLM agent training",
       "description": "Training methods for LLM-based agents, including fine-grained credit assignment, reward shaping, and step-level supervision to improve long-horizon task performance.",
       "created_at": "2026-08-18T01:36:14Z",
-      "usage_count": 29,
+      "usage_count": 30,
       "examples": [
         "2608.05102",
         "2608.06113",
@@ -4354,14 +4398,15 @@
         "2610.07898",
         "2610.19686",
         "2610.04902",
-        "2610.28589"
+        "2610.28589",
+        "2610.30949"
       ]
     },
     {
       "name": "LLM agent workflow optimization",
       "description": "Research on designing, selecting, generating, revising, and evaluating executable workflow structures for LLM-based agents, including static templates, dynamic runtime graphs, tool/retrieval/code/memory interactions, and structure-aware optimization signals.",
       "created_at": "2026-05-28T19:01:27Z",
-      "usage_count": 23,
+      "usage_count": 24,
       "examples": [
         "2603.22386",
         "2603.23994",
@@ -4385,7 +4430,8 @@
         "2609.35530",
         "2610.04137",
         "2610.02396",
-        "2610.24649"
+        "2610.24649",
+        "2610.24383"
       ]
     },
     {
@@ -5085,7 +5131,7 @@
       "name": "LLM interpretability",
       "description": "Research on methods for understanding, explaining, and validating the internal representations or behaviors of large language models, including activation-based interpretation and reliability assessment of interpretability tools.",
       "created_at": "2026-05-28T05:56:47Z",
-      "usage_count": 66,
+      "usage_count": 67,
       "examples": [
         "2605.26045",
         "2605.26242",
@@ -5152,7 +5198,8 @@
         "2610.06851",
         "2609.38972",
         "2610.22169",
-        "2610.05114"
+        "2610.05114",
+        "2610.30882"
       ]
     },
     {
@@ -5219,7 +5266,7 @@
       "name": "LLM memory",
       "description": "Methods and evaluations for storing, updating, retrieving, debugging, or optimizing persistent and long-context memory mechanisms in large language model systems.",
       "created_at": "2026-05-28T05:37:30Z",
-      "usage_count": 155,
+      "usage_count": 156,
       "examples": [
         "2605.28732",
         "2605.28773",
@@ -5372,7 +5419,8 @@
         "2610.26453",
         "2609.34565",
         "2610.27406",
-        "2610.29357"
+        "2610.29357",
+        "2610.25100"
       ]
     },
     {
@@ -5483,14 +5531,15 @@
       "name": "LLM personalization",
       "description": "Research on adapting large language model behavior to individual users by extracting, selecting, remembering, and incorporating user-specific information, including evaluation of whether personalization is useful and aligned with human judgments.",
       "created_at": "2026-06-23T01:37:56Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2606.06614",
         "2608.04570",
         "2608.28833",
         "2601.06352",
         "2601.06362",
-        "2609.33304"
+        "2609.33304",
+        "2610.24385"
       ]
     },
     {
@@ -5903,6 +5952,15 @@
       ]
     },
     {
+      "name": "LLM routing",
+      "description": "Learning to dynamically select and coordinate heterogeneous language models, including jointly optimizing routing mode (single-round, multi-round, agentic) and model choice within a mode, typically via reinforcement learning.",
+      "created_at": "2026-10-24T05:24:52Z",
+      "usage_count": 1,
+      "examples": [
+        "2610.19705"
+      ]
+    },
+    {
       "name": "LLM safety alignment",
       "description": "Methods for aligning large language models to follow safety constraints and resist unsafe or adversarial prompts, including representation-level, multilingual, and fine-tuning-based safety alignment approaches.",
       "created_at": "2026-05-28T07:05:32Z",
@@ -6087,7 +6145,7 @@
       "name": "LLM security red-teaming",
       "description": "Research on adversarial testing and attack generation methods for evaluating LLM security risks, including prompt injection, jailbreaks, knowledge corruption, and efficient red-teaming workflows.",
       "created_at": "2026-05-28T07:44:53Z",
-      "usage_count": 13,
+      "usage_count": 14,
       "examples": [
         "2604.28157",
         "2605.00553",
@@ -6101,7 +6159,8 @@
         "2606.11817",
         "2607.26115",
         "2608.05108",
-        "2608.09867"
+        "2608.09867",
+        "2610.22722"
       ]
     },
     {
@@ -6665,7 +6724,7 @@
       "name": "Mixture-of-Experts",
       "description": "Research on sparse neural architectures that route inputs to subsets of expert modules, focusing here on pretraining strategies that encourage semantic expert specialization and modular deployment of large language models.",
       "created_at": "2026-05-28T07:59:33Z",
-      "usage_count": 32,
+      "usage_count": 33,
       "examples": [
         "2605.06663",
         "2605.06665",
@@ -6698,7 +6757,8 @@
         "2609.35751",
         "2610.07348",
         "2610.07207",
-        "2610.19975"
+        "2610.19975",
+        "2610.27598"
       ]
     },
     {
@@ -6855,7 +6915,7 @@
       "name": "model quantization",
       "description": "Methods for reducing model precision and deployment cost through post-training or calibration-based quantization, including quantization strategies for specialized settings such as merged or multi-expert models.",
       "created_at": "2026-05-28T09:04:58Z",
-      "usage_count": 43,
+      "usage_count": 44,
       "examples": [
         "2605.16882",
         "2605.19660",
@@ -6899,7 +6959,8 @@
         "2609.38169",
         "2610.07121",
         "2610.21810",
-        "2610.29545"
+        "2610.29545",
+        "2610.31198"
       ]
     },
     {
@@ -7463,7 +7524,7 @@
       "name": "multimodal benchmark evaluation",
       "description": "Evaluation methods and benchmarks for assessing multimodal models, including vision-language model robustness, generalization, and reasoning under controlled dataset variations.",
       "created_at": "2026-05-28T05:38:43Z",
-      "usage_count": 179,
+      "usage_count": 180,
       "examples": [
         "2605.27311",
         "2605.26396",
@@ -7641,7 +7702,8 @@
         "2610.18834",
         "2610.23986",
         "2610.27911",
-        "2610.28444"
+        "2610.28444",
+        "2610.31158"
       ]
     },
     {
@@ -8599,7 +8661,7 @@
       "name": "neuro-symbolic reasoning",
       "description": "Research on combining neural models with symbolic logic or rule-based representations to learn, infer, or execute interpretable reasoning procedures across tasks.",
       "created_at": "2026-05-28T07:55:20Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2605.04916",
         "2605.04330",
@@ -8607,7 +8669,8 @@
         "2603.20105",
         "2608.08786",
         "2608.12836",
-        "2610.19636"
+        "2610.19636",
+        "2610.31062"
       ]
     },
     {
@@ -8734,7 +8797,7 @@
       "name": "on-policy distillation",
       "description": "Methods for training student models using teacher feedback on the student's own generated trajectories, often improving imitation learning, alignment, or policy transfer compared with purely offline sequence-level distillation.",
       "created_at": "2026-05-28T05:38:18Z",
-      "usage_count": 193,
+      "usage_count": 194,
       "examples": [
         "2605.27028",
         "2604.01193",
@@ -8927,7 +8990,8 @@
         "2610.14022",
         "2610.07052",
         "2610.19439",
-        "2610.27450"
+        "2610.27450",
+        "2610.25376"
       ]
     },
     {
@@ -9419,7 +9483,7 @@
       "name": "RAG retrieval",
       "description": "Methods that use retrieval-augmented generation or document-grounded retrieval pipelines to answer questions, compare evidence, or analyze consistency across textual corpora.",
       "created_at": "2026-05-28T06:30:20Z",
-      "usage_count": 38,
+      "usage_count": 39,
       "examples": [
         "2603.21460",
         "2603.26259",
@@ -9458,7 +9522,8 @@
         "2608.13410",
         "2608.15698",
         "2608.22872",
-        "2608.30468"
+        "2608.30468",
+        "2610.30755"
       ]
     },
     {
@@ -9516,7 +9581,7 @@
       "name": "recursive self-improvement",
       "description": "Recursive self-improvement refers to methods where an LLM agent iteratively applies a fixed meta-operation to its own outputs to generate higher-level reasoning layers, enabling emergent depth without modifying the editing machinery.",
       "created_at": "2026-08-27T01:03:41Z",
-      "usage_count": 34,
+      "usage_count": 35,
       "examples": [
         "2608.24735",
         "2608.26530",
@@ -9551,7 +9616,8 @@
         "2610.26848",
         "2610.25078",
         "2610.29784",
-        "2610.23344"
+        "2610.23344",
+        "2610.29677"
       ]
     },
     {
@@ -10221,6 +10287,15 @@
       ]
     },
     {
+      "name": "sequence compression",
+      "description": "Sequence compression methods that reduce token counts via pooling, learned projections, regression, or other learned compression primitives for efficient language and multimodal models.",
+      "created_at": "2026-10-24T05:25:45Z",
+      "usage_count": 1,
+      "examples": [
+        "2610.31574"
+      ]
+    },
+    {
       "name": "sequence model theory",
       "description": "Theoretical analysis of recurrent and sequence-processing architectures, including state-space models and linear attention, focusing on expressivity, stability, error dynamics, and limits of state tracking.",
       "created_at": "2026-05-28T08:04:59Z",
@@ -10240,7 +10315,7 @@
       "name": "sim-to-real robot learning",
       "description": "Methods for training robot policies in simulation that transfer robustly to real-world hardware, often using domain randomization, dynamics uncertainty modeling, or zero-shot transfer techniques.",
       "created_at": "2026-05-28T09:11:59Z",
-      "usage_count": 14,
+      "usage_count": 15,
       "examples": [
         "2605.09789",
         "2602.12628",
@@ -10255,7 +10330,8 @@
         "2609.17172",
         "2609.28660",
         "2610.02788",
-        "2610.12772"
+        "2610.12772",
+        "2610.28950"
       ]
     },
     {
@@ -10379,6 +10455,15 @@
         "2610.23787",
         "2610.23935",
         "2511.14102"
+      ]
+    },
+    {
+      "name": "speculative tool execution",
+      "description": "Methods for realtime or streaming agents that speculatively begin or complete tool calls and reasoning while input is still being received, typically using periodic invocations and shared state over partial transcripts and tool results to enable parallel preparation.",
+      "created_at": "2026-10-24T05:24:22Z",
+      "usage_count": 1,
+      "examples": [
+        "2610.26233"
       ]
     },
     {
@@ -10662,9 +10747,10 @@
       "name": "symbolic verification",
       "description": "Methods that use formal, symbolic or axiomatic rules to verify or score model outputs, often replacing statistical voting or learned judges in reasoning tasks.",
       "created_at": "2026-08-18T01:35:51Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2608.03506"
+        "2608.03506",
+        "2610.20459"
       ]
     },
     {
@@ -10921,7 +11007,7 @@
       "name": "text-to-speech synthesis",
       "description": "Research on generating natural speech from text, including neural TTS modeling, low-resource adaptation, script or phoneme handling, and acoustic quality improvement.",
       "created_at": "2026-05-28T18:24:03Z",
-      "usage_count": 11,
+      "usage_count": 12,
       "examples": [
         "2603.07513",
         "2603.07534",
@@ -10933,7 +11019,8 @@
         "2609.38157",
         "2609.38658",
         "2609.32777",
-        "2609.29123"
+        "2609.29123",
+        "2610.26252"
       ]
     },
     {
@@ -11025,7 +11112,7 @@
       "name": "time series forecasting",
       "description": "Methods for predicting future values or event counts from temporal data, including statistical, machine learning, and hybrid approaches for sparse, noisy, or bursty sequences.",
       "created_at": "2026-05-28T07:19:24Z",
-      "usage_count": 12,
+      "usage_count": 13,
       "examples": [
         "2604.16038",
         "2605.15035",
@@ -11038,7 +11125,8 @@
         "2606.27821",
         "2608.14106",
         "2608.15767",
-        "2610.04109"
+        "2610.04109",
+        "2610.12586"
       ]
     },
     {
@@ -11227,6 +11315,16 @@
       ]
     },
     {
+      "name": "unified visual perception",
+      "description": "Research on vision-language models or systems that jointly handle multiple visual perception tasks at different granularities (e.g., detection, segmentation, matting) within a single framework.",
+      "created_at": "2026-10-24T05:22:33Z",
+      "usage_count": 2,
+      "examples": [
+        "2610.31329",
+        "2610.30340"
+      ]
+    },
+    {
       "name": "vector graphics generation",
       "description": "Generative methods for producing or optimizing vector-based visual content such as sketches, drawings, or illustrations, often using differentiable rendering and guidance from vision-language or diffusion models.",
       "created_at": "2026-05-28T17:23:20Z",
@@ -11254,7 +11352,7 @@
       "name": "video diffusion",
       "description": "Methods for generating or editing video with diffusion-based models, including diffusion transformers and efficiency improvements for text-to-video generation.",
       "created_at": "2026-05-28T05:37:50Z",
-      "usage_count": 59,
+      "usage_count": 60,
       "examples": [
         "2605.28691",
         "2605.15042",
@@ -11313,7 +11411,8 @@
         "2609.32540",
         "2610.03120",
         "2610.12442",
-        "2610.30023"
+        "2610.30023",
+        "2610.30926"
       ]
     },
     {
@@ -11401,7 +11500,7 @@
       "name": "video generation benchmark evaluation",
       "description": "Evaluation benchmarks and automated metrics for assessing video generation systems, including controllability, temporal consistency, prompt or condition following, and overall perceptual quality.",
       "created_at": "2026-07-19T17:03:45Z",
-      "usage_count": 13,
+      "usage_count": 14,
       "examples": [
         "2607.14202",
         "2607.24241",
@@ -11415,7 +11514,8 @@
         "2610.10047",
         "2610.14020",
         "2610.26711",
-        "2610.28402"
+        "2610.28402",
+        "2610.28416"
       ]
     },
     {
@@ -11631,9 +11731,10 @@
       "name": "video scene graph generation",
       "description": "Methods and datasets for extracting structured object, attribute, and relation graphs from videos, often using segmentation, tracking, and vision-language models to represent spatio-temporal scene semantics.",
       "created_at": "2026-05-28T18:01:43Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2602.23543"
+        "2602.23543",
+        "2610.20091"
       ]
     },
     {
@@ -11918,7 +12019,7 @@
       "name": "vision-language-action models",
       "description": "Research on adapting vision-language representations into action-conditioned robotic policy models, including embodied supervision, robot trajectory pretraining, and parameter-efficient adaptation strategies for VLA initialization and control.",
       "created_at": "2026-05-28T05:55:45Z",
-      "usage_count": 118,
+      "usage_count": 119,
       "examples": [
         "2605.25802",
         "2603.25406",
@@ -12037,7 +12138,8 @@
         "2610.21306",
         "2610.21453",
         "2610.14746",
-        "2610.25043"
+        "2610.25043",
+        "2610.22951"
       ]
     },
     {
@@ -12371,7 +12473,7 @@
       "name": "world models",
       "description": "Models that learn to generate or predict interactive environment dynamics from observations and actions, often for simulation, planning, or embodied agent control.",
       "created_at": "2026-05-28T05:37:10Z",
-      "usage_count": 261,
+      "usage_count": 265,
       "examples": [
         "2605.28816",
         "2603.25240",
@@ -12632,7 +12734,11 @@
         "2610.11942",
         "2610.30120",
         "2610.30136",
-        "2610.28827"
+        "2610.28827",
+        "2610.27851",
+        "2610.30320",
+        "2610.31668",
+        "2610.31474"
       ]
     },
     {
