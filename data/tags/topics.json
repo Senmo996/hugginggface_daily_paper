@@ -280,7 +280,7 @@
       "name": "3D-aware video generation",
       "description": "Methods for generating videos with explicit or implicit 3D spatial consistency, especially for customized subjects or novel-view dynamic synthesis.",
       "created_at": "2026-05-28T18:50:38Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2603.18524",
         "2603.17735",
@@ -288,7 +288,8 @@
         "2606.26087",
         "2607.05376",
         "2608.19556",
-        "2610.33135"
+        "2610.33135",
+        "2610.35684"
       ]
     },
     {
@@ -381,11 +382,12 @@
       "name": "active learning",
       "description": "Methods that iteratively select the most informative unlabeled samples for annotation to improve model performance under limited labeling budgets.",
       "created_at": "2026-05-28T16:15:41Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2601.13677",
         "2602.14279",
-        "2609.06806"
+        "2609.06806",
+        "2610.20832"
       ]
     },
     {
@@ -983,10 +985,11 @@
       "name": "audio source separation",
       "description": "Content-adaptive frequency band partitioning for audio source separation models.",
       "created_at": "2026-10-17T05:19:23Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2610.14993",
-        "2610.17821"
+        "2610.17821",
+        "2610.32749"
       ]
     },
     {
@@ -1213,13 +1216,14 @@
       "name": "autoregressive image generation",
       "description": "Methods for generating images with autoregressive sequence models over visual tokens or latent representations, including scalable token prediction schemes and efficient sampling strategies.",
       "created_at": "2026-05-28T17:15:37Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2602.09024",
         "2602.14041",
         "2606.27978",
         "2606.32039",
-        "2610.04722"
+        "2610.04722",
+        "2610.37626"
       ]
     },
     {
@@ -1518,7 +1522,7 @@
       "name": "computer-use benchmark evaluation",
       "description": "Benchmarks for evaluating computer-use agents in realistic desktop or professional software environments, focusing on long-horizon tasks with verifiable artifacts.",
       "created_at": "2026-09-22T05:53:41Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2609.16251",
         "2609.39903",
@@ -1526,7 +1530,8 @@
         "2610.03574",
         "2609.24890",
         "2610.19128",
-        "2610.34735"
+        "2610.34735",
+        "2610.22990"
       ]
     },
     {
@@ -2409,6 +2414,15 @@
       ]
     },
     {
+      "name": "embodied causal reasoning",
+      "description": "Methods that extract or use causal knowledge about action preconditions and effects to guide embodied high-level planning and interaction reasoning, often combined with MLLMs or learned world-state representations.",
+      "created_at": "2026-10-30T06:48:16Z",
+      "usage_count": 1,
+      "examples": [
+        "2610.29702"
+      ]
+    },
+    {
       "name": "embodied data curation",
       "description": "Curation, alignment, mixing, and evaluation of heterogeneous datasets for training embodied AI and robot manipulation foundation models.",
       "created_at": "2026-07-29T01:02:35Z",
@@ -3096,7 +3110,7 @@
       "name": "human-AI collaboration evaluation",
       "description": "Evaluation methods for measuring, attributing, and interpreting contributions, behaviors, and user perceptions in collaborative workflows between humans and AI systems.",
       "created_at": "2026-05-28T09:30:15Z",
-      "usage_count": 11,
+      "usage_count": 12,
       "examples": [
         "2605.21363",
         "2601.07786",
@@ -3108,7 +3122,8 @@
         "2603.19005",
         "2607.20734",
         "2610.27148",
-        "2610.21109"
+        "2610.21109",
+        "2610.22507"
       ]
     },
     {
@@ -3766,7 +3781,7 @@
       "name": "LLM agent benchmark evaluation",
       "description": "Benchmarks and evaluation protocols for assessing LLM-based agents on interactive capabilities such as personalization, proactivity, memory use, tool use, and long-horizon decision-making.",
       "created_at": "2026-05-28T05:56:31Z",
-      "usage_count": 231,
+      "usage_count": 232,
       "examples": [
         "2605.27141",
         "2605.24219",
@@ -3998,7 +4013,8 @@
         "2610.32285",
         "2610.34238",
         "2610.34634",
-        "2610.32004"
+        "2610.32004",
+        "2610.30161"
       ]
     },
     {
@@ -4634,7 +4650,7 @@
       "name": "LLM behavior evaluation",
       "description": "Evaluates behavioral properties of language models beyond task accuracy, including interaction awareness, conversational dynamics, and latent response tendencies through probing or benchmark-style analyses.",
       "created_at": "2026-05-28T06:57:23Z",
-      "usage_count": 38,
+      "usage_count": 39,
       "examples": [
         "2604.02315",
         "2604.09497",
@@ -4673,7 +4689,8 @@
         "2609.14803",
         "2609.36139",
         "2610.04977",
-        "2610.11765"
+        "2610.11765",
+        "2610.36095"
       ]
     },
     {
@@ -5829,7 +5846,7 @@
       "name": "LLM reinforcement learning",
       "description": "Online reinforcement learning methods for optimizing large language model policies, especially for reasoning tasks and exploration-exploitation control.",
       "created_at": "2026-05-28T05:38:29Z",
-      "usage_count": 242,
+      "usage_count": 243,
       "examples": [
         "2605.28109",
         "2605.28184",
@@ -6070,7 +6087,8 @@
         "2610.23928",
         "2610.35013",
         "2610.34894",
-        "2610.30435"
+        "2610.30435",
+        "2610.30132"
       ]
     },
     {
@@ -6146,7 +6164,7 @@
       "name": "LLM safety evaluation",
       "description": "Evaluation of large language model safety, jailbreak robustness, refusal behavior, and culturally grounded harmful or sensitive content handling through benchmarks and metrics.",
       "created_at": "2026-05-28T07:54:52Z",
-      "usage_count": 35,
+      "usage_count": 36,
       "examples": [
         "2605.05662",
         "2605.06652",
@@ -6182,7 +6200,8 @@
         "2608.14577",
         "2609.00519",
         "2610.25060",
-        "2610.29477"
+        "2610.29477",
+        "2610.35671"
       ]
     },
     {
@@ -6379,7 +6398,7 @@
       "name": "LLM system optimization",
       "description": "Methods for automatically optimizing the non-weight components of LLM applications, such as prompts, context management, retrieval logic, tool use, and orchestration code.",
       "created_at": "2026-05-28T06:28:51Z",
-      "usage_count": 56,
+      "usage_count": 57,
       "examples": [
         "2603.28052",
         "2603.29002",
@@ -6436,7 +6455,8 @@
         "2608.09444",
         "2609.34645",
         "2610.12242",
-        "2609.35855"
+        "2609.35855",
+        "2610.37230"
       ]
     },
     {
@@ -9941,7 +9961,7 @@
       "name": "representation geometry evaluation",
       "description": "Evaluation and analysis of whether learned model representations preserve continuous geometric, topological, or information-theoretic structure in scientific or other structured domains.",
       "created_at": "2026-05-28T06:43:25Z",
-      "usage_count": 19,
+      "usage_count": 20,
       "examples": [
         "2604.04155",
         "2604.03480",
@@ -9961,7 +9981,8 @@
         "2606.29655",
         "2609.10060",
         "2609.15975",
-        "2609.27158"
+        "2609.27158",
+        "2610.31670"
       ]
     },
     {
@@ -10627,6 +10648,15 @@
       "examples": [
         "2605.00777",
         "2606.21215"
+      ]
+    },
+    {
+      "name": "spectral representation learning",
+      "description": "Methods for learning universal representations of spectral data (e.g., astronomical spectra) across instruments using self-supervised pretraining with continuous-coordinate masked autoencoders and physics-aware position encodings.",
+      "created_at": "2026-10-30T06:49:50Z",
+      "usage_count": 1,
+      "examples": [
+        "2601.15351"
       ]
     },
     {
@@ -12257,7 +12287,7 @@
       "name": "vision-language-action models",
       "description": "Research on adapting vision-language representations into action-conditioned robotic policy models, including embodied supervision, robot trajectory pretraining, and parameter-efficient adaptation strategies for VLA initialization and control.",
       "created_at": "2026-05-28T05:55:45Z",
-      "usage_count": 125,
+      "usage_count": 126,
       "examples": [
         "2605.25802",
         "2603.25406",
@@ -12383,7 +12413,8 @@
         "2610.31423",
         "2610.34356",
         "2610.37381",
-        "2610.37219"
+        "2610.37219",
+        "2610.34186"
       ]
     },
     {
@@ -12475,7 +12506,7 @@
       "name": "visual grounding",
       "description": "Methods for grounding language expressions or prompts in images by localizing objects or regions, often using vision-language models for bounding box or point prediction and detection.",
       "created_at": "2026-05-28T05:54:10Z",
-      "usage_count": 28,
+      "usage_count": 29,
       "examples": [
         "2605.27365",
         "2604.00528",
@@ -12504,7 +12535,8 @@
         "2610.19100",
         "2610.23279",
         "2610.27040",
-        "2610.35450"
+        "2610.35450",
+        "2610.33645"
       ]
     },
     {
@@ -12672,7 +12704,7 @@
       "name": "world model benchmark evaluation",
       "description": "Benchmarks and evaluation toolkits for assessing interactive or generative world models under standardized scenes, actions, trajectories, and consistency metrics.",
       "created_at": "2026-05-28T07:29:13Z",
-      "usage_count": 41,
+      "usage_count": 42,
       "examples": [
         "2604.21686",
         "2605.03941",
@@ -12714,7 +12746,8 @@
         "2610.23542",
         "2610.22708",
         "2610.26844",
-        "2610.31066"
+        "2610.31066",
+        "2610.27100"
       ]
     },
     {
