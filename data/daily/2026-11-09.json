@@ -1,8 +1,8 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-10T08:17:08Z",
+  "generated_at": "2026-11-10T08:19:44Z",
   "status": "partial",
-  "paper_count": 16,
+  "paper_count": 17,
   "papers": [
     {
       "id": "2611.06043",
@@ -858,6 +858,51 @@
       "model_metadata": {
         "topic_is_new": false,
         "generated_at": "2026-11-10T08:17:08Z"
+      }
+    },
+    {
+      "id": "2611.08290",
+      "daily_date": "2026-11-09",
+      "title": "AutoCompress: Automated Hardware-Guided Model Compression",
+      "summary": "LLM pruning must preserve quality while meeting hardware- and workload-specific constraints on latency, throughput, and memory. Existing pruning workflows often target parameter counts, requiring practitioners to manually select model sizes that meet latency, throughput, and GPU memory limits. However, parameter count alone does not predict these metrics, which depend on the model architecture, workload, hardware, and serving engine. We introduce AutoCompress, a hardware-guided compression framework that directly incorporates such constraints into differentiable architecture search. AutoCompress jointly optimizes global and per-layer structure to produce heterogeneous architectures, guided by serving-engine cost models validated against end-to-end latency, throughput, and memory measurements. We evaluate AutoCompress on long-context local coding, batched datacenter serving, and latency-sensitive in-game interaction. Compared to the state-of-the-art Minitron pruning framework, AutoCompress improves average accuracy across eight benchmarks by 6.57, 2.35, and 0.57 percentage points on RTX 5070, RTX 5080, and H100, respectively. AutoCompress also compresses Nemotron 3.5 Super from 120B to 74B parameters for single-B200 BF16 serving at 128K context, retaining 95% of its mean benchmark score.",
+      "authors": [
+        "Sheldon Liang",
+        "Ali Taghibakhshi",
+        "Saurav Muralidharan",
+        "Sharath Turuvekere Sreenivas",
+        "Ashwath Aithal",
+        "Pavlo Molchanov",
+        "Nima Tajbakhsh"
+      ],
+      "published_at": "2026-11-05T16:53:48.000Z",
+      "submitted_on_daily_at": "2026-11-09T00:00:00.000Z",
+      "upvotes": 9,
+      "num_comments": 3,
+      "ai_keywords": [
+        "LLM pruning",
+        "hardware-guided compression",
+        "differentiable architecture search",
+        "global and per-layer structure",
+        "heterogeneous architectures",
+        "serving-engine cost models",
+        "Minitron pruning framework",
+        "AutoCompress",
+        "Nemotron 3.5 Super",
+        "B200 BF16",
+        "128K context"
+      ],
+      "institution": "NVIDIA",
+      "hf_url": "https://huggingface.co/papers/2611.08290",
+      "arxiv_url": "https://arxiv.org/abs/2611.08290",
+      "project_page": null,
+      "github_repo": null,
+      "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2611.08290.png",
+      "one_sentence_summary": "该论文提出AutoCompress,一个硬件引导的LLM压缩框架，将延迟、吞吐量与显存等硬件及工作负载约束直接融入可微分架构搜索，并借助服务引擎成本模型联合优化全局与逐层剪枝结构，从而自动生成满足部署指标的异构压缩模型。",
+      "institution_tag": "NVIDIA",
+      "topic_tag": "LLM compression",
+      "model_metadata": {
+        "topic_is_new": false,
+        "generated_at": "2026-11-10T08:19:44Z"
       }
     }
   ]
