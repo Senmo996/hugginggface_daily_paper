@@ -115,6 +115,15 @@
       ]
     },
     {
+      "name": "3D part decomposition",
+      "description": "Research direction on part-aware 3D asset generation and decomposition: jointly modeling geometry, appearance, and part identity in a shared latent representation so that segmentation, part completion, and interactive part editing are built into the generation process rather than applied as post-processing.",
+      "created_at": "2026-11-10T08:29:51Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.09055"
+      ]
+    },
+    {
       "name": "3D rigging",
       "description": "Methods for automatically generating animation rigs for 3D assets, including skeleton prediction, skinning weight estimation, and unified generative formulations for rigged characters or objects.",
       "created_at": "2026-05-28T16:55:43Z",
@@ -2289,9 +2298,10 @@
       "name": "document extraction benchmark",
       "description": "benchmark evaluation for schema-guided document extraction, covers value accuracy, record completeness, grounding metrics, and cost measurement",
       "created_at": "2026-08-18T01:29:21Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2607.29677"
+        "2607.29677",
+        "2611.02775"
       ]
     },
     {
@@ -2363,6 +2373,15 @@
       "usage_count": 1,
       "examples": [
         "2601.19149"
+      ]
+    },
+    {
+      "name": "dynamical system learning",
+      "description": "Methods for learning the vector fields or evolution operators of continuous-time dynamical systems (ODEs and PDEs) from data, including simulation-free training objectives, stability and approximation theory, and neural parameterizations of dynamics.",
+      "created_at": "2026-11-10T08:33:54Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.00448"
       ]
     },
     {
@@ -3482,10 +3501,11 @@
       "name": "image style transfer",
       "description": "Research on transferring, representing, and evaluating visual artistic styles in images, often using generative models, curated style datasets, and representation learning methods.",
       "created_at": "2026-05-28T06:51:08Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2604.08364",
-        "2603.16649"
+        "2603.16649",
+        "2610.36896"
       ]
     },
     {
@@ -4259,7 +4279,7 @@
       "name": "LLM agent infrastructure",
       "description": "Research on the runtime systems, memory, skills, protocols, orchestration layers, and engineering patterns that support and extend LLM-based agents beyond model weights.",
       "created_at": "2026-05-28T06:51:25Z",
-      "usage_count": 78,
+      "usage_count": 79,
       "examples": [
         "2604.08224",
         "2604.11641",
@@ -4338,7 +4358,8 @@
         "2610.35845",
         "2610.34241",
         "2610.34298",
-        "2611.03178"
+        "2611.03178",
+        "2611.07461"
       ]
     },
     {
@@ -4425,7 +4446,7 @@
       "name": "LLM agent safety evaluation",
       "description": "Evaluation of safety-relevant behaviors and failure modes in LLM-based agents, including coercion, deception, and harmful escalation in multi-agent interactions.",
       "created_at": "2026-07-23T03:46:19Z",
-      "usage_count": 14,
+      "usage_count": 15,
       "examples": [
         "2607.15434",
         "2607.20891",
@@ -4440,7 +4461,8 @@
         "2610.07967",
         "2610.06406",
         "2610.13623",
-        "2611.02332"
+        "2611.02332",
+        "2611.09113"
       ]
     },
     {
@@ -4493,9 +4515,10 @@
       "name": "LLM agent skill compression",
       "description": "面向LLM代理技能库的压缩与程序化抽象方法，在保持执行契约的前提下缩减存储和上下文开销。",
       "created_at": "2026-08-18T02:03:30Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2608.05604"
+        "2608.05604",
+        "2611.09891"
       ]
     },
     {
@@ -4737,7 +4760,7 @@
       "name": "LLM architecture optimization",
       "description": "Research on improving large language model architectures and training dynamics through lightweight structural or parameterization changes, such as normalization, scaling, residual pathways, and optimizer-aware design.",
       "created_at": "2026-05-28T05:55:26Z",
-      "usage_count": 49,
+      "usage_count": 50,
       "examples": [
         "2605.26895",
         "2605.27358",
@@ -4787,7 +4810,8 @@
         "2610.13630",
         "2610.23036",
         "2610.19625",
-        "2610.37903"
+        "2610.37903",
+        "2610.41711"
       ]
     },
     {
@@ -5373,7 +5397,7 @@
       "name": "LLM formal verification",
       "description": "Research on using large language models and coding agents to generate, check, or evaluate formal specifications, proofs, and verified software artifacts.",
       "created_at": "2026-05-28T05:38:55Z",
-      "usage_count": 16,
+      "usage_count": 17,
       "examples": [
         "2605.26457",
         "2604.01483",
@@ -5389,7 +5413,8 @@
         "2603.21065",
         "2606.01008",
         "2606.17182",
-        "2610.30524"
+        "2610.30524",
+        "2611.04434"
       ]
     },
     {
@@ -5781,14 +5806,15 @@
       "name": "LLM model editing",
       "description": "Methods for modifying specific behaviors or knowledge in large language models while preserving their general capabilities and avoiding broad performance degradation.",
       "created_at": "2026-05-28T17:41:55Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2602.15823",
         "2607.03065",
         "2608.11660",
         "2610.10533",
         "2610.20399",
-        "2611.09382"
+        "2611.09382",
+        "2611.08647"
       ]
     },
     {
@@ -5905,7 +5931,7 @@
       "name": "LLM preference optimization",
       "description": "Studies methods for aligning language models with preference signals, including preference-tuning objectives, domain generalization, and adaptation strategies such as supervised fine-tuning or pseudo-labeling.",
       "created_at": "2026-05-28T15:38:42Z",
-      "usage_count": 16,
+      "usage_count": 17,
       "examples": [
         "2601.05882",
         "2601.22083",
@@ -5922,7 +5948,8 @@
         "2609.38987",
         "2610.19376",
         "2610.28474",
-        "2610.41296"
+        "2610.41296",
+        "2611.09634"
       ]
     },
     {
@@ -9227,7 +9254,7 @@
       "name": "on-policy distillation",
       "description": "Methods for training student models using teacher feedback on the student's own generated trajectories, often improving imitation learning, alignment, or policy transfer compared with purely offline sequence-level distillation.",
       "created_at": "2026-05-28T05:38:18Z",
-      "usage_count": 208,
+      "usage_count": 209,
       "examples": [
         "2605.27028",
         "2604.01193",
@@ -9435,7 +9462,8 @@
         "2611.05609",
         "2611.02846",
         "2611.04386",
-        "2611.03953"
+        "2611.03953",
+        "2611.08179"
       ]
     },
     {
@@ -9824,6 +9852,15 @@
         "2610.33472",
         "2610.34722",
         "2610.37651"
+      ]
+    },
+    {
+      "name": "protein design benchmark evaluation",
+      "description": "Benchmarking and systematic evaluation of protein generative design and scaffold-generation models, covering target coverage, solution diversity, and dynamics-aware validation through molecular dynamics simulation.",
+      "created_at": "2026-11-10T08:34:36Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.07723"
       ]
     },
     {
@@ -10316,6 +10353,15 @@
       ]
     },
     {
+      "name": "reward hacking evaluation",
+      "description": "Evaluation and analysis of reward hacking in LLM agents trained with verifiable rewards, including hardened environment testing of answer-leakage exploits and agent trace analysis.",
+      "created_at": "2026-11-10T08:33:24Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.10404"
+      ]
+    },
+    {
       "name": "reward model evaluation",
       "description": "Evaluation methods and benchmarks for assessing reward models, preference models, and their alignment with human or personalized preferences in LLM training and inference workflows.",
       "created_at": "2026-05-28T06:48:47Z",
@@ -10469,7 +10515,7 @@
       "name": "robot imitation learning",
       "description": "Methods that train robotic or physics-based agents to reproduce behaviors from demonstrations, videos, or trajectories, often for manipulation or embodied control tasks.",
       "created_at": "2026-05-28T07:26:16Z",
-      "usage_count": 23,
+      "usage_count": 24,
       "examples": [
         "2604.20841",
         "2604.19734",
@@ -10493,7 +10539,8 @@
         "2609.07498",
         "2609.35690",
         "2610.25736",
-        "2610.32093"
+        "2610.32093",
+        "2611.01729"
       ]
     },
     {
@@ -10722,10 +10769,11 @@
       "name": "scientific semantic retrieval",
       "description": "Semantic retrieval methods for scientific or technical corpora, using language-model representations, embeddings, and query-document matching to find fine-grained scientific facts, claims, theorems, or passages.",
       "created_at": "2026-05-28T16:58:46Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2602.05216",
-        "2607.28618"
+        "2607.28618",
+        "2611.01362"
       ]
     },
     {
@@ -12514,14 +12562,15 @@
       "name": "vision-language model architecture optimization",
       "description": "Research on improving VLM design choices such as vision encoders, multimodal interfaces, and lightweight architectures to increase efficiency and visual-language reasoning performance without simply scaling model size.",
       "created_at": "2026-05-28T18:13:39Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2603.06569",
         "2603.19209",
         "2603.23495",
         "2606.09131",
         "2607.23373",
-        "2609.34972"
+        "2609.34972",
+        "2611.06844"
       ]
     },
     {
