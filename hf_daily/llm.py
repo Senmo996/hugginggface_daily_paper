@@ -1,12 +1,17 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 from dataclasses import dataclass
 from typing import Any
 
 from dotenv import load_dotenv
 from openai import OpenAI
+
+
+logger = logging.getLogger(__name__)
+MAX_METADATA_ATTEMPTS = 3
 
 
 @dataclass(frozen=True)
@@ -47,20 +52,76 @@ class OpenAICompatibleClient:
         existing_topics: list[str],
         known_institution: str | None,
     ) -> LLMGeneration:
-        response = self.client.chat.completions.create(
-            model=self.model,
-            response_format={"type": "json_object"},
-            messages=build_generation_messages(paper, existing_topics, known_institution),
-        )
-        content = response.choices[0].message.content or "{}"
-        data = parse_json_object(content)
-        return LLMGeneration(
-            one_sentence_summary=str(data["one_sentence_summary"]).strip(),
-            institution_tag=str(data.get("institution_tag") or known_institution or "Unknown").strip(),
-            topic_tag=str(data["topic_tag"]).strip(),
-            topic_description=str(data.get("topic_description") or data["topic_tag"]).strip(),
-            topic_is_new=bool(data.get("topic_is_new", False)),
-        )
+        messages = build_generation_messages(paper, existing_topics, known_institution)
+        for attempt in range(1, MAX_METADATA_ATTEMPTS + 1):
+            # Transport/API retries are handled by the SDK. These retries repair
+            # successful API responses whose contents do not match our contract.
+            response = self.client.chat.completions.create(
+                model=self.model,
+                response_format={"type": "json_object"},
+                messages=messages,
+            )
+            choice = response.choices[0] if response.choices else None
+            finish_reason = getattr(choice, "finish_reason", None)
+            data: dict[str, Any] = {}
+            try:
+                content = choice.message.content if choice else None
+                if not content or not content.strip():
+                    raise ValueError("LLM response is empty")
+                if finish_reason in {"length", "content_filter"}:
+                    raise ValueError(f"LLM response is incomplete ({finish_reason})")
+                data = parse_json_object(content)
+                return validate_generation(data, known_institution)
+            except ValueError as exc:
+                details = (
+                    f"Invalid LLM metadata for paper {paper.get('id', 'unknown')} "
+                    f"(attempt {attempt}/{MAX_METADATA_ATTEMPTS}, "
+                    f"finish_reason={finish_reason}, "
+                    f"keys={repr(list(data))[:300]}): {exc}"
+                )
+                logger.warning("%s", details)
+                if attempt == MAX_METADATA_ATTEMPTS:
+                    raise RuntimeError(details) from exc
+                messages = [
+                    *build_generation_messages(paper, existing_topics, known_institution),
+                    {
+                        "role": "user",
+                        "content": (
+                            f"The previous response failed validation: {exc}. "
+                            "Generate the complete metadata again as one JSON object, "
+                            "with all required fields at the top level. "
+                            "one_sentence_summary and topic_tag must be non-empty strings; "
+                            "topic_is_new must be a JSON boolean."
+                        ),
+                    },
+                ]
+        raise AssertionError("Metadata retry loop exhausted unexpectedly")
+
+
+def validate_generation(
+    data: dict[str, Any], known_institution: str | None,
+) -> LLMGeneration:
+    for field in ("one_sentence_summary", "topic_tag"):
+        value = data.get(field)
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"{field} must be a non-empty string")
+
+    for field in ("institution_tag", "topic_description"):
+        value = data.get(field)
+        if value is not None and not isinstance(value, str):
+            raise ValueError(f"{field} must be a string")
+
+    topic_is_new = data.get("topic_is_new", False)
+    if not isinstance(topic_is_new, bool):
+        raise ValueError("topic_is_new must be a JSON boolean")
+
+    return LLMGeneration(
+        one_sentence_summary=data["one_sentence_summary"].strip(),
+        institution_tag=(data.get("institution_tag") or "").strip() or known_institution or "Unknown",
+        topic_tag=data["topic_tag"].strip(),
+        topic_description=(data.get("topic_description") or "").strip() or data["topic_tag"].strip(),
+        topic_is_new=topic_is_new,
+    )
 
 
 def parse_json_object(content: str) -> dict[str, Any]:
@@ -100,7 +161,7 @@ def build_generation_messages(
             "role": "system",
             "content": (
                 "You classify AI research papers for a local archive. "
-                "Return strict JSON only. "
+                "Return strict JSON only, with all required fields at the top level. "
                 "one_sentence_summary must be written in Simplified Chinese as one sentence "
                 "describing the paper direction and method. "
                 "topic_tag must remain English. "
