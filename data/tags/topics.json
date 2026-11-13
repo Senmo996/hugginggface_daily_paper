@@ -1717,6 +1717,15 @@
       ]
     },
     {
+      "name": "conversational recommendation evaluation",
+      "description": "Benchmarks and rubric-based evaluation methods for LLM-based conversational recommenders that give shopping or product advice in multi-turn dialogue.",
+      "created_at": "2026-11-13T07:46:56Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.05862"
+      ]
+    },
+    {
       "name": "cross-lingual retrieval",
       "description": "Methods and evaluations for retrieving relevant documents across languages, including multilingual embedding alignment, cross-lingual semantic matching, and mitigation of language bias in retrieval models.",
       "created_at": "2026-05-28T06:49:32Z",
@@ -2860,10 +2869,11 @@
       "name": "game reinforcement learning",
       "description": "Reinforcement learning methods and environment designs for training agents in video games or game-like simulators, often addressing sparse rewards, partial observability, long horizons, and exploration failures.",
       "created_at": "2026-05-28T07:06:07Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2604.10812",
-        "2610.20584"
+        "2610.20584",
+        "2611.13028"
       ]
     },
     {
@@ -3021,11 +3031,12 @@
       "name": "GPU kernel optimization",
       "description": "Benchmarks and methods for optimizing GPU kernels, including DSL-specific code generation, agent skill distillation, and cross-DSL knowledge transfer evaluation.",
       "created_at": "2026-10-13T07:24:07Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2610.05014",
         "2611.03344",
-        "2611.03517"
+        "2611.03517",
+        "2611.13766"
       ]
     },
     {
@@ -3045,6 +3056,15 @@
       "usage_count": 1,
       "examples": [
         "2608.16097"
+      ]
+    },
+    {
+      "name": "graph neural network optimization",
+      "description": "Designing and adapting optimization algorithms for graph neural networks, including matrix-aware preconditioning and graph-structure-aware update geometry.",
+      "created_at": "2026-11-13T07:47:46Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.08379"
       ]
     },
     {
@@ -3274,7 +3294,7 @@
       "name": "human-AI collaboration evaluation",
       "description": "Evaluation methods for measuring, attributing, and interpreting contributions, behaviors, and user perceptions in collaborative workflows between humans and AI systems.",
       "created_at": "2026-05-28T09:30:15Z",
-      "usage_count": 13,
+      "usage_count": 14,
       "examples": [
         "2605.21363",
         "2601.07786",
@@ -3288,7 +3308,8 @@
         "2610.27148",
         "2610.21109",
         "2610.22507",
-        "2611.02633"
+        "2611.02633",
+        "2611.08286"
       ]
     },
     {
@@ -4501,7 +4522,7 @@
       "name": "LLM agent safety evaluation",
       "description": "Evaluation of safety-relevant behaviors and failure modes in LLM-based agents, including coercion, deception, and harmful escalation in multi-agent interactions.",
       "created_at": "2026-07-23T03:46:19Z",
-      "usage_count": 15,
+      "usage_count": 16,
       "examples": [
         "2607.15434",
         "2607.20891",
@@ -4517,7 +4538,8 @@
         "2610.06406",
         "2610.13623",
         "2611.02332",
-        "2611.09113"
+        "2611.09113",
+        "2611.11306"
       ]
     },
     {
@@ -4887,7 +4909,7 @@
       "name": "LLM behavior evaluation",
       "description": "Evaluates behavioral properties of language models beyond task accuracy, including interaction awareness, conversational dynamics, and latent response tendencies through probing or benchmark-style analyses.",
       "created_at": "2026-05-28T06:57:23Z",
-      "usage_count": 40,
+      "usage_count": 41,
       "examples": [
         "2604.02315",
         "2604.09497",
@@ -4928,7 +4950,8 @@
         "2610.04977",
         "2610.11765",
         "2610.36095",
-        "2610.38623"
+        "2610.38623",
+        "2607.24999"
       ]
     },
     {
@@ -5179,13 +5202,14 @@
       "name": "LLM context management",
       "description": "Training LLM agents to proactively edit and maintain their working context during long-horizon tasks, covering toolsets for pruning, summarization, planning, long-term memory, and context offloading, as well as reinforcement learning methods with fine-grained credit assignment for context editing actions.",
       "created_at": "2026-09-02T06:37:28Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2608.28476",
         "2609.37725",
         "2610.01415",
         "2610.00964",
-        "2610.18784"
+        "2610.18784",
+        "2608.22237"
       ]
     },
     {
@@ -5662,7 +5686,7 @@
       "name": "LLM mathematical reasoning",
       "description": "Research on improving and evaluating language models for advanced mathematical problem solving, including dataset construction, reasoning trace generation, filtering, and fine-tuning for math tasks.",
       "created_at": "2026-05-28T05:37:21Z",
-      "usage_count": 10,
+      "usage_count": 11,
       "examples": [
         "2605.28003",
         "2605.13301",
@@ -5672,7 +5696,8 @@
         "2608.28600",
         "2609.10712",
         "2609.10728",
-        "2610.02191"
+        "2610.02191",
+        "2610.40394"
       ]
     },
     {
@@ -6055,7 +6080,7 @@
       "name": "LLM reasoning evaluation",
       "description": "Evaluation and diagnostic analysis of large language model reasoning behavior, including benchmarks, controlled probes, attribution, and prompting interventions for identifying systematic reasoning failures.",
       "created_at": "2026-05-28T06:29:29Z",
-      "usage_count": 59,
+      "usage_count": 60,
       "examples": [
         "2603.29025",
         "2604.01161",
@@ -6115,14 +6140,15 @@
         "2610.03509",
         "2610.21204",
         "2610.27597",
-        "2611.10329"
+        "2611.10329",
+        "2603.27343"
       ]
     },
     {
       "name": "LLM reinforcement learning",
       "description": "Online reinforcement learning methods for optimizing large language model policies, especially for reasoning tasks and exploration-exploitation control.",
       "created_at": "2026-05-28T05:38:29Z",
-      "usage_count": 244,
+      "usage_count": 245,
       "examples": [
         "2605.28109",
         "2605.28184",
@@ -6365,7 +6391,8 @@
         "2610.34894",
         "2610.30435",
         "2610.30132",
-        "2610.40945"
+        "2610.40945",
+        "2610.39671"
       ]
     },
     {
@@ -6396,9 +6423,10 @@
       "name": "LLM routing",
       "description": "Learning to dynamically select and coordinate heterogeneous language models, including jointly optimizing routing mode (single-round, multi-round, agentic) and model choice within a mode, typically via reinforcement learning.",
       "created_at": "2026-10-24T05:24:52Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2610.19705"
+        "2610.19705",
+        "2611.10193"
       ]
     },
     {
@@ -6686,7 +6714,7 @@
       "name": "LLM system optimization",
       "description": "Methods for automatically optimizing the non-weight components of LLM applications, such as prompts, context management, retrieval logic, tool use, and orchestration code.",
       "created_at": "2026-05-28T06:28:51Z",
-      "usage_count": 57,
+      "usage_count": 58,
       "examples": [
         "2603.28052",
         "2603.29002",
@@ -6744,7 +6772,8 @@
         "2609.34645",
         "2610.12242",
         "2609.35855",
-        "2610.37230"
+        "2610.37230",
+        "2611.12304"
       ]
     },
     {
@@ -7392,7 +7421,7 @@
       "name": "model quantization",
       "description": "Methods for reducing model precision and deployment cost through post-training or calibration-based quantization, including quantization strategies for specialized settings such as merged or multi-expert models.",
       "created_at": "2026-05-28T09:04:58Z",
-      "usage_count": 48,
+      "usage_count": 51,
       "examples": [
         "2605.16882",
         "2605.19660",
@@ -7441,7 +7470,10 @@
         "2610.31309",
         "2609.05881",
         "2610.29617",
-        "2611.10649"
+        "2611.10649",
+        "2611.13410",
+        "2611.14418",
+        "2611.14413"
       ]
     },
     {
@@ -7807,7 +7839,7 @@
       "name": "multilingual NLP benchmark evaluation",
       "description": "Evaluation and dataset benchmarks for multilingual or code-switched NLP tasks, often assessing language models on realistic cross-lingual understanding, dialogue, classification, summarization, or QA settings.",
       "created_at": "2026-05-28T16:26:26Z",
-      "usage_count": 10,
+      "usage_count": 11,
       "examples": [
         "2601.17277",
         "2602.01479",
@@ -7818,7 +7850,8 @@
         "2608.04397",
         "2608.25832",
         "2609.19879",
-        "2610.19432"
+        "2610.19432",
+        "2611.13843"
       ]
     },
     {
@@ -10390,7 +10423,7 @@
       "name": "representation geometry evaluation",
       "description": "Evaluation and analysis of whether learned model representations preserve continuous geometric, topological, or information-theoretic structure in scientific or other structured domains.",
       "created_at": "2026-05-28T06:43:25Z",
-      "usage_count": 20,
+      "usage_count": 21,
       "examples": [
         "2604.04155",
         "2604.03480",
@@ -10411,7 +10444,17 @@
         "2609.10060",
         "2609.15975",
         "2609.27158",
-        "2610.31670"
+        "2610.31670",
+        "2611.12869"
+      ]
+    },
+    {
+      "name": "representation probing",
+      "description": "Training linear probes on intermediate and final model representations to evaluate what features are encoded and identify where in depth and across modules the most transferable or informative representations reside.",
+      "created_at": "2026-11-13T07:44:25Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.11531"
       ]
     },
     {
@@ -11391,6 +11434,15 @@
         "2603.13962",
         "2605.21102",
         "2606.00683"
+      ]
+    },
+    {
+      "name": "subliminal learning",
+      "description": "Study of the phenomenon where a teacher model transmits hidden preferences or behavioral traits to a student model through training data unrelated to those traits, here extended from LLMs to vision-language models.",
+      "created_at": "2026-11-13T07:42:35Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.08538"
       ]
     },
     {
@@ -13244,6 +13296,15 @@
       "examples": [
         "2605.22715",
         "2602.19004"
+      ]
+    },
+    {
+      "name": "weight-space programming",
+      "description": "Language models directly reading, debugging, and synthesizing the weights of trained or newly initialized neural networks through reasoning instead of gradient descent, including weight repair, fault correction, and from-scratch weight generation for small networks.",
+      "created_at": "2026-11-13T07:47:18Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.13758"
       ]
     },
     {
