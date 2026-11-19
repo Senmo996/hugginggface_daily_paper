@@ -337,7 +337,7 @@
       "name": "4D reconstruction",
       "description": "Methods for reconstructing dynamic 3D geometry, pose, and motion over time from visual observations, including monocular or sparse-view videos and object interaction scenarios.",
       "created_at": "2026-05-28T06:30:02Z",
-      "usage_count": 23,
+      "usage_count": 24,
       "examples": [
         "2603.25791",
         "2604.07350",
@@ -361,7 +361,8 @@
         "2607.09125",
         "2607.17790",
         "2610.03715",
-        "2610.18871"
+        "2610.18871",
+        "2611.23144"
       ]
     },
     {
@@ -539,13 +540,14 @@
       "name": "agent environment synthesis",
       "description": "Methods for generating synthetic interactive environments and tasks for training AI agents, including quality control of synthesized tasks and support for multiple interaction interfaces.",
       "created_at": "2026-10-23T05:44:48Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2610.26828",
         "2610.33966",
         "2610.37786",
         "2611.05036",
-        "2611.03634"
+        "2611.03634",
+        "2611.21152"
       ]
     },
     {
@@ -591,14 +593,15 @@
       "name": "agentic artifact generation",
       "description": "A research direction where AI agents statefully construct or revise complete deliverables (documents, code, UI, 3D assets, etc.), coupling operational artifact representations, construction policies, and runtime verification feedback that redirects subsequent actions, including systems and benchmark evaluation for such agentic construction.",
       "created_at": "2026-09-02T06:33:09Z",
-      "usage_count": 6,
+      "usage_count": 7,
       "examples": [
         "2608.28122",
         "2609.04034",
         "2609.06758",
         "2609.10824",
         "2610.08621",
-        "2611.01860"
+        "2611.01860",
+        "2611.21382"
       ]
     },
     {
@@ -1125,12 +1128,13 @@
       "name": "autoformalization",
       "description": "Autoformalization of natural-language mathematical statements into machine-verified Lean 4 code, using knowledge retrieval from Mathlib and verification-guided iterative refinement to improve correctness and construct large-scale verified training data.",
       "created_at": "2026-08-20T01:03:04Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2608.14221",
         "2609.11085",
         "2606.31002",
-        "2610.31810"
+        "2610.31810",
+        "2611.21421"
       ]
     },
     {
@@ -1316,6 +1320,15 @@
       ]
     },
     {
+      "name": "Bayesian inference",
+      "description": "Methods for probabilistic posterior inference in structured Bayesian models, including transport maps, marginalization of Gaussian conditionals, and MCMC sampling acceleration.",
+      "created_at": "2026-11-19T08:39:51Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.20995"
+      ]
+    },
+    {
       "name": "Bayesian optimization",
       "description": "Principled optimization methods that use probabilistic surrogate models and acquisition functions to guide sample-efficient experiment selection, especially for scientific discovery and experimental design.",
       "created_at": "2026-05-28T06:37:03Z",
@@ -1413,13 +1426,14 @@
       "name": "CAD generation",
       "description": "Methods for generating structured, editable computer-aided design representations such as BReps or parametric surfaces from text, images, point clouds, meshes, or other inputs.",
       "created_at": "2026-05-28T18:15:08Z",
-      "usage_count": 5,
+      "usage_count": 6,
       "examples": [
         "2603.05607",
         "2606.26299",
         "2608.00799",
         "2608.16485",
-        "2608.26238"
+        "2608.26238",
+        "2611.22563"
       ]
     },
     {
@@ -2069,7 +2083,7 @@
       "name": "diffusion model acceleration",
       "description": "Methods for reducing inference cost and improving runtime efficiency of diffusion models, including sparsity, quantization, distillation, kernel optimization, and other deployment-oriented acceleration techniques.",
       "created_at": "2026-05-28T05:57:15Z",
-      "usage_count": 60,
+      "usage_count": 61,
       "examples": [
         "2605.26632",
         "2603.26357",
@@ -2130,7 +2144,8 @@
         "2610.26837",
         "2610.35850",
         "2610.40914",
-        "2611.06796"
+        "2611.06796",
+        "2611.23226"
       ]
     },
     {
@@ -2602,7 +2617,7 @@
       "name": "embodied data curation",
       "description": "Curation, alignment, mixing, and evaluation of heterogeneous datasets for training embodied AI and robot manipulation foundation models.",
       "created_at": "2026-07-29T01:02:35Z",
-      "usage_count": 12,
+      "usage_count": 13,
       "examples": [
         "2607.24744",
         "2607.25895",
@@ -2615,7 +2630,8 @@
         "2610.31779",
         "2611.05320",
         "2611.06817",
-        "2611.17060"
+        "2611.17060",
+        "2611.21938"
       ]
     },
     {
@@ -3220,6 +3236,15 @@
       ]
     },
     {
+      "name": "hard attention",
+      "description": "Attention mechanisms that discretely select supports (e.g., argmax or zero-temperature reads) instead of soft weighted averages, typically to obtain exact, length-generalizing or verifiable reasoning behavior in neural networks.",
+      "created_at": "2026-11-19T08:34:27Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.11937"
+      ]
+    },
+    {
       "name": "hate speech detection",
       "description": "Research on detecting hateful or abusive language in text, including multilingual datasets, classification models, rationale-based supervision, and explainability methods for social media moderation.",
       "created_at": "2026-05-28T15:25:20Z",
@@ -3381,10 +3406,11 @@
       "name": "humanoid loco-manipulation",
       "description": "Methods for whole-body humanoid control combining locomotion and manipulation, often learned from human demonstrations and egocentric video data.",
       "created_at": "2026-10-22T05:51:43Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2610.18950",
-        "2610.32909"
+        "2610.32909",
+        "2611.22275"
       ]
     },
     {
@@ -4906,7 +4932,7 @@
       "name": "LLM architecture optimization",
       "description": "Research on improving large language model architectures and training dynamics through lightweight structural or parameterization changes, such as normalization, scaling, residual pathways, and optimizer-aware design.",
       "created_at": "2026-05-28T05:55:26Z",
-      "usage_count": 53,
+      "usage_count": 55,
       "examples": [
         "2605.26895",
         "2605.27358",
@@ -4960,7 +4986,9 @@
         "2610.41711",
         "2611.10556",
         "2611.03142",
-        "2611.05984"
+        "2611.05984",
+        "2611.19800",
+        "2611.23026"
       ]
     },
     {
@@ -5760,6 +5788,15 @@
       ]
     },
     {
+      "name": "LLM manufacturing agents",
+      "description": "LLM-driven agents for manufacturing tasks such as machining process planning, operation and cutting-parameter selection, and toolpath decision-making, where domain-specific geometric simulators or verifiers provide execution feedback for iterative plan refinement.",
+      "created_at": "2026-11-19T08:33:40Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.22565"
+      ]
+    },
+    {
       "name": "LLM mathematical reasoning",
       "description": "Research on improving and evaluating language models for advanced mathematical problem solving, including dataset construction, reasoning trace generation, filtering, and fine-tuning for math tasks.",
       "created_at": "2026-05-28T05:37:21Z",
@@ -6132,7 +6169,7 @@
       "name": "LLM pretraining",
       "description": "Research on large language model pretraining methodology, including data processing pipelines, curriculum design, scaling behavior, controlled ablations, and evaluation protocols for understanding how foundational capabilities emerge before post-training.",
       "created_at": "2026-05-28T06:28:25Z",
-      "usage_count": 22,
+      "usage_count": 23,
       "examples": [
         "2603.27164",
         "2604.11152",
@@ -6155,7 +6192,8 @@
         "2608.27370",
         "2609.39827",
         "2611.21003",
-        "2611.20404"
+        "2611.20404",
+        "2611.22115"
       ]
     },
     {
@@ -7535,7 +7573,7 @@
       "name": "model quantization",
       "description": "Methods for reducing model precision and deployment cost through post-training or calibration-based quantization, including quantization strategies for specialized settings such as merged or multi-expert models.",
       "created_at": "2026-05-28T09:04:58Z",
-      "usage_count": 51,
+      "usage_count": 52,
       "examples": [
         "2605.16882",
         "2605.19660",
@@ -7587,7 +7625,8 @@
         "2611.10649",
         "2611.13410",
         "2611.14418",
-        "2611.14413"
+        "2611.14413",
+        "2611.15671"
       ]
     },
     {
@@ -8059,7 +8098,7 @@
       "name": "multimodal agents",
       "description": "Methods for vision-language or multimodal models that act as agents by interleaving reasoning with external tool use, environment interaction, or multi-step decision making.",
       "created_at": "2026-05-28T05:37:05Z",
-      "usage_count": 131,
+      "usage_count": 132,
       "examples": [
         "2605.28774",
         "2605.28548",
@@ -8187,7 +8226,8 @@
         "2611.06083",
         "2611.08175",
         "2611.14256",
-        "2611.21605"
+        "2611.21605",
+        "2611.21392"
       ]
     },
     {
@@ -8203,7 +8243,7 @@
       "name": "multimodal benchmark evaluation",
       "description": "Evaluation methods and benchmarks for assessing multimodal models, including vision-language model robustness, generalization, and reasoning under controlled dataset variations.",
       "created_at": "2026-05-28T05:38:43Z",
-      "usage_count": 190,
+      "usage_count": 191,
       "examples": [
         "2605.27311",
         "2605.26396",
@@ -8392,7 +8432,8 @@
         "2611.08369",
         "2611.12934",
         "2611.00428",
-        "2611.20385"
+        "2611.20385",
+        "2611.21644"
       ]
     },
     {
@@ -8429,7 +8470,7 @@
       "name": "multimodal data curation",
       "description": "Methods for collecting, structuring, verifying, and improving multimodal training data, often using human-AI collaboration or model-assisted annotation to enhance downstream vision-language or generative model performance.",
       "created_at": "2026-05-28T07:32:39Z",
-      "usage_count": 35,
+      "usage_count": 36,
       "examples": [
         "2604.21718",
         "2604.20857",
@@ -8465,7 +8506,8 @@
         "2608.24845",
         "2608.28958",
         "2608.30209",
-        "2611.04418"
+        "2611.04418",
+        "2611.23140"
       ]
     },
     {
@@ -8588,7 +8630,7 @@
       "name": "multimodal interpretability",
       "description": "Research on explaining and probing multimodal models such as vision-language models, including internal representations, neuron or circuit behavior, cross-modal information flow, and causal interventions.",
       "created_at": "2026-05-28T06:54:26Z",
-      "usage_count": 30,
+      "usage_count": 31,
       "examples": [
         "2603.27070",
         "2604.10949",
@@ -8619,7 +8661,8 @@
         "2609.03586",
         "2610.06844",
         "2610.13527",
-        "2610.00898"
+        "2610.00898",
+        "2611.08922"
       ]
     },
     {
@@ -9246,10 +9289,11 @@
       "name": "neural lossless compression",
       "description": "Methods that use neural probabilistic sequence models, often combined with classical entropy coding or context modeling, to improve lossless data compression.",
       "created_at": "2026-05-28T07:52:19Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2605.02904",
-        "2602.19626"
+        "2602.19626",
+        "2611.23108"
       ]
     },
     {
@@ -9443,6 +9487,15 @@
       ]
     },
     {
+      "name": "NPU kernel optimization",
+      "description": "Research on optimizing compute kernels for neural processing units (NPUs), including benchmarks and agent/model-driven kernel optimization evaluated on real-world workloads under cost constraints, parallel to GPU kernel optimization but targeting NPU hardware.",
+      "created_at": "2026-11-19T08:23:43Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.17621"
+      ]
+    },
+    {
       "name": "numerical PDE simulation",
       "description": "Development and validation of computational methods or software for simulating partial differential equations and physics dynamics using numerical discretization and time integration techniques.",
       "created_at": "2026-05-28T16:18:22Z",
@@ -9486,12 +9539,13 @@
       "name": "off-policy language model training",
       "description": "Language-model post-training methods that learn from responses generated by a behavior policy rather than directly optimizing on-policy generation, often using token-level supervision to improve robust generation.",
       "created_at": "2026-07-23T03:45:33Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2607.17524",
         "2607.10848",
         "2609.37868",
-        "2609.35954"
+        "2609.35954",
+        "2611.21791"
       ]
     },
     {
@@ -9526,7 +9580,7 @@
       "name": "on-policy distillation",
       "description": "Methods for training student models using teacher feedback on the student's own generated trajectories, often improving imitation learning, alignment, or policy transfer compared with purely offline sequence-level distillation.",
       "created_at": "2026-05-28T05:38:18Z",
-      "usage_count": 212,
+      "usage_count": 214,
       "examples": [
         "2605.27028",
         "2604.01193",
@@ -9738,7 +9792,9 @@
         "2611.08179",
         "2611.12886",
         "2611.11450",
-        "2611.10015"
+        "2611.10015",
+        "2611.19244",
+        "2611.23034"
       ]
     },
     {
@@ -10396,7 +10452,7 @@
       "name": "recursive self-improvement",
       "description": "Recursive self-improvement refers to methods where an LLM agent iteratively applies a fixed meta-operation to its own outputs to generate higher-level reasoning layers, enabling emergent depth without modifying the editing machinery.",
       "created_at": "2026-08-27T01:03:41Z",
-      "usage_count": 49,
+      "usage_count": 51,
       "examples": [
         "2608.24735",
         "2608.26530",
@@ -10446,7 +10502,9 @@
         "2611.06768",
         "2611.07624",
         "2611.11558",
-        "2611.16378"
+        "2611.16378",
+        "2611.18856",
+        "2611.23219"
       ]
     },
     {
@@ -11076,7 +11134,7 @@
       "name": "scientific reproducibility evaluation",
       "description": "Evaluation and dataset construction for assessing whether scientific claims, methods, or implementation details are faithfully reflected in associated code or reproducibility artifacts, often using LLMs for discrepancy detection.",
       "created_at": "2026-05-28T16:15:05Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2601.12910",
         "2601.18724",
@@ -11084,7 +11142,8 @@
         "2609.09219",
         "2609.10539",
         "2610.28655",
-        "2611.08452"
+        "2611.08452",
+        "2611.20003"
       ]
     },
     {
@@ -11338,7 +11397,7 @@
       "name": "speculative decoding",
       "description": "Methods for accelerating autoregressive LLM inference using draft-and-verify generation, including draft models, draft trees, pruning, retrieval-assisted drafting, and verification-efficient decoding strategies.",
       "created_at": "2026-05-28T09:10:48Z",
-      "usage_count": 39,
+      "usage_count": 40,
       "examples": [
         "2605.20104",
         "2601.05167",
@@ -11378,7 +11437,8 @@
         "2611.08449",
         "2611.06982",
         "2611.18482",
-        "2611.19649"
+        "2611.19649",
+        "2611.21925"
       ]
     },
     {
@@ -11582,7 +11642,7 @@
       "name": "streaming video-language models",
       "description": "Methods for online video-language models that process incoming video streams causally and generate timely language reasoning or responses during playback, often optimizing latency, temporal coherence, and real-time interaction.",
       "created_at": "2026-05-28T18:34:15Z",
-      "usage_count": 19,
+      "usage_count": 20,
       "examples": [
         "2603.12262",
         "2603.11896",
@@ -11602,7 +11662,8 @@
         "2610.31734",
         "2610.38678",
         "2610.34926",
-        "2611.01120"
+        "2611.01120",
+        "2611.17048"
       ]
     },
     {
@@ -11803,7 +11864,7 @@
       "name": "tactile robot manipulation",
       "description": "Research on robot manipulation policies that use tactile sensing, contact prediction, and multimodal perception to improve dexterous or contact-rich manipulation in real-world settings.",
       "created_at": "2026-05-28T07:05:47Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2604.13015",
         "2602.13579",
@@ -11811,7 +11872,8 @@
         "2607.23782",
         "2607.23783",
         "2608.18701",
-        "2608.25798"
+        "2608.25798",
+        "2611.21099"
       ]
     },
     {
@@ -12057,7 +12119,7 @@
       "name": "time series benchmark evaluation",
       "description": "Benchmarking and evaluation of time series forecasting models across diverse regimes, datasets, metrics, and scaling conditions.",
       "created_at": "2026-05-28T06:32:19Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2603.26017",
         "2603.23582",
@@ -12065,7 +12127,8 @@
         "2602.19455",
         "2603.10926",
         "2608.08119",
-        "2609.05405"
+        "2609.05405",
+        "2611.15348"
       ]
     },
     {
@@ -12373,7 +12436,7 @@
       "name": "video diffusion",
       "description": "Methods for generating or editing video with diffusion-based models, including diffusion transformers and efficiency improvements for text-to-video generation.",
       "created_at": "2026-05-28T05:37:50Z",
-      "usage_count": 65,
+      "usage_count": 66,
       "examples": [
         "2605.28691",
         "2605.15042",
@@ -12438,7 +12501,8 @@
         "2611.00859",
         "2611.17336",
         "2611.18549",
-        "2611.21339"
+        "2611.21339",
+        "2611.12069"
       ]
     },
     {
@@ -12832,7 +12896,7 @@
       "name": "video-guided robot manipulation",
       "description": "Methods that use generated or predicted videos as motion or dynamics priors to guide robotic manipulation policies or control without requiring task-specific demonstrations.",
       "created_at": "2026-05-28T15:12:41Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2512.24766",
         "2601.16163",
@@ -12840,7 +12904,8 @@
         "2606.06194",
         "2608.26103",
         "2610.03607",
-        "2611.05163"
+        "2611.05163",
+        "2611.23143"
       ]
     },
     {
@@ -12969,7 +13034,7 @@
       "name": "vision-language model architecture optimization",
       "description": "Research on improving VLM design choices such as vision encoders, multimodal interfaces, and lightweight architectures to increase efficiency and visual-language reasoning performance without simply scaling model size.",
       "created_at": "2026-05-28T18:13:39Z",
-      "usage_count": 8,
+      "usage_count": 9,
       "examples": [
         "2603.06569",
         "2603.19209",
@@ -12978,7 +13043,8 @@
         "2607.23373",
         "2609.34972",
         "2611.06844",
-        "2611.17334"
+        "2611.17334",
+        "2611.20992"
       ]
     },
     {
@@ -13370,9 +13436,10 @@
       "name": "visual sim-to-real",
       "description": "Research on transferring visual perception systems from simulated or synthetic visual evidence to real-world deployment, including domain-gap analysis, CAD-guided rendering and verification, synthetic data design, calibration, and prior-based adaptation for industrial inspection or pose estimation.",
       "created_at": "2026-06-04T01:04:43Z",
-      "usage_count": 1,
+      "usage_count": 2,
       "examples": [
-        "2605.30581"
+        "2605.30581",
+        "2611.20321"
       ]
     },
     {
@@ -13510,9 +13577,11 @@
       "name": "weight-space programming",
       "description": "Language models directly reading, debugging, and synthesizing the weights of trained or newly initialized neural networks through reasoning instead of gradient descent, including weight repair, fault correction, and from-scratch weight generation for small networks.",
       "created_at": "2026-11-13T07:47:18Z",
-      "usage_count": 1,
+      "usage_count": 3,
       "examples": [
-        "2611.13758"
+        "2611.13758",
+        "2611.22055",
+        "2611.18553"
       ]
     },
     {
@@ -13583,7 +13652,7 @@
       "name": "world models",
       "description": "Models that learn to generate or predict interactive environment dynamics from observations and actions, often for simulation, planning, or embodied agent control.",
       "created_at": "2026-05-28T05:37:10Z",
-      "usage_count": 290,
+      "usage_count": 292,
       "examples": [
         "2605.28816",
         "2603.25240",
@@ -13872,7 +13941,9 @@
         "2611.14815",
         "2611.15131",
         "2611.21479",
-        "2611.19771"
+        "2611.19771",
+        "2611.19559",
+        "2611.19857"
       ]
     },
     {
