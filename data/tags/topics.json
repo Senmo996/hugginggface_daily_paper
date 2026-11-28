@@ -852,12 +852,13 @@
       "name": "algorithm discovery",
       "description": "Computational search methods and infrastructure for discovering improved algorithms or algebraic schemes, often via combinatorial or heuristic exploration rather than learned prediction alone.",
       "created_at": "2026-05-28T18:07:44Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2603.02398",
         "2608.16884",
         "2610.06577",
-        "2610.03872"
+        "2610.03872",
+        "2611.31155"
       ]
     },
     {
@@ -1098,11 +1099,12 @@
       "name": "audio tokenization",
       "description": "Methods for learning discrete audio representations or neural audio codecs that convert waveform signals into tokens usable by speech, audio generation, and native audio foundation models.",
       "created_at": "2026-05-28T17:22:40Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2602.10934",
         "2607.04064",
-        "2610.29434"
+        "2610.29434",
+        "2611.30723"
       ]
     },
     {
@@ -1674,7 +1676,7 @@
       "name": "computer-use benchmark evaluation",
       "description": "Benchmarks for evaluating computer-use agents in realistic desktop or professional software environments, focusing on long-horizon tasks with verifiable artifacts.",
       "created_at": "2026-09-22T05:53:41Z",
-      "usage_count": 13,
+      "usage_count": 14,
       "examples": [
         "2609.16251",
         "2609.39903",
@@ -1688,7 +1690,8 @@
         "2611.17955",
         "2611.25387",
         "2611.30962",
-        "2611.34466"
+        "2611.34466",
+        "2611.34232"
       ]
     },
     {
@@ -1775,6 +1778,15 @@
       "usage_count": 1,
       "examples": [
         "2610.18596"
+      ]
+    },
+    {
+      "name": "continuous-time neural networks",
+      "description": "Neural primitives and architectures that operate in continuous physical time, covering damped wave/state integration neurons, neural ODE/CDE-style models, closed-form evolution with stability analysis, and parallel-scan implementations for irregularly sampled temporal data.",
+      "created_at": "2026-11-28T08:48:17Z",
+      "usage_count": 1,
+      "examples": [
+        "2611.30025"
       ]
     },
     {
@@ -2631,7 +2643,7 @@
       "name": "embodied agent architecture",
       "description": "Modular cognitive architectures for embodied virtual agents, integrating perception, reasoning, and action in interactive 3D environments.",
       "created_at": "2026-08-18T01:47:37Z",
-      "usage_count": 25,
+      "usage_count": 26,
       "examples": [
         "2608.09848",
         "2608.11350",
@@ -2657,7 +2669,8 @@
         "2611.18359",
         "2611.31201",
         "2611.30254",
-        "2611.27689"
+        "2611.27689",
+        "2611.32238"
       ]
     },
     {
@@ -2956,10 +2969,11 @@
       "name": "flow-based image generation",
       "description": "Image generation methods based on normalizing flows or related invertible generative models, often improving semantic modeling, latent representations, or sampling quality beyond standard pixel-level flow modeling.",
       "created_at": "2026-06-30T17:06:31Z",
-      "usage_count": 2,
+      "usage_count": 3,
       "examples": [
         "2606.26016",
-        "2607.18198"
+        "2607.18198",
+        "2611.34782"
       ]
     },
     {
@@ -3618,7 +3632,7 @@
       "name": "image editing",
       "description": "Methods for modifying or enhancing images through learned reasoning, generation, restoration, retouching, or controllable semantic edits.",
       "created_at": "2026-05-28T07:21:29Z",
-      "usage_count": 36,
+      "usage_count": 37,
       "examples": [
         "2604.19587",
         "2604.10268",
@@ -3655,7 +3669,8 @@
         "2610.40453",
         "2611.04303",
         "2611.06741",
-        "2611.33894"
+        "2611.33894",
+        "2611.33885"
       ]
     },
     {
@@ -4117,7 +4132,7 @@
       "name": "linear attention",
       "description": "A method family replacing quadratic softmax attention with recurrent fast-weight state updates, covering normalized first-order / delta-rule linear attention, fast-weight memories, and state-space-style sequence models with efficient parallel forms.",
       "created_at": "2026-09-02T06:36:43Z",
-      "usage_count": 10,
+      "usage_count": 11,
       "examples": [
         "2608.27763",
         "2609.07816",
@@ -4128,7 +4143,8 @@
         "2610.05842",
         "2610.26834",
         "2610.41994",
-        "2611.08376"
+        "2611.08376",
+        "2611.34051"
       ]
     },
     {
@@ -4258,7 +4274,7 @@
       "name": "LLM agent benchmark evaluation",
       "description": "Benchmarks and evaluation protocols for assessing LLM-based agents on interactive capabilities such as personalization, proactivity, memory use, tool use, and long-horizon decision-making.",
       "created_at": "2026-05-28T05:56:31Z",
-      "usage_count": 249,
+      "usage_count": 250,
       "examples": [
         "2605.27141",
         "2605.24219",
@@ -4508,7 +4524,8 @@
         "2611.22033",
         "2611.26248",
         "2611.25252",
-        "2611.30017"
+        "2611.30017",
+        "2611.34852"
       ]
     },
     {
@@ -4784,7 +4801,7 @@
       "name": "LLM agent safety evaluation",
       "description": "Evaluation of safety-relevant behaviors and failure modes in LLM-based agents, including coercion, deception, and harmful escalation in multi-agent interactions.",
       "created_at": "2026-07-23T03:46:19Z",
-      "usage_count": 17,
+      "usage_count": 18,
       "examples": [
         "2607.15434",
         "2607.20891",
@@ -4802,14 +4819,15 @@
         "2611.02332",
         "2611.09113",
         "2611.11306",
-        "2611.17460"
+        "2611.17460",
+        "2611.30483"
       ]
     },
     {
       "name": "LLM agent security evaluation",
       "description": "Evaluation of security risks, attack surfaces, adversarial scenarios, and defenses for LLM-based agents operating with tools, persistent state, or real-world system access.",
       "created_at": "2026-05-28T06:42:31Z",
-      "usage_count": 39,
+      "usage_count": 40,
       "examples": [
         "2604.04759",
         "2604.10577",
@@ -4848,7 +4866,8 @@
         "2609.06140",
         "2609.22076",
         "2610.14766",
-        "2610.30418"
+        "2610.30418",
+        "2611.27112"
       ]
     },
     {
@@ -5347,7 +5366,7 @@
       "name": "LLM coding agents",
       "description": "Research on large language model based agents that autonomously perform software engineering tasks such as code generation, pull request creation, code review, and maintenance analysis in real-world development workflows.",
       "created_at": "2026-05-28T06:35:45Z",
-      "usage_count": 71,
+      "usage_count": 72,
       "examples": [
         "2604.00917",
         "2603.26233",
@@ -5419,7 +5438,8 @@
         "2611.12164",
         "2611.31974",
         "2611.34237",
-        "2611.33093"
+        "2611.33093",
+        "2611.34813"
       ]
     },
     {
@@ -7527,7 +7547,7 @@
       "name": "medical multimodal foundation models",
       "description": "Research on medical-domain foundation models that integrate multimodal understanding and generation capabilities for clinical imaging or related healthcare data.",
       "created_at": "2026-05-28T16:13:33Z",
-      "usage_count": 11,
+      "usage_count": 12,
       "examples": [
         "2601.11522",
         "2602.12705",
@@ -7539,7 +7559,8 @@
         "2609.09140",
         "2611.03360",
         "2611.15094",
-        "2611.34575"
+        "2611.34575",
+        "2611.32993"
       ]
     },
     {
@@ -8150,7 +8171,7 @@
       "name": "multi-view 3D reconstruction",
       "description": "Methods for reconstructing 3D scene geometry from multiple images or views, including robust feed-forward reconstruction and feature-space restoration under degraded imaging conditions.",
       "created_at": "2026-05-28T05:54:31Z",
-      "usage_count": 26,
+      "usage_count": 27,
       "examples": [
         "2605.26230",
         "2604.01479",
@@ -8177,7 +8198,8 @@
         "2606.13644",
         "2610.03308",
         "2611.02857",
-        "2611.34128"
+        "2611.34128",
+        "2611.31516"
       ]
     },
     {
@@ -8344,7 +8366,7 @@
       "name": "multimodal agents",
       "description": "Methods for vision-language or multimodal models that act as agents by interleaving reasoning with external tool use, environment interaction, or multi-step decision making.",
       "created_at": "2026-05-28T05:37:05Z",
-      "usage_count": 135,
+      "usage_count": 136,
       "examples": [
         "2605.28774",
         "2605.28548",
@@ -8476,7 +8498,8 @@
         "2611.21392",
         "2611.28202",
         "2611.31466",
-        "2611.31895"
+        "2611.31895",
+        "2611.34290"
       ]
     },
     {
@@ -9138,12 +9161,13 @@
       "name": "multimodal safety guardrails",
       "description": "Methods and evaluations for policy-conditioned safety guardrails in multimodal or vision-language systems, including detecting unsafe visual content under changing deployment policies.",
       "created_at": "2026-07-16T17:03:07Z",
-      "usage_count": 4,
+      "usage_count": 5,
       "examples": [
         "2607.05910",
         "2607.15550",
         "2607.25857",
-        "2608.29098"
+        "2608.29098",
+        "2611.28849"
       ]
     },
     {
@@ -10491,7 +10515,7 @@
       "name": "prompt optimization",
       "description": "Methods for improving language model behavior by searching, selecting, or refining prompts without updating model weights, including system prompt optimization and prompt subset selection.",
       "created_at": "2026-05-28T06:56:32Z",
-      "usage_count": 28,
+      "usage_count": 29,
       "examples": [
         "2604.08801",
         "2605.09271",
@@ -10520,7 +10544,8 @@
         "2610.34722",
         "2610.37651",
         "2611.11994",
-        "2611.27229"
+        "2611.27229",
+        "2611.30494"
       ]
     },
     {
@@ -12145,11 +12170,12 @@
       "name": "synthetic image detection",
       "description": "Research on detecting AI-generated or synthetic images, including methods that use discriminative classifiers, generative cues, adversarial signals, or joint generation-detection training to improve authenticity verification and robustness.",
       "created_at": "2026-05-28T07:30:39Z",
-      "usage_count": 3,
+      "usage_count": 4,
       "examples": [
         "2604.21904",
         "2605.09296",
-        "2606.03348"
+        "2606.03348",
+        "2611.34719"
       ]
     },
     {
@@ -12207,14 +12233,15 @@
       "name": "tabular representation learning",
       "description": "Learning general-purpose vector representations for tabular data that capture structural, categorical, and numerical semantics for tasks such as classification, retrieval, and semantic matching.",
       "created_at": "2026-05-28T08:00:36Z",
-      "usage_count": 7,
+      "usage_count": 8,
       "examples": [
         "2605.04962",
         "2606.09323",
         "2606.19827",
         "2609.17488",
         "2609.37959",
-        "2611.17600"
+        "2611.17600",
+        "2611.31491"
       ]
     },
     {
@@ -12498,7 +12525,7 @@
       "name": "time series benchmark evaluation",
       "description": "Benchmarking and evaluation of time series forecasting models across diverse regimes, datasets, metrics, and scaling conditions.",
       "created_at": "2026-05-28T06:32:19Z",
-      "usage_count": 8,
+      "usage_count": 9,
       "examples": [
         "2603.26017",
         "2603.23582",
@@ -12507,7 +12534,8 @@
         "2603.10926",
         "2608.08119",
         "2609.05405",
-        "2611.15348"
+        "2611.15348",
+        "2611.31619"
       ]
     },
     {
@@ -13001,7 +13029,7 @@
       "name": "video generation benchmark evaluation",
       "description": "Evaluation benchmarks and automated metrics for assessing video generation systems, including controllability, temporal consistency, prompt or condition following, and overall perceptual quality.",
       "created_at": "2026-07-19T17:03:45Z",
-      "usage_count": 17,
+      "usage_count": 18,
       "examples": [
         "2607.14202",
         "2607.24241",
@@ -13019,7 +13047,8 @@
         "2610.28416",
         "2611.13576",
         "2611.16217",
-        "2611.22673"
+        "2611.22673",
+        "2611.34457"
       ]
     },
     {
@@ -14090,7 +14119,7 @@
       "name": "world models",
       "description": "Models that learn to generate or predict interactive environment dynamics from observations and actions, often for simulation, planning, or embodied agent control.",
       "created_at": "2026-05-28T05:37:10Z",
-      "usage_count": 305,
+      "usage_count": 306,
       "examples": [
         "2605.28816",
         "2603.25240",
@@ -14394,7 +14423,8 @@
         "2611.25927",
         "2611.34811",
         "2611.33925",
-        "2611.32473"
+        "2611.32473",
+        "2611.34693"
       ]
     },
     {
